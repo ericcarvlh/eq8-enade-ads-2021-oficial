@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="73" height="22">
+
+<g transform="matrix(1.3333334 0 0 1.3333334 0 0)">
+    <path d="M0 0L54.75 0L54.75 16.5L0 16.5z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" />
+	<g transform="matrix(0.75 0 0 0.75 -0 -0)">
+		<g>
+			<g>
+				<g transform="matrix(1 0 0 1 0 0)">
+                    <path transform="matrix(1 0 0 1 0 0)"  d="M0 -0.23640001L72.9294 -0.23640001L72.9294 21.6306L0 21.6306z" stroke="#FFFFFF" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" opacity="0" />
+					<g transform="matrix(1 0 0 1 0 0)">
+                        <image  x="9.85" y="4.6886" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAVCAYAAAD7NJjdAAAACXBIWXMAAA7EAAAOwQHoXPpeAAAA50lEQVR4nO2WMQ6CMBSGS8LgyHF0w1u4uboZR0/gKpO6OXoLcXPs6DEc3er/khJNaIlg2zyS9yVfQGmK+YqhuTFGCW1ye/TVyb7OhxSs4Q3u4dNxPcSq/PsbiRpqeIIP+iLvGByC0rqGc3tzjpTWFdzAY+wwDQW8wpmyK8KUCTzAe6owRAGXcJvwnkPZpQxDLNQ4wkybMFnnsN/H9CX0nMHmS/3EjIYQr2vfKsXaAsSej3jJE+NGSxg3lYRpcyElzAcNK3imDxzDsNgWcAzDAgnjgWOYvnuRGH89lmFYIGE8SBgPEsbDG9beIrGE6+6FAAAAAElFTkSuQmCC" width="53.229397" height="12.017"/>
+					</g>
+                    <path transform="matrix(1 0 0 1 0 0)"  d="" stroke="none" fill="none" />
+				</g>
+				<g transform="matrix(1 0 0 1 0 0)">
+                    <path transform="matrix(1 0 0 1 0 0)"  d="M0 0.27580002L0 0.27580002" stroke="#3465A4" stroke-width="1" fill="none" />
+                    <path d="M0 0.27580002L0 0.27580002L72.9688 0.27580002L72.9688 0.27580002L72.9688 21.9064L72.9688 21.9064L0 21.9064L0 21.9064L0 0.27580002z" stroke="#3465A4" stroke-width="1" fill="#FF8000" fill-rule="evenodd" />
+                    <path transform="matrix(1 0 0 1 0 0)"  d="" stroke="none" fill="none" />
+				</g>
+				<g transform="matrix(1 0 0 1 0 0)">
+                    <path transform="matrix(1 0 0 1 0 0)"  d="M0.039400004 -0.23640001L72.968796 -0.23640001L72.968796 21.6306L0.039400004 21.6306z" stroke="#FFFFFF" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" opacity="0" />
+					<g transform="matrix(1 0 0 1 0 0)">
+                        <image  x="9.8894005" y="4.6886" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAVCAYAAAD7NJjdAAAACXBIWXMAAA7EAAAOwQHoXPpeAAAA50lEQVR4nO2WMQ6CMBSGS8LgyHF0w1u4uboZR0/gKpO6OXoLcXPs6DEc3er/khJNaIlg2zyS9yVfQGmK+YqhuTFGCW1ye/TVyb7OhxSs4Q3u4dNxPcSq/PsbiRpqeIIP+iLvGByC0rqGc3tzjpTWFdzAY+wwDQW8wpmyK8KUCTzAe6owRAGXcJvwnkPZpQxDLNQ4wkybMFnnsN/H9CX0nMHmS/3EjIYQr2vfKsXaAsSej3jJE+NGSxg3lYRpcyElzAcNK3imDxzDsNgWcAzDAgnjgWOYvnuRGH89lmFYIGE8SBgPEsbDG9beIrGE6+6FAAAAAElFTkSuQmCC" width="53.229397" height="12.017"/>
+					</g>
+                    <path transform="matrix(1 0 0 1 0 0)"  d="" stroke="none" fill="none" />
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
