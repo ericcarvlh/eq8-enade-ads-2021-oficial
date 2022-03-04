@@ -1,82 +1,100 @@
 <!DocType HTML>
 
-    <HTML Lang = "PT-BR">
+<HTML Lang = "PT-BR">
     <Head>
         <Meta CharSet = "UTF-8"/>
-        <Title>Início - Enade</Title>
+        <Meta Name = "Author" Content = "Éric Carvalho"/>
+        <Meta Name = "KeyWord" Content = "Enade, Simulado, Enade ADS, Analise e Desenvolvimento de Sistemas"/>
+        <Title>Início - SimuNade</Title>
         <Link Rel = "Icon" href ="http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel="Stylesheet" type="Text/Css" href="../../css/layout.css">
     </Head>
 
     <Body>
         <Header>
-            <!--Style da Tag "Img" inicialmente apenas para vizualização-->
-            <p>
-                <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">
-                    <Img Style="padding: 3px; background-color: rgb(255, 136, 0);" Src = "Images/ofc_logo_inep.svg"/>
-                </a>
-                Enade
-            </p>
+            <Nav>
+                <Div Class = "logo_inep">
+                    <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">
+                        <Img Src = "../../Images/Principal/ofc_logo_inep.svg"/>
+                    </a>  
+                </Div>
+                
+                <Div Class = "logo_enade"><b>Enade</b></Div>
+                
+                <Ul Class = "nav-list">
+                    <Li><a Href = "../../Views/Principal/Index.html">Início</a></Li>
+                    <Li><a Href = "../../Views/Principal/Credits.html">Créditos</a></Li>
+                    <Li><a Href = "#">Contato</a></Li>
+                    <Li><a Href = "../../Views/Principal/About.html">Sobre</a></Li>
+                </Ul>
+            </Nav>
         </Header>
 
-        <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/#!/index">
-            <Img Src = "Images/logo.png"/>
-        </a>
-
-        <H2>Simulado Enade - Análise e Desenvolvimento de Sistemas (2021)</H2>
-
-        <a Href = "#">
-            <Input Type = "Button" Value = "Iniciar simulado"/>
-        </a>
-
-        <H3>Você sabe o que é o Enade?</H3>
-
-        <p>Breve explicação.</p>
-
-        <p>Fonte:
-            <!-- 
-                Caso você retirar o underline do blank ele vai abrir outros links na mesma guia já aberta.
-            -->
-
-            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade">
-                https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade
+            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/#!/index">
+                <Img Src = "../../Images/Principal/ofc_logo_enade.png"/>
             </a>
-        </p>
+    
+            <Div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/avJZ2mtFljc" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            </Div>
 
-        <H3>Confira a prova do Enade do ano de 2021</H3>
+            <Div>
 
-        <p>Prova de tecnologia análise e desenvolvimento de sistemas (ADS):
-            <a Target = "_Blank" Href = "#">
-                Gabarito
-            </a>
-        </p>
+                <H3>Você sabe o que é o Enade?</H3>
+    
+                <p>Breve explicação.</p>
 
-        <p>Gabarito da prova de tecnologia análise e desenvolvimento de sistemas (ADS):
-            <a Target = "_Blank" Href = "#">
-                Prova
-            </a>
-        </p>
+            </Div>
 
-        <Input Type = "Button" Value = "Créditos"/>
-        <Input Type = "Button" Value = "Sobre"/>
-
-        <Footer>
-            <p>
-                As informações das provas do Enade, bem como outras informações, foram obtidas através do site do
+            <H2>Simulado Enade - Análise e Desenvolvimento de Sistemas (2021)</H2>
+    
+            <p>Fonte:
                 <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade">
-                    INEP 
-                </a>
-                e
-                <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/#!/index">
-                    Enade
+                    https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade
                 </a>
             </p>
-            <p>
+
+            <a Href = "#">
+                <Input Type = "Button" Value = "Iniciar simulado"/>
+            </a>
+    
+            <H3>Confira a prova do Enade do ano de 2021</H3>
+    
+            <p>Prova de tecnologia análise e desenvolvimento de sistemas (ADS):
+                <a Target = "_Blank" Href = "#">
+                    Gabarito
+                </a>
+            </p>
+    
+            <p>Gabarito da prova de tecnologia análise e desenvolvimento de sistemas (ADS):
+                <a Target = "_Blank" Href = "#">
+                    Prova
+                </a>
+            </p>
+            
+        <Footer >
+            <p align = "center">
+                <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+                    Técnologo em Análise e Desenvolvimento de Sistemas (ADS)
+                </a>
+            </p>
+
+            <br>
+
+            <p align = "center">
                 <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
-                    Fatec Carapicuiba
+                    <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
                 </a>
                 |
-                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
-                    Análise e Desenvolvimento de Sistemas (ADS)
+                <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+                    <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+                </a>
+                |
+                <a>
+                    <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
                 </a>
             </p>
         </Footer>
