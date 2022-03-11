@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html Lang = "PT-BR">
+	
+	<head>
+		<Meta CharSet = "UTF-8"/>
+		<Title>Questão 11 - SimuNade</Title>
+		<Meta Name = "Author" Content = "Raul Mascarenhas"/>
+        <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+	</head>
+
+	<body>
+		<div>
+			<b>
+				Questão 11
+			</b>
+		</div>
+
+		<div>
+			<p>
+				O código Java, a seguir, contém a implementação de uma Pilha utilizando a estratégia encadeada.<br><br>
+					<font face="Courier New">
+						<b>public class</b> No{<br>
+						&nbsp;&nbsp;&nbsp;<b>public int</b> dado<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;<b>public</b> No prox<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;<b>public</b> No(<b>int</b> dado){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>this.</b>dado = dado<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						}<br>
+						<b>public class</b> PilhaEncadeada{<br>
+						&nbsp;&nbsp;&nbsp;<b>private</b> No topo<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;<b>public int</b> pop(){<br>
+						&nbsp;&nbsp;&nbsp;<b>if</b> (topo == <b>null</b>)<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> -1<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No lixo = topo<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;topo = topo.prox<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lixo.prox = <b>null;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> lixo.dado<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;<b>public int</b> top(){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>if</b> (topo == <b>null</b>)<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> -1<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> (topo.dado)<b>;</b><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						}<br><br>
+					</font>
+				Com base no exposto, assinale a opção que possui a implementação correta do método push para essa Pilha.
+			</p>
+		</div>
+	</body>
+</html>

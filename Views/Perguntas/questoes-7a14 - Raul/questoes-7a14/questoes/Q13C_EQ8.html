@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html Lang = "PT-BR">
+	
+	<head>
+		<Meta CharSet = "UTF-8"/>
+		<Title>Questão 13 - SimuNade</Title>
+		<Meta Name = "Author" Content = "Raul Mascarenhas"/>
+        <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+	</head>
+
+	<body>
+		<div>
+			<b>
+				Questão 13
+			</b>
+		</div>
+
+		<div>
+			<p>
+				Considere que as variáveis <b>pilha</b> e <b>fila</b> correspondem, respectivamente, às estruturas de dados do tipo<br>
+				Pilha e Fila. Para testar as duas estruturas, um programador realizou a série de operações a seguir.<br><br>
+
+				Pilha <b>pilha</b> = new Pilha();<br>
+				Fila <b>fila</b> = new Fila();<br>
+				<b>pilha</b>.push(‘A’);<br>
+				<b>pilha</b>.push(‘B’);<br>
+				<b>pilha</b>.push(‘C’);<br>
+				<b>fila</b>.enqueue(pilha.top());<br>
+				<b>fila</b>.enqueue(pilha.top());<br>
+				<b>fila</b>.enqueue(‘D’);<br>
+				<b>pilha</b>.push(fila.dequeue());<br>
+				<b>fila</b>.enqueue(fila.dequeue());<br>
+				<b>fila</b>.enqueue(pilha.pop());<br>
+				<b>pilha</b>.push(‘E’);<br>
+				<b>fila</b>.enqueue(‘E’);<br>
+				<b>pilha</b>.pop();<br><br>
+
+				Após essas operações, ao imprimir o conteúdo de <b>pilha</b> e <b>fila</b>, respectivamente, seria exibido:
+			</p>
+		</div>
+	</body>
+</html>

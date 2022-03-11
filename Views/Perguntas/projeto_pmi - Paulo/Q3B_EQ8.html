@@ -1,0 +1,108 @@
+<!DOCTYPE html> <!-- Abrindo a tag DOCTYPE para definir o tipo HTML-->
+<html lang="pt-br"> <!-- Abrindo a tag html-->
+    <head> <!-- Abrindo a tag head, para o cabeçalho da página-->
+        <meta charset="UTF-8"> <!-- Tag para o documento aceitar caracteres especiais-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css"> <!-- Linkando a página ao css externo-->
+        <title>Questão 3</title> <!-- Definindo o título da página-->
+    </head> <!-- Fechando a tag para do cabeçalho-->
+    <body> <!-- Abrindo a tag do corpo da página-->
+        <header> <!-- Abrindo a tag Header, para fazer o cabeçalho da página-->
+            <div class="logos"> <!-- Abrindo uma div para agrupar as imagens dos logos, dando classe "logos"-->
+                <img src="imagens/ofc_logo_inep.svg" class="inep"> <!-- Inserindo a imagem do logo do inep-->
+                <img src="imagens/logo_enade.png" class="enade"> <!-- Inserindo a imagem do logo do enade-->
+            </div> <!-- Fechando a div logos-->
+            <nav> <!-- Abrindo uma nav, para colocar os liks de acesso-->
+                <ul> <!-- Abrindo tag ul para lista não ordenda-->
+                    <li><a href="#">Início</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de início-->
+                    <li><a href="#">Crédito</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de créditos-->
+                    <li><a href="#">Contato</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de contato-->
+                    <li><a href="#">Sobre</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de sobre-->
+                </ul> <!-- Fechando a tag da lista não ordenada-->
+            </nav> <!-- Fechando a navegação-->
+        </header> <!-- Fechando o cabecalho-->
+        <main> <!-- Abrindo a tag main, para colocar o conteúdo principal-->
+            <nav class="nav_questoes"> <!-- Abrindo uma navegação, para nevegar pelas questões-->
+                <a href="Q2C_EQ8.html"><</a> <!-- Colocando link para a questão anterior-->
+                <a href="Q4B_EQ8.html">4</a> <!-- Colocando link para outra questão-->
+                <a href="Q5A_EQ8.html">5</a> <!-- Colocando link para outra questão-->
+                <a href="Q6A_EQ8.html">6</a> <!-- Colocando link para outra questão-->
+                <a href="Q4B_EQ8.html">></a> <!-- Colocando link para a próxima questão-->
+            </nav> <!-- Fechando a navegação para as questões-->
+
+            <form> <!-- Abrindo a tag form, para fazer um formulário-->
+                <h2>Questão 3</h2> <!-- Colocando a tag h2 para colocar o titulo da questão-->
+                <section class="questao"> <!-- Abrindo uma section "questao", para escrever a questão-->
+                    <h3>Texto I</h3> <!-- Colocando o subtítulo no texto-->
+                    <!-- As linhas abaixo dentro da tag p (paragrafo), é o enunciado da questão-->
+                    <p> Na Alemanha nazista, no auge da Segunda Guerra Mundial, surgiu a necessidade de abrir mais espaço 
+                        para os veículos automoti vos. Com muitos ciclistas, as bicicletas viraram um empecilho, forçando a 
+                        criação de um espaço exclusivo para elas – talvez as primeiras ciclovias do mundo. Mas, se na década 
+                        de 1940 os veículos eram prioridade, hoje, o uso de bicicletas – e das ciclovias – surge como uma das 
+                        principais alternati vas para melhorar a qualidade de vida nas grandes metrópoles. Quando políti cas 
+                        públicas incenti vam o uso de bicicletas como meio de transporte para curtas e médias distâncias, um 
+                        novo panorama se abre.</p>
+                    <br> <!-- Pulando uma linha-->
+                    <h3>Texto II</h3> <!-- Colocando o subtítulo no texto-->
+                    <img src="imagens/Q3_EQ8.png" class="questao-img"> <!-- Colocando a imagem da questão-->
+                </section> <!-- Fechando a section questao-->
+                <!-- Abrindo a tag p para fazer a fonte da questão-->
+                <p class="fonte">TEXTO I: COSTA, J. Ciclovias ajudam a humanizar o espaço urbano. Ciência e Cultura . v. 68, n. 2, São Paulo, 2016 (adaptado).</p>
+                <p class="fonte"> TEXTO II:  Disponível em: htt p://dopedal.blogspot.com/2012/05/charge-do-silverio-voz-da-serra.html. Acesso em: 29 de abr. 2020.</p>
+
+                <hr> <!-- Usandoa a tag hr para fazer uma linha para separar o conteúdo-->
+
+                <!-- Utilizando as seguintes tags p para fazer o enunciado da questão-->
+                <p> Considerando as informações apresentadas e o uso de bicicletas como alternati va para melhorar a 
+                    qualidade de vida nas cidades, avalie as afi rmações a seguir.</p>
+                <p>I. Dado que as bicicletas são veículos que ocupam pouco espaço na malha viária, prescinde-se de 
+                    investi mentos públicos em construção de ciclovias, sendo prioritárias campanhas de conscienti zação 
+                    de motoristas a respeito dos benefí cios do uso da bicicleta como meio de transporte.</p>
+                <p>II. O uso das bicicletas como meio de transporte contribui para a melhoria da qualidade de vida nas 
+                    grandes metrópoles, pois elas não emitem poluentes, além de esse uso proporcionar a práti ca de 
+                    ati vidade fí sica.</p>
+                <p>III. A parti r da Segunda Guerra Mundial, durante o governo da Alemanha nazista, o uso da bicicleta 
+                    como meio de transporte tornou-se efi caz e passou a prevalecer nas cidades europeias.</p>
+                <p> É correto o que se afi rma em</p>
+
+                <input type="radio" name="alternativa" value="a"> <!-- Fazendo um radio button para a alternativa-->
+                <!-- Tag label, para colocar um texto referente ao radio button-->
+                <label for="a">I, apenas.</label>
+                <br> <!-- Pulando uma linha-->
+
+                <input type="radio" name="alternativa" value="b"> <!-- Fazendo um radio button para a alternativa-->
+                <!-- Tag label para colocar um texto referente ao radio button-->
+                <label for="b">II, apenas.</label>
+                <br> <!-- Pulando uma linha-->
+
+                <input type="radio" name="alternativa" value="c"> <!-- Fazendo um radio button para a alternativa-->
+                <!-- Tag label para colocar um texto referente ao radio button-->
+                <label for="c">I e III, apenas.</label>
+                <br> <!-- Pulando uma linha-->
+
+                <input type="radio" name="alternativa" value="d"> <!-- Fazendo um radio button para a alternativa-->
+                <!-- Tag label para colocar um texto referente ao radio button-->
+                <label for="d">II e III, apenas.</label>
+                <br> <!-- Pulando uma linha-->
+
+                <input type="radio" name="alternativa" value="e"> <!-- Fazendo um radio button para a alternativa-->
+                <!-- Tag label para colocar um texto referente ao radio button-->
+                <label for="e">I, II e III.</label>
+                <br> <!-- Tag para pular uma linha-->
+
+                <br> <!-- Tag para pular uma linha-->
+                <div class="botoes"> <!-- Abrindo uma div "botoes", para colocar os botoes-->
+                    <button id="finalizar">Finalizar</button> <!-- Botao para finalizar-->
+                    <button id="revisar">Revisar</button> <!-- Botao para revisar-->
+                    <button id="corrogir">Corrigir</button> <!-- Botao para corrigir-->
+                </div> <!-- Fechando a div botoes-->
+            </form> <!-- Fechando o formulário-->
+        </main> <!-- Fechando a tag main-->
+        <footer> <!-- Abrindo a tag fotter, para fazer o rodapé da página-->
+            <a href="#"><img src="imagens/logo_fatec.png" class="logo_fatec"></a> <!-- Colocando uma imagem como link para a fatec-->
+            <a href="#"><img src="imagens/logo_sp.png" class="logo_sp"></a> <!-- Colocando uma imagem como link-->
+            <a href="#"><img src="imagens/cps-logo.png" class="logo_cps"></a> <!-- Colocando uma imagem como link-->
+        </footer> <!-- Fechando o rodapé da página-->
+    </body> <!-- Fechando o corpo da página-->
+</html> <!-- Fechando a tag HTML-->
