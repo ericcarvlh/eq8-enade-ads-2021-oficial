@@ -1,0 +1,6 @@
+Obs meu patrão:
+
+Faltou a tag de author (<Meta Name = "Author" Content = "Seu Nome"/>)
+
+Trabalho muito a frente em, Paulo, parabéns. 
+Confira se esta tudo correto, bom trabalho meu mano.
