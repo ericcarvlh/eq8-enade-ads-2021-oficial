@@ -2,104 +2,188 @@
 
 <HTML Lang = "PT-BR">
     <Head>
-        <Meta CharSet = "UTF-8"/>
-        <Meta Name = "Author" Content = "Éric Carvalho"/>
-        <Meta Name = "KeyWord" Content = "Enade, Simulado, Enade ADS, Analise e Desenvolvimento de Sistemas"/>
-        <Title>Início - SimuNade</Title>
-        <Link Rel = "Icon" href ="http://enade.inep.gov.br/enade/favicon.ico"/>
-        <Link Rel="Stylesheet" type="Text/Css" href="../../css/layout.css">
+      <Meta CharSet = "UTF-8"/>
+      <Meta Name = "Author" Content = "Éric Carvalho"/>
+      <Meta Name = "KeyWord" Content = "Enade, Simulado, Enade ADS, Analise e Desenvolvimento de Sistemas"/>
+      <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
+      <Title>Início - SimuNade</Title>
+      <Link Rel = "Icon" href ="http://enade.inep.gov.br/enade/favicon.ico"/>
+      <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
+      <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
+      <Link Rel = "Script" Href = "../../js/video.js"/>
+      <Link Rel = "Script" Href = "../../js/menu.js"/>
     </Head>
 
     <Body>
-        <Header>
+      <Header>
+        <Div Class = "container">
+          <Div Class = "inep_enade">
+            <Div Class = "logo_inep">
+              <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+                <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
+              </a>
+            </Div>
+            <Span Class = "logo_enade">
+              <b>
+                Enade
+              </b>
+            </Span>
+          </Div>
+          <Div Class = "menu-section">
+            <Div Class = "menu-toggle">
+              <Div Class = "one"></Div>
+              <Div Class = "two"></Div>
+              <Div Class = "three"></Div>
+            </Div>
             <Nav>
-                <Div Class = "logo_inep">
-                    <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">
-                        <Img Src = "../../Images/Principal/ofc_logo_inep.svg"/>
-                    </a>  
-                </Div>
-                
-                <Div Class = "logo_enade">
-                    <b>Enade</b>
-                </Div>
-                
-                <Ul Class = "nav-list">
-                    <Li><a Href = "../../Views/Principal/Index.html">Início</a></Li>
-                    <Li><a Href = "../../Views/Principal/Credits.html">Créditos</a></Li>
-                    <Li><a Href = "#">Contato</a></Li>
-                    <Li><a Href = "../../Views/Principal/About.html">Sobre</a></Li>
-                </Ul>
+              <Ul>
+                <Li>
+                  <a Href="Index.html">Início</a>
+                </Li>
+                <Li>
+                  <a Href="Credits.html">Créditos</a>
+                </Li>
+                <Li>
+                  <a Href="About.html">Sobre</a>
+                </Li>
+              </Ul>
             </Nav>
-        </Header>
+          </Div>
+        </Div>
+      </Header>
 
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/#!/index">
-                <Img Src = "../../Images/Principal/ofc_logo_enade.png"/>
-            </a>
-    
-            <Div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/avJZ2mtFljc" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-                clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
+      <Main>
+        <Div>
+          <Section class="cards">
+            <Div class="card">
+              <Picture Class = "image" Alt = "Imagem do video">
+                <Source Media = "(min-width: 768px)" SrcSet = "https://i.ytimg.com/vi/avJZ2mtFljc/maxdefault.jpg"/>
+                <Source Media = "(min-width: 320px)" SrcSet = "https://i.ytimg.com/vi/avJZ2mtFljc/hqdefault.jpg"/>
+                <Source Media = "(min-width: 10px)" SrcSet = "https://i.ytimg.com/vi/avJZ2mtFljc/mqdefault.jpg"/>
+
+                <img src="link-do-video" />
+              </Picture>
+              <Div class="content">
+                <p class="title text--medium">
+                  Título do video
+                </p>
+                <Div Class = "info">
+                  <p Class = "text--medium">Duração do video</p>
+                </Div>
+              </Div>
             </Div>
+          </Section>
+        </Div>
+        <Div>
+          <Div>
+            <H3>Você sabe o que é o Enade?</H3>
+  
+            <p>.</p>
+          </Div>
+        </Div>
 
-            <Div>
-
-                <H3>Você sabe o que é o Enade?</H3>
-    
-                <p>Breve explicação.</p>
-
-            </Div>
-
-            <H2>Simulado Enade - Análise e Desenvolvimento de Sistemas (2021)</H2>
-    
-            <p>Fonte:
-                <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade">
-                    https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade
-                </a>
-            </p>
-
-            <a Href = "#">
-                <Input Type = "Button" Value = "Iniciar simulado"/>
+        <Div Class = "modal-overlay">
+          <Div Class = "modal">
+            <a class="close-modal">
+              <svg viewBox="0 0 20 20">
+                <path
+                  fill="#000000"
+                  d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"
+                ></path>
+              </svg>
             </a>
+            <Div class="modal-content">
+              <Div class="video-background">
+                <Div class="video-foreground">
+                  <Iframe Src = "link-do-video" Frameborder = "0" AllowFullScreen></Iframe>
+                </Div>
+              </Div>
+            </Div>
+          </Div>
+        </Div>
+
+        <Div>
+          <p>
+            "O Exame Nacional de Desempenho dos Estudantes (Enade) avalia o rendimento dos
+            concluintes dos cursos de graduação em relação aos conteúdos programáticos
+            previstos nas diretrizes curriculares dos cursos,o desenvolvimento de competências e  
+            habilidades necessárias ao aprofundamento da formação geral e profissional, e o nível 
+            de atualização dos estudantes com relação à realidade brasileira e mundial.
+          </p>
+
+          <p>
+            Aplicado pelo Inep desde 2004, o Enade integra o Sistema Nacional de Avaliação da
+            Educação Superior (Sinaes), composto também pela Avaliação de cursos de graduação
+            e pela Avaliação institucional. Juntos eles formam o tripé avaliativo que permite
+            conhecer a qualidade dos cursos e instituições de educação superior brasileiras. Os
+            resultados do Enade, aliados às respostas do Questionário do Estudante, são insumos
+            para o cálculo dos Indicadores de Qualidade da Educação Superior.
+          </p>
+
+          <p>
+            A inscrição é obrigatória para estudantes ingressantes e concluintes habilitados de
+            cursos de bacharelado e superiores de tecnologia vinculados às áreas de avaliação da
+            edição. A situação de regularidade do estudante é registrada no histórico escolar.
+          </p>
+
+          <p>
+            O Ciclo Avaliativo do Enade determina as áreas de avaliação e os cursos a elas
+            vinculados. As áreas de conhecimento para os cursos de bacharelado e licenciatura
+            derivam da tabela de áreas do conhecimento divulgada pelo Conselho Nacional de 
+            Desenvolvimento Científico e Tecnológico (CNPq). Já os eixos tecnológicos são baseados  
+            no Catálogo Nacional de Cursos Superiores de Tecnologia (CNCST), do Ministério da Educação."
+          </p>
+
+          <p>Fonte:
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade">
+              https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enade
+            </a>
+          </p>
+        </Div>
     
-            <H3>Confira a prova do Enade do ano de 2021</H3>
+        <Div>
+          <H3>Confira a prova do Enade do ano de 2021</H3>
     
-            <p>Prova de tecnologia análise e desenvolvimento de sistemas (ADS):
-                <a Target = "_Blank" Href = "#">
-                    Gabarito
-                </a>
-            </p>
-    
-            <p>Gabarito da prova de tecnologia análise e desenvolvimento de sistemas (ADS):
-                <a Target = "_Blank" Href = "#">
-                    Prova
-                </a>
-            </p>
+          <p>Prova de tecnologia análise e desenvolvimento de sistemas (ADS):
+            <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_GB_tecnologia_analise_desenvolvimento_sistemas.pdf">
+              Gabarito
+            </a>
+          </p>
+      
+          <p>Gabarito da prova de tecnologia análise e desenvolvimento de sistemas (ADS):
+            <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+              Prova
+            </a>
+          </p>
+  
+          <H2>Simulado Enade - Análise e Desenvolvimento de Sistemas (2021)</H2>
+  
+          <a Href = "../Perguntas/Instructions.html">
+            <Input Type = "Button" Class = "button" Value = "Iniciar simulado"/>
+          </a>
+        </Div>
+      </Main>
             
-        <Footer >
-            <p align = "center">
-                <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
-                    Técnologo em Análise e Desenvolvimento de Sistemas (ADS)
-                </a>
+        <Footer>
+          <Div>
+            <p>
+              <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+                Técnologo em Análise e Desenvolvimento de Sistemas (ADS)
+              </a>
             </p>
 
-            <br>
-
-            <p align = "center">
-                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
-                    <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
-                </a>
-                |
-                <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
-                    <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
-                </a>
-                |
-                <a>
-                    <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
-                </a>
-            </p>
+            <Div Class = "fatec_sp_enade">
+              <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+                <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+              </a>
+              <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+                <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+              </a>
+              <a>
+                <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+              </a>
+            </Div>
+          </Div>
         </Footer>
     </Body>
-
 </HTML>

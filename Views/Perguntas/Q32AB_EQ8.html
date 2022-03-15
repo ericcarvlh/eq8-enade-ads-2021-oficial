@@ -5,37 +5,66 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Éric Carvalho"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Questão 32 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
     </Head>
 
     <Body>
-
-        <Div>
+        <Div Class = "numero-pergunta">
             <b>
-                Questão 32
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 32
+                </a>            
             </b>
         </Div>
 
-        <Div>
-            <p>
-                Um modelo de negócios descreve a lógica de criação, entrega e captura de valor por parte de uma <Br>
-                organização. A ferramenta de geração de modelo de negócios Canvas, desenvolvida por Osterwalder, <Br>
-                tem sido uma das mais utilizadas, principalmente entre as startups. O Canvas é dividido em nove <Br>
-                componentes básicos, que cobrem as quatro áreas principais de um negócio: clientes, oferta, infraestrutura <Br>
-                e viabilidade financeira. Os componentes são os seguintes: 1) segmentos de clientes; 2) proposta de valor; <Br>
-                3) canais; 4) relacionamento com cliente; 5) fontes de receita; 6) recursos principais; 7) atividades-chave; <Br>
-                8) parcerias principais; e 9) estrutura de custo.
-            </p>
-        </Div>
+        <Div  Class = "corpo-pergunta">
 
-        <Div>
-            <i>
-                OSTERWALDER, A.; PIGNEUR, Y. Business Model Generation - Inovação em Modelos de Negócios: <Br>
-                um manual para visionários, inovadores e revolucionários. Rio de Janeiro: Alta Books, 2011 (adaptado).
-            </i>
-        </Div>
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">31</a>
+                <a Class = "pergunta-selecionada" Href = "">32</a>
+                <a Href = "">33</a>
+                <a Href = "">></a>
+            </Div>
 
+            <Div Class = "texto-pergunta">
+                <p>
+                    Um modelo de negócios descreve a lógica de criação, entrega e captura de valor por parte de uma
+                    organização. A ferramenta de geração de modelo de negócios Canvas, desenvolvida por Osterwalder,
+                    tem sido uma das mais utilizadas, principalmente entre as startups. O Canvas é dividido em nove
+                    componentes básicos, que cobrem as quatro áreas principais de um negócio: clientes, oferta, infraestrutura
+                    e viabilidade financeira. Os componentes são os seguintes: 1) segmentos de clientes; 2) proposta de valor;
+                    3) canais; 4) relacionamento com cliente; 5) fontes de receita; 6) recursos principais; 7) atividades-chave;
+                    8) parcerias principais; e 9) estrutura de custo.
+                </p>
+            </Div>
+
+            <Div Class = "fonte-pergunta">
+                <Blockquote>
+                    <i>
+                        OSTERWALDER, A.; PIGNEUR, Y. Business Model Generation - Inovação em Modelos de Negócios:
+                        um manual para visionários, inovadores e revolucionários. Rio de Janeiro: Alta Books, 2011 (adaptado).
+                    </i>
+                </Blockquote>
+            </Div>
+
+            <Div Class = "enunciado-pergunta">
+                <p>Diante deste contexto, conclui-se que as startups</p>
+            </Div>
+
+            <Div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "A"/> A) financeiras desenvolvem primeiro o plano de negócios, para em seguida partir para o Canvas. </Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "B" Id = "alt-correta"/> B) de big data utilizam o Canvas para a modelagem da validação da ideia de negócio, ou seja, do problema a ser resolvido. </Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "C"/> C) de educação dispensam a utilização do Canvas, ou seja, os modelos de negócios deste segmento já nascem validados. </Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "D"/> D) de logística utilizam o plano de negócios ao invés do Canvas, ou seja, elas nascem a partir de um produto mínimo viável (MVP). </Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "E"/> E) de impacto social podem desconsiderar o componente 1 (segmentos de clientes), pois possuem somente um segmento. </Span>
+            </Div>
+
+        </Div>
     </Body>
 
 </HTML>

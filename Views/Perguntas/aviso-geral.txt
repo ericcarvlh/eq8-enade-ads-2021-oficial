@@ -1,0 +1,17 @@
+Enquanto vocês vão terminando as estruturas 
+eu irei terminar o design do site juntamente com 
+a responsividade, não implementem os itens da index
+em suas respectivas páginas.
+
+Recomendo a vocês estudarem JS, logo mais começamos.
+
+Pendencias: 
+
+INICIAR O ARTIGO -> preciso que alguem inicie o artigo URGENTE! se eu 
+não estiver enganado precisa fazer até a parte de metodologia, quem assumir me avise,
+irei fazer metade para auxiliar.
+
+Corrigir os itens que a prof solicitou -> este já esta em andamento, vai ser entregue 
+na proxima versão do site.
+
+ 

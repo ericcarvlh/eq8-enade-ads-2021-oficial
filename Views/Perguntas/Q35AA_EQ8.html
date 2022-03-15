@@ -5,40 +5,89 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Éric Carvalho"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Questão 35 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
     </Head>
 
     <Body>
-
         <Div>
             <b>
-                Questão 35
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 35
+                </a>            
             </b>
         </Div>
 
-        <Div>
-            <p>
-                Uma equipe de matemáticos foi contratada para proceder com a análise e especificação de critérios para <Br>
-                a identificação de potenciais clientes para uma empresa de seguros. Após a análise, a equipe determinou <Br>
-                que deve-se considerar as seguintes variáveis: <Br>
-            </p>
+        <Div  Class = "corpo-pergunta">
 
-            <p>
-                a) ser maior de idade. <Br>
-                b) possuir residência própria ou não. <Br>
-                c) possuir algum parente que já possui seguro da companhia <Br>
-            </p>
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">33</a>
+                <a Href = "">34</a>
+                <a Class = "pergunta-selecionada" Href = "">35</a>
+                <a Href = "">></a>
+            </Div>
 
-            <p>
-                Em função da análise realizada, a companhia pretende estipular a viabilidade ou não do seguro, além <Br>
-                de decidir seu preço. A equipe contratada modelou cada variável identificada utilizando as seguintes <Br>
-                funções booleanas
-            </p>
+            <Div Class = "texto-pergunta">
+                <p>
+                    Uma equipe de matemáticos foi contratada para proceder com a análise e especificação de critérios para
+                    a identificação de potenciais clientes para uma empresa de seguros. Após a análise, a equipe determinou
+                    que deve-se considerar as seguintes variáveis:
+                </p>
 
-            <img src="../../Images/Perguntas/Q35AA_ENADE_ADS_2021_EQ8.png">
+                <p>
+                    a) ser maior de idade.
+                    b) possuir residência própria ou não.
+                    c) possuir algum parente que já possui seguro da companhia
+                </p>
+
+                <p>
+                    Em função da análise realizada, a companhia pretende estipular a viabilidade ou não do seguro, além
+                    de decidir seu preço. A equipe contratada modelou cada variável identificada utilizando as seguintes
+                    funções booleanas
+                </p>
+
+                <p>
+                    Após essa modelagem matemática, a seguinte tabela foi obtida. Ela expressa, utilizando a notação de 
+                    lógica quantitativa, os critérios para estabelecimento de viabilidade e eventuais preços de seguros a 
+                    serem concedidos
+                </p>
+
+                <p>
+                    I(x): função que verifica se a pessoa x é maior de idade.
+                    R(x): função que verifica se a pessoa x possui residência própria.
+                    P(x,y): função que verifica se as pessoas x e y são parentes.
+                    S(x): função que verifica se a pessoa x já possui seguro da companhia.
+                </p>
+
+                <Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q35AA_ENADE_ADS_2021_EQ8.png">
+
+                <p>
+                    A tabela foi repassada à equipe de programadores, cenário comum em que profissionais de 
+                    diferentes áreas do conhecimento devem interagir a fim de obter as soluções desejadas. A solução 
+                    foi implementada utilizando a linguagem C. Considere que as funções I e R foram escritas e são 
+                    booleanas, operando de acordo com a definição dada pela equipe. A função “obtem” encapsula o 
+                    funcionamento das funções P e S. Ela percorre a base de dados da companhia e obtém um parente 
+                    da pessoa apontada por “p” que possua o seguro, caso exista. Caso contrário, ela devolve NULL.
+                </p>
+
+                <p Style = "background-color: red;">
+                    Inserir o codigo
+                </p>
+            </Div>
+
+            <Div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "A" Id = "alt-correta"/> A) I e II.</Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "B"/> B) II e III.</Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "C"/> C) III e IV.</Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "D"/> D) I, II e IV.</Span>
+                <Span> <Input Type = "Radio" Name = "Q29" Value = "E"/> E) I, III e IV.</Span>
+            </Div>
+        
         </Div>
-
     </Body>
 
 </HTML>
