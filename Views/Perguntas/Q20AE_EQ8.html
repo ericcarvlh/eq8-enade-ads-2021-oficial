@@ -5,64 +5,95 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Tony Bryan"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Questão 20 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
     </Head>
 
     <Body>
-
-        <Div>
+        <Div Class = "numero-pergunta">
             <b>
-                Questão 20
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 20
+                </a>            
             </b>
         </Div>
 
-        <Div>
-            <p>
-                Uma secretaria municipal de esportes decidiu criar e disponibilizar um site que sirva como portal de<Br>
-                comunicação com pessoas da terceira idade. A finalidade é fornecer orientações que propiciem práticas<Br>
-                para uma vida mais saudável, além de divulgar eventos esportivos ofertados pelo município para esse<Br>
-                público-alvo. O projeto ainda prevê a interação entre os usuários do site, por meio da publicação de fotos,<Br>
-                que podem ser curtidas e comentadas.
-            </p>
+        <Div  Class = "corpo-pergunta">
 
-            <p>
-                A iniciativa de criação do site foi embasada em uma pesquisa mostrando que a maioria da população de<Br>
-                terceira idade do município dispõe de acesso à internet, especialmente por meio de dispositivos móveis<Br>
-                smartphones e tablets), embora uma parcela dessa população prefira realizar o acesso com computadores<Br>
-                de mesa e notebooks.
-            </p>
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">19</a>
+                <a Class = "pergunta-selecionada" Href = "">20</a>
+                <a Href = "">21</a>
+                <a Href = "">></a>
+            </Div>
 
-            <p>
-                Considerando as informações do texto e as responsabilidades inerentes ao desenvolvimento do site,<Br>
-                avalie as afirmações a seguir.
-            </p>
-        <div>
-            <ol type="I">
-                <li>A segurança no uso é um fator crítico de usabilidade a ser considerado no projeto de interface para<Br>
+            <Div Class = "texto-pergunta">
+                <p>
+                    Uma secretaria municipal de esportes decidiu criar e disponibilizar um site que sirva como portal de<Br>
+                    comunicação com pessoas da terceira idade. A finalidade é fornecer orientações que propiciem práticas<Br>
+                    para uma vida mais saudável, além de divulgar eventos esportivos ofertados pelo município para esse<Br>
+                    público-alvo. O projeto ainda prevê a interação entre os usuários do site, por meio da publicação de fotos,<Br>
+                    que podem ser curtidas e comentadas.
+                </p>
+
+                <p>
+                    A iniciativa de criação do site foi embasada em uma pesquisa mostrando que a maioria da população de<Br>
+                    terceira idade do município dispõe de acesso à internet, especialmente por meio de dispositivos móveis<Br>
+                    smartphones e tablets), embora uma parcela dessa população prefira realizar o acesso com computadores<Br>
+                    de mesa e notebooks.
+                </p>
+            </Div>
+            
+            <Div Class = "enunciado-pergunta">  
+                <p>
+                    Considerando as informações do texto e as responsabilidades inerentes ao desenvolvimento do site,<Br>
+                    avalie as afirmações a seguir.
+                </p>
+
+                <ol type="I">
+                    <li>
+                        A segurança no uso é um fator crítico de usabilidade a ser considerado no projeto de interface para<Br>
                         o site, tendo em vista que pessoas da terceira idade são temerosas quanto ao registro de dados<Br>
                         pessoais e confidenciais em sites e aplicativos.
-                </li><Br>
-                <li>A responsividade, que pressupõe o uso de valores relativos para definir as dimensões de elementos<Br>   
-                        na estilização de páginas HTML, deve ser considerada na construção do site, tendo em vista que o<Br>
+                    </li>
+
+                    <li>
+                        A responsividade, que pressupõe o uso de valores relativos para definir as dimensões de elementos<Br>   
+                        a estilização de páginas HTML, deve ser considerada na construção do site, tendo em vista que o<Br>
                         acesso deve ocorrer através de dispositivos com diferentes tamanhos de tela.
-                </li><Br> 
-                <li>A construção de protótipos pode antecipar problemas de design de interação e minimizar custos<Br>
+                    </li>
+
+                    <li>
+                        A construção de protótipos pode antecipar problemas de design de interação e minimizar custos<Br>
                         de desenvolvimento e, por isso, é viável para estabelecer uma comunicação mais objetiva com o<Br>
                         público-alvo e assim possibilitar a validação de usabilidade e da experiência do usuário.
-                </li><Br>
-                <li>O design participativo é um processo de design de Interação Humano-Computador (IHC) viável<Br>
+                    </li>
+
+                    <li>
+                        O design participativo é um processo de design de Interação Humano-Computador (IHC) viável<Br>
                         para direcionar o projeto de interfaces e de experiência com o usuário do site, pois o público-alvo<Br>
                         tende a apresentar dificuldades no manuseio de tecnologias da informação e da comunicação.
-                </li>
-        </div>
+                    </li>
+                </ol>    
 
-        <div>
-            <p>
-                É correto apenas o que se afirma em
-            </p>
+                <p>
+                    É correto apenas o que se afirma em
+                </p>
+            </div>
+
+            <Div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q20" Value = "A"/> A) I e II.</Span>
+                <Span> <Input Type = "Radio" Name = "Q20" Value = "B"/> B) I e III. </Span>
+                <Span> <Input Type = "Radio" Name = "Q20" Value = "C"/> C) II e IV.</Span>
+                <Span> <Input Type = "Radio" Name = "Q20" Value = "D"/> D) I, III e IV.</Span>
+                <Span> <Input Type = "Radio" Name = "Q20" Value = "E" Id = "alt-correta"/> E) II, III e IV.</Span>
+            </Div>    
+
         </Div>
-
     </Body>
 
 </HTML>

@@ -9,7 +9,7 @@
 */
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
   margin: 0;
   padding: 0;
   outline: 0;
@@ -38,47 +38,41 @@ header {
   background-color: #FF9D3F; /* Definindo uma cor de fundo para o header. */
 }
 
-header img {
-  margin-left: 5px; /* Define uma margem em relação ao lado esquerdo. */
-}
-
 header nav ul {
-display: flex; 
+  display: flex; /* Definindo como os elementos serão dispostos na página. */
 }
 
 header nav ul li {
-list-style: none;
+  list-style: none; /* Definindo o estilo da lista. */
 }
 
 header nav ul li a {
-text-decoration: none;
-color: white;
-text-transform: uppercase;
-font-size: 1.4rem;
-padding: 24px;
-transition: all 250ms linear 0s;
+  text-decoration: none; /* Definindo uma decoração de texto, sendo o mesmo com diferentes tipos de linhas. */
+  color: white; /* Definindo uma cor para a palavra. */
+  text-transform: capitalize; /* Definindo a capitalização das palavras (maiuscula, minuscuça etc). */
+  font-size: 1.4rem; /* Definindo o tamanho da fonte. */
+  padding: 24px; /* Definindo uma distância das boras em relação ao conteúdo. */
+  transition: all 250ms linear 0s; /* definindo a transição entre os elementos. */
 }
 
 header nav ul li a:hover {
-background: rgba(255,255,255, 0.15)
+  background: rgba(255, 255, 255, 0.267) /* Definindo uma cor quando o mouse for sobreposto ao elemento. */
 }
 
 h2 {
-color: rgb(75, 75, 75);
-font-size: 3.6rem;
-line-height: 4.6rem;
+  font-size: 3.6rem; /* Definindo o tamanho da fonte.*/
+  line-height: 4.6rem; /* Definindo o espaçamento entre as linhas do texto. */
 }
 
 h3 {
-color: rgb(75, 75, 75);
-font-size: 2.8rem;
-line-height: 3.8rem;
+  font-size: 2.8rem; /* Definindo o tamanho da fonte.*/
+  line-height: 3.8rem; /* Definindo o espaçamento entre as linhas do texto. */
 }
 
 header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Definindo como os elementos serão dispostos na página. */
+  align-items: center; /* Definindo o alinhamento dos itens */
+  justify-content: space-between; /*  */
   width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
   max-width: 1400px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
   margin: auto;
@@ -92,21 +86,21 @@ header .container {
 }
 
 .logo_inep{
-    padding: 13px; 
-    background-color: #FFB74D;
+  padding: 13px; 
+  background-color: #FFB74D;
 }
 
 .logo_enade{
-    margin-left: 0.5px;
-    align-items: center;
+  margin-left: 0.5px;
+  align-items: center;
 }
 
 .logo_enade b{
-   font-size: 3rem;
-   color: #fff;
-   letter-spacing: 1.5px;
-   padding: 5px;
-   background-color: #FFA726;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 1.5px;
+  padding: 5px;
+  background-color: #FFA726;
 }
 
 .button {
@@ -127,10 +121,6 @@ header .container {
   opacity: 0.9;
 }
 
-/*
-HERO
-*/
-
 section.hero {
   margin: 80px 0;
 }
@@ -150,25 +140,15 @@ section.hero p {
   margin: 10px 0px 0px;
 }
 
-
-
-/*=============== 
-MAIN
-==================*/
 main {
+  margin-top: 40px;
   margin-bottom: 80px;
 }
-/*=============== 
-CARDS
-==================*/
+
 .cards {
   width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
-  max-width: 1400px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
+  max-width: 300px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
   margin: auto;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
-  grid-gap: 20px;
 }
 
 .text--medium {
@@ -181,19 +161,18 @@ CARDS
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #7159c1;
+  background-color: rgb(255, 166, 0);
   cursor: pointer;
   transition: all 0.3s ease 0s;
-
 }
 
 .card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-10px); /* Definindo uma transição quando o card for sobreposto pelo m pointer. */
 }
 
 .image {
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 55.25%; /* 16:9 */
 
   overflow: hidden;
   position: relative;
@@ -208,7 +187,7 @@ CARDS
 }
 
 .content {
-  margin: 20px;
+  margin: 20px; /* Definindo a margem do card */
 }
 
 .title {
@@ -220,18 +199,6 @@ CARDS
   align-self: end;
   align-items: center;
 }
-
-.price {
-  margin-left: auto;
-  padding: 5px 20px;
-  border-radius: 20px;
-  background-color: #7159c1;
-  filter: brightness(90%);
-}
-
-/*=============== 
-MODAL
-==================*/
 
 .modal-overlay {
   display: flex;
@@ -318,8 +285,7 @@ MODAL
   z-index: -99;
   background-color: white;
 }
-.video-foreground,
-.video-background iframe {
+.video-foreground, .video-background iframe {
   position: absolute;
   top: 50%;
   left: 50%;

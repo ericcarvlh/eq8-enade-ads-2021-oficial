@@ -5,63 +5,91 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Tony Bryan"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Questão 19 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
     </Head>
 
     <Body>
-
-        <Div>
+        <Div Class = "numero-pergunta">
             <b>
-                Questão 19
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 19
+                </a>            
             </b>
         </Div>
 
-        <Div>
-            <p>
-                Arquitetura de software é uma representação que permite analisar a efetividade do projeto no<Br>
-                entendimento dos requisitos declarados. Durante a fase de concepção da arquitetura, podem-se<Br>
-                considerar alternativas de arquitetura em um estágio em que mudanças ainda são realizadas com menor<Br>
-                esforço, diminuindo riscos associados à construção do software ainda na fase inicial.
-            </p>
-        </div>
+        <Div  Class = "corpo-pergunta">
+
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">18</a>
+                <a Class = "pergunta-selecionada" Href = "">19</a>
+                <a Href = "">20</a>
+                <a Href = "">></a>
+            </Div>
+
+            <Div Class = "texto-pergunta">
+                <p>
+                    Arquitetura de software é uma representação que permite analisar a efetividade do projeto no<Br>
+                    entendimento dos requisitos declarados. Durante a fase de concepção da arquitetura, podem-se<Br>
+                    considerar alternativas de arquitetura em um estágio em que mudanças ainda são realizadas com menor<Br>
+                    esforço, diminuindo riscos associados à construção do software ainda na fase inicial.
+                </p>
+            </div>
     
-        <div>
-            <i>
-                PRESSMAN, R. S. Engenharia de Software: uma abordagem profissional. 8. ed. Porto Alegue: AMGH, 2016 (adaptado).
-            </i>
-        </Div>
+            <Div Class = "fonte-pergunta">
+                <Blockquote>
+                    <i>
+                        PRESSMAN, R. S. Engenharia de Software: uma abordagem profissional. 8. ed. Porto Alegue: AMGH, 2016 (adaptado).
+                    </i>
+                </Blockquote>
+            </Div>
     
-        <div>
-            <p>
-                A respeito dos estilos e padrões arquiteturais contidos na engenharia de software, avalie as afirmações<Br>
-                a seguir.<Br>
-            </p>
+            <Div Class = "enunciado-pergunta">
+                <p>
+                    A respeito dos estilos e padrões arquiteturais contidos na engenharia de software, avalie as afirmações<Br>
+                    a seguir.
+                </p>
+            
+                <ol type="I">
+                    <li>
+                        Em arquiteturas orientadas a objetos, a comunicação entre os componentes do software é realizada<br>
+                        por intermédio da troca de mensagens.
+                    </li>
+
+                    <li>
+                        As arquiteturas monolíticas consistem de um sistema dividido em pequenas partes, possibilitando<br>
+                        que estas tenham sua manutenção, execução e evolução individual.
+                    </li>
+
+                    <li>
+                        No padrão arquitetural Modelo-Visão-Controle (MVC), a camada de Modelo armazena as interações<br>
+                        realizadas no Controle, podendo ser apresentados/manipulados posteriormente na Visão.
+                    </li>
+
+                    <li>
+                        Nas arquiteturas microsserviços, o software possui componentes altamente acoplados, dificultando<br>
+                        a manutenção.
+                    </li>           
+                </ol>
+
+                <p>
+                    É correto apenas o que se afirma em
+                </p>
+            </div>
+
+            <Div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q19" Value = "A" Id = "alt-correta"/> A) I e III.</Span>
+                <Span> <Input Type = "Radio" Name = "Q19" Value = "B"/> B) II e III. </Span>
+                <Span> <Input Type = "Radio" Name = "Q19" Value = "C"/> C) II e IV.</Span>
+                <Span> <Input Type = "Radio" Name = "Q19" Value = "D"/> D) I, II e IV.</Span>
+                <Span> <Input Type = "Radio" Name = "Q19" Value = "E"/> E) I, III e IV.</Span>
+            </Div>
+
         </Div>
-
-        <div>
-            <ol type="I">
-                <li>Em arquiteturas orientadas a objetos, a comunicação entre os componentes do software é realizada<Br>
-                    por intermédio da troca de mensagens.
-                </li><Br>
-                <li>As arquiteturas monolíticas consistem de um sistema dividido em pequenas partes, possibilitando<Br>
-                    que estas tenham sua manutenção, execução e evolução individual.
-                </li><Br> 
-                <li>No padrão arquitetural Modelo-Visão-Controle (MVC), a camada de Modelo armazena as interações<Br>
-                    realizadas no Controle, podendo ser apresentados/manipulados posteriormente na Visão.
-                </li><Br>
-                <li>Nas arquiteturas microsserviços, o software possui componentes altamente acoplados, dificultando<Br>
-                    a manutenção.
-                </li>              
-            </ol>
-        </Div>
-
-        <Div>
-            <p>
-                É correto apenas o que se afirma em
-            </p>
-        </div>
-
     </Body>
 
 </HTML>

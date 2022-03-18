@@ -5,42 +5,65 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Tony Bryan"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Questão 15 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
     </Head>
 
     <Body>
-
-        <Div>
+        <Div Class = "numero-pergunta">
             <b>
-                Questão 15
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 15
+                </a>            
             </b>
         </Div>
 
-        <Div>
-            <p>
-                Uma fundação municipal de arte e cultura oferece cursos para crianças e adolescentes de até 16 anos.<Br>
-                Os registros de matrículas são realizados em uma planilha eletrônica ilustrada a seguir, o que dificulta bastante<Br>
-                o controle dos dados frente ao número expressivo de estudantes, muitos dos quais solicitam matrícula em mais<Br>
-                de um curso. A administração da fundação, então, solicitou o desenvolvimento de um programa para facilitar<Br>
-                o registro e a consulta desses dados, incluindo-se a data de efetivação de cada matrícula, para fins de controles<Br>
-                específicos da secretaria
-            </p>
+        <Div  Class = "corpo-pergunta">
 
-            <img src="../../Images/Perguntas/Q15AB_ENADE_ADS_2021_EQ8.png"> 
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">14</a>
+                <a Class = "pergunta-selecionada" Href = "">15</a>
+                <a Href = "">16</a>
+                <a Href = "">></a>
+            </Div>
 
-            <p>
-                A equipe de desenvolvimento de softwares da prefeitura, após uma breve entrevista com a administração<Br>
-                da fundação e de posse da planilha eletrônica, modelou um Diagrama de Classes como parte da<Br>
-                especificação dos requisitos do sistema.
-            </p>
+            <Div Class = "texto-pergunta">
+                <p>
+                    Uma fundação municipal de arte e cultura oferece cursos para crianças e adolescentes de até 16 anos.<Br>
+                    Os registros de matrículas são realizados em uma planilha eletrônica ilustrada a seguir, o que dificulta bastante<Br>
+                    o controle dos dados frente ao número expressivo de estudantes, muitos dos quais solicitam matrícula em mais<Br>
+                    de um curso. A administração da fundação, então, solicitou o desenvolvimento de um programa para facilitar<Br>
+                    o registro e a consulta desses dados, incluindo-se a data de efetivação de cada matrícula, para fins de controles<Br>
+                    específicos da secretaria
+                </p>
 
-            <p>
-                Considerando o cenário descrito, assinale a opção a seguir que exibe o Diagrama de Classes modelado<Br>
-                corretamente pela equipe de desenvolvimento.
-            </p>
+                <Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q15AB_ENADE_ADS_2021_EQ8.png"> 
+
+                <p>
+                    A equipe de desenvolvimento de softwares da prefeitura, após uma breve entrevista com a administração<Br>
+                    da fundação e de posse da planilha eletrônica, modelou um Diagrama de Classes como parte da<Br>
+                    especificação dos requisitos do sistema.
+                </p>
+
+                <p>
+                    Considerando o cenário descrito, assinale a opção a seguir que exibe o Diagrama de Classes modelado<Br>
+                    corretamente pela equipe de desenvolvimento.
+                </p>
+            </Div>
+
+            <div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q15" Value = "A"/> A) </Span>
+                <Span> <Input Type = "Radio" Name = "Q15" Value = "B" Id = "alt-correta"/> B) </Span>
+                <Span> <Input Type = "Radio" Name = "Q15" Value = "C"/> C) </Span>
+                <Span> <Input Type = "Radio" Name = "Q15" Value = "D"/> D) </Span>
+                <Span> <Input Type = "Radio" Name = "Q15" Value = "E"/> E) </Span>
+            </div>
+
         </Div>
-
     </Body>
 
 </HTML>

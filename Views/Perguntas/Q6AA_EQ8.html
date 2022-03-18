@@ -1,103 +1,91 @@
-<!DOCTYPE html> <!-- Abrindo a tag DOCTYPE para definir o tipo HTML-->
-<html lang="pt-br"> <!-- Abrindo a tag html-->
-    <head> <!-- Abrindo a tag head, para o cabeçalho da página-->
-        <meta charset="UTF-8"> <!-- Tag para o documento aceitar caracteres especiais-->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/estilo.css"> <!-- Linkando a página ao css externo-->
-        <title>Questão 6</title> <!-- Definindo o título da página-->
-    </head> <!-- Fechando a tag para do cabeçalho-->
-    <body> <!-- Abrindo a tag do corpo da página-->
-        <header> <!-- Abrindo a tag Header, para fazer o cabeçalho da página-->
-            <div class="logos"> <!-- Abrindo uma div para agrupar as imagens dos logos, dando classe "logos"-->
-                <img src="imagens/ofc_logo_inep.svg" class="inep"> <!-- Inserindo a imagem do logo do inep-->
-                <img src="imagens/logo_enade.png" class="enade"> <!-- Inserindo a imagem do logo do enade-->
-            </div> <!-- Fechando a div logos-->
-            <nav> <!-- Abrindo uma nav, para colocar os liks de acesso-->
-                <ul> <!-- Abrindo tag ul para lista não ordenda-->
-                    <li><a href="#">Início</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de início-->
-                    <li><a href="#">Crédito</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de créditos-->
-                    <li><a href="#">Contato</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de contato-->
-                    <li><a href="#">Sobre</a></li> <!-- Abrindo linhas na ul, e colocando o link de acesso para a página de sobre-->
-                </ul> <!-- Fechando a tag da lista não ordenada-->
-            </nav> <!-- Fechando a navegação-->
-        </header> <!-- Fechando o cabecalho-->
-        <main> <!-- Abrindo a tag main, para colocar o conteúdo principal-->
-            <nav class="nav_questoes"> <!-- Abrindo uma navegação, para nevegar pelas questões-->
-                <a href="Q5A_EQ8.html"><</a> <!-- Colocando link para a questão anterior-->
-                <a href="Q7C_EQ8.html">7</a> <!-- Colocando link para outra questão-->
-                <a href="#">8</a> <!-- Colocando link para outra questão-->
-                <a href="#">9</a> <!-- Colocando link para outra questão-->
-                <a href="Q7C_EQ8.html">></a> <!-- Colocando link para a próxima questão-->
-            </nav> <!-- Fechando a navegação para as questões-->
+<!DocType HTML>
 
-            <form> <!-- Abrindo a tag form, para fazer um formulário-->
-                <h2>Questão 6</h2> <!-- Colocando a tag h2 para colocar o titulo da questão-->
-                <section class="questao"> <!-- Abrindo uma section "questao", para escrever a questão-->
-                    <!-- As linhas abaixo dentro da tag p (paragrafo), é o enunciado da questão-->
-                    <p>A pandemia ocasionada pelo novo Coronavírus gerou impactos negati vos na economia e nos negócios, 
-                        intensifi cando problemas sociais no mundo todo. Nos Estados Unidos, um estudo realizado com a 
-                        parceria de duas importantes universidades verifi cou que a expectati va de vida dos norte-americanos 
-                        caiu 1,1 ano em 2020. A nova expectati va é de 77,4 anos. De acordo com o estudo, esta foi a maior queda 
-                        anual da expectati va de vida já registrada nos últi mos 40 anos. O declínio é ainda maior se considerada a 
-                        expectati va de vida para negros que moram no país, cuja queda foi de 2,1 anos. Para a população lati na, 
-                        essa queda foi de 3 anos. O declínio na expectati va de vida dos lati nos é signifi cati vo, uma vez que eles 
-                        apresentam menor incidência de condições crônicas que são fatores de risco para a Covid-19 em relação 
-                        às populações de brancos e negros.</p>
-                </section> <!-- Fechando a section questao-->
+<HTML Lang = "PT-BR">
 
-                <!-- Abrindo a tag p para a fonte da questão-->
-                <p class="fonte">LOUREIRO, R. Covid-19 reduz gravemente expectativa de vida de negros e latinos nos EUA. Revista Exame, 2021 (adaptado).</p>
-                <hr> <!-- Usandoa a tag hr para fazer uma linha para separar o conteúdo-->
+    <Head>
+        <Meta CharSet = "UTF-8"/>
+        <Meta Name = "Author" Content = "Paulo Felipe Siva Simão"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
+        <Title>Questão 6 - SimuNade</Title>
+        <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
+    </Head>
 
-                <!-- Utilizando as seguintes tags p para fazer o enunciado da questão-->
-                <p>Considerando as informações apresentadas no texto, avalie as asserções a seguir e a relação proposta 
-                    entre elas.</p>
-                <p>I. O efeito desproporcional da pandemia da Covid-19 na expectati va de vida da população negra e 
-                    lati no-americana estabelece relação com sua situação de vulnerabilidade social.</p>
-                <p class="porque"><strong>PORQUE</strong></p>
-                <P>II. Uma hipótese que pode ser levantada quanto à diminuição da expectati va de vida de negros e 
-                    lati no-americanos está relacionada às suas precárias condições de trabalho, levando-os a maior 
-                    possibilidade de exposição ao contágio pelo novo Coronavírus.</P>
-                <P>A respeito dessas asserções, assinale a opção correta.</P>
+    <Body>
+        <Div Class = "numero-pergunta">
+            <b>
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 6
+                </a>            
+            </b>
+        </Div>
 
-                <input type="radio" name="alternativa" value="a"> <!-- Fazendo um radio button para a alternativa-->
-                <!-- Tag label para colocar um texto referente ao radio button-->
-                <label for="a">As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.</label>
-                <br> <!-- Pulando uma linha-->
+        <Div  Class = "corpo-pergunta">
 
-                <input type="radio" name="alternativa" value="b"> <!-- Fazendo um radio button para a alternativa-->
-                <!-- Tag label para colocar um texto referene ao radio button-->
-                <label for="b">As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.</label>
-                <br> <!-- Pulando uma linha-->
+            <Div Class = "nav-pergunta">
+                <a Href = "Q5AA_EQ8.html"><</a>
+                <a Href = "Q5AA_EQ8.html">5</a>
+                <a Class="pergunta-selecionada" Href = "Q6AA_EQ8.HTML">6</a>
+                <a Href = "Q7AC_EQ8.html">7</a>
+                <a Href = "Q7AC_EQ8.html">></a>
+            </Div>
 
-                <input type="radio" name="alternativa" value="c"> <!-- Fazendo um radio button para a alternativa-->
-                <!-- Tag label para colocar um texto referente ao radio button-->
-                <label for="c">A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.</label>
-                <br> <!-- Pulando uma linha-->
+            <Div Class = "texto-pergunta">
+                <p>
+                    A pandemia ocasionada pelo novo Coronavírus gerou impactos negati vos na economia e nos negócios, 
+intensifi cando problemas sociais no mundo todo. Nos Estados Unidos, um estudo realizado com a 
+parceria de duas importantes universidades verifi cou que a expectati va de vida dos norte-americanos 
+caiu 1,1 ano em 2020. A nova expectati va é de 77,4 anos. De acordo com o estudo, esta foi a maior queda 
+anual da expectati va de vida já registrada nos últi mos 40 anos. O declínio é ainda maior se considerada a 
+expectati va de vida para negros que moram no país, cuja queda foi de 2,1 anos. Para a população lati na, 
+essa queda foi de 3 anos. O declínio na expectati va de vida dos lati nos é signifi cati vo, uma vez que eles 
+apresentam menor incidência de condições crônicas que são fatores de risco para a Covid-19 em relação 
+às populações de brancos e negros.
+                </p>
+            </Div>
 
-                <input type="radio" name="alternativa" value="d"> <!-- Fazendo um radio button para a alternativa-->
-                <!-- Tag label para colocar um texto referente ao radio button-->
-                <label for="d">A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.</label>
-                <br> <!-- Pulando uma linha-->
+            <Div Class = "fonte-pergunta">
+                <Blockquote>
+                    <i>
+                        LOUREIRO, R. Covid-19 reduz gravemente expectativa de vida de negros e latinos nos EUA. Revista Exame, 2021 (adaptado).
+                    </i>
+                </Blockquote>
+            </Div>
 
-                <input type="radio" name="alternativa" value="e"> <!-- Fazendo um radio button para a alternativa-->
-                <!-- Tag label para colocar um texto referente ao radio button-->
-                <label for="e">As asserções I e II são proposições falsas.</label>
-                <br> <!-- Tag para pular uma linha-->
+            <Div Class = "enunciado-pergunta">
+                <p>
+                    Considerando as informações apresentadas no texto, avalie as asserções a seguir e a relação proposta 
+entre elas
+                </p>
 
-                <br> <!-- Tag para pular uma linha-->
-                <div class="botoes"> <!-- Abrindo uma div "botoes", para colocar os botoes-->
-                    <button id="finalizar">Finalizar</button> <!-- Botao para finalizar-->
-                    <button id="revisar">Revisar</button> <!-- Botao para revisar-->
-                    <button id="corrogir">Corrigir</button> <!-- Botao para corrigir-->
-                </div> <!-- Fechando a div botoes-->
-            </form> <!-- Fechando o formulário-->
-        </main> <!-- Fechando a tag main-->
-        <footer> <!-- Abrindo a tag fotter, para fazer o rodapé da página-->
-            <a href="#"><img src="imagens/logo_fatec.png" class="logo_fatec"></a> <!-- Colocando uma imagem como link para a fatec-->
-            <a href="#"><img src="imagens/logo_sp.png" class="logo_sp"></a> <!-- Colocando uma imagem como link-->
-            <a href="#"><img src="imagens/cps-logo.png" class="logo_cps"></a> <!-- Colocando uma imagem como link-->
-        </footer> <!-- Fechando o rodapé da página-->
-    </body> <!-- Fechando o corpo da página-->
-</html> <!-- Fechando a tag HTML-->
+                <p>
+                    I. O efeito desproporcional da pandemia da Covid-19 na expectati va de vida da população negra e 
+lati no-americana estabelece relação com sua situação de vulnerabilidade social. 
+                </p>
+
+                <p>
+                    PORQUE
+                </p>
+
+                <p>
+                    II. Uma hipótese que pode ser levantada quanto à diminuição da expectati va de vida de negros e 
+lati no-americanos está relacionada às suas precárias condições de trabalho, levando-os a maior 
+possibilidade de exposição ao contágio pelo novo Coronavírus.
+                </p>
+
+                <p>
+                    A respeito dessas asserções, assinale a opção correta.
+                </p>
+            </Div>
+
+            <Div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q6" Value = "A" Id = "alt-correta"/> A) As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I. </Span>
+                <Span> <Input Type = "Radio" Name = "Q6" Value = "B"/> B) As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I. </Span>
+                <Span> <Input Type = "Radio" Name = "Q6" Value = "C"/> C) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa. </Span>
+                <Span> <Input Type = "Radio" Name = "Q6" Value = "D"/> D) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira. </Span>
+                <Span> <Input Type = "Radio" Name = "Q6" Value = "E"/> E) As asserções I e II são proposições falsas. </Span>
+            </Div>
+        </Div>
+    </Body>
+</HTML>

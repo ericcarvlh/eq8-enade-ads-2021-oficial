@@ -4,34 +4,61 @@
 	
 	<head>
 		<Meta CharSet = "UTF-8"/>
-		<Title>Questão 09 - SimuNade</Title>
 		<Meta Name = "Author" Content = "Raul Mascarenhas"/>
+		<Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
+		<Title>Questão 09 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
 	</head>
 
 	<body>
-		<div>
+		<div class = "numero-pergunta">
 			<b>
-				Questão 09
+				<a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 09 
+                </a>
 			</b>
 		</div>
 
-		<div>
-			<p>
-				A etapa de definição de requisitos é voltada para estabelecer quais as funções são requeridas pelo sistema<br> e as restrições sobre a operação e o desenvolvimento do software. Os requisitos de software podem ser<br> classificados como requisitos funcionais e não funcionais.
-			</p>
-		</div>
+		<div class = "corpo-pergunta">
 
-		<div>
-			<i>
-				SOMMERVILLE, I. <b>Engenharia de Software</b>, 10. ed. São Paulo: Pearson Education, 2019 (adaptado).
-			</i>
-		</div>
+			<Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">08</a>
+                <a Class = "pergunta-selecionada" Href = "">09</a>
+                <a Href = "">10</a>
+                <a Href = "">></a>
+            </Div>
 
-		<div>
-			<p>
-				Considerando as informações do texto, assinale a alternativa em que o item é um requisito funcional.
-			</p>
+            <div class = "texto-pergunta">
+				<p>
+					A etapa de definição de requisitos é voltada para estabelecer quais as funções são requeridas pelo sistema<br>e as restrições sobre a operação e o desenvolvimento do software.
+					Os requisitos de software podem ser<br> classificados como requisitos funcionais e não funcionais.
+				</p>
+			</div>
+
+			<div class = "fonte-pergunta">
+				<blockquote>
+					<i>
+						SOMMERVILLE, I. <b>Engenharia de Software</b>, 10. ed. São Paulo: Pearson Education, 2019 (adaptado).
+					</i>
+				</blockquote>
+			</div>
+
+			<div class = "enunciado-pergunta">
+				<p>
+					Considerando as informações do texto, assinale a alternativa em que o item é um requisito funcional.
+				</p>
+			</div>
+
+			<div class = "alternativas-pergunta">
+				<span><Input Type = "Radio" Name = "Q09" Value = "A"/> A) O software deve ser operacionalizado no sistema Linux. </span>
+				<span><Input Type = "Radio" Name = "Q09" Value = "B"/> B) O tempo de desenvolvimento não deve ultrapassar seis meses. </span>
+				<span><Input Type = "Radio" Name = "Q09" Value = "C" Id = "alt-correta"/> C) O software deve emitir relatórios de compras a cada quinze dias. </span>
+				<span><Input Type = "Radio" Name = "Q09" Value = "D"/> D) O tempo de resposta do sistema não deve ultrapassar 30 segundos. </span>
+				<span><Input Type = "Radio" Name = "Q09" Value = "E"/> E) A base de dados deve ser protegida para acesso apenas de usuários autorizados. </span>
+			</div>
 		</div>
 	</body>
 </html>

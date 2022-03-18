@@ -4,40 +4,69 @@
 	
 	<head>
 		<Meta CharSet = "UTF-8"/>
-		<Title>Questão 13 - SimuNade</Title>
 		<Meta Name = "Author" Content = "Raul Mascarenhas"/>
-        <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+		<Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
+		<Title>Questão 13 - SimuNade</Title>
+		<Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
 	</head>
 
 	<body>
-		<div>
+		<div class = "numero-pergunta">
 			<b>
-				Questão 13
+				<a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 13
+                </a>  
 			</b>
 		</div>
 
-		<div>
-			<p>
-				Considere que as variáveis <b>pilha</b> e <b>fila</b> correspondem, respectivamente, às estruturas de dados do tipo<br>
-				Pilha e Fila. Para testar as duas estruturas, um programador realizou a série de operações a seguir.<br><br>
+		<div class = "corpo-pergunta">
 
-				Pilha <b>pilha</b> = new Pilha();<br>
-				Fila <b>fila</b> = new Fila();<br>
-				<b>pilha</b>.push(‘A’);<br>
-				<b>pilha</b>.push(‘B’);<br>
-				<b>pilha</b>.push(‘C’);<br>
-				<b>fila</b>.enqueue(pilha.top());<br>
-				<b>fila</b>.enqueue(pilha.top());<br>
-				<b>fila</b>.enqueue(‘D’);<br>
-				<b>pilha</b>.push(fila.dequeue());<br>
-				<b>fila</b>.enqueue(fila.dequeue());<br>
-				<b>fila</b>.enqueue(pilha.pop());<br>
-				<b>pilha</b>.push(‘E’);<br>
-				<b>fila</b>.enqueue(‘E’);<br>
-				<b>pilha</b>.pop();<br><br>
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">12</a>
+                <a Class = "pergunta-selecionada" Href = "">13</a>
+                <a Href = "">14</a>
+                <a Href = "">></a>
+            </Div>
 
-				Após essas operações, ao imprimir o conteúdo de <b>pilha</b> e <b>fila</b>, respectivamente, seria exibido:
-			</p>
+            <div class = "texto-pergunta">
+				<p>
+					Considere que as variáveis <b>pilha</b> e <b>fila</b> correspondem, respectivamente, às estruturas de dados do tipo<br>Pilha e Fila. Para testar as duas estruturas, um programador realizou a série de operações a seguir.<br><br>
+				</p>
+
+				<p>
+					Pilha <b>pilha</b> = new Pilha();<br>
+					Fila <b>fila</b> = new Fila();<br>
+					<b>pilha</b>.push(‘A’);<br>
+					<b>pilha</b>.push(‘B’);<br>
+					<b>pilha</b>.push(‘C’);<br>
+					<b>fila</b>.enqueue(pilha.top());<br>
+					<b>fila</b>.enqueue(pilha.top());<br>
+					<b>fila</b>.enqueue(‘D’);<br>
+					<b>pilha</b>.push(fila.dequeue());<br>
+					<b>fila</b>.enqueue(fila.dequeue());<br>
+					<b>fila</b>.enqueue(pilha.pop());<br>
+					<b>pilha</b>.push(‘E’);<br>
+					<b>fila</b>.enqueue(‘E’);<br>
+					<b>pilha</b>.pop();<br><br>
+				</p>
+			</div>
+
+			<div class = "enunciado-pergunta">
+				<p>
+					Após essas operações, ao imprimir o conteúdo de <b>pilha</b> e <b>fila</b>, respectivamente, seria exibido:
+				</p>
+			</div>
+
+			<div class = "alternativas-pergunta">
+				<span><Input Type = "Radio" Name = "Q13" Value = "A"/> A) pilha: topo → C → A → E. fila: início → D → A → A → E. </span>
+				<span><Input Type = "Radio" Name = "Q13" Value = "B"/> B) pilha: topo →A. fila: início → D → B → C → E. </span>
+				<span><Input Type = "Radio" Name = "Q13" Value = "C" Id = "alt-correta"/> C) pilha: topo → C → B → A.fila: início → D → C → C → E. </span>
+				<span><Input Type = "Radio" Name = "Q13" Value = "D"/> D) pilha: topo → B → A.fila: início → D → B → C → E. </span>
+				<span><Input Type = "Radio" Name = "Q13" Value = "E"/> E) pilha: topo → C → B → A.fila: início → D → B → C → E. </span>
+			</div>
 		</div>
 	</body>
 </html>

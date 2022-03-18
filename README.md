@@ -6,9 +6,11 @@ Foi desenvolvido um projeto chamado SimuNade, com 5 contribuientes sob a orienta
 
 ## Padrão de nomenclatura adotado:
 
-Em relação as perguntas temos:
+Em relação as perguntas:
 
 `Q1AE_EQ8` -> onde "Q" significa questão, "1" do número da questão, "A" de alternativa, "E" de alternativa correta e, "EQ8" significa Equipe 8.
+
+Em relação as imagens:
 
 `Q2AC_ENADE_ADS_2021_EQ8.png` -> onde "Q" significa questão, "2" do número da questão, "A" de alternativa, "C" de alternativa correta, "ADS" Análise e Desenvolvimento de Sistemas e, "EQ8" significa Equipe 8.
 

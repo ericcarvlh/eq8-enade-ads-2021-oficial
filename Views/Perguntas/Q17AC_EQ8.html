@@ -5,33 +5,56 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Tony Bryan"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Questão 17 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
     </Head>
 
     <Body>
-
-        <Div>
+        <Div Class = "numero-pergunta">
             <b>
-                Questão 17
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 17
+                </a>            
             </b>
         </Div>
 
-        <Div>
-            <p>
-                O modelo de dados relacional a seguir representa de forma simplificada o banco de dados para um<Br>
-                sistema de informação bancário:
-            </p>
+        <Div  Class = "corpo-pergunta">
+
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">16</a>
+                <a Class = "pergunta-selecionada" Href = "">17</a>
+                <a Href = "">18</a>
+                <a Href = "">></a>
+            </Div>
+
+            <Div Class = "texto-pergunta">
+                <p>
+                    O modelo de dados relacional a seguir representa de forma simplificada o banco de dados para um<Br>
+                    sistema de informação bancário:
+                </p>
                 
-            <img src="../../Images/Perguntas/Q17AC_ENADE_ADS_2021_EQ8.png"> 
+                <Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q17AC_ENADE_ADS_2021_EQ8.png"> 
 
-            <p>
-                Usando a linguagem SQL (Structured Query Language) indique a consulta que recupera o nome dos<Br>
-                clientes e o valor médio movimentado por eles em sua conta até o momento. Primeiro devem ser exibidos<Br>
-                os clientes com maior média de valor movimentado.
-            </p>
+                <p>
+                    Usando a linguagem SQL (Structured Query Language) indique a consulta que recupera o nome dos<Br>
+                    clientes e o valor médio movimentado por eles em sua conta até o momento. Primeiro devem ser exibidos<Br>
+                    os clientes com maior média de valor movimentado.
+                </p>
+            </Div>
+
+            <div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q17" Value = "A"/> A) <Img Src = "../Imagens/Alternativas/Q17_alt_A.png"/></Span>
+                <Span> <Input Type = "Radio" Name = "Q17" Value = "B"/> B) </Span>
+                <Span> <Input Type = "Radio" Name = "Q17" Value = "C" Id = "alt-correta"/> C) </Span>
+                <Span> <Input Type = "Radio" Name = "Q17" Value = "D"/> D) </Span>
+                <Span> <Input Type = "Radio" Name = "Q17" Value = "E"/> E) </Span>
+            </div>
+
         </Div>
-
     </Body>
 
 </HTML>

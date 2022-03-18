@@ -10,8 +10,6 @@
       <Link Rel = "Icon" href ="http://enade.inep.gov.br/enade/favicon.ico"/>
       <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
       <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
-      <Link Rel = "Script" Href = "../../js/video.js"/>
-      <Link Rel = "Script" Href = "../../js/menu.js"/>
     </Head>
 
     <Body>
@@ -53,15 +51,15 @@
       </Header>
 
       <Main>
-        <Div>
+        <Div Class = "info-enade">
           <Section class="cards">
             <Div class="card">
               <Picture Class = "image" Alt = "Imagem do video">
-                <Source Media = "(min-width: 768px)" SrcSet = "https://i.ytimg.com/vi/avJZ2mtFljc/maxdefault.jpg"/>
+                <Source Media = "(min-width: 768px)" SrcSet = "https://i.ytimg.com/vi/avJZ2mtFljc/maxresdefault.jpg"/>
                 <Source Media = "(min-width: 320px)" SrcSet = "https://i.ytimg.com/vi/avJZ2mtFljc/hqdefault.jpg"/>
                 <Source Media = "(min-width: 10px)" SrcSet = "https://i.ytimg.com/vi/avJZ2mtFljc/mqdefault.jpg"/>
 
-                <img src="link-do-video" />
+                <Img src="https://i.ytimg.com/vi/avJZ2mtFljc/hqdefault.jpg" />
               </Picture>
               <Div class="content">
                 <p class="title text--medium">
@@ -74,6 +72,7 @@
             </Div>
           </Section>
         </Div>
+
         <Div>
           <Div>
             <H3>Você sabe o que é o Enade?</H3>
@@ -164,26 +163,29 @@
         </Div>
       </Main>
             
-        <Footer>
-          <Div>
-            <p>
-              <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
-                Técnologo em Análise e Desenvolvimento de Sistemas (ADS)
-              </a>
-            </p>
+      <Footer>
+        <Div>
+          <p>
+            <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+              Curdo de Análise e Desenvolvimento de Sistemas (ADS)
+            </a>
+          </p>
 
-            <Div Class = "fatec_sp_enade">
-              <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
-                <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
-              </a>
-              <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
-                <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
-              </a>
-              <a>
-                <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
-              </a>
-            </Div>
+          <Div Class = "fatec_sp_enade">
+            <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+              <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+            </a>
+            <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+              <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+            </a>
+            <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+              <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+            </a>
           </Div>
-        </Footer>
+        </Div>
+      </Footer>
+
+      <Script Src = "../../js/menu.js"></Script>
+      <Script Src = "../../js/video.js"></Script>
     </Body>
 </HTML>

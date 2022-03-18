@@ -5,38 +5,63 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Tony Bryan"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Questão 16 - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
     </Head>
 
     <Body>
-
-        <Div>
+        <Div Class = "numero-pergunta">
             <b>
-                Questão 16
+                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                    Questão 16
+                </a>            
             </b>
         </Div>
 
-        <Div>
-            <p>
-                Uma ONG decidiu construir um hospital de campanha para tratamento de pacientes diagnosticados<Br>
-                com a Covid-19. Para auxiliar na gerência hospitalar, a ONG contratou alguns programadores voluntários<Br>
-                para desenvolver um Sistema de Suporte à Decisão para Gestão Hospitalar. Esse sistema irá auxiliar no<Br>
-                registro de todos os procedimentos diários realizados no paciente que dá entrada no hospital, desde sua<Br>
-                internação até a saída, seja essa saída por recebimento de alta, por transferência ou óbito. O sistema foi<Br>
-                todo desenvolvido em Java de acordo com o Paradigma Orientado a Objetos. Durante o curto processo de<Br>
-                análise, devido à urgência, foram construídos diversos diagramas em UML (Unified Modeling Language).<Br>
-                Um desses diagramas relaciona a interação entre os objetos do sistema, o Diagrama de Sequência.<Br>
-                Esse diagrama é apresentado a seguir.
-            </p>
+        <Div  Class = "corpo-pergunta">
+
+            <Div Class = "nav-pergunta">
+                <a Href = ""><</a>
+                <a Href = "">15</a>
+                <a Class = "pergunta-selecionada" Href = "">16</a>
+                <a Href = "">17</a>
+                <a Href = "">></a>
+            </Div>
+
+            <Div Class = "texto-pergunta">
+                <p>
+                   Uma ONG decidiu construir um hospital de campanha para tratamento de pacientes diagnosticados<Br>
+                   com a Covid-19. Para auxiliar na gerência hospitalar, a ONG contratou alguns programadores voluntários<Br>
+                   para desenvolver um Sistema de Suporte à Decisão para Gestão Hospitalar. Esse sistema irá auxiliar no<Br>
+                   registro de todos os procedimentos diários realizados no paciente que dá entrada no hospital, desde sua<Br>
+                   internação até a saída, seja essa saída por recebimento de alta, por transferência ou óbito. O sistema foi<Br>
+                   todo desenvolvido em Java de acordo com o Paradigma Orientado a Objetos. Durante o curto processo de<Br>
+                   análise, devido à urgência, foram construídos diversos diagramas em UML (Unified Modeling Language).<Br>
+                   Um desses diagramas relaciona a interação entre os objetos do sistema, o Diagrama de Sequência.<Br>
+                   Esse diagrama é apresentado a seguir.
+                </p>
             
-            <img src="../../Images/Perguntas/Q16AE_ENADE_ADS_2021_EQ8.png">
+                <Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q16AE_ENADE_ADS_2021_EQ8.png">
+            </Div>
 
-            <p>
-            Considerando o Diagrama de Sequência apresentado, assinale a opção correta.
-            </p>
+            <Div Class = "enunciado-pergunta">
+                <p>
+                   Considerando o Diagrama de Sequência apresentado, assinale a opção correta.
+                </p>
+            </Div> 
+            
+            <Div Class = "alternativas-pergunta">
+                <Span> <Input Type = "Radio" Name = "Q16" Value = "A"/> A) Leito é uma subclasse de UTI. </Span>
+                <Span> <Input Type = "Radio" Name = "Q16" Value = "B"/> B) O método registraPaciente() é implementado por Paciente. </Span>
+                <Span> <Input Type = "Radio" Name = "Q16" Value = "C"/> C) Todos os objetos foram criados no instante de execução do Caso de Uso representado. </Span>
+                <Span> <Input Type = "Radio" Name = "Q16" Value = "D"/> D) O diagrama apresenta um erro ao não representar as mensagens de retorno depois da destruição dos objetos. </Span>
+                <Span> <Input Type = "Radio" Name = "Q16" Value = "E" Id = "alt-correta"/> E) A mensagem 4 pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação correta do Diagrama de Sequência representado. </Span>
+            </Div>
+
         </Div>
-
     </Body>
 
 </HTML>
