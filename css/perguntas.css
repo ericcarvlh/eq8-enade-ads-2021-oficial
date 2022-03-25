@@ -1,14 +1,11 @@
 .pagina-pergunta{
-    display: flex;
-    position: absolute;
-    height: 100vh;
-    width: 100vh;
-    left: 0px;
-    top: 0px;
-    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+}
 
-    justify-content: center;
-    align-itens: center;
+.numero-pergunta{
+    text-align: start;
+    margin-left: 15%;
 }
 
 .numero-pergunta a, .nav-pergunta a{
@@ -21,13 +18,13 @@
 
 .numero-pergunta a:hover{
     color: gray;
-    font-size: 1.1rem;
+    font-size: 1.9rem;
 }
 
 .nav-pergunta{
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: 550;
+    padding: 10px;
+    font-size: 1.6rem;
+    font-weight: 650;
 }
 
 .nav-pergunta a{
@@ -54,5 +51,36 @@
 }
 
 .corpo-pergunta{
-    background-color: gray;
+    margin-top: 1%;
+    padding: 1%;
+    margin-right: 15%;
+    margin-left: 15%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 2%;
+    box-shadow: 9px 9px 10px 10px rgba(0, 0, 0, 0.233);
+}
+
+.texto-pergunta{
+    background-color: rgba(199, 199, 199, 0.842);
+    border-radius: 2%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.575);
+    border-width: 0.4px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.fonte-pergunta{
+    margin-top: 1%;
+    margin-right: 10%;
+    text-align: end;
+    font-size: 1.4rem;
+}
+
+.enunciado-pergunta{
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
