@@ -4,56 +4,126 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Éric Carvalho"/>
-        <Title>Instruções</Title>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
+        <Title>Instruções - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/instructions.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
     </Head>
 
     <Body>
+        <Header>
+            <Div Class = "container">
+              <Div Class = "inep_enade">
+                <Div Class = "logo_inep">
+                  <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+                    <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
+                  </a>
+                </Div>
+                <Span Class = "logo_enade">
+                  <b>
+                    Enade
+                  </b>
+                </Span>
+              </Div>
+              <Div Class = "menu-section">
+                <Div Class = "menu-toggle">
+                  <Div Class = "one"></Div>
+                  <Div Class = "two"></Div>
+                  <Div Class = "three"></Div>
+                </Div>
+                <Nav>
+                  <Ul>
+                    <Li>
+                      <a Href="../../Views/Principal/Index.html">Início</a>
+                    </Li>
+                    <Li>
+                      <a Href="../../Views/Principal/Credits.html">Créditos</a>
+                    </Li>
+                    <Li>
+                      <a Href="../../Views/Principal/About.html">Sobre</a>
+                    </Li>
+                  </Ul>
+                </Nav>
+              </Div>
+            </Div>
+        </Header>
 
-        <Div>
-            <H2>Instruções</H2>
-        </Div>
+        <Main>
+            <Div Class = "corpo-pagina">   
 
-        <p>
-            Olá! Abaixo confira as intruções do Simulado. Após a leitura, 
-            você pode clicar no botão <b>Iniciar simulado</b>. Que te levará a primeira questão.
-        </p>
+                <Div Class = "instrucoes-simulado">
+                
+                    <Div Class = "intrucoes-principais">
+                        <H2>Instruções</H2>
 
-        <p>
-            O simulado consiste em 35 questões objetivas, com 5 opções de 
-            resposta, de A a E. Com duração total de 4 horas.
-        </p>
+                        <p>
+                            Olá! Abaixo confira as intruções do Simulado. Após a leitura, 
+                            você pode clicar no botão <b>Iniciar simulado</b>. Que te levará a primeira questão.
+                        </p>
+
+                        <p>
+                            O simulado consiste em 35 questões objetivas, com 5 opções de 
+                            resposta, de A a E. Com duração total de 4 horas.
+                        </p>
+                    
+                        <p>
+                            Nas questões você deve selecionar a alternativa que acredita estar correta 
+                            e após ter certeza, pode clicar no botão <b>Corrigir</b>, que se encontra no canto superior esquerdo. 
+                            Após isso aparecerá um pop-up informando se a alternativa escolhida está certa, ou errada, 
+                            e qual a resposta certa.
+                        </p>
+
+                        <p> 
+                            Você também pode clicar no botão <b>Próxima</b>, 
+                            que se encontra na parte inferior direita. Ao clicar nele será 
+                            apresentado a pergunta sucessora. O processo inverso ocorre quando
+                            você clica no botão <b>Voltar</b>.
+                        </p>
+
+                        <Img Class = "imagem-informativa" Src="https://www.wpoven.com/blog/wp-content/uploads/2019/12/404-error-not-found.png" Alt="Demonstração das funcionalidades" Height = "400" width="800"/>
+
+                        <p>
+                            Todas as respostas objetivas serão contabilizadas, assim que você clicar no botão <b>FINALIZAR</b>.
+                            E será mostrado a quantidade de acertos e erros. Obs.: Caso tenha alguma questão em branco, a mesma 
+                            será contabilzada como ERRADA.
+                        </p>
+                    </Div>
+                </Div>
+
+                <Div Class = "intrucoes-finais">
+                    <h2>BOA SORTE!</h2>
+
+                    <a href="../../Views/Principal/Q1E_EQ8.html">
+                        <Input Type = "button" Class = "button-nav" Value = "Iniciar simulado">
+                    </a>
+                </Div>
+
+            </Div>
+        </Main>
+
+        <Footer>
+            <Div>
+              <p>
+                <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+                  Curso de Análise e Desenvolvimento de Sistemas (ADS)
+                </a>
+              </p>
     
-        <p>
-            Nas questões você deve selecionar a alternativa que acredita estar correta 
-            e após ter certeza, pode clicar no botão <b>Corrigir</b>, que se encontra no canto superior esquerdo. 
-            Após isso aparecerá um pop-up informando se a alternativa escolhida está certa, ou errada, 
-            e qual a resposta certa.
-        </p>
-
-        <p> 
-            Você também pode clicar no botão <b>Próxima</b>, 
-            que se encontra na parte inferior direita. Ao clicar nele será 
-            apresentado a pergunta sucessora. O processo inverso ocorre quando
-            você clica no botão <b>Voltar</b>.
-        </p>
-
-        <Img Id="imagemInformativa" Src="#" Alt="Demonstração das funcionalidades"/>
-
-        <p>
-            Todas as respostas objetivas serão contabilizadas, assim que você clicar no botão <b>FINALIZAR</b>.
-             E será mostrado a quantidade de acertos e erros. Obs.: Caso tenha alguma questão em branco, a mesma 
-             será contabilzada como ERRADA.
-        </p>
-
-        <h2>BOA SORTE!</h2>
-
-        <Div>
-            <a href="../../Views/Principal/Q1E_EQ8.html">
-                <button>Iniciar simulado</button>
-            </a>
-        </Div>
-
+              <Div Class = "fatec_sp_enade">
+                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+                  <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+                </a>
+              </Div>
+            </Div>
+        </Footer>
     </Body>
 
 </HTML>

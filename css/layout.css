@@ -60,13 +60,17 @@ header nav ul li a:hover {
 }
 
 h2 {
+  margin-top: 1%;
+  text-align: center;
   font-size: 3.6rem; /* Definindo o tamanho da fonte.*/
-  line-height: 4.6rem; /* Definindo o espaçamento entre as linhas do texto. */
+  line-height: 3.2rem; /* Definindo o espaçamento entre as linhas do texto. */
 }
 
 h3 {
+  text-align: center;
+  margin-top: 1%;
   font-size: 2.8rem; /* Definindo o tamanho da fonte.*/
-  line-height: 3.8rem; /* Definindo o espaçamento entre as linhas do texto. */
+  line-height: 3rem; /* Definindo o espaçamento entre as linhas do texto. */
 }
 
 header .container {
@@ -103,10 +107,10 @@ header .container {
   background-color: #FFA726;
 }
 
-.button {
+.button-nav {
   display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 580;
   color: rgb(255, 255, 255);
   background-color: #FFAB40;
   margin: 15px 0px 0px;
@@ -117,8 +121,21 @@ header .container {
   transition: all 150ms linear 0s;
 }
 
-.button:hover {
-  opacity: 0.9;
+.button-nav:hover{
+  font-size: 1.5rem; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
+  font-weight: 700; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
+}
+
+.corpo-pagina{
+  background-color: #ffb84d1f;
+  box-shadow: inset;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-align: center;
 }
 
 section.hero {
@@ -128,9 +145,9 @@ section.hero {
 section.hero .container {
     width: 90%; /* Tornando a largura 90% do valor máximo de largura pré-estabelecido. */
     max-width: 1400px; /* Definindo um tamanho máximo de div para não ser ultrapassada.*/
-    margin: auto;
+    margin: auto; /* */
   
-    display: flex;
+    display: flex; /* */
 }
 
 section.hero p {
@@ -140,159 +157,12 @@ section.hero p {
   margin: 10px 0px 0px;
 }
 
+/*
 main {
   margin-top: 40px;
   margin-bottom: 80px;
 }
-
-.cards {
-  width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
-  max-width: 300px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
-  margin: auto;
-}
-
-.text--medium {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  font-weight: 400;
-  color: #ecf0f1;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(255, 166, 0);
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.card:hover {
-  transform: translateY(-10px); /* Definindo uma transição quando o card for sobreposto pelo m pointer. */
-}
-
-.image {
-  width: 100%;
-  padding-top: 55.25%; /* 16:9 */
-
-  overflow: hidden;
-  position: relative;
-}
-
-.image img {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.content {
-  margin: 20px; /* Definindo a margem do card */
-}
-
-.title {
-  margin-bottom: 20px;
-}
-
-.info {
-  display: flex;
-  align-self: end;
-  align-items: center;
-}
-
-.modal-overlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  visibility: hidden;
-}
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-.modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  
-  background-color: #fff;
-  
-  width: 800px;
-  height: 400px;
-  
-  margin: 0 auto;
-  padding: 10px;
-  
-  border-radius: 3px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-  opacity: 0;
-  overflow-y: auto;
-  visibility: hidden;
-  
-  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transform: scale(1.2);
-}
-.modal .close-modal {
-  position: absolute;
-  cursor: pointer;
-
-  top: 5px;
-  right: 15px;
-  
-  opacity: 0;
-  
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition-delay: 0.3s;
-}
-.modal .close-modal svg {
-  width: 18px;
-  height: 18px;
-}
-.modal .modal-content {
-  opacity: 0;
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition-delay: 0.3s;
-}
-.modal.active {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-}
-.modal.active .modal-content {
-  opacity: 1;
-}
-.modal.active .close-modal {
-  transform: translateY(10px);
-  opacity: 1;
-}
-
-.video-background {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -99;
-  background-color: white;
-}
-.video-foreground, .video-background iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 90%;
-  transform: translate(-50%, -50%);
-}
+*/
 
 footer{
   width: 100%;
@@ -319,6 +189,23 @@ footer p {
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+.fatec_sp_enade a:hover{
+  padding: 0.2%;
+  background: rgba(255, 255, 255, 0.164) /* Definindo uma cor quando o mouse for sobreposto ao elemento.*/
+}
+
+footer p a {
+  text-decoration: none; /* Definindo uma decoração de texto, sendo o mesmo com diferentes tipos de linhas.*/
+  color: white; /* Definindo uma cor para a palavra. */
+  text-transform: capitalize; /* Definindo a capitalização das palavras (maiuscula, minuscuça etc).*/
+  font-size: 1.6rem; /* Definindo o tamanho da fonte. */
+  transition: all 250ms linear 0s; /* definindo a transição entre os elementos.*/
+}
+
+footer p a:hover {
+  background: rgba(255, 255, 255, 0.267) /* Definindo uma cor quando o mouse for sobreposto ao elemento.*/
 }
 
 input {

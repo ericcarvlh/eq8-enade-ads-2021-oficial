@@ -1,0 +1,29 @@
+h2{
+    padding-bottom: 2%;
+}
+
+b{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.7rem;
+    padding-top: 1%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sobre-o-site{
+    margin-left: 20%; /* Definindo uma distância em relaçãp a margem esquerda.*/
+    margin-right: 20%; /* Definindo uma distância em relaçãp a margem direita.*/
+    padding: 0.5%;
+}
+
+.responsaveis-site{
+    margin-left: 20%; /* Definindo uma distância em relaçãp a margem esquerda.*/
+    margin-right: 20%; /* Definindo uma distância em relaçãp a margem direita.*/
+    margin-top: 2%;
+    padding: 0.5%;
+}

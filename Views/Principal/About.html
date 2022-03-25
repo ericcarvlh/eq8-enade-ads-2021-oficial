@@ -4,54 +4,116 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Éric Carvalho"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Sobre - SimuNade</Title>
-        <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>      
+        <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/about.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>      
     </Head>
 
     <Body>
-        <Main>
-        
-            <Div>
-                <H2>Sobre o site</H2>
-                
-                <p>
-                    O <i>SimuNade</i> foi uma iniciativa desenvolvida por 5 estudantes da Fatec Carapicuiba, sendo os estudantes: Diogo, Éric, Paulo,  
-                    Raul e Tony, sob orientação dos docentes Jose Luis Barboza Lobianco e Rita de Cassia Felix para participar no SIMGETEC.
-                    O <i>SimuNade</i> tem compromisso em auxiliar outros estudantes a se aprimorarem e prepararem para as provas do Exame Nacional de Desempenho dos Estudantes (ENADE).
-                    Oferecendo aos mesmos um simulado da edição do Enade de 2021 de Técnologo em Análise e Desenvolvimento de Sistemas (ADS). 
-                </p>
-
-                <p>
-                    O site contém 5 páginas principais, para o usuário navegar, dentre elas: 
-                    Início, Contato, Créditos e Sobre. Ao usuário solicitar o início do simulado ele irá se deparar com uma página informando
-                    as principais funcionalidades de cada botão que se encontra em cada questão do simulado. Além disso, ao final do simulado o usuário será informado 
-                    sobre seu tempo realizando a prova, questões em branco, acertos e erros. Um breve resumo para dar um norte ao usuário.
-                </p>
-
-                <b>Orientadora:</b> 
-        
-                <p>   
-                    Felix, Rita de Cassia 
-                </p>
-        
-                <b>Coorientador:</b>
-        
-                <p>
-                    Lobianco, Jose Luis Barboza 
-                </p>
-        
-                <b>Autores do SimuNade:</b>
-        
-                <p>
-                    Soares, Diogo Gabadro<Br>
-                    Carvalho, Éric Vieira de<Br>
-                    Simão, Paulo Felipe Silva <Br>
-                    Souza, Raul Mascarenhas <Br>
-                    Gutierrez, Tony Bryan Espinoza 
-                </p>
+        <Header>
+            <Div Class = "container">
+                <Div Class = "inep_enade">
+                    <Div Class = "logo_inep">
+                    <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+                        <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
+                    </a>
+                    </Div>
+                    <Span Class = "logo_enade">
+                    <b>
+                        Enade
+                    </b>
+                    </Span>
+                </Div>
+                <Div Class = "menu-section">
+                    <Div Class = "menu-toggle">
+                    <Div Class = "one"></Div>
+                    <Div Class = "two"></Div>
+                    <Div Class = "three"></Div>
+                    </Div>
+                    <Nav>
+                        <Ul>
+                            <Li>
+                            <a Href="Index.html">Início</a>
+                            </Li>
+                            <Li>
+                            <a Href="Credits.html">Créditos</a>
+                            </Li>
+                            <Li>
+                            <a Href="About.html">Sobre</a>
+                            </Li>
+                        </Ul>
+                    </Nav>
+                </Div>
             </Div>
+        </Header>
 
+        <Main>
+            <Div Class = "corpo-pagina">
+
+                <Div Class = "sobre-o-site">
+                    <H2>Sobre o site</H2>
+                    
+                    <p>
+                        O <i>SimuNade</i> foi uma iniciativa desenvolvida por 5 estudantes da Fatec Carapicuiba, sendo os estudantes: Diogo, Éric, Paulo,  
+                        Raul e Tony, sob orientação da docente Rita de Cassia Felix e coorientação do docente Jose Luis Barboza Lobianco  para participar no SIMGETEC.
+                        O <i>SimuNade</i> tem compromisso em auxiliar outros estudantes a se aprimorarem e prepararem para as provas do Exame Nacional de Desempenho dos Estudantes (ENADE).
+                        Oferecendo aos mesmos um simulado da edição do Enade de 2021 de Técnologo em Análise e Desenvolvimento de Sistemas (ADS). 
+                    </p>
+
+                    <p>
+                        O site contém 5 páginas principais, para o usuário navegar, dentre elas: 
+                        Início, Contato, Créditos e Sobre. Ao usuário solicitar o início do simulado ele irá se deparar com uma página informando
+                        as principais funcionalidades de cada botão que se encontra em cada questão do simulado. Além disso, ao final do simulado o usuário será informado 
+                        sobre seu tempo realizando a prova, questões em branco, acertos e erros. Um breve resumo para dar um norte ao usuário.
+                    </p>
+                </Div>
+
+                <Div Class = "responsaveis-site">
+                    <b>Orientadora:</b> 
+
+                    <p>MSC Felix, <b>Rita</b></p>
+    
+                    <b>Coorientador:</b>
+    
+                    <p>MSC Lobianco, <b>Jose</b></p>
+    
+                    <b>Autores do SimuNade:</b>
+    
+                    <p>
+                        Soares, <b>Diogo</b><Br>
+                        Carvalho, <b>Éric</b><Br>
+                        Simão, <b>Paulo</b><Br>
+                        Souza, <b>Raul</b><Br>
+                        Gutierrez, <b>Tony</b>
+                    </p>
+                </Div>
+            </Div>
         </Main>
+
+        <Footer>
+            <Div>
+              <p>
+                <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+                  Curso de Análise e Desenvolvimento de Sistemas (ADS)
+                </a>
+              </p>
+    
+              <Div Class = "fatec_sp_enade">
+                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+                  <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+                </a>
+              </Div>
+            </Div>
+        </Footer>
     </Body>
 
 </HTML>

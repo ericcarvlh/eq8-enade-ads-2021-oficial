@@ -4,74 +4,134 @@
     <Head>
         <Meta CharSet = "UTF-8"/>
         <Meta Name = "Author" Content = "Éric Carvalho"/>
+        <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
         <Title>Créditos - SimuNade</Title>
         <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/credits.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
     </Head>
 
     <Body>
-        <Main>
-            <Div>
-                <H2>Créditos</H2>
-                
-                <b>
-                    Prova do Simulado:
-                </b>
-
-                <p>
-                    Documento retirado do site do
-                    <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
-                        Instituto Nacional de Estudos e Pesquisas <Br> Educacionais Anísio Teixeira (INEP) 
+        <Header>
+            <Div Class = "container">
+                <Div Class = "inep_enade">
+                    <Div Class = "logo_inep">
+                    <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+                        <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
                     </a>
-                    . Todos os direitos reservados ao 
-                    <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">
-                        INEP
-                    </a>
-                    .
-                </p>
-
-                <b>
-                    Fatec Carapicuiba
-                </b>
-
-                <p>
-                    Por ministrar o curso superior de tecnologia em 
-                    <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
-                        Análise e Desenvolvimento de Sistemas (ADS).
-                    </a>
-                </p>
-
-                <b>
-                    Orientadora:
-                </b> 
-
-                <p>   
-                    Felix, Rita de Cassia 
-                </p>
-
-                <b>Coorientador:</b>
-
-                <p>
-                    Lobianco, Jose Luis Barboza 
-                </p>
-
-                <b>
-                    Autores do SimuNade: 
-                </b>
-
-                <p>
-                    Soares, Diogo Gabadro<Br>
-                    Carvalho, Éric Vieira de<Br>
-                    Simão, Paulo Felipe Silva <Br>
-                    Souza, Raul Mascarenhas <Br>
-                    Gutierrez, Tony Bryan Espinoza 
-                </p>
-
-                <p>
-                    Alunos do 1º semestre cursando a disciplina de Programação em Microinformática (PMI).
-                </p>
+                    </Div>
+                    <Span Class = "logo_enade">
+                    <b>
+                        Enade
+                    </b>
+                    </Span>
+                </Div>
+                <Div Class = "menu-section">
+                    <Div Class = "menu-toggle">
+                    <Div Class = "one"></Div>
+                    <Div Class = "two"></Div>
+                    <Div Class = "three"></Div>
+                    </Div>
+                    <Nav>
+                        <Ul>
+                            <Li>
+                            <a Href="Index.html">Início</a>
+                            </Li>
+                            <Li>
+                            <a Href="Credits.html">Créditos</a>
+                            </Li>
+                            <Li>
+                            <a Href="About.html">Sobre</a>
+                            </Li>
+                        </Ul>
+                    </Nav>
+                </Div>
             </Div>
-            
+        </Header>
+
+        <Main>
+            <Div Class = "corpo-pagina">
+                <Div Class = "creditos-do-site">
+                    <H2>Créditos</H2>
+
+                    <b>Prova do Simulado:</b>
+
+                    <p>
+                        Documento retirado do site do
+                        <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                            Instituto Nacional de Estudos e Pesquisas <Br> Educacionais Anísio Teixeira (INEP) 
+                        </a>
+                        . Todos os direitos reservados ao 
+                        <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">
+                            INEP
+                        </a>
+                        e ao 
+                        <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/#!/index">
+                            Exame Nacional de Desempenho dos Estudantes (ENADE).
+                        </a>
+                    </p>
+
+                    <b>
+                        Fatec Carapicuiba
+                    </b>
+
+                    <p>
+                        Por ministrar o curso superior de tecnologia em 
+                        <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+                            Análise e Desenvolvimento de Sistemas (ADS).
+                        </a>
+                    </p>
+                </Div>
+
+                <Div Class = "responsaveis-site">
+
+                    <b>Orientadora:</b> 
+
+                    <p>MSC Felix, <b>Rita</b></p>
+
+                    <b>Coorientador:</b>
+
+                    <p>MSC Lobianco, <b>Jose</b></p>
+
+                    <b>Autores do SimuNade:</b>
+
+                    <p>
+                        Soares, <b>Diogo</b><Br>
+                        Carvalho, <b>Éric</b><Br>
+                        Simão, <b>Paulo</b><Br>
+                        Souza, <b>Raul</b><Br>
+                        Gutierrez, <b>Tony</b>
+                    </p>
+
+                    <p>
+                        Alunos do 1º semestre cursando a disciplina de Programação em Microinformática (PMI).
+                    </p>
+                </Div>
+            </Div>           
         </Main>
+
+        <Footer>
+            <Div>
+              <p>
+                <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+                  Curso de Análise e Desenvolvimento de Sistemas (ADS)
+                </a>
+              </p>
+    
+              <Div Class = "fatec_sp_enade">
+                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+                  <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+                </a>
+              </Div>
+            </Div>
+          </Footer>
     </Body>
 
 </HTML>

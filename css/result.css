@@ -1,0 +1,6 @@
+.tempo-resultado, .branco-resultado, .acertos-resultado, 
+.erros-resultado{
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+}
