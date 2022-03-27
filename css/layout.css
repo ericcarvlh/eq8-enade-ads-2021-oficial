@@ -76,7 +76,7 @@ h3 {
 header .container {
   display: flex; /* Definindo como os elementos serão dispostos na página. */
   align-items: center; /* Definindo o alinhamento dos itens */
-  justify-content: space-between; /*  */
+  justify-content: space-between; /* Definindo o alinhamento do conteudo no eixo principal. */
   width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
   max-width: 1400px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
   margin: auto;
