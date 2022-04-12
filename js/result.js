@@ -1,6 +1,10 @@
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
+var gabarito = []
+var acertos = []
+var erros = []
+
 function drawChart() {
 
     /* Grafico de acertos e erros em porcentagem. */
