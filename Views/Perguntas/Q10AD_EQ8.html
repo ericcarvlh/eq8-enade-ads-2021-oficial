@@ -51,63 +51,87 @@
             </Div>
         </Header>
 
-		<div class = "numero-pergunta">
-			<b>
-				<a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
-                    Questão 10
-                </a>     
-			</b>
-		</div>
-
-		<div class = "corpo-pergunta">
-
-			<Div Class = "nav-pergunta">
-                <a Href = ""><</a>
-                <a Href = "">09</a>
-                <a Class = "pergunta-selecionada" Href = "">10</a>
-                <a Href = "">11</a>
-                <a Href = "">></a>
-            </Div>
-
-           	<div class = "texto-pergunta">
-				<p>
-					Uma fábrica adquiriu máquinas de costura industrial para a produção de jogos de toalhas de mesa e guardanapos<br>de tecido com estampas quadriculadas. Cada quadrículo tem tamanho padrão de 5 cm X 5 cm. Para a configuração<br>da costura, é preciso um programa de computador para criar um molde em que sejam informadas as quantidades<br>de quadrículos por comprimento e por largura, além do desenho da estampa a ser costurada. Por exemplo,<br>
-					para um guardanapo de tecido que tenha 30 cm X 30 cm, com uma estampa representada pelo caractere “#”,<br>o seguinte molde precisa ser criado:<br>
-				</p>
-				
-				<Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q10AD_ENADE_ADS_2021_EQ8.png">	
+		<Main> 
+			<div class = "numero-pergunta">
+				<b>
+					<a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+						Simulado Análise e Desenvolvimento de Sistemas  - Enade 2021 - Questão 10
+					</a>     
+				</b>
 			</div>
 
-			<div class = "texto-pergunta">
-				<p>
-					Como uma toalha pode ter, no máximo, 250 cm de comprimento e 200 cm de largura, o programador<br>
-					declarou uma matriz <font face="Courier New">char  molde[40][50]</font> para ser possível representar moldes cujas medidas<br>compreendam esses limites.
-				</p> 
+			<div class = "corpo-pergunta">
 
-				<p>
-					Ele também implementou, entre outras, as seguintes funções:<br><br>
-					<font face="Courier New">- criar_molde</font>, para a qual os seguintes parâmetros são esperados, nessa ordem: uma referência à<br>
+				<Div Class = "nav-pergunta">
+					<a Href = "Q8AD_EQ8.html"><</a>
+					<a Href = "Q9AC_EQ8.html">09</a>
+					<a Class = "pergunta-selecionada" Href = "#">10</a>
+					<a Href = "Q11AE_EQ8.html">11</a>
+					<a Href = "Q12AC_EQ8.html">></a>
+				</Div>
 
-					matriz molde, o comprimento e a largura do tecido (em quantidades de quadrículos) e o caractere que<br> 
-					representa a estampa;<br><br>
+				<div class = "texto-pergunta">
+					<p>
+						Uma fábrica adquiriu máquinas de costura industrial para a produção de jogos de toalhas de mesa e guardanapos<br>de tecido com estampas quadriculadas. Cada quadrículo tem tamanho padrão de 5 cm X 5 cm. Para a configuração<br>da costura, é preciso um programa de computador para criar um molde em que sejam informadas as quantidades<br>de quadrículos por comprimento e por largura, além do desenho da estampa a ser costurada. Por exemplo,<br>
+						para um guardanapo de tecido que tenha 30 cm X 30 cm, com uma estampa representada pelo caractere “#”,<br>o seguinte molde precisa ser criado:<br>
+					</p>
+					
+					<Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q10AD_ENADE_ADS_2021_EQ8.png">	
+				</div>
 
-					<font face="Courier New">- alternar_estampa</font>, que tem a tarefa de controlar a disposição alternada das estampas no molde.<br><br>
-				</p>
+				<div class = "texto-pergunta">
+					<p>
+						Como uma toalha pode ter, no máximo, 250 cm de comprimento e 200 cm de largura, o programador<br>
+						declarou uma matriz <font face="Courier New">char  molde[40][50]</font> para ser possível representar moldes cujas medidas<br>compreendam esses limites.
+					</p> 
+
+					<p>
+						Ele também implementou, entre outras, as seguintes funções:<br><br>
+						<font face="Courier New">- criar_molde</font>, para a qual os seguintes parâmetros são esperados, nessa ordem: uma referência à<br>
+
+						matriz molde, o comprimento e a largura do tecido (em quantidades de quadrículos) e o caractere que<br> 
+						representa a estampa;<br><br>
+
+						<font face="Courier New">- alternar_estampa</font>, que tem a tarefa de controlar a disposição alternada das estampas no molde.<br><br>
+					</p>
+				</div>
+
+				<div class = "enunciado-pergunta">
+					<p>
+						Considerando o cenário descrito, que alternativa a seguir apresenta a implementação correta das funções<br><font face="Courier New">criar_molde e alternar_estampa</font>?
+					</p>
+				</div>
+
+				<div class = "alternativas-pergunta">
+					<span><Input Type = "Radio" Name = "Q10" Value = "A"/> A) char alternar_estampa(char estampa, char *proxima) {         *proxima = *proxima == estampa ? ' ' : estampa;     return *proxima;  }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, &proxima); } </span>
+					<span><Input Type = "Radio" Name = "Q10" Value = "B"/> B) char alternar_estampa(char estampa, char proxima) {     proxima = proxima == estampa ? ' ' : estampa;     return proxima; }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, proxima); } </span>
+					<span><Input Type = "Radio" Name = "Q10" Value = "C"/> C) char alternar_estampa(char estampa, char *proxima) {     return *proxima == estampa ? ' ' : estampa; }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, &proxima); } </span>
+					<span><Input Type = "Radio" Name = "Q10" Value = "D" Id = "alt-correta"/> D) char alternar_estampa(char estampa, char *proxima) {     return *proxima == estampa ? ' ' : estampa; }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, &proxima); } </span>
+					<span><Input Type = "Radio" Name = "Q10" Value = "E"/> E) char alternar_estampa(char estampa, char proxima) {     proxima = proxima == estampa ? ' ' : estampa;     return proxima; }  void criar_molde(char molde[][50], int c, int l, char estampa) {    char proxima = estampa;     for (int i = 0; i < l; i++) {         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, proxima);         proxima = molde[i][0];     } } </span>
+				</div>
 			</div>
+		</Main>
 
-			<div class = "enunciado-pergunta">
-				<p>
-					Considerando o cenário descrito, que alternativa a seguir apresenta a implementação correta das funções<br><font face="Courier New">criar_molde e alternar_estampa</font>?
-				</p>
-			</div>
-
-			<div class = "alternativas-pergunta">
-				<span><Input Type = "Radio" Name = "Q10" Value = "A"/> A) char alternar_estampa(char estampa, char *proxima) {         *proxima = *proxima == estampa ? ' ' : estampa;     return *proxima;  }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, &proxima); } </span>
-				<span><Input Type = "Radio" Name = "Q10" Value = "B"/> B) char alternar_estampa(char estampa, char proxima) {     proxima = proxima == estampa ? ' ' : estampa;     return proxima; }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, proxima); } </span>
-				<span><Input Type = "Radio" Name = "Q10" Value = "C"/> C) char alternar_estampa(char estampa, char *proxima) {     return *proxima == estampa ? ' ' : estampa; }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, &proxima); } </span>
-				<span><Input Type = "Radio" Name = "Q10" Value = "D" Id = "alt-correta"/> D) char alternar_estampa(char estampa, char *proxima) {     return *proxima == estampa ? ' ' : estampa; }  void criar_molde(char molde[][50], int c, int l, char estampa) {     char proxima = estampa;     for (int i = 0; i < l; i++)         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, &proxima); } </span>
-				<span><Input Type = "Radio" Name = "Q10" Value = "E"/> E) char alternar_estampa(char estampa, char proxima) {     proxima = proxima == estampa ? ' ' : estampa;     return proxima; }  void criar_molde(char molde[][50], int c, int l, char estampa) {    char proxima = estampa;     for (int i = 0; i < l; i++) {         for (int j = 0; j < c; j++)             molde[i][j] = alternar_estampa(estampa, proxima);         proxima = molde[i][0];     } } </span>
-			</div>
-		</div>
+		<Footer>
+			<Div>
+			  <p>
+				<a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+				  Curso de Análise e Desenvolvimento de Sistemas (ADS)
+				</a>
+			  </p>
+		
+			  <Div Class = "fatec_sp_enade">
+				<a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+					<Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+				</a>
+				<a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+					<Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+				</a>
+				<a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+					<Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+				</a>
+			  </Div>
+			</Div>
+		</Footer>
 	</body>
 </html>

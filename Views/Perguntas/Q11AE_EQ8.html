@@ -51,71 +51,95 @@
             </Div>
         </Header>
 
-		<div class = "numero-pergunta">
-			<b>
-				<a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
-                    Questão 11 
-                </a> 
-			</b>
-		</div>
-
-		<div class = "corpo-pergunta">
-
-			<Div Class = "nav-pergunta">
-                <a Href = ""><</a>
-                <a Href = "">10</a>
-                <a Class = "pergunta-selecionada" Href = "">11</a>
-                <a Href = "">12</a>
-                <a Href = "">></a>
-            </Div>
-
-            <div class = "texto-pergunta">
-            	<p>
-					O código Java, a seguir, contém a implementação de uma Pilha utilizando a estratégia encadeada.<br><br>
-				</p>
-
-				<p>
-					<font face="Courier New">
-						<b>public class</b> No{<br>
-						&nbsp;&nbsp;&nbsp;<b>public int</b> dado<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;<b>public</b> No prox<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;<b>public</b> No(<b>int</b> dado){<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>this.</b>dado = dado<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-						}<br>
-						<b>public class</b> PilhaEncadeada{<br>
-						&nbsp;&nbsp;&nbsp;<b>private</b> No topo<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;<b>public int</b> pop(){<br>
-						&nbsp;&nbsp;&nbsp;<b>if</b> (topo == <b>null</b>)<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> -1<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No lixo = topo<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;topo = topo.prox<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lixo.prox = <b>null;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> lixo.dado<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-						&nbsp;&nbsp;&nbsp;<b>public int</b> top(){<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>if</b> (topo == <b>null</b>)<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> -1<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> (topo.dado)<b>;</b><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-						}<br><br>
-					</font>
-				</p>
+		<Main> 
+			<div class = "numero-pergunta">
+				<b>
+					<a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+						Simulado Análise e Desenvolvimento de Sistemas  - Enade 2021 - Questão 11 
+					</a> 
+				</b>
 			</div>
 
-			<div class="enunciado-pergunta">
-				<p>
-					Com base no exposto, assinale a opção que possui a implementação correta do método push para essa Pilha.
-				</p>
-			</div>
+			<div class = "corpo-pergunta">
 
-			<div class = "alternativas-pergunta">
-				<span><Input Type = "Radio" Name = "Q11" Value = "A"/> A) public void push(int elemento){No novo = new No(elemento); if(topo == null)   topo = novo; else  topo.prox = novo; } </span>
-				<span><Input Type = "Radio" Name = "Q11" Value = "B"/> B) public void push(int elemento){     No novo = new No(elemento);   topo = novo; } </span>
-				<span><Input Type = "Radio" Name = "Q11" Value = "C"/> C) public void push(int elemento){ topo.dado = elemento; } </span>
-				<span><Input Type = "Radio" Name = "Q11" Value = "D"/> D) public void push(int elemento){   No novo = new No(elemento); while (topo != null)     topo = topo.prox;   topo.prox = novo; } </span>
-				<span><Input Type = "Radio" Name = "Q11" Value = "E" Id = "alt-correta"/> E) public void push(int elemento){   No novo = new No(elemento);       novo.prox = topo;   topo = novo; } </span>
+				<Div Class = "nav-pergunta">
+					<a Href = "Q9AC_EQ8.html"><</a>
+					<a Href = "Q10AD_EQ8.html">10</a>
+					<a Class = "pergunta-selecionada" Href = "#">11</a>
+					<a Href = "Q12AC_EQ8.html">12</a>
+					<a Href = "Q13AC_EQ8.html">></a>
+				</Div>
+
+				<div class = "texto-pergunta">
+					<p>
+						O código Java, a seguir, contém a implementação de uma Pilha utilizando a estratégia encadeada.<br><br>
+					</p>
+
+					<p>
+						<font face="Courier New">
+							<b>public class</b> No{<br>
+							&nbsp;&nbsp;&nbsp;<b>public int</b> dado<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;<b>public</b> No prox<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;<b>public</b> No(<b>int</b> dado){<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>this.</b>dado = dado<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+							}<br>
+							<b>public class</b> PilhaEncadeada{<br>
+							&nbsp;&nbsp;&nbsp;<b>private</b> No topo<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;<b>public int</b> pop(){<br>
+							&nbsp;&nbsp;&nbsp;<b>if</b> (topo == <b>null</b>)<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> -1<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No lixo = topo<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;topo = topo.prox<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lixo.prox = <b>null;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> lixo.dado<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+							&nbsp;&nbsp;&nbsp;<b>public int</b> top(){<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>if</b> (topo == <b>null</b>)<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> -1<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>return</b> (topo.dado)<b>;</b><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+							}<br><br>
+						</font>
+					</p>
+				</div>
+
+				<div class="enunciado-pergunta">
+					<p>
+						Com base no exposto, assinale a opção que possui a implementação correta do método push para essa Pilha.
+					</p>
+				</div>
+
+				<div class = "alternativas-pergunta">
+					<span><Input Type = "Radio" Name = "Q11" Value = "A"/> A) public void push(int elemento){No novo = new No(elemento); if(topo == null)   topo = novo; else  topo.prox = novo; } </span>
+					<span><Input Type = "Radio" Name = "Q11" Value = "B"/> B) public void push(int elemento){     No novo = new No(elemento);   topo = novo; } </span>
+					<span><Input Type = "Radio" Name = "Q11" Value = "C"/> C) public void push(int elemento){ topo.dado = elemento; } </span>
+					<span><Input Type = "Radio" Name = "Q11" Value = "D"/> D) public void push(int elemento){   No novo = new No(elemento); while (topo != null)     topo = topo.prox;   topo.prox = novo; } </span>
+					<span><Input Type = "Radio" Name = "Q11" Value = "E" Id = "alt-correta"/> E) public void push(int elemento){   No novo = new No(elemento);       novo.prox = topo;   topo = novo; } </span>
+				</div>
 			</div>
-		</div>
+		</Main>
+
+		<Footer>
+			<Div>
+			  <p>
+				<a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+				  Curso de Análise e Desenvolvimento de Sistemas (ADS)
+				</a>
+			  </p>
+		
+			  <Div Class = "fatec_sp_enade">
+				<a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+					<Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+				</a>
+				<a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+					<Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+				</a>
+				<a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+					<Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+				</a>
+			  </Div>
+			</Div>
+		</Footer>
 	</body>
 </html>
