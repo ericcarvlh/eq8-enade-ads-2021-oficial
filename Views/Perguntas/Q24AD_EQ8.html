@@ -2,142 +2,168 @@
 
 <html lang = "pt-br">
 
-    <head>
-        <meta charset = "utf-8"/>
-        <meta name = "Author" Content = "Diogo Gabardo"/>
-        <meta name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
-        <title>Questão 24 - SimuNade</title>
-        <link rel = "Icon" href = "http://enade.inep.gov.br/enade/favicon.ico"/>
-        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
-        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
-        <Link Rel = "Script" Href = "../../js/perguntas.js"/>
-    </head>
+  <head>
+      <meta charset = "utf-8"/>
+      <meta name = "Author" Content = "Diogo Gabardo"/>
+      <meta name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
+      <title>Questão 24 - SimuNade</title>
+      <link rel = "Icon" href = "http://enade.inep.gov.br/enade/favicon.ico"/>
+      <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
+      <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+      <Link Rel = "Script" Href = "../../js/perguntas.js"/>
+  </head>
 
-    <body>
-        <Header>
-            <Div Class = "container">
-              <Div Class = "inep_enade">
-                <Div Class = "logo_inep">
-                  <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
-                    <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
-                  </a>
-                </Div>
-                <Span Class = "logo_enade">
-                  <b>
-                    Enade
-                  </b>
-                </Span>
-              </Div>
-              <Div Class = "menu-section">
-                <Div Class = "menu-toggle">
-                  <Div Class = "one"></Div>
-                  <Div Class = "two"></Div>
-                  <Div Class = "three"></Div>
-                </Div>
-                <Nav>
-                  <Ul>
-                    <Li>
-                      <a Href="../../Views/Principal/Index.html">Início</a>
-                    </Li>
-                    <Li>
-                      <a Href="../../Views/Principal/Credits.html">Créditos</a>
-                    </Li>
-                    <Li>
-                      <a Href="../../Views/Principal/About.html">Sobre</a>
-                    </Li>
-                  </Ul>
-                </Nav>
-              </Div>
-            </Div>
-        </Header>
-
-        <div class = "numero-pergunta">
+  <body>
+    <Header>
+      <Div Class = "container">
+        <Div Class = "inep_enade">
+          <Div Class = "logo_inep">
+            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+              <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
+            </a>
+          </Div>
+          <Span Class = "logo_enade">
             <b>
-                <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
-                Questão 24
-                </a>
+              Enade
             </b>
+          </Span>
+        </Div>
+        <Div Class = "menu-section">
+          <Div Class = "menu-toggle">
+            <Div Class = "one"></Div>
+            <Div Class = "two"></Div>
+            <Div Class = "three"></Div>
+          </Div>
+          <Nav>
+            <Ul>
+              <Li>
+                <a Href="../../Views/Principal/Index.html">Início</a>
+              </Li>
+              <Li>
+                <a Href="../../Views/Principal/Credits.html">Créditos</a>
+              </Li>
+              <Li>
+                <a Href="../../Views/Principal/About.html">Sobre</a>
+              </Li>
+            </Ul>
+          </Nav>
+        </Div>
+      </Div>
+    </Header>
+
+    <Main>
+      <div class = "numero-pergunta">
+        <b>
+          <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
+            Simulado Análise e Desenvolvimento de Sistemas - Enade 2021 - Questão 24
+          </a>
+        </b>
+      </div>
+
+      <div  class = "corpo-pergunta">
+
+        <div class = "nav-pergunta">
+            <a href = ""><</a>
+            <a href = "">23</a>
+            <a class = "pergunta-selecionada" href = "">24</a>
+            <a href = "">25</a>
+            <a href = "">></a>
         </div>
 
-        <div  class = "corpo-pergunta">
+        <div class = "texto-pergunta">
+          <p>
+            Em razão da Covid-19, muitos estabelecimentos viram no delivery uma forma de manter os negócios <br>
+            funcionando. As mudanças de hábitos dos brasileiros revelaram um aumento do interesse nesse tipo <br>
+            de serviço. <br>
+            Nesse contexto, um restaurante solicitou o desenvolvimento de um sistema web que possibilite <br>
+            gerenciar automaticamente os pedidos de entrega. O sistema foi projetado com base em tecnologias <br>
+            web e modelado com UML (Unified Modeling Language). Durante o processo de desenvolvimento <br>
+            foram descritos alguns itens importantes que merecem atenção no processo de teste de software. <br>
+            Considerem as seguintes descrições definidas pelo analista de teste:
+          </p>
 
-            <div class = "nav-pergunta">
-                <a href = ""><</a>
-                <a href = "">23</a>
-                <a class = "pergunta-selecionada" href = "">24</a>
-                <a href = "">25</a>
-                <a href = "">></a>
-            </div>
+          <ol style="list-style: decimal-leading-zero;">  <!-- colocar 0 no css (para ficar 01, 02, 03, 04...) -->                                                     
+            <li> 
+                – Verificar se o método “Finalizar Pedido” da classe “Pedido” está funcionando corretamente.
+            </li>
 
-            <div class = "texto-pergunta">
-                <p>
-                    Em razão da Covid-19, muitos estabelecimentos viram no delivery uma forma de manter os negócios <br>
-                    funcionando. As mudanças de hábitos dos brasileiros revelaram um aumento do interesse nesse tipo <br>
-                    de serviço. <br>
-                    Nesse contexto, um restaurante solicitou o desenvolvimento de um sistema web que possibilite <br>
-                    gerenciar automaticamente os pedidos de entrega. O sistema foi projetado com base em tecnologias <br>
-                    web e modelado com UML (Unified Modeling Language). Durante o processo de desenvolvimento <br>
-                    foram descritos alguns itens importantes que merecem atenção no processo de teste de software. <br>
-                    Considerem as seguintes descrições definidas pelo analista de teste:
-                </p>    
+            <li> 
+                – Garantir que o sistema funcione corretamente em diferentes navegadores de internet.
+            </li>
 
-                <ol style="list-style: decimal-leading-zero;">  <!-- colocar 0 no css (para ficar 01, 02, 03, 04...) -->                                                     
-                    <li> 
-                        – Verificar se o método “Finalizar Pedido” da classe “Pedido” está funcionando corretamente.
-                    </li>
+            <li> 
+                – O sistema deve passar por testes rigorosos na estrutura lógica interna do software. 
+            </li>
 
-                    <li> 
-                        – Garantir que o sistema funcione corretamente em diferentes navegadores de internet.
-                    </li>
+            <li> 
+                – O sistema deve garantir, no mínimo, o registro de 100 pedidos simultâneos. 
+            </li>
 
-                    <li> 
-                        – O sistema deve passar por testes rigorosos na estrutura lógica interna do software. 
-                    </li>
-
-                    <li> 
-                        – O sistema deve garantir, no mínimo, o registro de 100 pedidos simultâneos. 
-                    </li>
-                    <li> 
-                        – O usuário deve testar o sistema em um ambiente controlado sob a supervisão dos desenvolvedores.
-                    </li>
-                </ol>
-
-            <div class = "enunciado-pergunta">    
-                Considerando o texto e as descrições apresentadas, avalie as afirmações a seguir.
-
-                <ol type="I">
-                    <li> 
-                        A descrição 01 deve ser verificada com teste unitário.
-                    </li>
-
-                    <li> 
-                        A descrição 02 deve ser executada com a abordagem caixa-branca.
-                    </li>
-                        
-                    <li> 
-                        A descrição 03 deve ser executada com a abordagem caixa-preta.
-                    </li>
-                        
-                    <li>
-                        A descrição 04 deve ser verificada com teste carga.
-                    </li>
-
-                    <li>
-                        A descrição 05 deve ser classificada como teste alfa. 
-                    </li>
-                </ol>
-
-                <p>   
-                    É correto apenas o que se afirma em
-                </p>
-            </div>    
-            <div class = "alternativas-pergunta">
-                <span> <input type = "Radio" Name = "Q29" Value = "A"/> A) II e III. </span>
-                <span> <input type = "Radio" Name = "Q29" Value = "B"/> B) I, II e IV. </span>
-                <span> <input type = "Radio" Name = "Q29" Value = "C"/> C) I, III e V </span>
-                <span> <input type = "Radio" Name = "Q29" Value = "D" Id = "alt-correta"/> D) I, IV e V. </span>
-                <span> <input type = "Radio" Name = "Q29" Value = "E"/> E) II, III, IV e V </span>
-            </div>
+            <li> 
+                – O usuário deve testar o sistema em um ambiente controlado sob a supervisão dos desenvolvedores.
+            </li>
+          </ol>
         </div>
-    </body>
+
+        <div class = "enunciado-pergunta">    
+          Considerando o texto e as descrições apresentadas, avalie as afirmações a seguir.
+
+          <ol type="I">
+            <li> 
+                A descrição 01 deve ser verificada com teste unitário.
+            </li>
+
+            <li> 
+                A descrição 02 deve ser executada com a abordagem caixa-branca.
+            </li>
+                
+            <li> 
+                A descrição 03 deve ser executada com a abordagem caixa-preta.
+            </li>
+                
+            <li>
+                A descrição 04 deve ser verificada com teste carga.
+            </li>
+
+            <li>
+                A descrição 05 deve ser classificada como teste alfa. 
+            </li>
+          </ol>
+
+          <p>   
+            É correto apenas o que se afirma em
+          </p>
+        </div>    
+        <div class = "alternativas-pergunta">
+          <span> <input type = "Radio" Name = "Q29" Value = "A"/> A) II e III. </span>
+          <span> <input type = "Radio" Name = "Q29" Value = "B"/> B) I, II e IV. </span>
+          <span> <input type = "Radio" Name = "Q29" Value = "C"/> C) I, III e V </span>
+          <span> <input type = "Radio" Name = "Q29" Value = "D" Id = "alt-correta"/> D) I, IV e V. </span>
+          <span> <input type = "Radio" Name = "Q29" Value = "E"/> E) II, III, IV e V </span>
+        </div>
+      </div>
+    </Main>
+
+    <Footer>
+      <Div>
+        <p>
+          <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+            Curso de Análise e Desenvolvimento de Sistemas (ADS)
+          </a>
+        </p>
+  
+        <Div Class = "fatec_sp_enade">
+          <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+            <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+          </a>
+          <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+            <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+          </a>
+          <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+            <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+          </a>
+        </Div>
+      </Div>
+    </Footer>
+  </body>
 </html>
