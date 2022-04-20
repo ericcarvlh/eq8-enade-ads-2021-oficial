@@ -12,7 +12,7 @@
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
   </Head>
 
-  <Body>
+  <Body Id = "Q29">
     <Header>
       <Div Class = "container">
         <Div Class = "inep_enade">
@@ -87,8 +87,27 @@
 
           <Div Class = "enunciado-pergunta">
             <p>Considere o algoritmo a seguir.</p>
-            
-            <Img Class = "" Src = "../../Images/Perguntas/Q29AD_ENADE_ADS_2021_EQ8.png"/>
+          
+            <p>
+              <font face = "Courier New">
+                Algoritmo Calcular<Br>
+                &nbsp;&nbsp;&nbsp;var<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mat [1..3][1..5] de inteiro =<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{1, 2, -1, 2, 3}, {1, -3, 4, 2, 0}, {-3, 5, 2, 3, 4}}<Br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sl[1..3] de inteiro = {0, 0, 0}<Br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x, i, j : inteiro<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <- 0<Br> 
+                &nbsp;&nbsp;&nbsp;início<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;para i <- 1 até 3 faça<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;para j <- 1 até 5 faça<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sl[i] <- sl[i] + mat[i][j]<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fimpara<Br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <- x + sl[i]<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fimpara<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imprima x<Br>
+                &nbsp;&nbsp;&nbsp;fim
+              </font>
+            </p>
 
             <p>
               No fim da execução do código apresentado, será exibido o valor
@@ -135,7 +154,7 @@
       </Div>
     </Footer>
 
-    <Script src = "../../js/perguntas.js"></Script>
+    <Script src = "../../js/corrigir.js"></Script>
   </Body>
 
 </HTML>

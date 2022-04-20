@@ -114,8 +114,48 @@
               da pessoa apontada por “p” que possua o seguro, caso exista. Caso contrário, ela devolve NULL.
             </p>
 
-            <p Style = "background-color: red;">
-              Inserir o codigo
+            <p>
+              <font face = "Courier New">
+                void obtem_resultado (pessoa * p){<Br>
+                &nbsp;&nbsp;&nbsp;pessoa*y = NULL;<Br>
+                &nbsp;&nbsp;&nbsp;if(!I(p))<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(“Inviável”);<Br>
+                &nbsp;&nbsp;&nbsp;else if (I(p)&&R(p)&&y=obtem(p))<Br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(“Viável,preço:R$200”);<Br> 
+                &nbsp;&nbsp;&nbsp;else if(I(p)&&!R(p)&&y=obtem(p))<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(“Viável,preço:R$300”);<Br> 
+                &nbsp;&nbsp;&nbsp;else if(!I(p)||(R(p)&&I(p)))<Br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(“Viável,preço:“R$500”);<Br>
+                }
+              </font>
+            </p>
+
+            <p>Considerando as informações apresentadas, avalie as afirmações a seguir.</p>
+
+            <Ol Type = "I">
+              <Li>
+                A tabela apresentada é ambígua, pois há pessoas para as quais a análise resultaria em dois 
+                resultados diferentes.
+              </Li>
+
+              <Li>
+                Embora a tabela seja ambígua, não existe a possibilidade de o programa exibir mais de um resultado 
+                para uma pessoa.
+              </Li>
+
+              <Li>
+                Segundo a tabela, não existe a possibilidade de pessoas sem residência própria serem contempladas 
+                com o seguro.
+              </Li>
+
+              <Li>
+                Segundo o funcionamento do programa, o seguro para uma pessoa menor de idade e sem 
+                residência própria é viável e lhe custará R$500.
+              </Li>
+            </Ol>
+
+            <p>
+              É correto apenas o que se afirma em
             </p>
           </Div>
 

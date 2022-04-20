@@ -56,11 +56,13 @@
         <H2>Resultado</H2>
 
         <Div Class = "primeira-linha">
+          <!-- Tempo em que o usuário ficou realizando a prova. -->
           <Div Class = "tempo-resultado">
             <b>Tempo decorrido:</b>
             <p>X</p>
           </Div>
 
+          <!-- Questões deixadas em branco (sem resposta) pelo usuário. -->
           <Div Class = "branco-resultado">
             <b>Questões em branco:</b>
             <p>X</p>
@@ -68,21 +70,49 @@
         </Div>
 
         <Div Class = "segunda-linha">
+          <!-- Total de acertos (respostas corretas) no simulado. -->
           <Div Class = "acertos-resultado">
             <b>Acertos:</b>
             <p>X</p>
           </Div>
           
+          <!-- Total de erros (respostas incorretas) no simulado. -->
           <Div Class = "erros-resultado">
             <b>Erros:</b>
             <p>X</p>
           </Div>
         </Div>
 
+        <Div>
+          <!-- 
+            Ao finalizar a prova será realizado um cálculo (total acertos/total de questões),
+            ao qual o resultado do calculo será a % de acertos, após armazenar essa informação,
+            será realizado um série de condicionais para informar o usuário, seguido de uma 
+            mensagem motivacional.
+          -->
+          <p>Você acertou 75% das questões do simulado. Se continuar se esforçando, obterá o resultado máximo, parabéns.</p>
+          
+          <!--
+            Ao final da prova, com as respostas erradas já armazenadas, será feito um levantamento
+            sobre o contéudo das questões que o usuário errou e depois informado ao mesmo para estudar.
+          -->
+          <p>recomendamos que você estude o(s) seguinte(s) conteúdo(s):</p>
+          <p Id = "conteudos">Conteúdos</p>
+        </Div>
+
         <Div Class = "graficos">
+          <!-- Grafico responsavel por mostrar total de acertos e erros em %. -->
           <Div Style = "width:400; height:400;" Id = "grafico_AcertoErro_per"></Div>
+          <!-- Grafico responsavel por mostrar total de acertos e erros em inteiro. -->
           <Div Style = "width:400; height:400;" Id = "grafico_AcertoErro_int"></Div>
+          <!-- Grafico responsavel por mostrar questões prenchidas e nulas. -->
           <Div Style = "width:400; height:400;" Id = "grafico_PreenchidasNulas_int"></Div>
+        </Div>
+
+        <Div Class = "buttons-nav">
+          <a Href = "ResultadoEstatisticas.html">
+            <Input Type = "Button" Class = "button-nav" Value = "Estatísticas"/>
+          </a>
         </Div>
         
       </Div>
@@ -91,7 +121,7 @@
     <Footer>
         <Div>
           <p>
-            <a Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+            <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
               Curso de Análise e Desenvolvimento de Sistemas (ADS)
             </a>
           </p>
@@ -111,7 +141,7 @@
     </Footer>
 
     <Script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></Script>
-    <Script Src = "../../js/result.js"></Script>
+    <Script Src = "../../js/resultado.js"></Script>
   </Body>
     
 </HTML>

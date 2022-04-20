@@ -3,14 +3,26 @@ altCorreta = ''
 altCorretaTexto = ''
 
 /* 
+    Quando a pagina carregar, 
+    sera realizado um evento.
+*/
+window.addEventListener("load", function(){
+
+    if(!sessionStorage.getItem("startTime"))
+        this.sessionStorage.setItem("startTime", Date.parse(new Date()))
+
+    /* Salvando a alternativa correta. */
+    altCorreta = document.getElementById('alt-correta').value
+
+})
+
+
+/* 
     Quando o botão de corrigir for clicado,
     o metódo 'confereResposta' será chamado
     este é responsável por conferir a repsota
 */
 function confereResposta(){
-
-    /* Salvando a alternativa correta. */
-    altCorreta = document.getElementById('alt-correta').value
 
     /* Se a alternativa esta correta, abrimos um pop-up mostrando que está correta. */
     if (alternativaSelecionada() === altCorreta)

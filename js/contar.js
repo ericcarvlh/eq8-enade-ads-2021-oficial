@@ -1,0 +1,3 @@
+var altCorreta
+var idPagina
+var perguntasRespondidas
