@@ -6,24 +6,21 @@ b{
     font-size: 2rem;
 }
 
-p{
-    font-size: 1.7rem;
-    padding-top: 1%;
-}
-
 a{
     text-decoration: none;
 }
 
 .sobre-o-site{
-    margin-left: 20%; /* Definindo uma distância em relaçãp a margem esquerda.*/
-    margin-right: 20%; /* Definindo uma distância em relaçãp a margem direita.*/
-    padding: 0.5%;
+    font-size: 1.9rem;
+    margin-left: 15%; /* Definindo uma distância em relaçãp a margem esquerda.*/
+    margin-right: 15%; /* Definindo uma distância em relaçãp a margem direita.*/
+    padding: 0.8%;
+    text-align: justify;
 }
 
 .responsaveis-site{
-    margin-left: 20%; /* Definindo uma distância em relaçãp a margem esquerda.*/
-    margin-right: 20%; /* Definindo uma distância em relaçãp a margem direita.*/
+    font-size: 1.9rem;
+    margin-left: 15%; /* Definindo uma distância em relaçãp a margem esquerda.*/
+    margin-right: 15%; /* Definindo uma distância em relaçãp a margem direita.*/
     margin-top: 2%;
-    padding: 0.5%;
 }
