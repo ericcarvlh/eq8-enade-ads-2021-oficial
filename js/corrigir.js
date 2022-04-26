@@ -1,17 +1,16 @@
 /* Declarando variaveis para armazenar a alternativa correta e texto (respectiva resposta).*/
-altCorreta = ''
-altCorretaTexto = ''
+var altCorreta = ''
+var altCorretaTexto = ''
+var pagsCorrigidas = ''
+var index = 0
 
-console.log(idPagina)
+/* Quando a pagina carregar... */
+window.addEventListener('load', function(){
 
-/* 
-    Quando a pagina carregar, 
-    sera realizado um evento.
-*/
-window.addEventListener("load", function(){
+    if(!sessionStorage.getItem('comecoProva'))
+        this.sessionStorage.setItem('comecoProva', Date.parse(new Date()))
 
-    if(!sessionStorage.getItem("comecoProva"))
-        this.sessionStorage.setItem("comecoProva", Date.parse(new Date()))
+    verificaPagCorrigida()
 
     /* Salvando a alternativa correta. */
     altCorreta = document.getElementById('alt-correta').value    
@@ -24,21 +23,74 @@ window.addEventListener("load", function(){
 */
 function confereResposta(){
 
-    /* Se a alternativa esta correta, abrimos um pop-up mostrando que está correta. */
-    if (alternativaSelecionada() === altCorreta)
-        console.log('voce acertou, a alternativa correta é: ', altCorreta)
+    verificaPagCorrigida()
     
-    /* Se estiver errada, abrimos um pop-up mostrando que está errada */
-    if (alternativaSelecionada() != altCorreta)
-        if(alternativaSelecionada() != 'None')
-            console.log('voce errou, a alternativa era: ', altCorreta)
-    
-    /* Se nenhuma for selecionada, abrimos um pop-up mostrando que nenhuma foi selecionada.*/ 
-    if (alternativaSelecionada() == 'None')
-        console.log('selecione ao menos uma alternativa.')
+    if(alternativaSelecionada() != 'None'){
+        /* Se a alternativa esta correta, abrimos um pop-up mostrando que está correta. */
+        if (alternativaSelecionada() === altCorreta)
+            console.log('voce acertou, a alternativa correta é: ', altCorreta)
+        
+        /* Se estiver errada, abrimos um pop-up mostrando que está errada */
+        if (alternativaSelecionada() != altCorreta){
+            if(alternativaSelecionada() != 'None')
+                console.log('voce errou, a alternativa era: ', altCorreta)
+        }
 
-    respostaAlternativaCorreta(alternativaSelecionada())
+        respostaAlternativaCorreta(alternativaSelecionada())
+        /* Desativando a opção de marcar outra a alternaiva caso o usuário já tenha corrigido. */
+        desativaInputRadio()
+
+        var repitcoes = 0
+        for(pagCorrigida of pagsCorrigidas.split(" ")){
+            if(pagCorrigida == idPagina){
+                repitcoes++
+            }
+        }
+    
+        if(repitcoes==0){
+            /* Salvando a pagina como já corrigida */
+            pagsCorrigidas = pagsCorrigidas.split(" ")
+            pagsCorrigidas.push(idPagina)
+            pagsCorrigidas = pagsCorrigidas.join(" ")
+            sessionStorage.setItem('paginasCorrigidas', pagsCorrigidas)
+        }
+    }else {
+        /* Se nenhuma for selecionada, abrimos um pop-up mostrando que nenhuma foi selecionada.*/ 
+        console.log('selecione ao menos uma alternativa.')
+    }
 }
+
+/* 
+    Desativa a possibilidade de 
+    marcar a alternativa 
+*/
+function desativaInputRadio(){
+    /*
+        Desabilitando a possibilidade do usuário selecionar
+        outra alternativa (caso ele já tenha corrigido a pag em questão).
+    */
+    for(item of document.querySelectorAll(`Input[Name=${idPagina}]`))
+    item.style.pointerEvents = 'None' 
+}
+
+/* 
+    Vendo se a pagina já foi corrigida, se sim ele 
+    bloqueia a opção de mudar a alternativa.
+*/
+function verificaPagCorrigida(){
+    if(sessionStorage.getItem('paginasCorrigidas')){
+
+        pagsCorrigidas = sessionStorage.getItem('paginasCorrigidas')
+
+        for(pagCorrigida of pagsCorrigidas.split(" ")){
+
+            if(pagCorrigida == idPagina)               
+                desativaInputRadio()
+        }
+    } else
+        sessionStorage.setItem('paginasCorrigidas', '')
+}
+
 
 /*
     Ao chamar essa função, ela verifica se o usuário 
@@ -58,6 +110,7 @@ function alternativaSelecionada(){
         if(item.checked)
             return item.value     
     }
+    return 'None'
 }
 
 /*
@@ -73,6 +126,7 @@ function respostaAlternativaCorreta(alternativa){
         4° - 'Filtramos' p armazenar somente a string não o HTML por completo. 
     */
     altCorretaTexto = document.querySelector(`Input[value=${alternativa}`).parentElement.innerText
+
     /* 
         1° - Acessamos o contéudo encontrado em 'altCorretaTexto'.
         2° - Utilizamos o método subString para pegar uma determinada parte da string
@@ -82,4 +136,3 @@ function respostaAlternativaCorreta(alternativa){
     altCorretaTexto = altCorretaTexto.substring(altCorretaTexto.indexOf(")") + 2)
     console.log(altCorretaTexto)
 }
-    

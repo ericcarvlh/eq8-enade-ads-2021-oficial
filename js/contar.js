@@ -1,13 +1,13 @@
-/* 
-    Declarando variaveis para armazenar o Id da 
-    página e perguntas respondida (gabarito do usuário).
-*/
+/* Declarando var. para armazenar o Id da página e perguntas respondidas (gabarito do usuário). */
 let idPagina = ''
 let perguntasRespondidas = ''
 
 /* Armazenando o ID da página. */
 idPagina = document.querySelector('Body').id
 
+/* 
+    Verifica alternativa selecionada e retorna a mesma. 
+*/
 function alternativaSelecionada(){
 
     for(item of document.querySelectorAll(`Input[Name=${idPagina}]`)){
@@ -16,6 +16,9 @@ function alternativaSelecionada(){
     }
 }
 
+/* 
+    Quando a página carregar... 
+*/
 addEventListener('load', function(){
 
     /* 
@@ -59,13 +62,6 @@ addEventListener('load', function(){
                 */
                 document.querySelector(`Input[Value=${perguntaR.split(":")[1]}]`).checked = true;
 
-                /*
-                    Além disso, desabilitamos a opção do usuário de selecionar
-                    outra alternativa (caso ele já tenha respondido).
-                */
-                for(item of document.querySelectorAll('Input[Name=Q]'))
-                    item.style.pointerEvents = 'None'
-
             }
 
         }
@@ -80,38 +76,75 @@ addEventListener('load', function(){
         sessionStorage.setItem('gabaritoUsuario', '')
 })
 
-/* Quando a página mudar/sofrer alteração... */
+/* 
+    Quando a página mudar/sofrer alteração... 
+*/
 addEventListener('change', function(){
 
-    /* Armazenando a alternativa selecionada pelo usuário*/
+    /* Armazenando a alternativa selecionada pelo usuário. */
     let altUsuario = alternativaSelecionada()
     /* Passando o gabarito do usuário como array para uma variável. */
     let historicoPerguntas = perguntasRespondidas.split(" ")
-    /*  */
+    /* 
+        Armazenando 'false' para indicar que não 
+        realizamos nenhuma alteração em uma pergunta 
+        já respondida. 
+    */
     let alteracaoQuestao = false
 
+    /* para cada pergunta do gabarito do usuário...  */
     for(pergunta of historicoPerguntas){
 
+        /* Se o ID da pergunta em questão for igual ao id da página */
         if(pergunta.split(":")[0] == idPagina){
+
+            /* Atribuímos o índice do array desta pergunta em questão. */
             let i = historicoPerguntas.indexOf(pergunta)
+            /* e após isso, atribuímos um valor a essa questão. */
             historicoPerguntas[i] = `${idPagina}:${altUsuario}`
 
+            /* como a questão foi alterada, então mudamos a 'alteracaoQuestao'. */
             alteracaoQuestao = true
         }
 
     }
 
+    console.log(alteracaoQuestao)
+    /* 
+        Se a questão não tiver sido alterada, 
+        então devemos salvar a resposta na variável 'historicoPerguntas'.  
+    */
     if(!alteracaoQuestao){
 
+        /* 
+            Se estiver vazio, quer dizer que o usuário não 
+            respondeu nada, então, fica vazia.
+        */
         if(historicoPerguntas[0] == "")
             historicoPerguntas[0] = `${idPagina}:${altUsuario}`
+        /*
+            Caso contrário, ele respondeu, então salvamos
+            na variável 'historicoPerguntas'.
+        */
         else
             historicoPerguntas.push(`${idPagina}:${altUsuario}`) 
 
     }
 
+    /* 
+        Após isso convertemos o array 
+        para uma string.
+        Ex ANTES de converter (entrada): Q1:A, Q2:B, Q3:C,...
+        Ex DEPOIS de converter (saída): Q1:A Q2:B Q3:C...
+    */
     historicoPerguntas = historicoPerguntas.join(" ")
 
+    /* 
+        Depois informados que na sessionStorage 
+        onde nos encontramos (gabaritoUsuario)
+        ele irá armazenar o valor da string 
+        recebida (historicoPerguntas). 
+    */
     this.sessionStorage.setItem('gabaritoUsuario', historicoPerguntas)
 
 })
