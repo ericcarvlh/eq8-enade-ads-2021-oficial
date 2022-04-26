@@ -2,20 +2,20 @@
 altCorreta = ''
 altCorretaTexto = ''
 
+console.log(idPagina)
+
 /* 
     Quando a pagina carregar, 
     sera realizado um evento.
 */
 window.addEventListener("load", function(){
 
-    if(!sessionStorage.getItem("startTime"))
-        this.sessionStorage.setItem("startTime", Date.parse(new Date()))
+    if(!sessionStorage.getItem("comecoProva"))
+        this.sessionStorage.setItem("comecoProva", Date.parse(new Date()))
 
     /* Salvando a alternativa correta. */
-    altCorreta = document.getElementById('alt-correta').value
-
+    altCorreta = document.getElementById('alt-correta').value    
 })
-
 
 /* 
     Quando o botão de corrigir for clicado,
@@ -48,17 +48,16 @@ function confereResposta(){
 function alternativaSelecionada(){
 
     /* 
-       Fazemos uma estrutura de repetição
-       para percorrer todas as alternativas cujo o nome for "Q"
-       e para cada (item) fazemos uma verificação.
-       le-se: para cada item cujo o nome for 'Q' faça...
+        Fazemos uma estrutura de repetição
+        para percorrer todas as alternativas cujo o nome for "Q"
+        e para cada (item) fazemos uma verificação.
+        le-se: para cada item cujo o nome for 'Q' faça...
     */
-    for(item of document.querySelectorAll('Input[Name=Q]')){
+    for(item of document.querySelectorAll(`Input[Name=${idPagina}]`)){
         /* Se houver algum input radio selecionado, então retorne o valor do input... */
         if(item.checked)
             return item.value     
     }
-    return "None"
 }
 
 /*
@@ -83,3 +82,4 @@ function respostaAlternativaCorreta(alternativa){
     altCorretaTexto = altCorretaTexto.substring(altCorretaTexto.indexOf(")") + 2)
     console.log(altCorretaTexto)
 }
+    
