@@ -23,8 +23,10 @@ window.addEventListener('load', function(){
 */
 function confereResposta(){
 
+    /* Verifica se a página já foi corrigida. */
     verificaPagCorrigida()
     
+    /* Se houver uma alternativa selecionada... */
     if(alternativaSelecionada() != 'None'){
         /* Se a alternativa esta correta, abrimos um pop-up mostrando que está correta. */
         if (alternativaSelecionada() === altCorreta)
@@ -36,25 +38,41 @@ function confereResposta(){
                 console.log('voce errou, a alternativa era: ', altCorreta)
         }
 
-        respostaAlternativaCorreta(alternativaSelecionada())
+        /* 
+            Ao chamarmos essa função, ela requere um parametro (alternativaSelecionada e este
+            parametro é aquela alternativa que foi selecionada pelo usuário), 
+            vai na alternativa que o usuário passou e 'pega'
+            o texto/valor dela. 
+        */
+        conteudoAlternativaSelecionada(alternativaSelecionada())
         /* Desativando a opção de marcar outra a alternaiva caso o usuário já tenha corrigido. */
         desativaInputRadio()
 
-        var repitcoes = 0
+        /* Variável que vai receber a quantidade de vezes que o ID se repete. */
+        let repitcoes = 0
+        /* Percorrendo o array todo para ver se há alguma repetição de ID. */
         for(pagCorrigida of pagsCorrigidas.split(" ")){
+            /* Se o id da pagina ja estiver no array, então somamos 1. */
             if(pagCorrigida == idPagina){
                 repitcoes++
             }
         }
     
+        /* verificando se ID se repete */
         if(repitcoes==0){
-            /* Salvando a pagina como já corrigida */
+            /* Salvando a pagina como já corrigida. */
+            /* Convertendo para array e armazenando. */
             pagsCorrigidas = pagsCorrigidas.split(" ")
+            /* Salvando o novo ID da pagina no array. */
             pagsCorrigidas.push(idPagina)
+            /* Convertendo para string. */
             pagsCorrigidas = pagsCorrigidas.join(" ")
+            /* Salvando no sessionStorage para utilizar em breve. */
             sessionStorage.setItem('paginasCorrigidas', pagsCorrigidas)
         }
-    }else {
+    }
+    /* Caso contrário, ele solicita ao usuário marcar uma alternativa */
+    else {
         /* Se nenhuma for selecionada, abrimos um pop-up mostrando que nenhuma foi selecionada.*/ 
         console.log('selecione ao menos uma alternativa.')
     }
@@ -118,7 +136,7 @@ function alternativaSelecionada(){
     É repassado para essa função uma alternativa em específico, e a função é responsável 
     por 'ir' até a alternatia selecionada e, 'pegar' o conteúdo ali encontrado.  
 */
-function respostaAlternativaCorreta(alternativa){
+function conteudoAlternativaSelecionada(alternativa){
     /* 
         1° - Acessamos o DOM (lugar onde se encontra os elementos do HTML, DOM -> Document).
         2° - Buscamos por um elemento específico (cujo valor é o da variável alternativa).
