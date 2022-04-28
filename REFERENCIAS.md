@@ -4,5 +4,10 @@
 
 `Let` -> https://www.youtube.com/watch?v=ZOx7iTnBqFQ e https://imasters.com.br/front-end/o-que-e-o-let-no-javascript-es6
 
+`Charts.js` (uma das bibliotecas utilizadas para gráfico) -> https://www.chartjs.org/ (documentação)
+
+`Google Charts` (uma das bibliotecas utilizadas para gráfico) -> https://developers.google.com/chart (documentação)
+
+
 
 
