@@ -3,14 +3,85 @@
 <HTML lang = "PT-BR">
     <Head>
         <Meta CharSet = "UTF-8">
+        <Meta Name = "Author" Content = "Paulo Felipe Siva Simão"/>
         <Meta http-equiv="X-UA-Compatible" content="IE=edge">
         <Meta Name = "viewport" Content = "width=device-width, initial-scale=1.0">
         <Title>Estatísticas Gerais</Title>
+        <Link Rel = "Icon" href ="http://enade.inep.gov.br/enade/favicon.ico"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/estatisticas-gerais.css"/>
+        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
     </Head>
 
     <Body>
-        <div id="chart_div"></div>
-        <Script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></Script>
-        <Script Src= "../../js/resultado-estatisticas.js"></Script>
+        <Header>
+            <Div Class = "container">
+              <Div Class = "inep_enade">
+                <Div Class = "logo_inep">
+                  <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+                    <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
+                  </a>
+                </Div>
+                <Span Class = "logo_enade">
+                  <b>
+                    Enade
+                  </b>
+                </Span>
+              </Div>
+              <Div Class = "menu-section">
+                <Div Class = "menu-toggle">
+                  <Div Class = "one"></Div>
+                  <Div Class = "two"></Div>
+                  <Div Class = "three"></Div>
+                </Div>
+                <Nav>
+                  <Ul>
+                    <Li>
+                      <a Href="../Principal/Index.html">Início</a>
+                    </Li>
+                    <Li>
+                      <a Href="../Principal/Credits.html">Créditos</a>
+                    </Li>
+                    <Li>
+                      <a Href="../Principal/About.html">Sobre</a>
+                    </Li>
+                  </Ul>
+                </Nav>
+              </Div>
+            </Div>
+        </Header>
+
+        <Main>
+            <Div Class = "corpo-pagina">
+                <Div Class = "todos-graficos">
+                    <Script src="https://cdn.jsdelivr.net/npm/chart.js"></Script>
+                    <Script Src= "../../js/resultado-estatisticas.js"></Script>
+                </Div>
+            </Div>
+        </Main>
+
+        <Footer>
+            <Div>
+              <p>
+                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+                  Curso de Análise e Desenvolvimento de Sistemas (ADS)
+                </a>
+              </p>
+    
+              <Div Class = "fatec_sp_enade">
+                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+                  <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+                </a>
+                <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+                  <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+                </a>
+              </Div>
+            </Div>
+        </Footer>
+
+        <Script Src = "../../js/menu.js"></Script>
     </Body>
 </HTML>
