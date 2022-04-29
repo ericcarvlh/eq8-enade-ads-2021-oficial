@@ -10,7 +10,6 @@
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
-    <Link Rel = "Script" Href = "../../js/perguntas.js"/>
   </Head>
 
   <Body Id = "Q35">
@@ -167,34 +166,40 @@
             <Span> <Input Type = "Radio" Name = "Q35" Value = "E"/> E) I, III e IV.</Span>
           </Div>
         
+          <Div Class = "buttons-nav">
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
+          </Div>
+
         </Div>
       </Div>
     </Main>
 
-      <Footer>
-        <Div>
-          <p>
-            <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
-              Curso de Análise e Desenvolvimento de Sistemas (ADS)
-            </a>
-          </p>
-    
-          <Div Class = "fatec_sp_enade">
-            <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
-              <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
-            </a>
-            <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
-              <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
-            </a>
-            <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
-              <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
-            </a>
-          </Div>
+    <Footer>
+      <Div>
+        <p>
+          <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+            Curso de Análise e Desenvolvimento de Sistemas (ADS)
+          </a>
+        </p>
+  
+        <Div Class = "fatec_sp_enade">
+          <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+            <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+          </a>
+          <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+            <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+          </a>
+          <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+            <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+          </a>
         </Div>
-      </Footer>
+      </Div>
+    </Footer>
 
-      <Script Src = "../../js/contar.js"></Script>
-      <Script src = "../../js/corrigir.js"></Script>
+    <Script Src = "../../js/contar.js"></Script>
+    <Script src = "../../js/corrigir.js"></Script>
   </Body>
 
 </HTML>

@@ -10,7 +10,6 @@
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
-    <Link Rel = "Script" Href = "../../js/perguntas.js"/>
   </Head>
 
   <Body Id = "Q34">
@@ -112,6 +111,12 @@
             <Span> <Input Type = "Radio" Name = "Q34" Value = "C"/> C) se 100 pessoas procurarem o atendimento apresentando ambos os sintomas, a quantidade de pessoas com dengue será igual a 70. </Span>
             <Span> <Input Type = "Radio" Name = "Q34" Value = "D"/> D) cada pessoa que chega apresentando um dos dois sintomas estará com resfriado comum.</Span>
             <Span> <Input Type = "Radio" Name = "Q34" Value = "E"/> E) a cada 100 pessoas que procuram atendimento, no máximo 30 estarão doentes. </Span>
+          </Div>
+
+          <Div Class = "buttons-nav">
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
 
         </Div>
