@@ -12,7 +12,7 @@ Em relação as perguntas:
 
 Em relação as imagens:
 
-`Q2AC_ENADE_ADS_2021_EQ8.png` -> onde "Q" significa questão, "2" o número da questão, "A" de alternativa, "C" de alternativa correta, "ADS" Análise e Desenvolvimento de Sistemas e, "EQ8" significa Equipe 8.
+`Q2AC_ENADE_ADS_2021_EQ8.png` -> onde "Q" significa questão, "2" o número da questão, "A" de alternativa, "C" de alternativa correta, "ADS" Análise e Desenvolvimento de Sistemas e, "EQ8" quer dizer Equipe 8.
 
 Em relação as imagens das alternativas:
 
