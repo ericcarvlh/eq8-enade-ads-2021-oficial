@@ -77,6 +77,14 @@
     margin-right: 9%;
 }
 
+.imagem-pergunta{
+    box-sizing: content-box;
+    max-width: 725px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
 .fonte-pergunta{
     margin-top: 1%;
     margin-right: 10%;
@@ -89,6 +97,16 @@
     margin-left: 10%;
     margin-right: 10%;
     text-align: start;
+}
+
+.alternativas-pergunta{
+    text-align: left;
+}
+
+.imagem-alternativa{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
 
 .buttons-nav{
