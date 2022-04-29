@@ -4,7 +4,7 @@ let perguntasRespondidas = ''
 
 /* Armazenando o ID da página. */
 idPagina = document.querySelector('Body').id
-
+console.log("teste de id, o id é: "+ idPagina)
 /* 
     Verifica alternativa selecionada e retorna a mesma. 
 */

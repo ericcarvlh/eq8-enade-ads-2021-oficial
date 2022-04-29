@@ -167,7 +167,9 @@
           </Div>
         
           <Div Class = "buttons-nav">
-            <Input Type = "Button" Class = "button-nav" Value = "Finalizar"/>
+            <a Href = "Resultado.html">
+              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
+            </a>
             <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
@@ -198,6 +200,7 @@
       </Div>
     </Footer>
 
+    <Script Src = "../../js/resultado.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script src = "../../js/corrigir.js"></Script>
   </Body>

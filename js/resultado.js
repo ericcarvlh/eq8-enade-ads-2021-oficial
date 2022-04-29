@@ -5,6 +5,10 @@ var gabarito = []
 var acertos = []
 var erros = []
 
+function teste(){
+    alert("foiiiiiiii!")
+}
+
 function drawChart() {
 
     /* Grafico de acertos e erros em porcentagem. */
