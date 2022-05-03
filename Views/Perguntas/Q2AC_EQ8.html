@@ -10,6 +10,7 @@
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
   </Head>
 
   <Body Id = "Q2">
@@ -149,7 +150,7 @@
             <a Href = "Resultado.html">
               <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
             </a>
-            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" id="popup" Class = "button-nav" Value = "Revisar" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
         </Div>
@@ -180,5 +181,6 @@
 
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
+    <script src="../../js/popup.js"></script>
   </Body>
 </HTML>
