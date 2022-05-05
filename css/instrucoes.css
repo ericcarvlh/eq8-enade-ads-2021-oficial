@@ -1,7 +1,8 @@
-.intrucoes-principais{
+.intrucoes-principais p {
     font-size: 1.75rem; /* Definindo um tamanho para a fonte*/
     margin-left: 10%; /* Definindo uma distância em relaçãp a margem esquerda.*/
     margin-right: 10%; /* Definindo uma distância em relaçãp a margem direita.*/
+    text-align: justify;
 }
 
 .imagem-informativa{

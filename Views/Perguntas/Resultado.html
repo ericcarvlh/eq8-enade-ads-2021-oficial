@@ -6,6 +6,7 @@
     <Meta Name = "Author" Content = "Éric Carvalho"/>
     <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
     <Title>Resultado - SimuNade</Title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/result.css"/>
@@ -56,7 +57,10 @@
         <H2>Resultado</H2>
 
         <Div Class = "graficos">
-          <!--graficos aqui, blz?-->
+          <canvas id="myChart"></canvas>
+          <Br><Br>
+          <canvas id="r2d2"></canvas>
+          
         </Div>
 
         <Div>
@@ -66,23 +70,15 @@
             será realizado um série de condicionais para informar o usuário, seguido de uma 
             mensagem motivacional.
           -->
-          <p Id = "retorno-acertos">Você acertou 75% das questões do simulado. Se continuar se esforçando, obterá o resultado máximo, parabéns.</p>
+          <p Id = "retorno-acertos">X</p>
           
           <!--
             Ao final da prova, com as respostas erradas já armazenadas, será feito um levantamento
             sobre o contéudo das questões que o usuário errou e depois informado ao mesmo para estudar.
-          -->
-          <p>recomendamos que você estude o(s) seguinte(s) conteúdo(s):</p>
-          <p Id = "conteudos-a-estudar">Conteúdos</p>
-        </Div>
 
-        <Div Class = "graficos">
-          <!-- Grafico responsavel por mostrar total de acertos e erros em %. -->
-          <Div Style = "width:400; height:400;" Id = "grafico_AcertoErro_per"></Div>
-          <!-- Grafico responsavel por mostrar total de acertos e erros em inteiro. -->
-          <Div Style = "width:400; height:400;" Id = "grafico_AcertoErro_int"></Div>
-          <!-- Grafico responsavel por mostrar questões prenchidas e nulas. -->
-          <Div Style = "width:400; height:400;" Id = "grafico_PreenchidasNulas_int"></Div>
+            <p>recomendamos que você estude o(s) seguinte(s) conteúdo(s):</p>
+            <p Id = "conteudos-a-estudar">Conteúdos</p>
+          -->
         </Div>
 
         <Div Class = "buttons-nav">
@@ -90,10 +86,10 @@
             <Input Type = "Button" Class = "button-nav" Value = "Estatísticas"/>
           </a>
           <a Href = "Q1AE_EQ8.html">
-            <Input Type = "Button" Class = "button-nav" Value = "Refazer simulado"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Refazer simulado" OnClick = "limparStorage()"/>
           </a>
           <a Href = "../Principal/Index.html">
-            <Input Type = "Button" Class = "button-nav" Value = "Sair do simulado"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Sair do simulado" OnClick = "limparStorage()"/>
           </a>
         </Div>
         
@@ -122,7 +118,6 @@
         </Div>
     </Footer>
 
-    <Script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></Script>
     <Script Src = "../../js/resultado.js"></Script>
     <Script Src = "../../js/menu.js"></Script>
   </Body>

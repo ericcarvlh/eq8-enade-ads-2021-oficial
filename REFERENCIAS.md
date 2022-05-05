@@ -19,7 +19,13 @@
 
 `JavaScript Split()` -> [DevMedia](https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254)
 
+`Coalescência nula ou ??` -> [C# Tutorial](https://csharp.net-tutorials.com/pt/397/operadores/operador-de-coalescencia-nula/) e [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+
 `JavaScript Join()` -> [Acervo Lima](https://acervolima.com/metodo-javascript-array-join/)
+
+`Math.round()` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
+
+`Formatação de números decimais` -> [Alura](https://www.alura.com.br/artigos/formatando-numeros-no-javascript)
 
 `LocalStorage e SessionStorage` -> [Stack Overflow](https://pt.stackoverflow.com/questions/19384/diferen%C3%A7as-entre-localstorage-vs-sessionstorage), [TreinaWeb](https://www.treinaweb.com.br/blog/quando-usar-sessionstorage-e-localstorage) e [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage)
 
