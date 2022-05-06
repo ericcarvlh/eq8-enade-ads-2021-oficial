@@ -146,6 +146,5 @@ addEventListener('change', function(){
         recebida (historicoPerguntas). 
     */
     this.sessionStorage.setItem('gabaritoUsuario', historicoPerguntas)
-
 })
 

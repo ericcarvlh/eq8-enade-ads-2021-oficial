@@ -18,16 +18,19 @@ if(totalRespondidas[0] != ''){
 	}
 	totalNaoRespondidas = 35 - totalRespondidas.length
 }
-else{
+else
 	totalRespondidas = []
-}
 
+salvaProgresso(totalAcertos, totalErros)
 
 var mensagemAcertos = ''
 var porcentagemAcerto = Math.round((totalRespondidas.length / 35) * 100)
 
-if(porcentagemAcerto == 0)
-	mensagemAcertos = 'Ops, parece que você não respondeu a nenhuma pergunta. Clique em refazer simulado.'
+if(porcentagemAcerto == 0){
+	mensagemAcertos = 'Ops, parece que você não respondeu a nenhuma pergunta. Clique em <b>REFAZER SIMULADO</b>.'
+	document.getElementById('final-simulado').innerHTML = 'Por favor, certifique-se de selecionar ao menos uma alternativa de uma questão.'
+	document.getElementById('sub-t-final-simulado').innerHTML = 'Vá ao final da página e clique em <b>REFAZER SIMULADO</b>.'
+}
 else if(porcentagemAcerto < 25)
 	mensagemAcertos = 'Infelizmente, você está na linha de rebaixamento igual o Palmeiras, pois o seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
 else if (porcentagemAcerto < 50)
@@ -41,7 +44,7 @@ document.getElementById('retorno-acertos').innerHTML = mensagemAcertos
 
 let delayed;
 
-var grafico = document.getElementById("myChart").getContext('2d');
+var grafico = document.getElementById('acertos-erros').getContext('2d');
 var dados = {
 	type: "bar",
 	data: {
@@ -92,7 +95,7 @@ var dados = {
 }
 new Chart(grafico, dados);
 
-var grafico = document.getElementById('r2d2').getContext('2d');
+var grafico = document.getElementById('respondidas-e-naorespondidas').getContext('2d');
 var dados = {
 	type: "bar",
 	data: {
@@ -143,6 +146,51 @@ var dados = {
 }
 new Chart(grafico, dados);
 
-function limparStorage() {
-	sessionStorage.setItem('gabaritoUsuario', '')
+function salvaProgresso(totalAcertos, totalErros){
+	let errosUsuario = 0
+	let acertosUsuario = 0
+
+	if(localStorage.getItem('errosUsuario') && localStorage.getItem('acertosUsuario')){
+		errosUsuario = localStorage.getItem('errosUsuario').split(" ")
+		acertosUsuario = localStorage.getItem('acertosUsuario').split(" ")
+
+		/**/
+		errosUsuario.push(totalErros.length)
+		errosUsuario.join(" ")
+		localStorage.setItem('errosUsuario', errosUsuario)
+
+		acertosUsuario.push(totalAcertos.length)
+		acertosUsuario.join(" ")
+		localStorage.setItem('acertosUsuario', acertosUsuario)
+		/**/
+	
+		errosUsuario = localStorage.getItem('errosUsuario').split(" ")
+		acertosUsuario = localStorage.getItem('acertosUsuario').split(" ")
+
+		console.log(errosUsuario)
+		console.log(acertosUsuario)
+
+	}else{
+		localStorage.setItem('errosUsuario', errosUsuario)
+   		localStorage.setItem('acertosUsuario', acertosUsuario)
+	}
+
+	//localStorage.removeItem('errosUsuario')
+	//localStorage.removeItem('acertosUsuario')
+
+	//sessionStorage.setItem('gabaritoUsuario', '')
 }
+
+//console.log(gabaritoUsuario)
+
+
+function limparStorage() {
+	//salvaEvolucao(totalAcertos, totalErros))
+	//sessionStorage.setItem('gabaritoUsuario', '')
+}
+
+/* Fazer uma função para reduzir a quantidade de linhas dos gráficos. */
+
+/* Fazer uma função para mostrar o botão de evolução do funciónario
+quando o storage for diferente de nulo e quando for, deve haver ao menos 
+2 simulados realizdos. */

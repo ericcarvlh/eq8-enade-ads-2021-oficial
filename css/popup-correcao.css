@@ -1,0 +1,70 @@
+.pop-acerto {
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.errado {
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    background-color: #fff0e6;
+    border: 2px solid #ffab40;
+    position: relative;
+    margin: auto;
+    position: fixed;
+    display: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 10px 15px 10px #4d4d4d;
+}
+.errado p, .certo p{
+    margin-top: 13px;
+}
+
+.certo {
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    background-color: #fff0e6;
+    border: 2px solid #ffab40;
+    position: relative;
+    margin: auto;
+    position: fixed;
+    display: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 10px 15px 10px #4d4d4d;
+}
+.atencao{
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    background-color: #fff0e6;
+    border: 2px solid #ffab40;
+    position: relative;
+    margin: auto;
+    position: fixed;
+    display: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 10px 15px 10px #4d4d4d;
+    flex-direction: column;
+}
+.atencao h3{
+    margin-top: 50px;
+}
+
+.fechar {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 10px;
+}

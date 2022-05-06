@@ -3,15 +3,21 @@ var altCorreta = ''
 var altCorretaTexto = ''
 var pagsCorrigidas = ''
 var index = 0
+var selecionada = ''
+var textoSelecionada = ''
+
+constroeAlerta()
+constroeErro()
+constroeAcerto()
 
 /* Quando a pagina carregar... */
 window.addEventListener('load', function(){
-
+    
     if(!sessionStorage.getItem('comecoProva'))
-        this.sessionStorage.setItem('comecoProva', Date.parse(new Date()))
-
+    this.sessionStorage.setItem('comecoProva', Date.parse(new Date()))
+    
     verificaPagCorrigida()
-
+    
     /* Salvando a alternativa correta. */
     altCorreta = document.getElementById('alt-correta').value    
 })
@@ -26,25 +32,27 @@ function confereResposta(){
     /* Verifica se a página já foi corrigida. */
     verificaPagCorrigida()
     
+    textoSelecionada = conteudoAlternativaSelecionada(alternativaSelecionada())
+    /* 
+        Ao chamarmos essa função, ela requere um parametro (alternativaSelecionada e este
+        parametro é aquela alternativa que foi selecionada pelo usuário), e depois ela
+        vai na alternativa que o usuário passou e 'pega' o texto/valor dela. 
+    */
+    console.log("Peguei o "+textoSelecionada)
+
     /* Se houver uma alternativa selecionada... */
     if(alternativaSelecionada() != 'None'){
         /* Se a alternativa esta correta, abrimos um pop-up mostrando que está correta. */
-        if (alternativaSelecionada() === altCorreta)
-            console.log('voce acertou, a alternativa correta é: ', altCorreta)
+        if (alternativaSelecionada() === altCorreta){
+            abrirCerto()
+        }
         
         /* Se estiver errada, abrimos um pop-up mostrando que está errada */
         if (alternativaSelecionada() != altCorreta){
             if(alternativaSelecionada() != 'None')
-                console.log('voce errou, a alternativa era: ', altCorreta)
+                abrirErrado()
         }
 
-        /* 
-            Ao chamarmos essa função, ela requere um parametro (alternativaSelecionada e este
-            parametro é aquela alternativa que foi selecionada pelo usuário), 
-            vai na alternativa que o usuário passou e 'pega'
-            o texto/valor dela. 
-        */
-        conteudoAlternativaSelecionada(alternativaSelecionada())
         /* Desativando a opção de marcar outra a alternaiva caso o usuário já tenha corrigido. */
         desativaInputRadio()
 
@@ -72,10 +80,9 @@ function confereResposta(){
         }
     }
     /* Caso contrário, ele solicita ao usuário marcar uma alternativa */
-    else {
-        /* Se nenhuma for selecionada, abrimos um pop-up mostrando que nenhuma foi selecionada.*/ 
-        console.log('selecione ao menos uma alternativa.')
-    }
+    else 
+        /* Se nenhuma for selecionada, abrimos um pop-up mostrando que nenhuma foi selecionada.*/
+        abrirAlerta() 
 }
 
 /* 
@@ -153,4 +160,92 @@ function conteudoAlternativaSelecionada(alternativa){
     */
     altCorretaTexto = altCorretaTexto.substring(altCorretaTexto.indexOf(")") + 2)
     console.log(altCorretaTexto)
+
+    return altCorretaTexto
+}
+
+function alternativaSelecionadaUsuario() {
+    for (let i = 0; i <= 4; i++) {
+        const checado = document.querySelectorAll('[value]')[i].checked
+        console.log(checado)
+        if (checado === true) {
+            const valor = document.querySelectorAll('[value]')[i].value
+            const texto = document.querySelector(`Input[value=${valor}`).parentElement.innerText
+            selecionada = valor;
+            textoSelecionada = texto;
+        }
+    }
+}
+
+function constroeErro() {
+    const alternativaCorreta = document.querySelector('#alt-correta').value
+    const textoCorreto = document.querySelector(`input[value = ${document.querySelector('#alt-correta').value}]`).parentElement.innerText    
+    document.write('<div id="pop-erro" class="pop-acerto">')
+    document.write('<div id = "errado" class="errado">')
+    document.write('<img src="../../Images/Perguntas/errado.png">')
+    document.write('<h3>Você Errou</h3>')
+    document.write('<span class="fechar" onClick = "fechar()" >X</span>')
+    document.write('<p>A alternativa correta era a "' + alternativaCorreta + '", ou seja:</p>')
+    document.write('<p><b>"' + textoCorreto + '"</b></p>')
+    document.write(`<p>Se esforce um pouco mais, continuamos tendo orgulho de ter um usúario igual à você, o importante é tentar.</p></div></div>`)
+}
+
+function constroeAcerto() {
+    const alternativaCorreta = document.querySelector('#alt-correta').value
+    alternativaSelecionadaUsuario()
+    const textoCorreto = document.querySelector(`input[value = ${document.querySelector('#alt-correta').value}]`).parentElement.innerText
+    document.write('<div id="pop-acerto" class="pop-acerto">')
+    document.write('<div id = "certo" class="certo">')
+    document.write('<img src="../../Images/Perguntas/certo.png">')
+    document.write('<h3>Você Acertou</h3>')
+    document.write('<span class="fechar" onClick = "fechar()" >X</span>')
+    document.write('<p>Você acertou, a alternativa correta era a "' + alternativaCorreta + '", ou seja:</p>')
+    document.write('<p><b>"' + textoCorreto + '"</b></p>')
+    document.write('<p>Nos sentimos orgulhosos por termos um usuário igual a você, continue assim.</p></div></div>')
+}
+
+function constroeAlerta(){
+    document.write('<div id="pop-alerta" class="pop-acerto">')
+    document.write('<div id = "atencao" class="atencao">')
+    document.write('<img src="../../Images/Perguntas/atencao.png">')
+    document.write('<h3>Selecione uma alternativa</h3>')
+    document.write('<span class="fechar" onClick = "fechar()" >X</span>')
+    document.write('<p>Para corrigir a questão, é obrigatório que você selecione uma alternativa.</p></div></div>')
+}
+
+function abrirAlerta() {
+    const container = document.getElementById('pop-alerta')
+    container.style.display = 'flex'
+    const atencao = document.getElementById('atencao')
+    atencao.style.display = 'block'
+}
+
+function abrirErrado() {
+    const container = document.getElementById('pop-erro')
+    container.style.display = 'flex'
+    const errado = document.getElementById('errado')
+    errado.style.display = 'block'
+}
+
+function abrirCerto() {
+    const container = document.getElementById('pop-acerto')
+    container.style.display = 'flex'
+    const certo = document.getElementById('certo')
+    certo.style.display = 'block'
+}
+
+function fechar() {
+    const popAlerta = document.getElementById('pop-acerto')
+    const popErro = document.getElementById('pop-erro')
+    const container = document.getElementById('pop-alerta')
+    const certo = document.getElementById('certo')
+    const errado = document.getElementById('errado')
+    const atencao = document.getElementById('atencao')
+    popErro.style.display = 'none'
+    container.style.display = 'none'
+    certo.style.display = 'none'
+    errado.style.display = 'none'
+    popAlerta.style.display = 'none'
+    atencao.style.display = 'none'
+
 }

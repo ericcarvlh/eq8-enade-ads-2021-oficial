@@ -3,13 +3,12 @@
 <HTML Lang = "PT-BR">
   <Head>
     <Meta CharSet = "UTF-8"/>
-    <Meta Name = "Author" Content = "Éric Carvalho"/>
+    <Meta Name = "Author" Content = "Éric Carvalho, Tony Bryan"/>
     <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
     <Title>Resultado - SimuNade</Title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
-    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/result.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/resultado.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
   </Head>
 
@@ -54,13 +53,13 @@
     <Main>
       <Div Class = "corpo-pagina">   
 
-        <H2>Resultado</H2>
+        <p Class = "mensagem-final-simulado" Id = "final-simulado">Parabéns, você acabou de finalizar o simualdo!</p>
 
-        <Div Class = "graficos">
-          <canvas id="myChart"></canvas>
-          <Br><Br>
-          <canvas id="r2d2"></canvas>
-          
+        <p Class = "sub-mensagem-final-simulado" Id = "sub-t-final-simulado">Vamos conferir alguns dados?</p>
+
+        <Div Class = "graficos" Align = "center">
+          <canvas Class="acertos-erros" id="acertos-erros"></canvas>
+          <canvas Class="respondidas-e-naorespondidas"id="respondidas-e-naorespondidas"></canvas>
         </Div>
 
         <Div>
@@ -91,6 +90,9 @@
           <a Href = "../Principal/Index.html">
             <Input Type = "Button" Class = "button-nav" Value = "Sair do simulado" OnClick = "limparStorage()"/>
           </a>
+          <a Href = "../Perguntas/EvolucaoUsuario.html">
+            <Input Type = "Button" Class = "button-nav" Value = "Conferir evolução" OnClick = "verificaEvolucao()"/>
+          </a>
         </Div>
         
       </Div>
@@ -117,7 +119,8 @@
           </Div>
         </Div>
     </Footer>
-
+    
+    <Script src="https://cdn.jsdelivr.net/npm/chart.js"></Script>
     <Script Src = "../../js/resultado.js"></Script>
     <Script Src = "../../js/menu.js"></Script>
   </Body>

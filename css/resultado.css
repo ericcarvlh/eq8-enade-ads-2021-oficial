@@ -1,0 +1,25 @@
+.graficos{
+    margin-top: 5%;
+}
+
+.acertos-erros, .respondidas-e-naorespondidas{
+    width: 90%;
+    height: 80%;
+    max-height: 400px;
+    max-width: 500px;
+}
+
+.respondidas-e-naorespondidas{
+    margin-bottom: 4%;
+}
+
+.mensagem-final-simulado{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.1rem;    
+}
+
+.sub-mensagem-final-simulado{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.1rem; 
+    margin-top: 1.5%;
+}
