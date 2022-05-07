@@ -119,16 +119,14 @@ function verificaPagCorrigida(){
 
 /*
     Ao chamar essa função, ela verifica se o usuário 
-    selecinou alguma alternativa, qual foi selecionada
-    e se a mesma é a alternativa correta.
+    selecinou alguma alternativa e qual foi selecionada.
 */
 function alternativaSelecionada(){
-
     /* 
         Fazemos uma estrutura de repetição
-        para percorrer todas as alternativas cujo o nome for "Q"
-        e para cada (item) fazemos uma verificação.
-        le-se: para cada item cujo o nome for 'Q' faça...
+        para percorrer todas as alternativas cujo o nome for 
+        o id da pagina (Ex: Q35). Para cada (item/input radio) fazemos 
+        uma verificação. le-se: para cada item cujo o nome for o id da página, faça...
     */
     for(item of document.querySelectorAll(`Input[Name=${idPagina}]`)){
         /* Se houver algum input radio selecionado, então retorne o valor do input... */
