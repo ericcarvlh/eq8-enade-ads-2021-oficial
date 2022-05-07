@@ -88,23 +88,23 @@ label2, dados2, corFundoSegundoGrafico, corBordaSegundoGrafico, titulo){
 			},
 			animation: {
 				onComplete: () => {
-				delayed = true;
+					delayed = true;
 				},
 				delay: (context) => {
-				let delay = 0;
-				if (context.type === 'data' && context.mode === 'default' && !delayed) {
-					delay = context.dataIndex * 850 + context.datasetIndex * 950;
-				}
-				return delay;
+					let delay = 0;
+					if (context.type === 'data' && context.mode === 'default' && !delayed) {
+						delay = context.dataIndex * 850 + context.datasetIndex * 950;
+					}
+					return delay;
 				},
 			},
 			scales: {
 				y: {
-				display: true,
-				title: {
 					display: true,
-					text: 'Total de perguntas'
-				}
+					title: {
+						display: true,
+						text: 'Total de perguntas'
+					}
 				},
 			}
 		}

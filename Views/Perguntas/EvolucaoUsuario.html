@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 
 <HTML lang="PT-BR">
-    <Head>
-        <Meta CharSet = "UTF-8">
-        <Meta http-equiv = "X-UA-Compatible" content = "IE=edge">
-        <Meta Name = "viewport" Content = "width=device-width, initial-scale=1.0">
-        <Title>Sua evolução</Title>
-        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
-        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/evolucao-usuario.css"/>
-        <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
-    </Head>
+  <Head>
+    <Meta CharSet = "UTF-8">
+    <Meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <Meta Name = "viewport" Content = "width=device-width, initial-scale=1.0">
+    <Title>Sua evolução</Title>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/evolucao-usuario.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/evolucao-usuario.css"/>
+  </Head>
 
-    <Body>
-        <Header>
-            <Div Class = "container">
-                <Div Class = "inep_enade">
-                <Div Class = "logo_inep">
-                    <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
-                    <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
-                    </a>
-                </Div>
-                <Span Class = "logo_enade">
-                    <b>
-                    Enade
-                    </b>
-                </Span>
-                </Div>
-                <Div Class = "menu-section">
-                <Div Class = "menu-toggle">
-                    <Div Class = "one"></Div>
-                    <Div Class = "two"></Div>
-                    <Div Class = "three"></Div>
-                </Div>
-                <Nav>
-                    <Ul>
-                    <Li>
-                        <a Href="../../Views/Principal/Index.html">Início</a>
-                    </Li>
-                    <Li>
-                        <a Href="../../Views/Principal/Credits.html">Créditos</a>
-                    </Li>
-                    <Li>
-                        <a Href="../../Views/Principal/About.html">Sobre</a>
-                    </Li>
-                    </Ul>
-                </Nav>
-                </Div>
-            </Div>
-        </Header>
-      
-        <Main>
-            <Div Class = "corpo-pagina">   
-                <p Class = "mensagem-evolucao-usuario" Id = "evolucao-usuario">Acompanhe nessa página a sua evolução!</p>
+  <Body>
+    <Header>
+      <Div Class = "container">
+        <Div Class = "inep_enade">
+          <Div Class = "logo_inep">
+            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+              <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
+            </a>
+          </Div>
+          <Span Class = "logo_enade">
+            <b>
+              Enade
+            </b>
+          </Span>
+        </Div>
+        <Div Class = "menu-section">
+          <Div Class = "menu-toggle">
+            <Div Class = "one"></Div>
+            <Div Class = "two"></Div>
+            <Div Class = "three"></Div>
+          </Div>
+          <Nav>
+            <Ul>
+            <Li>
+                <a Href="../../Views/Principal/Index.html">Início</a>
+            </Li>
+            <Li>
+                <a Href="../../Views/Principal/Credits.html">Créditos</a>
+            </Li>
+            <Li>
+                <a Href="../../Views/Principal/About.html">Sobre</a>
+            </Li>
+            </Ul>
+          </Nav>
+        </Div>
+      </Div>
+    </Header>
+  
+    <Main>
+      <Div Class = "corpo-pagina">   
+        <p Class = "mensagem-evolucao-usuario" Id = "evolucao-usuario">
+          Acompanhe nessa página a sua evolução!
+        </p>
 
-                <p Class = "sub-mensagem-evolucao-usuario" Id = "sub-t-evolucao-usuario">Desde seu primeiro simulado até agora.</p>
+        <p Class = "sub-mensagem-evolucao-usuario" Id = "sub-t-evolucao-usuario">
+          Desde seu primeiro simulado até agora.
+        </p>
 
-                <canvas Id = 'grafico-evolucao'></canvas>
+        <Div Class = "graficos" Align = "center">
+          <canvas Class = "grafico-evolucao" Id = 'grafico-evolucao'></canvas>
+        </Div>
 
-                <Div Class = "buttons-nav">
-                    <a Href = "Resultado.html">
-                      <Input Type = "Button" Class = "button-nav" Value = "Voltar"/>
-                    </a>
-                    <a Href = "../Principal/Index.html">
-                      <Input Type = "Button" Class = "button-nav" Value = "Sair"/>
-                    </a>
-                </Div>
-            </Div>
-        </Main>
+        <Div Class = "buttons-nav">
+          <a Href = "Resultado.html">
+            <Input Type = "Button" Class = "button-nav" Value = "Voltar"/>
+          </a>
+          <a Href = "../Principal/Index.html">
+            <Input Type = "Button" Class = "button-nav" Value = "Sair"/>
+          </a>
+        </Div>
+      </Div>
+    </Main>
 
-        <Footer>
-            <Div>
-              <p>
-                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
-                  Curso de Análise e Desenvolvimento de Sistemas (ADS)
-                </a>
-              </p>
-    
-              <Div Class = "fatec_sp_enade">
-                <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
-                  <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
-                </a>
-                <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
-                  <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
-                </a>
-                <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
-                  <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
-                </a>
-              </Div>
-            </Div>
-        </Footer>
+    <Footer>
+      <Div>
+        <p>
+          <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+            Curso de Análise e Desenvolvimento de Sistemas (ADS)
+          </a>
+        </p>
 
-        <Script src="https://cdn.jsdelivr.net/npm/chart.js"></Script>
-        <Script Src = "../../js/evolucao-usuario.js"></Script>
-        <Script Src = "../../js/menu.js"></Script>
-    </Body>
+        <Div Class = "fatec_sp_enade">
+          <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
+            <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
+          </a>
+          <a Target = "_Blank" Href = "https://www.saopaulo.sp.gov.br/">
+            <Img Src = "../../Images/Principal/governo-do-estado-de-sp-logo.png" height="45px" width="80px"/> 
+          </a>
+          <a Target = "_Blank" Href = "https://www.cps.sp.gov.br/">
+            <Img Src = "../../Images/Principal/cps-logo.png" height="45px" width="80px"/> 
+          </a>
+        </Div>
+      </Div>
+    </Footer>
+
+    <Script src="https://cdn.jsdelivr.net/npm/chart.js"></Script>
+    <Script Src = "../../js/evolucao-usuario.js"></Script>
+    <Script Src = "../../js/menu.js"></Script>
+  </Body>
 </HTML>

@@ -5,11 +5,17 @@ console.log("Data(s): "+localStorage.getItem('dataSimulado'))
 let acertos = []
 let erros = []
 let datas = []
+let porcentagemAcerto = []
+ 
 
 if(localStorage.getItem('acertosUsuario')){
   acertos = localStorage.getItem('acertosUsuario').split(',')
   erros = localStorage.getItem('errosUsuario').split(',')
   datas = localStorage.getItem('dataSimulado').split(',')
+
+  for(let i = 0; i < acertos.length; i++){
+    porcentagemAcerto[i] = Math.trunc((acertos[i] / 35) * 100)
+  }
 
   if(datas.length < 2){
     window.location.href = 'Resultado.html' 
@@ -19,11 +25,13 @@ if(localStorage.getItem('acertosUsuario')){
 console.log("Já em array "+acertos)
 console.log("Já em array "+erros)
 console.log("Já em array "+datas)
+console.log("Porcentagem: "+porcentagemAcerto)
 
-var grafico = document.getElementById('grafico-evolucao').getContext('2d');
-var dados = {
-	type: "line",
-	data: {
+let delayed
+grafico = document.getElementById('grafico-evolucao').getContext('2d')
+dados = {
+  type: 'bar',
+  data: {
 		labels: datas,
 		datasets: [{
 				label:'Total de acertos',
@@ -36,37 +44,51 @@ var dados = {
 				data: erros,
 				backgroundColor: 'rgba(255, 0, 0, 0.6)',
 				borderColor: 'rgba(255, 0, 0, 1)',
-		}]
+		  },
+      {
+        label:'Acertos em %',
+        data: porcentagemAcerto, 
+				backgroundColor: 'rgba(150, 0, 0, 0.6)',
+				borderColor: 'rgba(150, 0, 0, 1)',
+        type: 'line'
+      }]
 	},
-    options: {
-        animation: {
-            x: {
-                type: 'number',
-                easing: 'linear',
-                duration: 1000,
-                from: 0, // the point is initially skipped
-                delay(ctx) {
-                if (ctx.type !== 'data' || ctx.xStarted) {
-                    return 0;
-                }
-                ctx.xStarted = true;
-                return ctx.index * 500;
-                }
-            },
-            y: {
-              type: 'number',
-              easing: 'linear',
-              duration: 1000,
-              from: 0,
-              delay(ctx) {
-                if (ctx.type !== 'data' || ctx.yStarted) {
-                  return 0;
-                }
-                ctx.yStarted = true;
-                return ctx.index * 500;
-              }
-            }
+  options: {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Desempenho nos simulados'
+      },
+    },
+    animation: {
+      onComplete: () => {
+        delayed = true;
+      },
+      delay: (context) => {
+        let delay = 0;
+        if (context.type === 'data' && context.mode === 'default' && !delayed) {
+          delay = context.dataIndex * 850 + context.datasetIndex * 950;
         }
-    }   
+        return delay;
+      },
+    },
+    scales: {
+      y: {
+        display: true,
+        title: {
+          display: true,
+          text: 'Perguntas'
+        }
+      },
+      x:{
+        display: true,
+        title: {
+          display: true,
+          text: 'Data (Dia/Mês/Ano)'
+        }
+      }
+    }
+  },
 }
 new Chart(grafico, dados);
