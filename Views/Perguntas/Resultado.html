@@ -53,9 +53,34 @@
     <Main>
       <Div Class = "corpo-pagina">   
 
-        <p Class = "mensagem-final-simulado" Id = "final-simulado">Parabéns, você acabou de finalizar o simualdo!</p>
+        <p Class = "mensagem-final-simulado" Id = "final-simulado">
+          Parabéns, você acabou de finalizar o simualdo!
+        </p>
 
-        <p Class = "sub-mensagem-final-simulado" Id = "sub-t-final-simulado">Vamos conferir alguns dados?</p>
+        <p Class = "sub-mensagem-final-simulado" Id = "sub-t-final-simulado">
+          Vamos conferir alguns dados?
+        </p>
+
+        <Div Id = "info-resultado" Class = "info-resultado">
+          <p Class = "orientacao" Id = "orientacao">
+            Confira abaixo alguns gráficos informando sobre seu desempenho, sendo:
+          </p>
+
+          <p Id = "orientacao">
+            <b>Total de acertos</b>, <b>Total de erros</b>, <b>Total de perguntas não respondidas</b>
+            e <b>Total de perguntas respondidas</b>
+          </p>
+
+          <p>
+            Confira também, logo após os gráficos, algumas 
+            outras informações quanto ao seu desempenho e botões para 
+            conferir a distribuição geral de seleção por alternativa de cada questão 
+            (<b>Estatísticas</b>), realizar o simulado mais uma vez (<b>Refazer Simulado</b>),
+            ir para a págna inicial (<b>Sair do Simulado</b>) e caso você tenha realizado o simulado
+            <b>MAIS DE UMA VEZ</b>, poderá conferir a sua evolução através de um gráfico 
+            (<b>Conferir evolução</b>).
+          </p>
+        </Div>
 
         <Div Class = "graficos" Align = "center">
           <canvas Class="acertos-erros" id="acertos-erros"></canvas>
@@ -69,7 +94,12 @@
             será realizado um série de condicionais para informar o usuário, seguido de uma 
             mensagem motivacional.
           -->
-          <p Id = "retorno-acertos">X</p>
+          <p Class = "mensagem-evolucao-usuario" Id = "mensagem-evolucao-usuario" Style = "display: none;">
+            Para acessar a página de <b>Evolução do Usuário</b> (<b>Conferir evolução</b>),
+            você precisa, no mínimo, ter realizado o simualdo 2 vezes.
+          </p>
+
+          <p Class = "retorno-acertos" Id = "retorno-acertos">X</p>
           
           <!--
             Ao final da prova, com as respostas erradas já armazenadas, será feito um levantamento
@@ -85,13 +115,13 @@
             <Input Type = "Button" Class = "button-nav" Value = "Estatísticas"/>
           </a>
           <a Href = "Q1AE_EQ8.html">
-            <Input Type = "Button" Class = "button-nav" Value = "Refazer simulado" OnClick = "limparStorage()"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Refazer simulado" OnClick = "salvaEvolucaoResetaSimulado()"/>
           </a>
           <a Href = "../Principal/Index.html">
-            <Input Type = "Button" Class = "button-nav" Value = "Sair do simulado" OnClick = "limparStorage()"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Sair do simulado" OnClick = "salvaEvolucaoResetaSimulado()"/>
           </a>
-          <a Href = "../Perguntas/EvolucaoUsuario.html">
-            <Input Type = "Button" Class = "button-nav" Value = "Conferir evolução" OnClick = "verificaEvolucao()"/>
+          <a Id = "link-evolucao-usuario" Href = "../Perguntas/EvolucaoUsuario.html">
+            <Input Type = "Button" Class = "button-nav" Value = "Conferir evolução" Id = "conferir-evolucao" OnClick = "salvaEvolucaoResetaSimulado()"/>
           </a>
         </Div>
         

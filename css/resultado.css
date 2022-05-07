@@ -23,3 +23,26 @@
     font-size: 2.1rem; 
     margin-top: 1.5%;
 }
+
+.info-resultado{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.info-resultado p{
+    text-align: justify;
+}
+
+.orientacao{
+    margin-top: 2.5%;
+    font-size: 1.8rem; 
+}
+
+.retorno-acertos{
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.mensagem-evolucao-usuario{
+    margin-top: 5%;
+}

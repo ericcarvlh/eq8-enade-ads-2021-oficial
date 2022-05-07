@@ -23,9 +23,11 @@
 
 `JavaScript Join()` -> [Acervo Lima](https://acervolima.com/metodo-javascript-array-join/)
 
-`Math.round()` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
+`JavaScript Math.round()` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
 
 `Formatação de números decimais` -> [Alura](https://www.alura.com.br/artigos/formatando-numeros-no-javascript)
+
+`JavaScript window.locaion` -> [DevMedia](https://www.devmedia.com.br/javascript-redirect-redirecionando-o-usuario-com-window-location/39809)
 
 `LocalStorage e SessionStorage` -> [Stack Overflow](https://pt.stackoverflow.com/questions/19384/diferen%C3%A7as-entre-localstorage-vs-sessionstorage), [TreinaWeb](https://www.treinaweb.com.br/blog/quando-usar-sessionstorage-e-localstorage) e [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage)
 

@@ -1,19 +1,39 @@
+console.log("Acertos: "+localStorage.getItem('acertosUsuario'))
+console.log("Erros: "+localStorage.getItem('errosUsuario'))
+console.log("Data(s): "+localStorage.getItem('dataSimulado'))
 
+let acertos = []
+let erros = []
+let datas = []
+
+if(localStorage.getItem('acertosUsuario')){
+  acertos = localStorage.getItem('acertosUsuario').split(',')
+  erros = localStorage.getItem('errosUsuario').split(',')
+  datas = localStorage.getItem('dataSimulado').split(',')
+
+  if(datas.length < 2){
+    window.location.href = 'Resultado.html' 
+  }
+}
+
+console.log("Já em array "+acertos)
+console.log("Já em array "+erros)
+console.log("Já em array "+datas)
 
 var grafico = document.getElementById('grafico-evolucao').getContext('2d');
 var dados = {
 	type: "line",
 	data: {
-		labels: ['Jan', 'Fev', 'Mar'],
+		labels: datas,
 		datasets: [{
 				label:'Total de acertos',
-				data: [50, 450, 50],
+				data: acertos,
 				backgroundColor: 'rgba(0, 255, 0, 0.6)',
 				borderColor: 'rgba(0, 255, 0, 1)',
 			},
 			{
 				label:'Total de erros',
-				data: [50, 350, 150],
+				data: erros,
 				backgroundColor: 'rgba(255, 0, 0, 0.6)',
 				borderColor: 'rgba(255, 0, 0, 1)',
 		}]
