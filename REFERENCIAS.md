@@ -13,6 +13,10 @@
 `Var, Let e Const` -> [Var, Let, Const - Tudo o que você precisa saber
 (Youtube)](https://www.youtube.com/watch?v=ZOx7iTnBqFQ) e [IMasters](https://imasters.com.br/front-end/o-que-e-o-let-no-javascript-es6)
 
+`Funções` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions)
+
+`Métodos` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+
 `JavaScript indexOf()` -> [DevMedia](https://www.devmedia.com.br/javascript-indexof-encontrando-a-posicao-de-um-caractere-ou-string/39422)
 
 `JavaScript Substring()` -> [WarContent](https://warcontent.com/substring-javascript/~)

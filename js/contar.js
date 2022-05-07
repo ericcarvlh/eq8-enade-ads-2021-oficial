@@ -19,7 +19,7 @@ function alternativaSelecionada(){
 /* 
     Quando a página carregar... 
 */
-addEventListener('load', function(){
+addEventListener('load', () => {
 
     /* 
         Verificando a existência de uma sessão
@@ -79,7 +79,7 @@ addEventListener('load', function(){
 /* 
     Quando a página mudar/sofrer alteração... 
 */
-addEventListener('change', function(){
+addEventListener('change', () => {
 
     /* Armazenando a alternativa selecionada pelo usuário. */
     let altUsuario = alternativaSelecionada()

@@ -11,7 +11,7 @@ constroeErro()
 constroeAcerto()
 
 /* Quando a pagina carregar... */
-window.addEventListener('load', function(){
+window.addEventListener('load', () => {
     
     if(!sessionStorage.getItem('comecoProva'))
     this.sessionStorage.setItem('comecoProva', Date.parse(new Date()))

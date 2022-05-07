@@ -112,7 +112,7 @@ label2, dados2, corFundoSegundoGrafico, corBordaSegundoGrafico, titulo){
 	new Chart(grafico, dados);
 }
 
-addEventListener('load', function(){
+addEventListener('load', () => {
 
 	let datas = []
 
