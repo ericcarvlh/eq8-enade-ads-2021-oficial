@@ -63,7 +63,5 @@ function criarBotoes(){
             document.write('<a href= "'+htmls[i]+'" class="bt-pop">'+ (i+1) +'</a>')
         }
     }  
-    /* document.write('</div><input type="button" class="fechar" value="X" onclick="fecharPopUp()"></div></div>') */
     document.write('</div><span class="fechar" onClick = "fecharPopUp()" >X</span></div></div>')
-    /* document.getElementsByClassName('fechar') */
 }

@@ -20,6 +20,8 @@ function alternativaSelecionada(){
     Quando a página carregar... 
 */
 addEventListener('load', () => {
+    if(!sessionStorage.getItem('comecoProva'))
+        this.sessionStorage.setItem('comecoProva', Date.parse(new Date()))
 
     /* 
         Verificando a existência de uma sessão

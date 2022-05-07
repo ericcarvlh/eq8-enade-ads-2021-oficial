@@ -13,9 +13,6 @@ constroeAcerto()
 /* Quando a pagina carregar... */
 window.addEventListener('load', () => {
     
-    if(!sessionStorage.getItem('comecoProva'))
-    this.sessionStorage.setItem('comecoProva', Date.parse(new Date()))
-    
     verificaPagCorrigida()
     
     /* Salvando a alternativa correta. */

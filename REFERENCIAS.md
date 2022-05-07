@@ -15,6 +15,8 @@
 
 `Funções` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions)
 
+`Inserindo variáveis em strings` -> [DelfStack](https://www.delftstack.com/pt/howto/javascript/javascript-variable-in-string/) e [Mozilla](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
+
 `Métodos` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 
 `JavaScript indexOf()` -> [DevMedia](https://www.devmedia.com.br/javascript-indexof-encontrando-a-posicao-de-um-caractere-ou-string/39422)
@@ -38,6 +40,3 @@
 `Charts.js`  -> [Documentação](https://www.chartjs.org/)
 
 `Google Charts` -> [Documentação](https://developers.google.com/chart)
-
-
-

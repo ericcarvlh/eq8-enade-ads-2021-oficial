@@ -1,0 +1,14 @@
+header, .buttons-nav, footer, .info-resultado{
+    display: none;
+}
+
+.corpo-pagina{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+body{
+    background: #FFF;
+    color: #000; 
+    font: 12pt serif;
+}

@@ -3,6 +3,8 @@ const gabaritoOficial = ["Q1:E", "Q2:C", "Q3:B", "Q4:B", "Q5:A", "Q6:A", "Q7:C",
 "Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A", ""]
 var gabaritoUsuario = []
 var totalRespondidas = []
+var tempoDecorrido = 0
+var tempoMedioPergunta = 0
 
 if(sessionStorage.getItem('gabaritoUsuario')){
 	gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
@@ -28,6 +30,52 @@ if(totalRespondidas[0] != ''){
 else
 	totalRespondidas = []
 
+addEventListener('load', () => {
+
+	if(sessionStorage.getItem("comecoProva")){
+		let inicioProva = sessionStorage.getItem("comecoProva");
+		let finalProva = Date.parse(new Date())
+	
+		tempoDecorrido = (finalProva - inicioProva)/1000
+		console.log(totalRespondidas)
+		let segundos = tempoDecorrido%60
+
+		tempoMedioPergunta = totalRespondidas.length/segundos
+		
+		if(tempoDecorrido < 60){
+			document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 
+			com um tempo médio por pergunta de <b>${tempoMedioPergunta}</b>. segundos`
+		}
+		
+		if(tempoDecorrido > 60){
+			minutos = Math.floor(tempoDecorrido/60)
+	
+			p1 = "minutos"
+			p2 = "segundos"
+	
+			if(minutos == 1) 
+				p1 = "minuto"
+			if(segundos == 1) 
+				p2 = "segundo"
+	
+			document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${minutos} ${p1} e ${segundos} ${p2}, 
+			com um tempo médio por pergunta de <b>${tempoMedioPergunta}</b>. segundos`
+		}
+	}
+	
+	let datas = []
+
+	if(this.localStorage.getItem('dataSimulado'))
+		datas = this.localStorage.getItem('dataSimulado').split(',')
+
+	if(datas.length<2){
+		this.document.getElementById('link-evolucao-usuario').href = ''
+		this.document.getElementById('mensagem-evolucao-usuario').style.display = 'Block'
+		this.document.getElementById('conferir-evolucao').disabled = true
+	}
+
+})
+
 var porcentagemAcerto = Math.round((totalRespondidas.length / 35) * 100)
 
 if(porcentagemAcerto == 0 || gabaritoUsuario == null){
@@ -35,6 +83,7 @@ if(porcentagemAcerto == 0 || gabaritoUsuario == null){
 	document.getElementById('final-simulado').innerHTML = 'Por favor, certifique-se de selecionar ao menos uma alternativa de uma questão.'
 	document.getElementById('sub-t-final-simulado').innerHTML = 'Vá ao final da página e clique em <b>REFAZER SIMULADO</b>.'
 	document.getElementById('info-resultado').style.display = 'None'
+	document.getElementById('imprimir-resultado').style.display = 'None'
 }
 else if(porcentagemAcerto < 25)
 	mensagemAcertos = 'Infelizmente, você está na linha de rebaixamento igual o Palmeiras, pois o seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
@@ -112,77 +161,58 @@ label2, dados2, corFundoSegundoGrafico, corBordaSegundoGrafico, titulo){
 	new Chart(grafico, dados);
 }
 
-addEventListener('load', () => {
-
-	let datas = []
-
-	if(this.localStorage.getItem('dataSimulado'))
-		datas = this.localStorage.getItem('dataSimulado').split(',')
-
-	if(datas.length<2){
-		this.document.getElementById('link-evolucao-usuario').href = ''
-		this.document.getElementById('mensagem-evolucao-usuario').style.display = 'Block'
-		this.document.getElementById('conferir-evolucao').disabled = true
-	}
-
-})
-
 function salvaEvolucaoResetaSimulado(){
-	let gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
-	let totalRespondidas = sessionStorage.getItem('gabaritoUsuario').split(" ")
-
-	let totalAcertos = []
-	let totalErros = []
-	//let totalNaoRespondidas = 35
-
 	let data = new Date()
 	let diaMesAno = String(data.getDate()).padStart(2, '0') + '/' + 
 	String(data.getMonth() + 1).padStart(2, '0') + '/' + data.getFullYear() 
-
-	if(totalRespondidas[0] != ''){
-		for (let i = 0; i < gabaritoUsuario.length; i++) {
-			
-			if (gabaritoOficial.indexOf(gabaritoUsuario[i]) >=0 )
-				totalAcertos.push(gabaritoUsuario[i]) 
-			
-			if (gabaritoOficial.indexOf(gabaritoUsuario[i]) < 0)
-				totalErros.push(gabaritoUsuario[i])
-		}
-		totalNaoRespondidas = 35 - totalRespondidas.length
-	}
-	else
-		totalRespondidas = []
 
 	if(localStorage.getItem('acertosUsuario')){
 		let acertos = localStorage.getItem('acertosUsuario').split(',')
 		let erros = localStorage.getItem('errosUsuario').split(',')
 		let datas = localStorage.getItem('dataSimulado').split(',')
+		let naoRespondidas = localStorage.getItem('perguntasNaoRespondidas').split(',')
+		let tempos = localStorage.getItem('tempoDecorrido').split(',')
 
 		acertos.push(totalAcertos.length)
 		erros.push(totalErros.length)
 		datas.push(diaMesAno)
+		naoRespondidas.push(totalNaoRespondidas)
+		tempos.push(tempoDecorrido)
 
 		acertos.join(' ')
 		erros.join(' ')
 		datas.join(' ')
+		naoRespondidas.join(' ')
+		tempos.join(' ')
 	
 		localStorage.setItem('acertosUsuario', acertos)
 		localStorage.setItem('errosUsuario', erros)
 		localStorage.setItem('dataSimulado', datas)
+		localStorage.setItem('perguntasNaoRespondidas', naoRespondidas)
+		localStorage.setItem('tempoDecorrido', tempos)
 	}
 	else{
 		localStorage.setItem('acertosUsuario', totalAcertos.length)
 		localStorage.setItem('errosUsuario', totalErros.length)
 		localStorage.setItem('dataSimulado', diaMesAno)
+		localStorage.setItem('perguntasNaoRespondidas', totalNaoRespondidas)
+		localStorage.setItem('tempoDecorrido', tempoDecorrido)
 	}
 
 	sessionStorage.setItem('gabaritoUsuario', '')
+	sessionStorage.removeItem('comecoProva', '');
+}
+
+function imprimirResultado(){
+	window.print()
 }
 
 console.log("Gabarito usuario: "+sessionStorage.getItem('gabaritoUsuario'))
 console.log("Acertos: "+localStorage.getItem('acertosUsuario'))
 console.log("Erros: "+localStorage.getItem('errosUsuario'))
 console.log("Data(s): "+localStorage.getItem('dataSimulado'))
+console.log("Em branco: "+localStorage.getItem('perguntasNaoRespondidas'))
+console.log("Tempo decorrido: "+localStorage.getItem('tempoDecorrido'))
 
 /* Fazer uma função para mostrar evolução do usuário
 quando o storage for diferente de nulo e quando for, deve haver ao menos 

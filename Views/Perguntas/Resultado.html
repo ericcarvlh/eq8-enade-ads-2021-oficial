@@ -10,6 +10,7 @@
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/resultado.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
+    <Link Rel = "StyleSheet" Href = "../../css/print.css" Media = "print"/>
   </Head>
 
   <Body>
@@ -88,12 +89,8 @@
         </Div>
 
         <Div>
-          <!-- 
-            Ao finalizar a prova será realizado um cálculo (total acertos/total de questões),
-            ao qual o resultado do calculo será a % de acertos, após armazenar essa informação,
-            será realizado um série de condicionais para informar o usuário, seguido de uma 
-            mensagem motivacional.
-          -->
+          <p Id = "tempo-de-simualdo"></p>
+
           <p Class = "mensagem-evolucao-usuario" Id = "mensagem-evolucao-usuario" Style = "display: none;">
             Para acessar a página de <b>Evolução do Usuário</b> (<b>Conferir evolução</b>),
             você precisa, no mínimo, ter realizado o simualdo 2 vezes.
@@ -123,6 +120,7 @@
           <a Id = "link-evolucao-usuario" Href = "../Perguntas/EvolucaoUsuario.html">
             <Input Type = "Button" Class = "button-nav" Value = "Conferir evolução" Id = "conferir-evolucao" OnClick = "salvaEvolucaoResetaSimulado()"/>
           </a>
+            <Input Type = "Button" Class = "button-nav" Value = "Imprimir" Id = "imprimir-resultado" OnClick = "imprimirResultado()"/>
         </Div>
         
       </Div>
