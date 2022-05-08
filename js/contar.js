@@ -4,7 +4,6 @@ let perguntasRespondidas = ''
 
 /* Armazenando o ID da página. */
 idPagina = document.querySelector('Body').id
-console.log("teste de id, o id é: "+ idPagina)
 /* 
     Verifica alternativa selecionada e retorna a mesma. 
 */
@@ -111,7 +110,6 @@ addEventListener('change', () => {
 
     }
 
-    console.log(alteracaoQuestao)
     /* 
         Se a questão não tiver sido alterada, 
         então devemos salvar a resposta na variável 'historicoPerguntas'.  

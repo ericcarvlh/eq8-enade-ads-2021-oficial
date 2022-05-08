@@ -1,10 +1,9 @@
 /* Declarando variaveis para armazenar a alternativa correta e texto (respectiva resposta).*/
 var altCorreta = ''
-var altCorretaTexto = ''
+var altTexto = ''
 var pagsCorrigidas = ''
 var index = 0
 var selecionada = ''
-var textoSelecionada = ''
 
 constroeAlerta()
 constroeErro()
@@ -29,16 +28,16 @@ function confereResposta(){
     /* Verifica se a página já foi corrigida. */
     verificaPagCorrigida()
     
-    textoSelecionada = conteudoAlternativaSelecionada(alternativaSelecionada())
     /* 
         Ao chamarmos essa função, ela requere um parametro (alternativaSelecionada e este
         parametro é aquela alternativa que foi selecionada pelo usuário), e depois ela
         vai na alternativa que o usuário passou e 'pega' o texto/valor dela. 
     */
-    console.log("Peguei o "+textoSelecionada)
 
     /* Se houver uma alternativa selecionada... */
     if(alternativaSelecionada() != 'None'){
+        conteudoAlternativaSelecionada(alternativaSelecionada())
+
         /* Se a alternativa esta correta, abrimos um pop-up mostrando que está correta. */
         if (alternativaSelecionada() === altCorreta){
             abrirCerto()
@@ -145,24 +144,22 @@ function conteudoAlternativaSelecionada(alternativa){
         3° - Pegamos o elemento pai.
         4° - 'Filtramos' p armazenar somente a string não o HTML por completo. 
     */
-    altCorretaTexto = document.querySelector(`Input[value=${alternativa}`).parentElement.innerText
+    altTexto = document.querySelector(`Input[value=${alternativa}`).parentElement.innerText
 
     /* 
-        1° - Acessamos o contéudo encontrado em 'altCorretaTexto'.
+        1° - Acessamos o contéudo encontrado em 'altTexto'.
         2° - Utilizamos o método subString para pegar uma determinada parte da string
-        no caso a string "altCorretaTexto", e utilizamos o '2' para começar a partir do 2 
+        no caso a string "altTexto", e utilizamos o '2' para começar a partir do 2 
         índice, logo após o ')' começando pelo indice 0.
     */
-    altCorretaTexto = altCorretaTexto.substring(altCorretaTexto.indexOf(")") + 2)
-    console.log(altCorretaTexto)
+    altTexto = altTexto.substring(altTexto.indexOf(")") + 2)
 
-    return altCorretaTexto
+    return altTexto
 }
 
 function alternativaSelecionadaUsuario() {
     for (let i = 0; i <= 4; i++) {
         const checado = document.querySelectorAll('[value]')[i].checked
-        console.log(checado)
         if (checado === true) {
             const valor = document.querySelectorAll('[value]')[i].value
             const texto = document.querySelector(`Input[value=${valor}`).parentElement.innerText
@@ -242,5 +239,4 @@ function fechar() {
     errado.style.display = 'none'
     popAlerta.style.display = 'none'
     atencao.style.display = 'none'
-
 }

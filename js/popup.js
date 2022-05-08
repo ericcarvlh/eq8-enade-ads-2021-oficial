@@ -41,7 +41,6 @@ criarBotoes()
 const container = document.getElementById('container-pop');
 let botoes = document.getElementsByClassName('botoes');
 function abrirPopUp(){
-    console.log(container)
     container.classList.remove('container-pop');
     container.classList.add('mostrar')
 } 

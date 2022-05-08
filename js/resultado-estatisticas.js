@@ -38,29 +38,67 @@ const dados = [
     [35, 'A', [50, 6.5, 15.2, 17.4, 10.9]]
 ]
 
-function drawBasic(numPergunta, respValor){
+// dados[0][2] -> retorna a porcentagem por cada questão.
+// dados[0][1] -> retorna a letra correta.
+
+function drawBasic(numPergunta, respValor, letra){
     
-    var div = `${numPergunta}-pergunta`
+    var cores = ['rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)', 
+    'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)']
+
+    switch (letra) {
+        case 'A':
+        cores[1] = 'rgba(0, 200, 0, 0.7)'
+            break;
+        case 'B':
+        cores[1] = 'rgba(0, 200, 0, 0.7)'
+            break;
+        case 'C':
+        cores[2] = 'rgba(0, 200, 0, 0.7)'
+            break;
+        case 'D':
+        cores[3] = 'rgba(0, 200, 0, 0.7)'
+            break;
+        case 'E':
+        cores[4] = 'rgba(0, 200, 0, 0.7)'
+            break;
+        default:
+            break;
+    }    
+
+    let numPerg = `${numPergunta}-pergunta`
 
     document.write('<Div Class= "grafico" Style = "margin-top: 5%;">')
-    document.write(`<H4 Class = "titulo-pergunta">${numPergunta} ° Pergunta</H4>`)
-    document.write(`<Canvas class="${div}"></Canvas>`)
+    document.write(`<H3 Class = "titulo-pergunta">${numPergunta} ° Pergunta</H3>`)
+    document.write(`<Canvas Id = "${numPerg}"></Canvas>`)
+    document.write(`<H3>Gabarito: ${letra}</H3>`)
     document.write('</Div>')
 
-    var ctx = document.getElementsByClassName(div);
+    /*let erradas = []
+    let certa = []
+
+    for(let i; i < cores.length; i++){
+        if(cores.indexOf(cores))
+    }*/
+
+    let ctx = document.getElementById(numPerg);
     
-    var grafico = new Chart(ctx, {
+    new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['A', 'B', 'C', 'D', 'E'],
+            labels: ['A','B','C','D','E'],
             datasets: [{
                 label: `Seleção de alternativa em % na ${numPergunta}° Pergunta`,
                 data: respValor,
                 borderColor: [
-                    'rgb(255,0,0)',
+                    'rgb(0,0,0)',
                 ],
                 backgroundColor: [
-                    'rgb(255, 133, 51)',
+                    cores[0],
+                    cores[1],
+                    cores[2],
+                    cores[3],
+                    cores[4]
                 ]
             },]
         },
@@ -89,11 +127,26 @@ function drawBasic(numPergunta, respValor){
                     return delay;
                 },
             },
+            scales: {
+				y: {
+					display: true,
+					title: {
+						display: true,
+						text: 'Alternativas'
+					}
+				},
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'Quantidade de seleção em porcentagem (%)'
+                    }
+                },
+			},
         }, 
     })
-
 }
 
 for (let i = 0; i < dados.length; i++) {
-    drawBasic(dados[i][0], dados[i][2])
+    drawBasic(dados[i][0], dados[i][2], dados[i][1])
 }

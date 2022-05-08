@@ -1,6 +1,6 @@
 const gabaritoOficial = ["Q1:E", "Q2:C", "Q3:B", "Q4:B", "Q5:A", "Q6:A", "Q7:C","Q8:D", "Q9:C", "Q10:D","Q11:E", 
 "Q12:C", "Q13:C","Q14:E", "Q15:B", "Q16:E","Q17:C", "Q18:A", "Q19:A","Q20:E", "Q21:B","Q22:A", "Q23:B","Q24:D", 
-"Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A", ""]
+"Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A"]
 var gabaritoUsuario = []
 var totalRespondidas = []
 var tempoDecorrido = 0
@@ -33,18 +33,17 @@ else
 addEventListener('load', () => {
 
 	if(sessionStorage.getItem("comecoProva")){
-		let inicioProva = sessionStorage.getItem("comecoProva");
+		let inicioProva = sessionStorage.getItem("comecoProva")
 		let finalProva = Date.parse(new Date())
 	
 		tempoDecorrido = (finalProva - inicioProva)/1000
-		console.log(totalRespondidas)
 		let segundos = tempoDecorrido%60
 
 		tempoMedioPergunta = totalRespondidas.length/segundos
 		
 		if(tempoDecorrido < 60){
 			document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 
-			com um tempo médio por pergunta de <b>${tempoMedioPergunta}</b>. segundos`
+			com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
 		}
 		
 		if(tempoDecorrido > 60){
@@ -59,7 +58,7 @@ addEventListener('load', () => {
 				p2 = "segundo"
 	
 			document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${minutos} ${p1} e ${segundos} ${p2}, 
-			com um tempo médio por pergunta de <b>${tempoMedioPergunta}</b>. segundos`
+			com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
 		}
 	}
 	
@@ -167,29 +166,13 @@ function salvaEvolucaoResetaSimulado(){
 	String(data.getMonth() + 1).padStart(2, '0') + '/' + data.getFullYear() 
 
 	if(localStorage.getItem('acertosUsuario')){
-		let acertos = localStorage.getItem('acertosUsuario').split(',')
-		let erros = localStorage.getItem('errosUsuario').split(',')
-		let datas = localStorage.getItem('dataSimulado').split(',')
-		let naoRespondidas = localStorage.getItem('perguntasNaoRespondidas').split(',')
-		let tempos = localStorage.getItem('tempoDecorrido').split(',')
 
-		acertos.push(totalAcertos.length)
-		erros.push(totalErros.length)
-		datas.push(diaMesAno)
-		naoRespondidas.push(totalNaoRespondidas)
-		tempos.push(tempoDecorrido)
-
-		acertos.join(' ')
-		erros.join(' ')
-		datas.join(' ')
-		naoRespondidas.join(' ')
-		tempos.join(' ')
-	
-		localStorage.setItem('acertosUsuario', acertos)
-		localStorage.setItem('errosUsuario', erros)
-		localStorage.setItem('dataSimulado', datas)
-		localStorage.setItem('perguntasNaoRespondidas', naoRespondidas)
-		localStorage.setItem('tempoDecorrido', tempos)
+		salvaDadosEvolucao(totalAcertos.length, 'acertosUsuario')
+		salvaDadosEvolucao(totalErros.length, 'errosUsuario')
+		salvaDadosEvolucao(diaMesAno, 'dataSimulado')
+		salvaDadosEvolucao(totalNaoRespondidas, 'perguntasNaoRespondidas')
+		salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
+		salvaDadosEvolucao(totalRespondidas, 'totalRespondida')
 	}
 	else{
 		localStorage.setItem('acertosUsuario', totalAcertos.length)
@@ -197,23 +180,45 @@ function salvaEvolucaoResetaSimulado(){
 		localStorage.setItem('dataSimulado', diaMesAno)
 		localStorage.setItem('perguntasNaoRespondidas', totalNaoRespondidas)
 		localStorage.setItem('tempoDecorrido', tempoDecorrido)
+		localStorage.setItem('totalRespondida', totalRespondidas.length)
 	}
 
 	sessionStorage.setItem('gabaritoUsuario', '')
-	sessionStorage.removeItem('comecoProva', '');
+	sessionStorage.setItem('paginasCorrigidas', '')
+	sessionStorage.setItem('comecoProva', '')
 }
 
 function imprimirResultado(){
 	window.print()
 }
 
-console.log("Gabarito usuario: "+sessionStorage.getItem('gabaritoUsuario'))
-console.log("Acertos: "+localStorage.getItem('acertosUsuario'))
-console.log("Erros: "+localStorage.getItem('errosUsuario'))
-console.log("Data(s): "+localStorage.getItem('dataSimulado'))
-console.log("Em branco: "+localStorage.getItem('perguntasNaoRespondidas'))
-console.log("Tempo decorrido: "+localStorage.getItem('tempoDecorrido'))
+function salvaDadosEvolucao(valorASerArmazenado, chaveLocalStorage){
+	let vetor = localStorage.getItem(chaveLocalStorage).split(',')
+	vetor.push(valorASerArmazenado)
+	vetor.join(' ')
+	localStorage.setItem(chaveLocalStorage, vetor)
+}
 
-/* Fazer uma função para mostrar evolução do usuário
-quando o storage for diferente de nulo e quando for, deve haver ao menos 
-2 simulados realizdos. */
+/*
+apagaTestes("Acertos: ", 'acertosUsuario')
+apagaTestes("Erros: ", 'errosUsuario')
+apagaTestes("Data(s): ", 'dataSimulado')
+apagaTestes("Em branco: ", 'perguntasNaoRespondidas')
+apagaTestes("Tempo decorrido: ", 'tempoDecorrido')
+apagaTestes("Total de perguntas respondidas: ", 'totalRespondida')
+*/
+
+testes("Acertos: ", 'acertosUsuario')
+testes("Erros: ", 'errosUsuario')
+testes("Data(s): ", 'dataSimulado')
+testes("Em branco: ", 'perguntasNaoRespondidas')
+testes("Tempo decorrido: ", 'tempoDecorrido')
+testes("Total de perguntas respondidas: ", 'totalRespondida')
+
+function testes(msg, key){
+	console.log(msg + localStorage.getItem(key))
+}
+
+function apagaTestes(msg, key){
+	console.log(msg + localStorage.removeItem(key))
+}
