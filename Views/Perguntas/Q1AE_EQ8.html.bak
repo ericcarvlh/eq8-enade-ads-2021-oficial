@@ -149,7 +149,6 @@
       </Div>
     </Footer>
     
-	<Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
     <script src="../../js/popup.js"></script>

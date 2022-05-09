@@ -6,6 +6,6 @@
 }
 
 .info-resultado-estatisticas p{
-	margin-top: 1.5%;
+	margin-top: 2%;
 	font-size: 1.6rem;
 }

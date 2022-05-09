@@ -13,3 +13,8 @@
 .info-evolucao-usuario p{
 	margin-top: 1.5%;
 }
+
+.mensagem-evolucao-usuario{
+	margin-top: 5%;
+	margin-right: 5%;
+}

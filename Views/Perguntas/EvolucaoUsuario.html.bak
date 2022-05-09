@@ -59,7 +59,7 @@
 			<p Class = "mensagem-evolucao-usuario" Id = "evolucao-usuario">
 			  Acompanhe nessa página a sua evolução pessoal, desde seu primeiro simulado até agora. <br>
 			  No gráfico abaixo voce vai ser informado sobre <b>Total de perguntas respondidas</b>, 
-			  <b>Total de <br>acertos</b>, <b>Total de erros</b>, <b>Acertos em %</b> e
+			  <b>Total de <br>acertos</b>, <b>Total de erros</b>, <b>Acertos em %</b>, 
 			  <b>Total de perguntas não respondidas</b>.  
 			</p>
 		</Div>
