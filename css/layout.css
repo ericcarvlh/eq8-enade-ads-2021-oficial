@@ -178,7 +178,6 @@ footer{
   height: 100%;
   max-height: 100px;
   overflow: hidden;
-  
 }
 
 footer p {
@@ -199,7 +198,6 @@ footer p {
 footer p a {
   text-decoration: none; /* Definindo uma decoração de texto, sendo o mesmo com diferentes tipos de linhas.*/
   color: white; /* Definindo uma cor para a palavra. */
-  text-transform: capitalize; /* Definindo a capitalização das palavras (maiuscula, minuscuça etc).*/
   font-size: 1.6rem; /* Definindo o tamanho da fonte. */
   transition: all 250ms linear 0s; /* definindo a transição entre os elementos.*/
 }
