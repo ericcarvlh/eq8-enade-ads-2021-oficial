@@ -1,6 +1,27 @@
 const gabaritoOficial = ["Q1:E", "Q2:C", "Q3:B", "Q4:B", "Q5:A", "Q6:A", "Q7:C","Q8:D", "Q9:C", "Q10:D","Q11:E", 
 "Q12:C", "Q13:C","Q14:E", "Q15:B", "Q16:E","Q17:C", "Q18:A", "Q19:A","Q20:E", "Q21:B","Q22:A", "Q23:B","Q24:D", 
 "Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A"]
+const conteudosProva = [
+	['Q1', ['Desconhecido']], ['Q2', ['Desconhecido']], ['Q3', ['Desconhecido']], 
+	['Q4', ['Desconhecido']], ['Q5', ['Desconhecido']], ['Q6', ['Desconhecido']], 
+	['Q7', ['Desconhecido']], ['Q8', ['Desconhecido']], ['Q9', ['Desconhecido']],
+	['Q10', ['Desconhecido']], ['Q11', ['Desconhecido']], ['Q12', ['Desconhecido']], 
+	['Q13', ['Desconhecido']], ['Q14', ['Desconhecido']], ['Q15', ['Desconhecido']],
+	['Q16', ['Desconhecido']], ['Q17', ['Desconhecido']], ['Q18', ['Desconhecido']],
+	['Q19', ['Desconhecido']], ['Q20', ['Desconhecido']], ['Q21', ['Desconhecido']],
+	['Q22', ['Desconhecido']], ['Q23', ['Desconhecido']], ['Q24', ['Desconhecido']],
+	['Q25', ['Desconhecido']], ['Q26', ['Desconhecido']], ['Q27', ['Desconhecido']],
+	['Q28', ['Desconhecido']], ['Q29', ['Desconhecido']], ['Q30', ['Desconhecido']],
+	['Q31', ['Desconhecido']], ['Q32', ['Desconhecido']], ['Q33', ['Desconhecido']],
+	['Q34', ['Desconhecido']], ['Q35', ['Desconhecido']]
+]
+
+/*
+	Possível sintaxe para resolver o problema do conteúdo prova.
+ 	for(let i = 0; i < 35; i++)
+		console.log(conteudosProva[i][0].indexOf(`Q${i+1}`)) 
+*/
+
 var gabaritoUsuario = []
 var totalRespondidas = []
 var tempoDecorrido = 0

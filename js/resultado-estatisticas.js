@@ -74,13 +74,6 @@ function drawBasic(numPergunta, respValor, letra){
     document.write(`<H3>Gabarito: ${letra}</H3>`)
     document.write('</Div>')
 
-    /*let erradas = []
-    let certa = []
-
-    for(let i; i < cores.length; i++){
-        if(cores.indexOf(cores))
-    }*/
-
     let ctx = document.getElementById(numPerg);
     
     new Chart(ctx, {

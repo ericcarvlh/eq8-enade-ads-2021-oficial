@@ -2,7 +2,7 @@ html{
     font-size: 50%;
 }
 
-@media (max-width: 540px){
+@media (max-width: 768px){
     nav {
         display: none;
     }
@@ -72,4 +72,67 @@ html{
         line-height: 4rem;
         display: block;
     }
+
+    @media (max-width: 425px){
+        .corpo-pagina{
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+
+        .corpo-pergunta{
+            margin-right: 3.5%;
+            margin-left: 3.5%;
+        }
+
+        .texto-pergunta{
+            margin-right: 3.5%;
+            margin-left: 3.5%;  
+        }
+    }
+
+    @media (max-width: 375px){
+        .corpo-pagina{
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+
+        .corpo-pergunta{
+            margin-right: 3%;
+            margin-left: 3%;
+        }
+
+        .texto-pergunta{
+            margin-right: 3.5%;
+            margin-left: 3.5%;  
+        }
+    }
+
+    @media (max-width: 320px) {
+        .corpo-pagina{
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+    
+        .corpo-pergunta{
+            margin-right: 2.5%;
+            margin-left: 2.5%;
+        }
+    
+        .texto-pergunta{
+            margin-right: 2.5%;
+            margin-left: 2.5%;  
+        }
+    
+        .button-nav {
+            font-size: 1rem;
+            font-weight: 480;
+            margin: 12px 0px 0px;
+            border-color: #FFAB40;
+            padding: 10px 28px;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 150ms linear 0s;
+        }  
+    }
+
 }
