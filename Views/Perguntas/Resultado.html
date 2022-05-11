@@ -64,7 +64,13 @@
 
         <Div Id = "info-resultado" Class = "info-resultado">
           <p Class = "orientacao" Id = "orientacao">
-            Confira abaixo alguns gráficos informando sobre seu desempenho, sendo:
+            Confira abaixo algumas tabelas informando sua qunatidade 
+            de acertos, erros, perguntas não respondidas e respondidas.
+          </p>
+
+          <p Class = "orientacao" Id = "orientacao">
+            Logo após as tabelas, também há a presença de gráficos,
+            informando sobre seu desempenho, sendo:
           </p>
 
           <p Id = "orientacao">
@@ -83,14 +89,31 @@
           </p>
         </Div>
 		
-		<Div Class = "dados-por-inteiro">
-			<Div></Div>
-			<Div></Div>
-		</Div>
+        <Div Class = "primeiro-dados-por-inteiro" Id = "primeiro-dados-por-inteiro">
+          <Div Class = "inteiro-acertos">
+            <H4>Quantidade de acertos</H4>
+            <p id = "acertos">X</p>
+          </Div>
+          <Div Class = "inteiro-erros">
+            <H4>Quantidade de erros</H4>
+            <p id = "erros">X</p>
+          </Div>
+        </Div>
+
+        <Div Class = "segundo-dados-por-inteiro" Id = "segundo-dados-por-inteiro">
+          <Div Class = "inteiro-nao-respondidas">
+            <H4>Perguntas de nao respondidas</H4>
+            <p id = "nao-respondidas">X</p>
+          </Div>
+          <Div Class = "inteiro-respondidas">
+            <H4>Perguntas respondidas</H4>
+            <p id = "respondidas">X</p>
+          </Div>
+        </Div>
 
         <Div Class = "graficos" Align = "center">
-          <canvas Class="acertos-erros" id="acertos-erros"></canvas>
-          <canvas Class="respondidas-e-naorespondidas"id="respondidas-e-naorespondidas"></canvas>
+          <canvas Class="grafico-acertos-erros" id="acertos-erros"></canvas>
+          <canvas Class="grafico-respondidas-e-naorespondidas"id="respondidas-e-naorespondidas"></canvas>
         </Div>
 
         <Div Class = "tempo-e-tempo-medio-simulado">
@@ -102,15 +125,13 @@
           </p>
 
           <p Class = "retorno-acertos" Id = "retorno-acertos">X</p>
-          
-          <!--
-            Ao final da prova, com as respostas erradas já armazenadas, será feito um levantamento
-            sobre o contéudo das questões que o usuário errou e depois informado ao mesmo para estudar.
-         -->
         </Div>
 
-        <Div Class = "conteudos-estudo">
-          <p Class = "conteudos-a-estudar">Recomendamos que você estude o(s) seguinte(s) conteúdo(s): <b>Conteúdos</b></p>
+        <Div Class = "conteudos-estudo" Id = "conteudos-estudo">
+          <p Class = "conteudos-a-estudar">
+            Recomendamos que você estude o(s) seguinte(s) conteúdo(s): 
+            <b Id = "conteudos">Conteúdos</b>
+          </p>
         </Div>
 
         <Div Class = "buttons-nav">

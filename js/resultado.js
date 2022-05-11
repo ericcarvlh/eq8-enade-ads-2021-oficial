@@ -2,40 +2,35 @@ const gabaritoOficial = ["Q1:E", "Q2:C", "Q3:B", "Q4:B", "Q5:A", "Q6:A", "Q7:C",
 "Q12:C", "Q13:C","Q14:E", "Q15:B", "Q16:E","Q17:C", "Q18:A", "Q19:A","Q20:E", "Q21:B","Q22:A", "Q23:B","Q24:D", 
 "Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A"]
 const conteudosProva = [
-	['Q1', ['Desconhecido']], ['Q2', ['Desconhecido']], ['Q3', ['Desconhecido']], 
-	['Q4', ['Desconhecido']], ['Q5', ['Desconhecido']], ['Q6', ['Desconhecido']], 
-	['Q7', ['Desconhecido']], ['Q8', ['Desconhecido']], ['Q9', ['Desconhecido']],
-	['Q10', ['Desconhecido']], ['Q11', ['Desconhecido']], ['Q12', ['Desconhecido']], 
-	['Q13', ['Desconhecido']], ['Q14', ['Desconhecido']], ['Q15', ['Desconhecido']],
-	['Q16', ['Desconhecido']], ['Q17', ['Desconhecido']], ['Q18', ['Desconhecido']],
-	['Q19', ['Desconhecido']], ['Q20', ['Desconhecido']], ['Q21', ['Desconhecido']],
-	['Q22', ['Desconhecido']], ['Q23', ['Desconhecido']], ['Q24', ['Desconhecido']],
-	['Q25', ['Desconhecido']], ['Q26', ['Desconhecido']], ['Q27', ['Desconhecido']],
-	['Q28', ['Desconhecido']], ['Q29', ['Desconhecido']], ['Q30', ['Desconhecido']],
-	['Q31', ['Desconhecido']], ['Q32', ['Desconhecido']], ['Q33', ['Desconhecido']],
-	['Q34', ['Desconhecido']], ['Q35', ['Desconhecido']]
+	['Q1', [' Interpretação']], ['Q2', [' Desconhecido']], ['Q3', [' Desconhecido']], 
+	['Q4', [' Desconhecido']], ['Q5', [' Desconhecido']], ['Q6', [' Desconhecido']], 
+	['Q7', [' Desconhecido']], ['Q8', [' Desconhecido']], ['Q9', [' Desconhecido']],
+	['Q10', [' Desconhecido']], ['Q11', [' Desconhecido']], ['Q12', [' Desconhecido']], 
+	['Q13', [' Desconhecido']], ['Q14', [' Desconhecido']], ['Q15', [' Desconhecido']],
+	['Q16', [' Desconhecido']], ['Q17', [' Desconhecido']], ['Q18', [' Desconhecido']],
+	['Q19', [' Desconhecido']], ['Q20', [' Desconhecido']], ['Q21', [' Desconhecido']],
+	['Q22', [' Desconhecido']], ['Q23', [' Desconhecido']], ['Q24', [' Desconhecido']],
+	['Q25', [' Desconhecido']], ['Q26', [' Desconhecido']], ['Q27', [' Desconhecido']],
+	['Q28', [' Desconhecido']], ['Q29', [' Desconhecido']], ['Q30', [' Desconhecido']],
+	['Q31', [' Desconhecido']], ['Q32', [' Desconhecido']], ['Q33', [' Desconhecido']],
+	['Q34', [' Desconhecido']], ['Q35', [' Desconhecido']]
 ]
 
-/*
-	Possível sintaxe para resolver o problema do conteúdo prova.
- 	for(let i = 0; i < 35; i++)
-		console.log(conteudosProva[i][0].indexOf(`Q${i+1}`)) 
-*/
-
+var recomendaConteudos = []
 var gabaritoUsuario = []
 var totalRespondidas = []
+var totalAcertos = []
+var totalErros = []
+
 var tempoDecorrido = 0
 var tempoMedioPergunta = 0
+var totalNaoRespondidas = 35
+var mensagemAcertos = ''
 
 if(sessionStorage.getItem('gabaritoUsuario')){
 	gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
 	totalRespondidas = sessionStorage.getItem('gabaritoUsuario').split(" ")
 }
-
-var totalAcertos = []
-var totalErros = []
-var totalNaoRespondidas = 35
-var mensagemAcertos = ''
 
 if(totalRespondidas[0] != ''){
 	for (let i = 0; i < gabaritoUsuario.length; i++) {
@@ -51,50 +46,60 @@ if(totalRespondidas[0] != ''){
 else
 	totalRespondidas = []
 
-addEventListener('load', () => {
+if(totalErros.length != 0){
+	for(let i = 0; i < totalErros.length; i++){
+		let questao = totalErros[i].split(":")[0]
 
-	if(sessionStorage.getItem("comecoProva")){
-		let inicioProva = sessionStorage.getItem("comecoProva")
-		let finalProva = Date.parse(new Date())
-	
-		tempoDecorrido = (finalProva - inicioProva)/1000
-		let segundos = tempoDecorrido%60
+		if(conteudosProva[i][0].indexOf(`${questao}`) == 0)
+			recomendaConteudos.push(conteudosProva[i][1])
+	}
+}
 
-		tempoMedioPergunta = totalRespondidas.length/segundos
-		
-		if(tempoDecorrido < 60){
-			document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 
-			com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
-		}
-		
-		if(tempoDecorrido > 60){
-			minutos = Math.floor(tempoDecorrido/60)
+if(sessionStorage.getItem("comecoProva")){
+	var inicioProva = sessionStorage.getItem("comecoProva")
+	var finalProva = Date.parse(new Date())
+
+	tempoDecorrido = (finalProva - inicioProva)/1000
+	segundos = tempoDecorrido%60
+
+	tempoMedioPergunta = segundos/totalRespondidas.length
 	
-			p1 = "minutos"
-			p2 = "segundos"
-	
-			if(minutos == 1) 
-				p1 = "minuto"
-			if(segundos == 1) 
-				p2 = "segundo"
-	
-			document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${minutos} ${p1} e ${segundos} ${p2}, 
-			com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
-		}
+	if(tempoDecorrido < 60){
+		document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 
+		com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
 	}
 	
-	let datas = []
+	if(tempoDecorrido > 60){
+		minutos = Math.floor(tempoDecorrido/60)
 
-	if(this.localStorage.getItem('dataSimulado'))
-		datas = this.localStorage.getItem('dataSimulado').split(',')
+		p1 = "minutos"
+		p2 = "segundos"
 
-	if(datas.length<2){
-		this.document.getElementById('link-evolucao-usuario').href = ''
-		this.document.getElementById('mensagem-evolucao-usuario').style.display = 'Block'
-		this.document.getElementById('conferir-evolucao').disabled = true
+		if(minutos == 1) 
+			p1 = "minuto"
+		if(segundos == 1) 
+			p2 = "segundo"
+
+		document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${minutos} ${p1} e ${segundos} ${p2}, 
+		com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
 	}
+}
 
-})
+let datas = []
+
+if(this.localStorage.getItem('dataSimulado'))
+	datas = this.localStorage.getItem('dataSimulado').split(',')
+
+if(datas.length<2){
+	this.document.getElementById('link-evolucao-usuario').href = ''
+	this.document.getElementById('mensagem-evolucao-usuario').style.display = 'Block'
+	this.document.getElementById('conferir-evolucao').disabled = true
+}
+
+if(totalErros.length === 0)
+	document.getElementById('conteudos-estudo').style.display = 'None'
+else
+	document.getElementById('conteudos').innerHTML = recomendaConteudos
 
 var porcentagemAcerto = Math.round((totalRespondidas.length / 35) * 100)
 
@@ -104,6 +109,8 @@ if(porcentagemAcerto == 0 || gabaritoUsuario == null){
 	document.getElementById('sub-t-final-simulado').innerHTML = 'Vá ao final da página e clique em <b>REFAZER SIMULADO</b>.'
 	document.getElementById('info-resultado').style.display = 'None'
 	document.getElementById('imprimir-resultado').style.display = 'None'
+	document.getElementById('primeiro-dados-por-inteiro').style.display = 'None'
+	document.getElementById('segundo-dados-por-inteiro').style.display = 'None'
 }
 else if(porcentagemAcerto < 25)
 	mensagemAcertos = 'Infelizmente, você está na linha de rebaixamento igual o Palmeiras, pois o seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
@@ -116,9 +123,12 @@ else
 
 document.getElementById('retorno-acertos').innerHTML = mensagemAcertos
 
+atribuiInformacoesInteiras(totalAcertos.length, totalErros.length, 
+totalNaoRespondidas, totalRespondidas.length)
+
 montaGrafico('acertos-erros', ['Total de acertos e erros'], 'Total de acertos', 
 [totalAcertos.length], 'rgba(0, 255, 0, 0.6)',  'rgba(0, 255, 0, 1)', 'Total de erros', 
-[totalErros.length], 'rgba(255, 0, 0, 0.6)',  'rgba(255, 0, 0, 1)', 
+[totalErros.length+totalNaoRespondidas], 'rgba(255, 0, 0, 0.6)',  'rgba(255, 0, 0, 1)', 
 'Total de acertos e erros')
 
 montaGrafico('respondidas-e-naorespondidas', ['Total de perguntas não respondidas e respondidas'],
@@ -220,6 +230,19 @@ function salvaDadosEvolucao(valorASerArmazenado, chaveLocalStorage){
 	localStorage.setItem(chaveLocalStorage, vetor)
 }
 
+function atribuiInformacoesInteiras(acertos, erros, naoRespondidas, respondidas){
+	let porcentAcerto = Math.round((acertos/35)*100)
+	erros = erros+naoRespondidas  
+	let porcentErros = Math.round((erros/35)*100)
+	let porcentNaoRespondidas = Math.round((naoRespondidas/35)*100)
+	let porcentRespondidas = Math.round((respondidas/35)*100)
+
+	document.getElementById('acertos').innerHTML = `${acertos}/35 <b>(${porcentAcerto}%)</b>`   
+	document.getElementById('erros').innerHTML = `${erros}/35 <b>(${porcentErros}%)</b>`
+	document.getElementById('nao-respondidas').innerHTML = `${naoRespondidas}/35 <b>(${porcentNaoRespondidas}%)</b>`
+	document.getElementById('respondidas').innerHTML = `${respondidas}/35 <b>(${porcentRespondidas}%)</b>`	
+}
+
 /*
 apagaTestes("Acertos: ", 'acertosUsuario')
 apagaTestes("Erros: ", 'errosUsuario')
@@ -229,12 +252,14 @@ apagaTestes("Tempo decorrido: ", 'tempoDecorrido')
 apagaTestes("Total de perguntas respondidas: ", 'totalRespondida')
 */
 
+/*
 testes("Acertos: ", 'acertosUsuario')
 testes("Erros: ", 'errosUsuario')
 testes("Data(s): ", 'dataSimulado')
 testes("Em branco: ", 'perguntasNaoRespondidas')
 testes("Tempo decorrido: ", 'tempoDecorrido')
 testes("Total de perguntas respondidas: ", 'totalRespondida')
+*/
 
 function testes(msg, key){
 	console.log(msg + localStorage.getItem(key))
