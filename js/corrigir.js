@@ -5,6 +5,7 @@ var pagsCorrigidas = ''
 var index = 0
 var selecionada = ''
 
+// Chama os métodos que constroem os pop ups de erro, acerto e alerta no HTML
 constroeAlerta()
 constroeErro()
 constroeAcerto()
@@ -157,18 +158,12 @@ function conteudoAlternativaSelecionada(alternativa){
     return altTexto
 }
 
-function alternativaSelecionadaUsuario() {
-    for (let i = 0; i <= 4; i++) {
-        const checado = document.querySelectorAll('[value]')[i].checked
-        if (checado === true) {
-            const valor = document.querySelectorAll('[value]')[i].value
-            const texto = document.querySelector(`Input[value=${valor}`).parentElement.innerText
-            selecionada = valor;
-            textoSelecionada = texto;
-        }
-    }
-}
-
+/**
+ * Usa document.write para escrever no HTML e construir uma div 
+ * com id = 'pop-erro' e class = 'pop-acerto', e dentro dela contruir 
+ * outra div com id e class = 'errado', na qual estão a imagem, a mensagem 
+ * e um span para fechar que compõem o pop up
+ */
 function constroeErro() {
     const alternativaCorreta = document.querySelector('#alt-correta').value
     const textoCorreto = document.querySelector(`input[value = ${document.querySelector('#alt-correta').value}]`).parentElement.innerText    
@@ -182,9 +177,14 @@ function constroeErro() {
     document.write(`<p>Se esforce um pouco mais, continuamos tendo orgulho de ter um usúario igual à você, o importante é tentar.</p></div></div>`)
 }
 
+/**
+ * Usa document.write para escrever no HTML e construir uma div 
+ * com id = 'pop-acerto' e class = 'pop-acerto', e dentro dela contruir 
+ * outra div com id e class = 'certo', na qual estão a imagem, a mensagem 
+ * e um span para fechar que compõem o pop up
+ */
 function constroeAcerto() {
     const alternativaCorreta = document.querySelector('#alt-correta').value
-    alternativaSelecionadaUsuario()
     const textoCorreto = document.querySelector(`input[value = ${document.querySelector('#alt-correta').value}]`).parentElement.innerText
     document.write('<div id="pop-acerto" class="pop-acerto">')
     document.write('<div id = "certo" class="certo">')
@@ -196,6 +196,12 @@ function constroeAcerto() {
     document.write('<p>Nos sentimos orgulhosos por termos um usuário igual a você, continue assim.</p></div></div>')
 }
 
+/**
+ * Usa document.write para escrever no HTML e construir uma div 
+ * com id = 'pop-alerta' e class = 'pop-acerto', e dentro dela contruir 
+ * outra div com id e class = 'atenaco', na qual estão a imagem, a mensagem 
+ * e um span para fechar que compõem o pop up
+ */
 function constroeAlerta(){
     document.write('<div id="pop-alerta" class="pop-acerto">')
     document.write('<div id = "atencao" class="atencao">')
@@ -205,6 +211,12 @@ function constroeAlerta(){
     document.write('<p>Para corrigir a questão, é obrigatório que você selecione uma alternativa.</p></div></div>')
 }
 
+/**
+ * O método que abre o alerta, pega a div maior pelo ID
+ * e seu atrubuto 'display' no css é mudado de none para flex.
+ * A div menor também é pega pelo ID e seu atributo 'display'
+ * no css é mudado de none para block.
+ */
 function abrirAlerta() {
     const container = document.getElementById('pop-alerta')
     container.style.display = 'flex'
@@ -212,6 +224,12 @@ function abrirAlerta() {
     atencao.style.display = 'block'
 }
 
+/**
+ * O método que abre o errado, pega a div maior pelo ID
+ * e seu atrubuto 'display' no css é mudado de none para flex.
+ * A div menor também é pega pelo ID e seu atributo 'display'
+ * no css é mudado de none para block.
+ */
 function abrirErrado() {
     const container = document.getElementById('pop-erro')
     container.style.display = 'flex'
@@ -219,6 +237,12 @@ function abrirErrado() {
     errado.style.display = 'block'
 }
 
+/**
+ * O método que abre o certo, pega a div maior pelo ID
+ * e seu atrubuto 'display' no css é mudado de none para flex.
+ * A div menor também é pega pelo ID e seu atributo 'display'
+ * no css é mudado de none para block.
+ */
 function abrirCerto() {
     const container = document.getElementById('pop-acerto')
     container.style.display = 'flex'
@@ -226,6 +250,11 @@ function abrirCerto() {
     certo.style.display = 'block'
 }
 
+/**
+ * No método para fechar pegamos todos os IDs, tanto os maiores quanto os
+ * menores, e mudamos seu atributo 'display' no css para none. Assim podemos 
+ * usar o mesmo método para fechar todos os pop ups.
+ */
 function fechar() {
     const popAlerta = document.getElementById('pop-acerto')
     const popErro = document.getElementById('pop-erro')

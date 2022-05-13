@@ -1,5 +1,8 @@
 let delayed;
 
+/*
+    O array dados, contém os dados que alimentaram os nossos gráficos.
+*/
 const dados = [
     [1, 'E', [9.1, 21.2, 18.2, 30.3, 21.2]],
     [2, 'C', [9.1, 15.2, 54.5, 9.1, 9.1]],
@@ -68,6 +71,7 @@ function drawBasic(numPergunta, respValor, letra) {
 
     let numPerg = `${numPergunta}-pergunta`
 
+    // Parte que coloca o gráfico no HTML
     document.write('<Div Class= "grafico" Style = "margin-top: 5%;">')
     document.write(`<H3 Class = "titulo-pergunta">${numPergunta} ° Pergunta</H3>`)
     document.write(`<Canvas Id = "${numPerg}"></Canvas>`)
@@ -140,19 +144,35 @@ function drawBasic(numPergunta, respValor, letra) {
     })
 }
 
+// Váriável que pega as alternativas que o usuário escolheu durante o simulado, e transforma em um array.
 var gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split("");
+
+// Chama o método que escreve o gabarito do usuário
 criaGabaritoUsuario()
 
+/*
+    A estrutura de repetição repete a função que desenha os gráficos,
+    passando como prametro os dados que estão estabelecidos no array dados
+*/
 for (let i = 0; i < dados.length; i++) {
     drawBasic(dados[i][0], dados[i][2], dados[i][1])
 }
 
+
 function criaGabaritoUsuario() {
+    // Escreve uma div no HTML
     document.write('<div id = "gabarito-usuario" class="gabarito-usuario"> <h3>Suas Respostas:</h3>')
     let j = 3;
     let cont = 0;
+
     for (let i = 0; i < dados.length; i++) {
+        // verifica se a alternativa escolhida pelo usuário é diferente da alternativa correta(que está em 'dados')
         if (gabaritoUsuario[j] != dados[i][1]) {
+            /**
+             * Verifica se o número da questão é de 1 a 9, casso for, escreve uma div com a classe 'errou' com
+             * o número da questão com um zero na frente, caso for maior que 9 ele vai pro else,
+             * e escreve uma div com a classe 'errou' e com u número normal, sem o zero antes
+             */
             if (dados[i][0] <= 9) {
                 document.write(`<div class="errou">0${dados[i][0]}</div>`)
                 cont++
@@ -160,7 +180,13 @@ function criaGabaritoUsuario() {
                 document.write(`<div class="errou">${dados[i][0]}</div>`)
                 cont++
             }
+            // Caso a alternativa selecionada seje a alternativa correta, cai dentro do else
         } else {
+            /**
+             * Verifica se o número da questão é de 1 a 9, casso for, escreve uma div com a classe 'acertou' com
+             * o número da questão com um zero na frente, caso for maior que 9 ele vai pro else,
+             * e escreve uma div com a classe 'acertou' e com o número normal, sem o zero antes
+             */
             if (dados[i][0] <= 9) {
                 document.write(`<div class="acertou">0${dados[i][0]}</div>`)
                 cont++
@@ -170,9 +196,11 @@ function criaGabaritoUsuario() {
             }
         }
 
+        // Estrutura para quando for escrita 18 quetões, pular uma linha para começar as escrever as demais
         if(cont === 18){
             document.write('<br>')
         }
+        // Agerga valor à variável j, que está sendo usando para a locação da casa para a resposta do usuário
         j = j+5
         console.log(j)
     }
