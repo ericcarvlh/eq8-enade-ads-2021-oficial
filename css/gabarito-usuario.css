@@ -1,0 +1,22 @@
+.gabarito-usuario{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+    padding: 10px;
+}
+.acertou{
+    display: inline-block;
+    background-color: rgba(0, 200, 0, 0.6);
+    padding: 5px;
+    border: 2px solid rgba(0, 200, 0, 0.6);
+    border-radius: 8px;
+    margin: 5px;
+}
+.errou{
+    display: inline-block;
+    background-color: rgba(200, 0, 0, 0.7);
+    padding: 5px;
+    border: 2px solid rgba(200, 0, 0, 0.7);
+    border-radius: 8px;
+    margin: 5px;
+}

@@ -72,6 +72,7 @@
 					</p>
 				</Div>
 			
+
                 <Div Class = "todos-graficos" Align = "Center"> 
 					<!--Colocar o a alternativa selecionada pelo usuário-->
                     <Script src="https://cdn.jsdelivr.net/npm/chart.js"></Script>

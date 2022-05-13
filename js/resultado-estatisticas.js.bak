@@ -41,30 +41,30 @@ const dados = [
 // dados[0][2] -> retorna a porcentagem por cada questão.
 // dados[0][1] -> retorna a letra correta.
 
-function drawBasic(numPergunta, respValor, letra) {
-
-    var cores = ['rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)',
-        'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)']
+function drawBasic(numPergunta, respValor, letra){
+    
+    var cores = ['rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)', 
+    'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)']
 
     switch (letra) {
         case 'A':
-            cores[1] = 'rgba(0, 200, 0, 0.7)'
+        cores[1] = 'rgba(0, 200, 0, 0.7)'
             break;
         case 'B':
-            cores[1] = 'rgba(0, 200, 0, 0.7)'
+        cores[1] = 'rgba(0, 200, 0, 0.7)'
             break;
         case 'C':
-            cores[2] = 'rgba(0, 200, 0, 0.7)'
+        cores[2] = 'rgba(0, 200, 0, 0.7)'
             break;
         case 'D':
-            cores[3] = 'rgba(0, 200, 0, 0.7)'
+        cores[3] = 'rgba(0, 200, 0, 0.7)'
             break;
         case 'E':
-            cores[4] = 'rgba(0, 200, 0, 0.7)'
+        cores[4] = 'rgba(0, 200, 0, 0.7)'
             break;
         default:
             break;
-    }
+    }    
 
     let numPerg = `${numPergunta}-pergunta`
 
@@ -75,11 +75,11 @@ function drawBasic(numPergunta, respValor, letra) {
     document.write('</Div>')
 
     let ctx = document.getElementById(numPerg);
-
+    
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['A', 'B', 'C', 'D', 'E'],
+            labels: ['A','B','C','D','E'],
             datasets: [{
                 label: `Seleção de alternativa em % na ${numPergunta}° Pergunta`,
                 data: respValor,
@@ -115,19 +115,19 @@ function drawBasic(numPergunta, respValor, letra) {
                 delay: (context) => {
                     let delay = 0;
                     if (context.type === 'data' && context.mode === 'default' && !delayed) {
-                        delay = context.dataIndex * 800 + context.datasetIndex * 300;
+                      delay = context.dataIndex * 800 + context.datasetIndex * 300;
                     }
                     return delay;
                 },
             },
             scales: {
-                y: {
-                    display: true,
-                    title: {
-                        display: true,
-                        text: 'Alternativas'
-                    }
-                },
+				y: {
+					display: true,
+					title: {
+						display: true,
+						text: 'Alternativas'
+					}
+				},
                 x: {
                     display: true,
                     title: {
@@ -135,47 +135,11 @@ function drawBasic(numPergunta, respValor, letra) {
                         text: 'Quantidade de seleção em porcentagem (%)'
                     }
                 },
-            },
-        },
+			},
+        }, 
     })
 }
 
-var gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split("");
-criaGabaritoUsuario()
-
 for (let i = 0; i < dados.length; i++) {
     drawBasic(dados[i][0], dados[i][2], dados[i][1])
-}
-
-function criaGabaritoUsuario() {
-    document.write('<div id = "gabarito-usuario" class="gabarito-usuario"> <h3>Suas Respostas:</h3>')
-    let j = 3;
-    let cont = 0;
-    for (let i = 0; i < dados.length; i++) {
-        if (gabaritoUsuario[j] != dados[i][1]) {
-            if (dados[i][0] <= 9) {
-                document.write(`<div class="errou">0${dados[i][0]}</div>`)
-                cont++
-            } else {
-                document.write(`<div class="errou">${dados[i][0]}</div>`)
-                cont++
-            }
-        } else {
-            if (dados[i][0] <= 9) {
-                document.write(`<div class="acertou">0${dados[i][0]}</div>`)
-                cont++
-            } else {
-                document.write(`<div class="acertou">${dados[i][0]}</div>`)
-                cont++
-            }
-        }
-
-        if(cont === 18){
-            document.write('<br>')
-        }
-        j = j+5
-        console.log(j)
-    }
-    
-    document.write('</div>')
 }
