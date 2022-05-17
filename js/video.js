@@ -5,7 +5,6 @@ const card = document.querySelector("div.card");
 
 const videos = [
   {
-    title: "ENADE // O que é? Como é? Pra que serve? | Maria Lowen",
     duration: "9:22",
     thumb: "https://i.ytimg.com/vi/avJZ2mtFljc/hqdefault.jpg",
     video_id: "avJZ2mtFljc"
@@ -16,7 +15,6 @@ videos.map(video => {
   const cardClone = card.cloneNode(true);
   cardClone.setAttribute("id", video.video_id);
   cardClone.querySelector("img").src = video.thumb;
-  cardClone.querySelector(".title").innerHTML = video.title;
   cardClone.querySelector(".info > p.text--medium").innerHTML = video.duration;
   sectionCards.appendChild(cardClone);
 });

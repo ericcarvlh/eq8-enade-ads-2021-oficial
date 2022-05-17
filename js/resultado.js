@@ -136,6 +136,11 @@ montaGrafico('respondidas-e-naorespondidas', ['Total de perguntas não respondid
 'rgba(180, 180, 180, 1)', 'Total de perguntas respondidas', [totalRespondidas.length], 
 'rgba(255, 155, 55, 0.6)', 'rgba(255, 153, 51, 1)', 'Total de perguntas não respondidas e respondidas')
 
+function limpaSessionStorage(){
+	if(sessionStorage.getItem('gabaritoUsuario'))
+		sessionStorage.setItem('gabaritoUsuario', '')
+}
+
 function montaGrafico(idCanvas, labels, label1, dados1, corFundoPrimeiroGrafico, corBordaPrimeiroGrafico, 
 label2, dados2, corFundoSegundoGrafico, corBordaSegundoGrafico, titulo){
 	let delayed;
@@ -199,11 +204,11 @@ function salvaEvolucaoResetaSimulado(){
 	if(localStorage.getItem('acertosUsuario')){
 
 		salvaDadosEvolucao(totalAcertos.length, 'acertosUsuario')
-		salvaDadosEvolucao(totalErros.length, 'errosUsuario')
+		salvaDadosEvolucao((totalErros.length+totalNaoRespondidas), 'errosUsuario')
 		salvaDadosEvolucao(diaMesAno, 'dataSimulado')
 		salvaDadosEvolucao(totalNaoRespondidas, 'perguntasNaoRespondidas')
 		salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
-		salvaDadosEvolucao(totalRespondidas, 'totalRespondida')
+		salvaDadosEvolucao(totalRespondidas.length, 'totalRespondida')
 	}
 	else{
 		localStorage.setItem('acertosUsuario', totalAcertos.length)

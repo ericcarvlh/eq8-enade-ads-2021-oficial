@@ -11,15 +11,6 @@
   color: #ecf0f1;
 }
   
-.app-simunade{
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.app-simunade h3{
-  font-size: 2.5rem;
-}
-
 .card {
   display: flex;
   flex-direction: column;
