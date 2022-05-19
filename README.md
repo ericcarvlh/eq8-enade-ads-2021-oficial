@@ -18,3 +18,25 @@ Em relação as imagens das alternativas:
 
 `Q10_alt_A` -> onde "Q" significa questão, "10" o número da questão, "alt" de alternativa e, "A" da respectiva pergunta em questão.
 
+## Páginas
+
+Confira a seguir uma breve informação sobre cada página do site.
+
+<p Align = 'Center'>
+
+### Início
+
+![Página inicial](./Images/Paginas/Inicio.png)
+
+Página que contém algumas informações sobre o que é o ENADE,
+acesso ao gabarito no próprio site do INEP e início do simulado.
+
+### Creditos
+
+![Página de créditos](./Images/Paginas/Creditos.png)
+
+### Sobre
+
+![Página de sobre](./Images//Paginas/Sobre.png)
+
+</p>
