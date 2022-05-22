@@ -2,7 +2,7 @@ html{
     font-size: 50%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 425px){
     nav {
         display: none;
     }
@@ -74,6 +74,7 @@ html{
     }
 
     @media (max-width: 425px){
+
         .corpo-pagina{
             margin-left: 4%;
             margin-right: 4%;
@@ -108,6 +109,14 @@ html{
     }
 
     @media (max-width: 320px) {
+        .img-320px{
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .corpo-pagina{
             margin-left: 3%;
             margin-right: 3%;

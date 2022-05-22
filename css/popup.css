@@ -1,8 +1,8 @@
 .popup {
     position: fixed;
     background-color: #fff0e6;
-    width: 550px;
-    height: 400px;
+	width: 100%;
+	height: auto;
     margin: auto;
     border-radius: 8px;
     border: solid 2px #FFAB40;

@@ -4,9 +4,9 @@
 
   <Head>
     <Meta CharSet = "UTF-8"/>
-    <Meta Name = "Author" Content = "Éric Carvalho"/>
+    <Meta Name = "Author" Content = "Paulo Felipe Siva Simão"/>
     <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
-    <Title>Questão 29 - SimuNade</Title>
+    <Title>Questão 5 - SimuNade</Title>
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
@@ -15,7 +15,7 @@
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
   </Head>
 
-  <Body Id = "Q29">
+  <Body Id = "Q5">
     <Header>
       <Div Class = "container">
         <Div Class = "inep_enade">
@@ -58,71 +58,91 @@
         <Div Class = "numero-pergunta">
           <b>
             <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
-              Simulado Análise e Desenvolvimento de Sistemas - Enade 2021 - Questão 29/35
+              Simulado Análise e Desenvolvimento de Sistemas - Enade 2021 - Questão 5/35
             </a>            
           </b>
         </Div>
 
-        <Div Class = "corpo-pergunta">
+        <Div  Class = "corpo-pergunta">
 
           <Div Class = "nav-pergunta">
-            <a Href = "Q28AB_EQ8.html"><</a>
-            <a Href = "Q28AB_EQ8.html">28</a>
-            <a Class = "pergunta-selecionada" Href = "#">29</a>
-            <a Href = "Q30AC_EQ8.html">30</a>
-            <a Href = "Q30AC_EQ8.html">></a>
+            <a Href = "Q4AB_EQ8.html"><</a>
+            <a Href = "Q4AB_EQ8.html">4</a>
+            <a Class="pergunta-selecionada" Href = "Q5AA_EQ8.html">5</a>
+            <a Href = "Q6AA_EQ8.html">6</a>
+            <a Href = "Q6AA_EQ8.html">></a>
           </Div>
 
           <Div Class = "texto-pergunta">
+            <h3>Texto I</h3>
             <p>
-              Um algoritmo é qualquer procedimento computacional bem definido que toma algum valor ou conjunto<Br> 
-              de valores como entrada e produz algum valor ou conjunto de valores como saída.
+              Segundo o Ministério da Saúde, em 2017 o Brasil registrou uma média nacional de 5,7 óbitos para 
+              100 mil habitantes. Na população indígena, foi registrado um número de óbitos três vezes maior que 
+              a média nacional – 15,2. Destes registros, 44,8% (aproximadamente, 6,8 óbitos), são suicídios de 
+              crianças e adolescentes entre 10 e 19 anos. Esses dados contrastam com o panorama nacional, 
+              em que o maior índice é entre adolescentes e adultos de 15 a 20 anos.
             </p>
+
+            <h3>Texto II</h3>
+            <p>
+              Evidências apontam que, em determinadas minorias étnico-raciais, como os indígenas (aborígines ou 
+              populações nativas), o suicídio entre crianças apresenta taxas bem mais elevadas do que as observadas 
+              na população geral. No Brasil, o enforcamento foi utilizado mais frequentemente entre indígenas do que 
+              entre não indígenas, não se observando, no primeiro grupo, suicídios por intoxicação ou por armas de 
+              fogo. O mapa a seguir apresenta a distribuição dos óbitos por suicídio entre crianças e adolescentes 
+              indígenas no Brasil, entre os anos de 2010 e 2014.
+            </p>
+            
+			<img Class = "imagem-pergunta" src="../../Images/Perguntas/Q5AA_ENADE_ADS_2021_EQ8">             
+            
           </Div>
 
           <Div Class = "fonte-pergunta">
             <Blockquote>
               <i>
-                  CORMEN, T. H. et al. Algoritmos Teoria e Prática. Rio de Janeiro: Elsevier, 2002 (adaptado).
+                TEXTO I: Disponível em: htt ps://www.cvv.org.br/blog/o-suicidio-do-povo-indigena/. Acesso em: 30 de abr. 2020 (adaptado).
+                <br>
+                TEXTO II:  SOUZA, M. Mortalidade por suicídio entre crianças indígenas no Brasil. Caderno de Saúde Pública, v.35, Rio de Janeiro, 2019 (adaptado).
               </i>
             </Blockquote>
           </Div>
 
           <Div Class = "enunciado-pergunta">
-            <p>Considere o algoritmo a seguir.</p>
-          
             <p>
-              <font face = "Courier New">
-                Algoritmo Calcular<Br>
-                &nbsp;&nbsp;&nbsp;var<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mat [1..3][1..5] de inteiro =<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{1, 2, -1, 2, 3}, {1, -3, 4, 2, 0}, {-3, 5, 2, 3, 4}}<Br> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sl[1..3] de inteiro = {0, 0, 0}<Br> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x, i, j : inteiro<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <- 0<Br> 
-                &nbsp;&nbsp;&nbsp;início<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;para i <- 1 até 3 faça<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;para j <- 1 até 5 faça<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sl[i] <- sl[i] + mat[i][j]<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fimpara<Br> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <- x + sl[i]<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fimpara<Br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imprima x<Br>
-                &nbsp;&nbsp;&nbsp;fim
-              </font>
+              Considerando as informações apresentadas e o alto índice de suicídio da população indígena, avalie as afirmações a seguir.
             </p>
 
             <p>
-              No fim da execução do código apresentado, será exibido o valor
+              I. O elevado índice de suicídios entre crianças e adolescentes indígenas no país evidencia a 
+              necessidade de ações com foco nos direitos fundamentais desses indivíduos.
+            </p>
+
+            <p>
+              II. Os estados do Pará e de Tocantins são os que possuem os maiores índices de suicídio de indígenas 
+              na faixa etária de 10 a 14 anos.
+            </p>
+
+            <p>
+              III. Os povos das tribos originárias do Brasil, no que tange a sua história e preservação cultural, 
+              não estão amparados por direitos e garantias constitucionais.
+            </p>
+
+            <p>
+              IV. O estabelecimento de ações preventivas ao suicídio nas comunidades indígenas deve considerar 
+              os elementos globais que afetam a população em geral, na faixa etária entre 15 e 20 anos.
+            </p>
+
+            <p>
+              É correto apenas o que se afirma em
             </p>
           </Div>
 
           <Div Class = "alternativas-pergunta">
-            <Span> <Input Type = "Radio" Name = "Q29" Value = "A"/> A) 4. </Span>
-            <Span> <Input Type = "Radio" Name = "Q29" Value = "B"/> B) 7. </Span>
-            <Span> <Input Type = "Radio" Name = "Q29" Value = "C"/> C) 11. </Span>
-            <Span> <Input Type = "Radio" Name = "Q29" Value = "D" Id = "alt-correta"/> D) 22. </Span>
-            <Span> <Input Type = "Radio" Name = "Q29" Value = "E"/> E) 30. </Span>
+            <Span> <Input Type = "Radio" Name = "Q5" Value = "A" Id = "alt-correta"/> A) I. </Span>
+            <Span> <Input Type = "Radio" Name = "Q5" Value = "B"/> B) II. </Span>
+            <Span> <Input Type = "Radio" Name = "Q5" Value = "C"/> C) I e III. </Span>
+            <Span> <Input Type = "Radio" Name = "Q5" Value = "D"/> D) II e IV. </Span>
+            <Span> <Input Type = "Radio" Name = "Q5" Value = "E"/> E) III e IV. </Span>
           </Div>
 
           <Div Class = "buttons-nav">
@@ -130,7 +150,6 @@
             <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
-
         </Div>
       </Div>
     </Main>
@@ -142,7 +161,7 @@
             Curso de Análise e Desenvolvimento de Sistemas (ADS)
           </a>
         </p>
-  
+
         <Div Class = "fatec_sp_enade">
           <a Target = "_Blank" Href = "http://www.fateccarapicuiba.edu.br">
             <Img Src = "../../Images/Principal/fatec-carapicuiba-logo.png"/> 
@@ -162,5 +181,4 @@
     <Script Src = "../../js/corrigir.js"></Script>
     <script src="../../js/popup.js"></script>
   </Body>
-
 </HTML>

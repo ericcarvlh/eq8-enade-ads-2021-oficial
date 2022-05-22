@@ -15,76 +15,64 @@ const conteudosProva = [
 	['Q31', [' Desconhecido']], ['Q32', [' Desconhecido']], ['Q33', [' Desconhecido']],
 	['Q34', [' Desconhecido']], ['Q35', [' Desconhecido']]
 ]
+let tamanho = localStorage.getItem('acertosUsuario').split(',').length
+var totalAcertos = localStorage.getItem('acertosUsuario').split(',')[tamanho-1]
 
 var recomendaConteudos = []
 var gabaritoUsuario = []
 var totalRespondidas = []
-var totalAcertos = []
 var totalErros = []
+var porcentagemAcerto = 0
+
+
+
+tamanho = localStorage.getItem('errosUsuario').split(',').length
+localStorage.getItem('errosUsuario').split(',')[tamanho-1]
+
+tamanho = localStorage.getItem('dataSimulado').split(',').length
+localStorage.getItem('dataSimulado').split(',')[tamanho-1]
+
+tamanho = localStorage.getItem('perguntasNaoRespondidas').split(',').length
+localStorage.getItem('perguntasNaoRespondidas').split(',')[tamanho-1]
+
+tamanho = localStorage.getItem('tempoDecorrido').split(',').length
+localStorage.getItem('tempoDecorrido').split(',')[tamanho-1]
+
+tamanho = localStorage.getItem('totalRespondida').split(',').length
+localStorage.getItem('totalRespondida').split(',')[tamanho-1]
+
+tamanho = localStorage.getItem('porcentagensDeAcerto').split(',').length
+localStorage.getItem('porcentagensDeAcerto').split(',')[tamanho-1]
 
 var tempoDecorrido = 0
-var tempoMedioPergunta = 0
 var totalNaoRespondidas = 35
 var mensagemAcertos = ''
 
-if(sessionStorage.getItem('gabaritoUsuario')){
-	gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
-	totalRespondidas = sessionStorage.getItem('gabaritoUsuario').split(" ")
+/*
+segundos = tempoDecorrido%60
+
+tempoMedioPergunta = Math.trunc(tempoDecorrido/totalRespondidas.length)
+
+if(tempoDecorrido < 60){
+	document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 
+	com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
 }
 
-if(totalRespondidas[0] != ''){
-	for (let i = 0; i < gabaritoUsuario.length; i++) {
-		
-		if (gabaritoOficial.indexOf(gabaritoUsuario[i]) >=0 )
-			totalAcertos.push(gabaritoUsuario[i]) 
-		
-		if (gabaritoOficial.indexOf(gabaritoUsuario[i]) < 0)
-			totalErros.push(gabaritoUsuario[i])
-	}
-	totalNaoRespondidas = 35 - totalRespondidas.length
+if(tempoDecorrido > 60){
+	let minutos = Math.floor(tempoDecorrido/60)
+
+	let p1 = 'minutos'
+	let p2 = 'segundos'
+
+	if(minutos == 1) 
+		p1 = 'minuto'
+	if(segundos == 1) 
+		p2 = 'segundo'
+
+	document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${minutos} ${p1} e ${segundos} ${p2}, 
+	com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
 }
-else
-	totalRespondidas = []
-
-if(totalErros.length != 0){
-	for(let i = 0; i < totalErros.length; i++){
-		let questao = totalErros[i].split(":")[0]
-
-		if(conteudosProva[i][0].indexOf(`${questao}`) == 0)
-			recomendaConteudos.push(conteudosProva[i][1])
-	}
-}
-
-if(sessionStorage.getItem("comecoProva")){
-	var inicioProva = sessionStorage.getItem("comecoProva")
-	var finalProva = Date.parse(new Date())
-
-	tempoDecorrido = (finalProva - inicioProva)/1000
-	segundos = tempoDecorrido%60
-
-	tempoMedioPergunta = Math.trunc(tempoDecorrido/totalRespondidas.length)
-	
-	if(tempoDecorrido < 60){
-		document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 
-		com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
-	}
-	
-	if(tempoDecorrido > 60){
-		minutos = Math.floor(tempoDecorrido/60)
-
-		p1 = "minutos"
-		p2 = "segundos"
-
-		if(minutos == 1) 
-			p1 = "minuto"
-		if(segundos == 1) 
-			p2 = "segundo"
-
-		document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${minutos} ${p1} e ${segundos} ${p2}, 
-		com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
-	}
-}
-
+*/
 let datas = []
 
 if(this.localStorage.getItem('dataSimulado'))
@@ -100,8 +88,6 @@ if(totalErros.length === 0)
 	document.getElementById('conteudos-estudo').style.display = 'None'
 else
 	document.getElementById('conteudos').innerHTML = recomendaConteudos
-
-var porcentagemAcerto = Math.round((totalRespondidas.length / 35) * 100)
 
 if(porcentagemAcerto == 0 || gabaritoUsuario == null){
 	mensagemAcertos = 'Ops, parece que você não respondeu a nenhuma pergunta. Clique em <b>REFAZER SIMULADO</b>.'
@@ -196,43 +182,8 @@ label2, dados2, corFundoSegundoGrafico, corBordaSegundoGrafico, titulo){
 	new Chart(grafico, dados);
 }
 
-function salvaEvolucaoResetaSimulado(){
-	let data = new Date()
-	let diaMesAno = String(data.getDate()).padStart(2, '0') + '/' + 
-	String(data.getMonth() + 1).padStart(2, '0') + '/' + data.getFullYear() 
-
-	if(localStorage.getItem('acertosUsuario')){
-
-		salvaDadosEvolucao(totalAcertos.length, 'acertosUsuario')
-		salvaDadosEvolucao((totalErros.length+totalNaoRespondidas), 'errosUsuario')
-		salvaDadosEvolucao(diaMesAno, 'dataSimulado')
-		salvaDadosEvolucao(totalNaoRespondidas, 'perguntasNaoRespondidas')
-		salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
-		salvaDadosEvolucao(totalRespondidas.length, 'totalRespondida')
-	}
-	else{
-		localStorage.setItem('acertosUsuario', totalAcertos.length)
-		localStorage.setItem('errosUsuario', totalErros.length)
-		localStorage.setItem('dataSimulado', diaMesAno)
-		localStorage.setItem('perguntasNaoRespondidas', totalNaoRespondidas)
-		localStorage.setItem('tempoDecorrido', tempoDecorrido)
-		localStorage.setItem('totalRespondida', totalRespondidas.length)
-	}
-
-	sessionStorage.setItem('gabaritoUsuario', '')
-	sessionStorage.setItem('paginasCorrigidas', '')
-	sessionStorage.setItem('comecoProva', '')
-}
-
 function imprimirResultado(){
 	window.print()
-}
-
-function salvaDadosEvolucao(valorASerArmazenado, chaveLocalStorage){
-	let vetor = localStorage.getItem(chaveLocalStorage).split(',')
-	vetor.push(valorASerArmazenado)
-	vetor.join(' ')
-	localStorage.setItem(chaveLocalStorage, vetor)
 }
 
 function atribuiInformacoesInteiras(acertos, erros, naoRespondidas, respondidas){
@@ -255,16 +206,16 @@ apagaTestes("Data(s): ", 'dataSimulado')
 apagaTestes("Em branco: ", 'perguntasNaoRespondidas')
 apagaTestes("Tempo decorrido: ", 'tempoDecorrido')
 apagaTestes("Total de perguntas respondidas: ", 'totalRespondida')
+apagaTestes('Porcentagens de acerto: ', 'porcentagensDeAcerto')
 */
 
-/*
 testes("Acertos: ", 'acertosUsuario')
 testes("Erros: ", 'errosUsuario')
 testes("Data(s): ", 'dataSimulado')
 testes("Em branco: ", 'perguntasNaoRespondidas')
 testes("Tempo decorrido: ", 'tempoDecorrido')
 testes("Total de perguntas respondidas: ", 'totalRespondida')
-*/
+testes("Porcentagens de acerto: ", 'porcentagensDeAcerto')
 
 function testes(msg, key){
 	console.log(msg + localStorage.getItem(key))

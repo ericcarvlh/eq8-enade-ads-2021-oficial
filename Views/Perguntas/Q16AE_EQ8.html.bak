@@ -4,18 +4,20 @@
 
   <Head>
     <Meta CharSet = "UTF-8"/>
-    <Meta Name = "Author" Content = "Éric Carvalho"/>
+    <Meta Name = "Author" Content = "Tony Bryan"/>
     <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
-    <Title>Questão 31 - SimuNade</Title>
+    <Title>Questão 16 - SimuNade</Title>
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
     <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
     <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas-responsive.css" Media = "screen and (min-width: 768px)"/>
+	<Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas-responsive-mobile.css" Media = "screen and (max-width: 728px)"/>
   </Head>
 
-  <Body Id = "Q31">
+  <Body Id = "Q16">
     <Header>
       <Div Class = "container">
         <Div Class = "inep_enade">
@@ -58,67 +60,49 @@
         <Div Class = "numero-pergunta">
           <b>
             <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
-              Simulado Análise e Desenvolvimento de Sistemas - Enade 2021 - Questão 31/35
+              Simulado Análise e Desenvolvimento de Sistemas - Enade 2021 - Questão 16/35
             </a>            
           </b>
         </Div>
-          
-        <Div Class = "corpo-pergunta">
+
+        <Div  Class = "corpo-pergunta">
 
           <Div Class = "nav-pergunta">
-            <a Href = "Q29AD_EQ8.html"><</a>
-            <a Href = "Q30AC_EQ8.html">30</a>
-            <a Class = "pergunta-selecionada" Href = "#">31</a>
-            <a Href = "Q32AB_EQ8.html">32</a>
-            <a Href = "Q33AD_EQ8.html">></a>
+            <a Href = "Q14AE_EQ8.html"><</a>
+            <a Href = "Q15AB_EQ8.html">15</a>
+            <a Class = "pergunta-selecionada" Href = "#">16</a>
+            <a Href = "Q17AC_EQ8.html">17</a>
+            <a Href = "Q18AC_EQ8.html">></a>
           </Div>
 
           <Div Class = "texto-pergunta">
             <p>
-              Foi solicitado o desenvolvimento de um software para o controle e gestão das matrículas dos alunos
-              em uma universidade. Os alunos poderão realizá-las diretamente no sistema, em um terminal a ser 
-              disponibilizado na universidade. Além dessas características, o sistema deverá considerar as restrições 
-              representadas no diagrama a seguir:
+              Uma ONG decidiu construir um hospital de campanha para tratamento de pacientes diagnosticados<Br>
+              com a Covid-19. Para auxiliar na gerência hospitalar, a ONG contratou alguns programadores voluntários<Br>
+              para desenvolver um Sistema de Suporte à Decisão para Gestão Hospitalar. Esse sistema irá auxiliar no<Br>
+              registro de todos os procedimentos diários realizados no paciente que dá entrada no hospital, desde sua<Br>
+              internação até a saída, seja essa saída por recebimento de alta, por transferência ou óbito. O sistema foi<Br>
+              todo desenvolvido em Java de acordo com o Paradigma Orientado a Objetos. Durante o curto processo de<Br>
+              análise, devido à urgência, foram construídos diversos diagramas em UML (Unified Modeling Language).<Br>
+              Um desses diagramas relaciona a interação entre os objetos do sistema, o Diagrama de Sequência.<Br>
+              Esse diagrama é apresentado a seguir.
             </p>
-
-            <Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q31AD_ENADE_ADS_2021_EQ8.png"/>
+          
+            <Img Class = "imagem-pergunta" Src="../../Images/Perguntas/Q16AE_ENADE_ADS_2021_EQ8.png">
           </Div>
 
           <Div Class = "enunciado-pergunta">
-            <p>Com base no texto e no diagrama, avalie as afirmações a seguir.</p>
-            
-            <ol type="I">
-              <Li>
-                O aluno poderá realizar a matrícula fora do prazo e as tratativas são as mesmas da matrícula feita 
-                dentro do prazo.
-              </Li>
-
-              <Li>
-                O aluno poderá, opcionalmente, realizar a matrícula fora do prazo.
-              </Li>
-
-              <Li>
-                O sistema, obrigatoriamente, deverá validar o aluno que realizar a matrícula fora do prazo.
-              </Li>
-
-              <Li>
-                A validação do aluno deverá ser feita a partir da sua matrícula informada no sistema.
-              </Li>
-
-              <Li>
-                A validação do aluno, a ser feita por retina, é diferente da validação feita pela digital.
-              </Li>
-            </ol>
-
-            <p>É correto apenas o que se afirma em</p>
-          </Div>
-
+            <p>
+              Considerando o Diagrama de Sequência apresentado, assinale a opção correta.
+            </p>
+          </Div> 
+          
           <Div Class = "alternativas-pergunta">
-            <Span> <Input Type = "Radio" Name = "Q31" Value = "A"/> A) I e IV. </Span>
-            <Span> <Input Type = "Radio" Name = "Q31" Value = "B"/> B) I, II e IV. </Span>
-            <Span> <Input Type = "Radio" Name = "Q31" Value = "C"/> C) I, III e V. </Span>
-            <Span> <Input Type = "Radio" Name = "Q31" Value = "D" Id = "alt-correta"/> D) II, III e V. </Span>
-            <Span> <Input Type = "Radio" Name = "Q31" Value = "E"/> E) II, III, IV e V. </Span>
+            <Span> <Input Type = "Radio" Name = "Q16" Value = "A"/> A) Leito é uma subclasse de UTI. </Span>
+            <Span> <Input Type = "Radio" Name = "Q16" Value = "B"/> B) O método registraPaciente() é implementado por Paciente. </Span>
+            <Span> <Input Type = "Radio" Name = "Q16" Value = "C"/> C) Todos os objetos foram criados no instante de execução do Caso de Uso representado. </Span>
+            <Span> <Input Type = "Radio" Name = "Q16" Value = "D"/> D) O diagrama apresenta um erro ao não representar as mensagens de retorno depois da destruição dos objetos. </Span>
+            <Span> <Input Type = "Radio" Name = "Q16" Value = "E" Id = "alt-correta"/> E) A mensagem 4 pode ser substituída pelo estereótipo <<create>> sem causar prejuízo à interpretação correta do Diagrama de Sequência representado. </Span>
           </Div>
 
           <Div Class = "buttons-nav">
@@ -126,11 +110,11 @@
             <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
-            
+
         </Div>
       </Div>
     </Main>
-    
+
     <Footer>
       <Div>
         <p>
@@ -155,7 +139,7 @@
 
     <Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
-    <Script src = "../../js/corrigir.js"></Script>
+    <Script Src = "../../js/corrigir.js"></Script>
     <script src="../../js/popup.js"></script>
   </Body>
 

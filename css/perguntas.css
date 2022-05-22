@@ -78,8 +78,8 @@
 }
 
 .imagem-pergunta{
-    box-sizing: content-box;
-    max-width: 725px;
+	width: 100%;
+	height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto 
@@ -104,6 +104,8 @@
 }
 
 .imagem-alternativa{
+	width: 100%;
+	height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto 

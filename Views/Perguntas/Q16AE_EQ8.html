@@ -13,6 +13,7 @@
     <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
     <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas-responsive.css" Media = "screen and (min-width: 768px)"/>
   </Head>
 
   <Body Id = "Q16">
@@ -104,9 +105,7 @@
           </Div>
 
           <Div Class = "buttons-nav">
-            <a Href = "Resultado.html">
-              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
-            </a>
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
             <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>

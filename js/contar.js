@@ -148,3 +148,106 @@ addEventListener('change', () => {
     this.sessionStorage.setItem('gabaritoUsuario', historicoPerguntas)
 })
 
+function salvaResultadoSimulado(){
+    let gabaritoOficial = ["Q1:E", "Q2:C", "Q3:B", "Q4:B", "Q5:A", "Q6:A", "Q7:C","Q8:D", "Q9:C", "Q10:D","Q11:E", 
+    "Q12:C", "Q13:C","Q14:E", "Q15:B", "Q16:E","Q17:C", "Q18:A", "Q19:A","Q20:E", "Q21:B","Q22:A", "Q23:B","Q24:D", 
+    "Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A"]
+    let conteudosProva = [
+        ['Q1', [' Interpretação']], ['Q2', [' Desconhecido']], ['Q3', [' Desconhecido']], 
+        ['Q4', [' Desconhecido']], ['Q5', [' Desconhecido']], ['Q6', [' Desconhecido']], 
+        ['Q7', [' Desconhecido']], ['Q8', [' Desconhecido']], ['Q9', [' Desconhecido']],
+        ['Q10', [' Desconhecido']], ['Q11', [' Desconhecido']], ['Q12', [' Desconhecido']], 
+        ['Q13', [' Desconhecido']], ['Q14', [' Desconhecido']], ['Q15', [' Desconhecido']],
+        ['Q16', [' Desconhecido']], ['Q17', [' Desconhecido']], ['Q18', [' Desconhecido']],
+        ['Q19', [' Desconhecido']], ['Q20', [' Desconhecido']], ['Q21', [' Desconhecido']],
+        ['Q22', [' Desconhecido']], ['Q23', [' Desconhecido']], ['Q24', [' Desconhecido']],
+        ['Q25', [' Desconhecido']], ['Q26', [' Desconhecido']], ['Q27', [' Desconhecido']],
+        ['Q28', [' Desconhecido']], ['Q29', [' Desconhecido']], ['Q30', [' Desconhecido']],
+        ['Q31', [' Desconhecido']], ['Q32', [' Desconhecido']], ['Q33', [' Desconhecido']],
+        ['Q34', [' Desconhecido']], ['Q35', [' Desconhecido']]
+    ]
+
+	let recomendaConteudos = []
+	let gabaritoUsuario = []
+	let totalRespondidas = []
+	let totalAcertos = []
+	let totalErros = []
+
+	let tempoDecorrido = 0
+	let totalNaoRespondidas = 35
+
+	if(sessionStorage.getItem('gabaritoUsuario')){
+		gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
+		totalRespondidas = sessionStorage.getItem('gabaritoUsuario').split(" ")
+	}
+
+	if(totalRespondidas[0] != ''){
+		for (let i = 0; i < gabaritoUsuario.length; i++) {
+			
+			if (gabaritoOficial.indexOf(gabaritoUsuario[i]) >=0 )
+				totalAcertos.push(gabaritoUsuario[i]) 
+			
+			if (gabaritoOficial.indexOf(gabaritoUsuario[i]) < 0)
+				totalErros.push(gabaritoUsuario[i])
+		}
+		totalNaoRespondidas = 35 - totalRespondidas.length
+	}
+	else
+		totalRespondidas = []
+
+	if(totalErros.length != 0){
+		for(let i = 0; i < totalErros.length; i++){
+			let questao = totalErros[i].split(":")[0]
+
+			if(conteudosProva[i][0].indexOf(`${questao}`) == 0)
+				recomendaConteudos.push(conteudosProva[i][1])
+		}
+	}
+
+	if(sessionStorage.getItem("comecoProva")){
+		let inicioProva = sessionStorage.getItem("comecoProva")
+		let finalProva = Date.parse(new Date())
+
+		tempoDecorrido = (finalProva - inicioProva)/1000
+	}
+
+	var porcentagemAcerto = Math.round((totalRespondidas.length / 35) * 100)
+
+	// salva dados no localStorage
+
+	let data = new Date()
+	let diaMesAno = String(data.getDate()).padStart(2, '0') + '/' + 
+	String(data.getMonth() + 1).padStart(2, '0') + '/' + data.getFullYear() 
+
+	if(localStorage.getItem('acertosUsuario')){
+		salvaDadosEvolucao(totalAcertos.length, 'acertosUsuario')
+		salvaDadosEvolucao((totalErros.length+totalNaoRespondidas), 'errosUsuario')
+		salvaDadosEvolucao(diaMesAno, 'dataSimulado')
+		salvaDadosEvolucao(totalNaoRespondidas, 'perguntasNaoRespondidas')
+		salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
+		salvaDadosEvolucao(totalRespondidas.length, 'totalRespondida')
+		salvaDadosEvolucao(porcentagemAcerto, 'porcentagensDeAcerto')
+	}
+	else{
+		localStorage.setItem('acertosUsuario', totalAcertos.length)
+		localStorage.setItem('errosUsuario', totalErros.length)
+		localStorage.setItem('dataSimulado', diaMesAno)
+		localStorage.setItem('perguntasNaoRespondidas', totalNaoRespondidas)
+		localStorage.setItem('tempoDecorrido', tempoDecorrido)
+		localStorage.setItem('totalRespondida', totalRespondidas.length)
+		localStorage.setItem('porcentagensDeAcerto', porcentagemAcerto)
+	}
+
+	sessionStorage.setItem('gabaritoUsuario', '')
+	sessionStorage.setItem('paginasCorrigidas', '')
+	sessionStorage.setItem('comecoProva', '')
+
+    window.location.href = 'Resultado.html'
+}
+
+function salvaDadosEvolucao(valorASerArmazenado, chaveLocalStorage){
+	let vetor = localStorage.getItem(chaveLocalStorage).split(',')
+	vetor.push(valorASerArmazenado)
+	vetor.join(' ')
+	localStorage.setItem(chaveLocalStorage, vetor)
+}
