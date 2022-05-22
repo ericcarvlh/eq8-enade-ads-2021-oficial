@@ -62,7 +62,7 @@ if(sessionStorage.getItem("comecoProva")){
 	tempoDecorrido = (finalProva - inicioProva)/1000
 	segundos = tempoDecorrido%60
 
-	tempoMedioPergunta = segundos/totalRespondidas.length
+	tempoMedioPergunta = Math.trunc(tempoDecorrido/totalRespondidas.length)
 	
 	if(tempoDecorrido < 60){
 		document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 

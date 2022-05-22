@@ -2,18 +2,16 @@
     font-size: 1.75rem; /* Definindo um tamanho para a fonte*/
     margin-left: 10%; /* Definindo uma distância em relaçãp a margem esquerda.*/
     margin-right: 10%; /* Definindo uma distância em relaçãp a margem direita.*/
-    text-align: justify;
+    text-align: justify;  /* Colocando o alinhamento do texto justificado */
 }
 
 .imagem-informativa{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 4%;
-    border-style: solid;
-    border-width: 4%;
-    border-color: gray;
+    margin-top: 3%;  /* Adicionando uma margem em relação ao conteúdo acima. */
+    margin-bottom: 3%;  /* Adicionando uma margem em relação ao conteúdo abaixo. */
+    border-radius: 4%;  /* Adicionando um arredontamento de borda. */
+    border: 4% solid gray; /* Defindo um tamanho de borda, estilo e cor. */
 }
 
 .intrucoes-finais{
-    margin-top: 3%;
+    margin-top: 3%; /* Adicionando uma margem em relação ao conteúdo acima. */ 
 }

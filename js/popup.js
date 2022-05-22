@@ -72,7 +72,6 @@ function fecharPopUp(){
     container.classList.add('container-pop')
 }
 
-
 /*
     Função para criar o pop up:
     Cria uma div com id e class = 'container-pop'

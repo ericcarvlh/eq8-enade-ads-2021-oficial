@@ -44,7 +44,7 @@ const dados = [
 // dados[0][2] -> retorna a porcentagem por cada questão.
 // dados[0][1] -> retorna a letra correta.
 
-function drawBasic(numPergunta, respValor, letra) {
+function montaGraficoEstatistica(numPergunta, respValor, letra) {
 
     var cores = ['rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)',
         'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)']
@@ -155,9 +155,8 @@ criaGabaritoUsuario()
     passando como prametro os dados que estão estabelecidos no array dados
 */
 for (let i = 0; i < dados.length; i++) {
-    drawBasic(dados[i][0], dados[i][2], dados[i][1])
+    montaGraficoEstatistica(dados[i][0], dados[i][2], dados[i][1])
 }
-
 
 function criaGabaritoUsuario() {
     // Escreve uma div no HTML

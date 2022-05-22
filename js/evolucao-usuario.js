@@ -5,6 +5,13 @@ console.log("Em branco: "+localStorage.getItem('perguntasNaoRespondidas'))
 console.log("Tempo decorrido: "+localStorage.getItem('tempoDecorrido'))
 console.log("Total respondida: "+localStorage.getItem('totalRespondida'))
 
+/* 
+  Definindo as respectivas variaveis:
+  total de acertos, erros, nao respondidas,
+  respondidas, porcentagem de acertos, tempo decorrido
+  e datas.
+*/
+
 let acertos = []
 let erros = []
 let datas = []
@@ -13,7 +20,12 @@ let temposDecorridos = []
 let respondidas = []
 let porcentagemAcerto = []
 
+/* Verifica se existe o localStorage cujo o nome é 'acertosUsuario'. */
 if(localStorage.getItem('acertosUsuario')){
+  /* 
+    Convertendo os acertos e as demais variáveis para array
+    após pega-las do localStorge.
+  */
   acertos = localStorage.getItem('acertosUsuario').split(',')
   erros = localStorage.getItem('errosUsuario').split(',')
   datas = localStorage.getItem('dataSimulado').split(',')
@@ -21,15 +33,25 @@ if(localStorage.getItem('acertosUsuario')){
   temposDecorridos = localStorage.getItem('tempoDecorrido').split(',')
   respondidas = localStorage.getItem('totalRespondida').split(',')
 
+  /* Calcula a porcentagem de acertoss */
   for(let i = 0; i < acertos.length; i++){
     porcentagemAcerto[i] = Math.trunc((acertos[i] / 35) * 100)
   }
 
+  /* 
+    Se o tamanho do array das datas for menor que 2,
+    então o usuário é transportado para a página de resultado.
+  */
   if(datas.length < 2){
     window.location.href = 'Resultado.html' 
   }
 }
 
+/* 
+  Definindo uma variável para ter uma animação de delay, 
+  para mais informaçôes, confira a documentação:
+  https://www.chartjs.org/docs/latest/samples/line/styling.html
+*/
 let delayed
 var grafico = document.getElementById('grafico-evolucao').getContext('2d');
 var dados = {

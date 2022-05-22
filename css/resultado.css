@@ -1,106 +1,106 @@
 .graficos{
-    margin-top: 5%;
+    margin-top: 5%; /* Adicionando uma margem em relação ao conteúdo acima. */
 }
 
 .grafico-acertos-erros, .grafico-respondidas-e-naorespondidas{
-    width: 90%;
-    height: 80%;
-    max-height: 400px;
-    max-width: 500px;
+    width: 90%; /* Adicionando uma largura. */
+    height: 80%; /* Adicionando uma altura. */
+    max-height: 400px; /* Adicionando uma largura máxima. */
+    max-width: 500px; /* Adicionando um tamanho máximo de largura. */
 }
 
 .primeiro-dados-por-inteiro div, .segundo-dados-por-inteiro div{
-    border-width: 1%;
-    border-style: solid;
-    border-color: rgba(66, 66, 66, 0.6);
-    height: 50%;
-    width: 60%;
-    max-width: 400px;
-    max-height: 200px;
-    align-items: center;
-    margin-top: 2.5%;
-    display: inline-table;
+    border-width: 1%; /* Adicionando uma largura a borda. */
+    border-style: solid; /* Adicionando um estilo de borda. */
+    border-color: rgba(66, 66, 66, 0.6); /* Adicionando uma cor para as bordas. */
+    height: 50%; /* Adicionando uma largura. */
+    width: 60%; /* Adicionando uma largura. */
+    max-width: 400px; /* Adicionando uma largura máxima. */
+    max-height: 200px; /* Adicionando uma largura máxima. */
+    align-items: center; /* Definindo um alinhamento dos itens. */
+    margin-top: 2.5%; /* Adicionando uma margem em relação ao conteúdo acima. */
+    display: inline-table; /* Adicionando uma forma de exibição. */
 }
 
 .primeiro-dados-por-inteiro p, .segundo-dados-por-inteiro p{
-    margin: 2.5%;
+    margin: 2.5%; /* Adicionando uma margem geral (esquerda, direita, p cima e p baixo). */
 }
 
 .inteiro-acertos h4, .inteiro-erros h4, 
 .inteiro-nao-respondidas h4, .inteiro-respondidas h4{
-    font-size: 2rem;
+    font-size: 2rem; /* Adicionando um tamanho de fonte. */
 }
 
 .inteiro-acertos, .inteiro-nao-respondidas{
-    margin-right: 15%;
+    margin-right: 15%; /* Adicionando uma margem em relação ao da direita. */
 }
 
 .inteiro-acertos h4{
-    background-color: rgba(0, 255, 0, 0.6);
+    background-color: rgba(0, 255, 0, 0.6); /* Adicionando uma cor de fundo. */
 }
 
 .inteiro-erros h4{
-    background-color: rgba(255, 0, 0, 0.6);
+    background-color: rgba(255, 0, 0, 0.6); /* Adicionando uma cor de fundo. */
 }
 
 .inteiro-nao-respondidas h4{
-    background-color: rgba(180, 180, 180, 0.6);
+    background-color: rgba(180, 180, 180, 0.6); /* Adicionando uma cor de fundo. */
 }
 
 .inteiro-respondidas h4{
-    background-color: rgba(255, 155, 55, 0.6);
+    background-color: rgba(255, 155, 55, 0.6); /* Adicionando uma cor de fundo. */
 }
 
 .respondidas-e-naorespondidas{
-    margin-bottom: 4%;
+    margin-bottom: 4%; /* Adicionando uma margem em relação ao conteúdo abaixo. */
 }
 
 .mensagem-final-simulado{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3.1rem;    
+    font-size: 3.1rem; /* Adicionando um tamanho de fonte. */ 
 }
 
 .sub-mensagem-final-simulado{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.1rem; 
-    margin-top: 1.5%;
+    font-size: 2.1rem; /* Adicionando um tamanho de fonte. */
+    margin-top: 1.5%; /* Adicionando uma margem em relação ao conteúdo acima. */
 }
 
 .info-resultado{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 10%; /* Adicionando uma margem em relação ao da esquerda. */
+    margin-right: 10%; /* Adicionando uma margem em relação ao da direita. */
 }
 
 .info-resultado p{
-    text-align: justify;
+    text-align: justify; /* Colocando o alinhamento do texto justificado */
 }
 
 .orientacao{
-    margin-top: 2.5%;
-    font-size: 1.8rem; 
+    margin-top: 2.5%; /* Adicionando uma margem em relação ao conteúdo acima. */
+    font-size: 1.8rem; /* Adicionando um tamanho de fonte. */
 }
 
 .retorno-acertos{
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin-top: 5%; /* Adicionando uma margem em relação ao conteúdo acima. */
+    margin-bottom: 2%; /* Adicionando uma margem em relação ao conteúdo abaixo. */
 }
 
 .mensagem-evolucao-usuario{
-    margin-top: 5%;
+    margin-top: 5%; /* Adicionando uma margem em relação ao conteúdo acima. */
 }
 
 table{
-	width: 60%;
+	width: 60%; /* Adicionando uma largura. */
 }
 
 .div-nota-individual table, th, td {
-	text-align: center;
-	border: 1px solid black;
-	border-collapse: collapse;  
+	text-align: center; /* Colocando o alinhamento do texto ao centro */
+	border: 1px solid black; /* Defindo um tamanho de borda, estilo e cor. */
+	border-collapse: collapse;  /* Definndo se as células vão compartilhar uma borda comum ou não. */
 }
 
 .div-nota-individual p{
-	margin-top: 2.5%;
-    margin-bottom: 1.5%;
+	margin-top: 2.5%; /* Adicionando uma margem em relação ao conteúdo acima. */
+    margin-bottom: 1.5%; /* Adicionando uma margem em relação ao conteúdo abaixo. */
 }
 
