@@ -1,3 +1,7 @@
+if(!localStorage.getItem('gabaritoUsuario')){
+    window.location.href = 'Resultado.html'
+}
+
 let delayed;
 
 /*
@@ -44,7 +48,7 @@ const dados = [
 // dados[0][2] -> retorna a porcentagem por cada questão.
 // dados[0][1] -> retorna a letra correta.
 
-function montaGraficoEstatistica(numPergunta, respValor, letra) {
+function montaGraficoEstatistica(numPergunta, respValor, letra, i) {
 
     var cores = ['rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)',
         'rgba(200,0,0, 0.7)', 'rgba(200,0,0, 0.7)']
@@ -70,12 +74,17 @@ function montaGraficoEstatistica(numPergunta, respValor, letra) {
     }
 
     let numPerg = `${numPergunta}-pergunta`
+    let gabaritoUsu = localStorage.getItem('gabaritoUsuario').split(",")
 
     // Parte que coloca o gráfico no HTML
     document.write('<Div Class= "grafico" Style = "margin-top: 5%;">')
     document.write(`<H3 Class = "titulo-pergunta">${numPergunta} ° Pergunta</H3>`)
     document.write(`<Canvas Id = "${numPerg}"></Canvas>`)
-    document.write(`<H3>Gabarito: ${letra}</H3>`)
+    document.write(`<H4>Gabarito: ${letra}</H4>`)
+    if(gabaritoUsu[i] != undefined)
+        document.write(`<H4>Sua resposta: ${gabaritoUsu[i].split(":")[1]}</H4>`)
+    else 
+        document.write(`<H4>Sua resposta: Não respondida</H4>`)
     document.write('</Div>')
 
     let ctx = document.getElementById(numPerg);
@@ -144,9 +153,6 @@ function montaGraficoEstatistica(numPergunta, respValor, letra) {
     })
 }
 
-// Váriável que pega as alternativas que o usuário escolheu durante o simulado, e transforma em um array.
-var gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split("");
-
 // Chama o método que escreve o gabarito do usuário
 criaGabaritoUsuario()
 
@@ -155,12 +161,15 @@ criaGabaritoUsuario()
     passando como prametro os dados que estão estabelecidos no array dados
 */
 for (let i = 0; i < dados.length; i++) {
-    montaGraficoEstatistica(dados[i][0], dados[i][2], dados[i][1])
+    montaGraficoEstatistica(dados[i][0], dados[i][2], dados[i][1], i)
 }
 
 function criaGabaritoUsuario() {
     // Escreve uma div no HTML
     document.write('<div id = "gabarito-usuario" class="gabarito-usuario"> <h3>Suas Respostas:</h3>')
+    // Váriável que pega as alternativas que o usuário escolheu durante o simulado, e transforma em um array.
+    let gabaritoUsuario = localStorage.getItem('gabaritoUsuario').split("");
+
     let j = 3;
     let cont = 0;
 
@@ -201,8 +210,11 @@ function criaGabaritoUsuario() {
         }
         // Agerga valor à variável j, que está sendo usando para a locação da casa para a resposta do usuário
         j = j+5
-        console.log(j)
     }
     
     document.write('</div>')
+}
+
+function imprimirEstatisticas(){
+	window.print()
 }

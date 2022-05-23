@@ -7,6 +7,11 @@ html{
         display: none;
     }
   
+    .imagem-informativa{
+        width: 100%;
+        height: auto;
+    }
+
     .one, .two, .three {
         background-color: white;
         height: 5px;

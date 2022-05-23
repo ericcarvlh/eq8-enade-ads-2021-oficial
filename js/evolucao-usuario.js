@@ -1,10 +1,3 @@
-console.log("Acertos: "+localStorage.getItem('acertosUsuario'))
-console.log("Erros: "+localStorage.getItem('errosUsuario'))
-console.log("Data(s): "+localStorage.getItem('dataSimulado'))
-console.log("Em branco: "+localStorage.getItem('perguntasNaoRespondidas'))
-console.log("Tempo decorrido: "+localStorage.getItem('tempoDecorrido'))
-console.log("Total respondida: "+localStorage.getItem('totalRespondida'))
-
 /* 
   Definindo as respectivas variaveis:
   total de acertos, erros, nao respondidas,
@@ -121,3 +114,7 @@ var dados = {
     }   
 }
 new Chart(grafico, dados);
+
+function imprimirEvolucao(){
+	window.print()
+}

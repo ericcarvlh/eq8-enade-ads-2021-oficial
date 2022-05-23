@@ -227,15 +227,19 @@ function salvaResultadoSimulado(){
 		salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
 		salvaDadosEvolucao(totalRespondidas.length, 'totalRespondida')
 		salvaDadosEvolucao(porcentagemAcerto, 'porcentagensDeAcerto')
+        localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
+        localStorage.setItem('recomendaConteudos', recomendaConteudos)
 	}
 	else{
 		localStorage.setItem('acertosUsuario', totalAcertos.length)
-		localStorage.setItem('errosUsuario', totalErros.length)
+		localStorage.setItem('errosUsuario', totalErros.length+totalNaoRespondidas)
 		localStorage.setItem('dataSimulado', diaMesAno)
 		localStorage.setItem('perguntasNaoRespondidas', totalNaoRespondidas)
 		localStorage.setItem('tempoDecorrido', tempoDecorrido)
 		localStorage.setItem('totalRespondida', totalRespondidas.length)
 		localStorage.setItem('porcentagensDeAcerto', porcentagemAcerto)
+        localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
+        localStorage.setItem('recomendaConteudos', recomendaConteudos)
 	}
 
 	sessionStorage.setItem('gabaritoUsuario', '')
