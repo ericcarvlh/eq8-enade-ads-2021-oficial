@@ -12,6 +12,9 @@ let naoRespondidas = []
 let temposDecorridos = []
 let respondidas = []
 let porcentagemAcerto = []
+let formacaoGeral = []
+let componenteEspecifico = []
+let notaFinal = []
 
 /* Verifica se existe o localStorage cujo o nome é 'acertosUsuario'. */
 if(localStorage.getItem('acertosUsuario')){
@@ -25,6 +28,9 @@ if(localStorage.getItem('acertosUsuario')){
   naoRespondidas = localStorage.getItem('perguntasNaoRespondidas').split(',')
   temposDecorridos = localStorage.getItem('tempoDecorrido').split(',')
   respondidas = localStorage.getItem('totalRespondida').split(',')
+  formacaoGeral = localStorage.getItem('formacaoGeral').split(',')
+  componenteEspecifico = localStorage.getItem('componenteEspecifico').split(',')
+  notaFinal = localStorage.getItem('notaFinal').split(',')
 
   /* Calcula a porcentagem de acertoss */
   for(let i = 0; i < acertos.length; i++){
@@ -80,6 +86,24 @@ var dados = {
         data: naoRespondidas, 
 				backgroundColor: 'rgba(180, 180, 180, 0.6)', 
 				borderColor: 'rgba(180, 180, 180, 1)',
+      },
+      {
+        label:'Nota em formação geral',
+        data: formacaoGeral, 
+				backgroundColor: 'rgba(114, 130, 255, 0.6)', 
+				borderColor: 'rgba(114, 130, 255, 1)',
+      },
+      {
+        label:'Nota em componentes específicos',
+        data: componenteEspecifico, 
+				backgroundColor: 'rgba(114, 130, 255, 0.6)', 
+				borderColor: 'rgba(114, 130, 255, 1)',
+      },
+      {
+        label:'Nota final obtida',
+        data: notaFinal, 
+				backgroundColor: 'rgba(114, 130, 255, 0.6)', 
+				borderColor: 'rgba(114, 130, 255, 1)',
     }]
 	},
     options: {

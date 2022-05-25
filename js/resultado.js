@@ -5,7 +5,8 @@ const gabaritoOficial = ["Q1:E", "Q2:C", "Q3:B", "Q4:B", "Q5:A", "Q6:A", "Q7:C",
 var totalAcertos = 0, totalErros = 0, 
 totalRespondidas = 0, porcentagemAcerto = 0,
 datas = [], totalNaoRespondidas = 0, tempoDecorrido = 0,
-mensagemAcertos = '', recomendaConteudos = []
+mensagemAcertos = '', recomendaConteudos = [],
+formacaoGeral = 0, componenteEspecifico = 0, notaFinal = 0
 
 if(localStorage.getItem('acertosUsuario')){
 	totalAcertos = atribuiValorStorage('acertosUsuario')
@@ -13,6 +14,9 @@ if(localStorage.getItem('acertosUsuario')){
 	totalRespondidas = atribuiValorStorage('totalRespondida')
 	porcentagemAcerto = atribuiValorStorage('porcentagensDeAcerto')
 	totalNaoRespondidas = atribuiValorStorage('perguntasNaoRespondidas')
+	formacaoGeral = atribuiValorStorage('formacaoGeral')
+	componenteEspecifico = atribuiValorStorage('componenteEspecifico')
+	notaFinal = atribuiValorStorage('notaFinal')
 	tempoDecorrido = atribuiValorStorage('tempoDecorrido')
 	datas = localStorage.getItem('dataSimulado').split(',')
 }
@@ -70,6 +74,7 @@ if(porcentagemAcerto == 0){
 	document.getElementById('imprimir-resultado').style.display = 'None'
 	document.getElementById('primeiro-dados-por-inteiro').style.display = 'None'
 	document.getElementById('segundo-dados-por-inteiro').style.display = 'None'
+	document.getElementById('nota-simulado').style.display = 'None'
 }
 else if(porcentagemAcerto < 25)
 	mensagemAcertos = 'Infelizmente, você está na linha de rebaixamento igual o Palmeiras, pois o seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
@@ -81,6 +86,11 @@ else
 	mensagemAcertos = 'Parabéns, sua quantidade de acertos foi igual a '+porcentagemAcerto+'%.  Nos parece que você é o filho do Einsten, não reencarne.'
 
 document.getElementById('retorno-acertos').innerHTML = mensagemAcertos
+for(elemento of document.querySelectorAll('#formacao-geral-multipla-escolha'))
+	elemento.innerHTML = formacaoGeral
+for(elemento of document.querySelectorAll('#componente-especifico-multipla-escolha'))
+	elemento.innerHTML = componenteEspecifico
+document.getElementById('nota-final').innerHTML = notaFinal
 
 montaGrafico('acertos-erros', ['Total de acertos e erros'], 'Total de acertos', 
 [totalAcertos], 'rgba(0, 255, 0, 0.6)',  'rgba(0, 255, 0, 1)', 'Total de erros', 
@@ -183,8 +193,12 @@ apagaTestes("Total de perguntas respondidas: ", 'totalRespondida')
 apagaTestes('Porcentagens de acerto: ', 'porcentagensDeAcerto')
 apagaTestes("Gabarito do usuário: ", 'gabaritoUsuario')
 apagaTestes("Recomenda conteudos: ", 'recomendaConteudos')
+apagaTestes("Formação geral: ", 'formacaoGeral')
+apagaTestes("Componente específico: ", 'componenteEspecifico')
+apagaTestes("Nota final: ", 'notaFinal')
 */
 
+/*
 testes("Acertos: ", 'acertosUsuario')
 testes("Erros: ", 'errosUsuario')
 testes("Data(s): ", 'dataSimulado')
@@ -194,6 +208,10 @@ testes("Total de perguntas respondidas: ", 'totalRespondida')
 testes("Porcentagens de acerto: ", 'porcentagensDeAcerto')
 testes("Gabarito do usuário: ", 'gabaritoUsuario')
 testes("Recomenda conteudos: ", 'recomendaConteudos')
+testes("Formação geral: ", 'formacaoGeral')
+testes("Componente específico: ", 'componenteEspecifico')
+testes("Nota final: ", 'notaFinal')
+*/
 
 function testes(msg, key){
 	console.log(msg + localStorage.getItem(key))

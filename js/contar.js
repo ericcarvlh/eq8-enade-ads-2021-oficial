@@ -176,6 +176,10 @@ function salvaResultadoSimulado(){
 	let tempoDecorrido = 0
 	let totalNaoRespondidas = 35
 
+    let formacaoGeral = 0
+    let componenteEspecifico = 0
+    let notaFinal = 0
+
 	if(sessionStorage.getItem('gabaritoUsuario')){
 		gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
 		totalRespondidas = sessionStorage.getItem('gabaritoUsuario').split(" ")
@@ -190,7 +194,21 @@ function salvaResultadoSimulado(){
 			if (gabaritoOficial.indexOf(gabaritoUsuario[i]) < 0)
 				totalErros.push(gabaritoUsuario[i])
 		}
+
+        for (let i = 0; i < totalAcertos.length; i++){
+            let acertos = totalAcertos.join(' ')
+
+            if (acertos.split(":")[i].split("Q")[1] < 8)
+                formacaoGeral += 12.5
+            else if(acertos.split(":")[i].split("Q")[1] > 8)
+                componenteEspecifico += 3.70
+        }
+
 		totalNaoRespondidas = 35 - totalRespondidas.length
+
+        formacaoGeral = (formacaoGeral * 0.6).toPrecision(2)
+        componenteEspecifico = (componenteEspecifico * 0.85).toPrecision(2)
+        notaFinal = ((formacaoGeral * 0.25) + (componenteEspecifico * 0.75)).toPrecision(2)
 	}
 	else
 		totalRespondidas = []
@@ -227,6 +245,9 @@ function salvaResultadoSimulado(){
 		salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
 		salvaDadosEvolucao(totalRespondidas.length, 'totalRespondida')
 		salvaDadosEvolucao(porcentagemAcerto, 'porcentagensDeAcerto')
+        salvaDadosEvolucao(formacaoGeral, 'formacaoGeral')
+        salvaDadosEvolucao(componenteEspecifico, 'componenteEspecifico')
+        salvaDadosEvolucao(notaFinal, 'notaFinal')
         localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
         localStorage.setItem('recomendaConteudos', recomendaConteudos)
 	}
@@ -238,6 +259,9 @@ function salvaResultadoSimulado(){
 		localStorage.setItem('tempoDecorrido', tempoDecorrido)
 		localStorage.setItem('totalRespondida', totalRespondidas.length)
 		localStorage.setItem('porcentagensDeAcerto', porcentagemAcerto)
+        localStorage.setItem('formacaoGeral', formacaoGeral)
+        localStorage.setItem('componenteEspecifico', componenteEspecifico)
+        localStorage.setItem('notaFinal', notaFinal)
         localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
         localStorage.setItem('recomendaConteudos', recomendaConteudos)
 	}

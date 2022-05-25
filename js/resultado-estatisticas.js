@@ -1,4 +1,10 @@
+/* Verifica se a o usuário já realizou o simulado alguma vez. */
 if(!localStorage.getItem('gabaritoUsuario')){
+    /* 
+        Se ele não tiver feito, então 'transportamos' ele para 
+        para a página de resultado, pois nessa página é necessário
+        o gabarito com pelo menos uma questão responidda.
+    */
     window.location.href = 'Resultado.html'
 }
 
@@ -215,6 +221,7 @@ function criaGabaritoUsuario() {
     document.write('</div>')
 }
 
+/* Transforma a página em um PDF */
 function imprimirEstatisticas(){
 	window.print()
 }
