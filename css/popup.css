@@ -2,8 +2,8 @@
 .popup {
     position: fixed;  /* Define uma posição fixa para o elemento */
     background-color: #fff0e6;  /* Coloca um cor de fundo laranja claro */
-	width: 100%;  /* Define a largura do elemento em 100% */
-	height: auto;  /* Define a altura do elemento como automático */
+	width: 550px;  /* Define a largura do elemento em 100% */
+	height: 400px;  /* Define a altura do elemento como automático */
     margin: auto;  /* Centraliza o elemento em relação à largura do elemento pai */
     border-radius: 8px;  /* Arredonta as pontas do elemento */
     border: solid 2px #FFAB40;  /* Coloca uma borda de 2px, sólida e um laranja mais escuro */

@@ -13,8 +13,8 @@
 /* Estilo referente à classe errado */
 .errado {
     text-align: center; /* entraliza o texto no centro, em consideração à largura */
-    width: auto; /* colocando a largura do elemento automática */
-	height: 100%; /* Definindo a altura do elemento em 100% */
+    width: 600px; /* colocando a largura do elemento em 600 pixels */
+	height: 300px; /* Definindo a altura do elemento em 300 pixels */
     background-color: #fff0e6; /* Colocando uma cor de fundo laranja claro */
     border: 2px solid #ffab40; /* colocando uma borda ao redor do elemento de 2px, sólida e um laranja mais escuro */
     position: relative; /* Definindo ele como position relative para ela tomar as referencias do elemento pai */
@@ -32,8 +32,8 @@
 /* Estilo referente à classe certo */
 .certo {
     text-align: center;
-    width: auto;
-	height: 100%;
+    width: 600px;
+	height: 300px;
     background-color: #fff0e6;
     border: 2px solid #ffab40;
     position: relative;
@@ -47,8 +47,8 @@
 /* Estilo referente à classe atencao */
 .atencao{
     text-align: center;
-    width: auto;
-	height: 100%;
+    width: 600px;
+	height: 300px;
     background-color: #fff0e6;
     border: 2px solid #ffab40;
     position: relative;

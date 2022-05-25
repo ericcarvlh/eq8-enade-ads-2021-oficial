@@ -1,124 +1,229 @@
-html{
-    font-size: 50%;
+@media (min-width: 1024px) and (max-width: 1440px){
+
 }
 
-@media (max-width: 768px){
+@media (min-width: 426px) and (max-width: 912px){
 	.corpo-pagina{
-		margin-left: 1.1%;
-		margin-right: 1.1%;
-	}
-	
-	.sobre-o-site{
-		font-size: 2.2rem;
-		margin-left: 5%;
-		margin-right: 5%;
+		padding-bottom: 40px;
 	}
 
-	.responsaveis-site b{
-		font-size: 2.5rem;
+	@media (max-width: 768px){
+		.popup {
+			width: 600px;
+			height: 425px;
+		}
+
+		.atencao, .certo, .errado{
+			width: auto;
+			height: auto;
+		}
+
+		.certo, .errado{
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+		.imagem-informativa{
+			width: 100%;
+			height: auto;
+		}
+
+		.sobre-o-site {
+			font-size: 2rem;
+			margin-left: 6%;
+			margin-right: 6%;
+		}
+
+		.corpo-pagina {
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+
+		.responsaveis-site p{
+			font-size: 2rem;
+		}
+
+		.responsaveis-site b{
+			font-size: 2.2rem;
+		}
+
+		header nav ul li a {
+			font-size: 2rem;
+		}
+
+		footer div p a{
+			font-size: 1.9rem;
+		}
+
+		.acesso-ao-simulado h2{
+			font-size: 2.9rem;
+		}
+
+		.acesso-prova-gabarito h3{
+			font-size: 2.8rem;
+		}
+
+		.intrucoes-principais p {
+			font-size: 2rem;
+		}
+
+		.corpo-pergunta {
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+
+		.nav-pergunta{
+			font-size: 2rem;
+		}
+
+		.fonte-pergunta{
+			font-size: 1rem;
+		}
+
+		.enunciado-pergunta p{
+			font-size: 2rem;
+		}
+
+		.numero-pergunta{
+			font-size: 1.8rem;
+			margin-left: 10%;
+		}
+
+		.texto-pergunta{
+			margin-left: 6%;
+    		margin-right: 6%;
+		}
+
+		.texto-pergunta p{
+			font-size: 1.8rem;
+		}
+
+		.button-nav{
+			font-size: 1.8rem;
+			font-weight: 700;
+		}
+
+		.alternativas-pergunta span{
+			font-size: 2rem;
+		}
 	}
 
-	.responsaveis-site{
-		font-size: 2.3rem;
-	}
+	@media (max-width: 540px) {
+		.corpo-pagina{
+			margin-left: 2.5%;
+    		margin-right: 2.5%;
+		}
 
-	header nav ul li a{
-		font-size: 1.7rem;
-	}
-	
-	.creditos-do-site h2{
-		font-size: 	4rem;
-	}
-	
-	.creditos-do-site p{
-		font-size: 2.5rem;
-	}
-	
-	.creditos-do-site b{
-		font-size: 2.3rem;
-	}
-	
-	.responsaveis-site p{
-		font-size: 2.4rem;
-	}
-	
-	.info-enade{
-		width: 95%;
-		height: 90%;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	.info-enade blockquote{
-		font-size: 1.7rem;
-	}
-	
-	.voce-enade{
-		font-size: 3rem;
-	}
-	
-	.sobre-o-enade{
-		font-size: 2.3rem;
-	}
-	
-	.acesso-ao-simulado h2{
-		font-size: 2.9rem;
-	}
-	
-	.acesso-prova-gabarito h3{
-		font-size: 3.2rem;
-	}
-	
-	.acesso-prova-gabarito p{
-		font-size: 2rem;
-	}
-	
-	.imagem-informativa{
-		width: 100%;
-		height: auto;
-	}
-	
-	.intrucoes-principais h2{
-		font-size: 4rem;
-	}
-	
-	.intrucoes-principais p{
-		font-size: 2rem;
-	}
-	
-	.fonte-pergunta{
-		font-size: 1.2rem;
-	}
-	
-	.texto-pergunta{
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-	
-	.alternativas-pergunta{
-		margin-left: 7%;
-		margin-right: 7%;
-	}
-	
-	.alternativas-pergunta span{
-		margin-top: -3%;
-	}
-	
-	.nav-pergunta{
-		font-size: 2.1rem;
-	}
-	
-	.numero-pergunta{
-		font-size: 1.8rem;
-	}
-	
-	footer div p a{
-		font-size: 2rem;
+		.sobre-o-enade {
+			margin-left: 6%;
+			margin-right: 6%;
+		}
+		
+		.acesso-ao-simulado h2{
+			font-size: 3rem;
+		}
+
+		.acesso-prova-gabarito h3{
+			font-size: 2.4rem;
+		}
+
+		.button-nav{
+			font-size: 1.4rem;
+		}
+
+		.imagem-informativa{
+			width: 100%;
+			height: auto;
+		}
+
+		.intrucoes-principais p {
+			font-size: 1.80rem;
+			margin-left: 6%;
+			margin-right: 6%;
+		}
+
+		.numero-pergunta {
+			margin-left: 5%;
+		}
+
+		.corpo-pergunta {
+			margin-right: 4%;
+			margin-left: 4%;
+		}
+
+		.nav-pergunta {
+			font-size: 2.3rem;
+		}
+
+		.texto-pergunta {
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+		.texto-pergunta p{
+			font-size: 1.75rem;
+		}
+
+		.alternativas-pergunta{
+			margin-left: 8%;
+			margin-right: 8%;				
+		}
+
+		.enunciado-pergunta{
+			font-size: 1.9rem;
+		}
+
+		.alternativas-pergunta span{
+			font-size: 1.8rem;
+		}
+
+		.buttons-nav input{
+			font-size: 1.7rem;
+		}
+
+		.buttons-nav input:hover{
+			font-size: 1.9rem; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
+			font-weight: 700; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
+		}
+
+		header nav ul li a {
+			font-size: 1.50rem;
+		}
+
+		footer div p a{
+			font-size: 2rem;
+		}
+
+		.sobre-o-site{
+			margin-left: 7%;
+			margin-right: 7%;
+		}
+
+		.responsaveis-site p{
+			font-size: 2rem;
+		}
+
+		.responsaveis-site b{
+			font-size: 2.3rem;
+		}
+
+		.popup{
+			height: 470px;
+			width: auto;
+
+			margin-left: 5%;	
+			margin-right: 5%;
+		}
 	}
 }
 
 @media (max-width: 425px){
+	@media (min-width: 280px){
+		html{
+			font-size: 50%;
+		}
+	}
+
     nav {
         display: none;
     }
@@ -263,11 +368,26 @@ html{
 		}
 		
 		.button-nav{
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 		}
     }
 
+	@media (min-width: 376px) {
+		.popup{
+			height: 470px;
+			width: auto;
+	
+			margin-left: 5%;	
+			margin-right: 5%;
+		}
+	}
+
     @media (max-width: 375px){
+		.errado, .certo, .atencao, .popup{
+			width: auto; 
+			height: 100%;
+		}
+
         .texto-pergunta{
             margin-right: 1.8%;
             margin-left: 1.8%;  
@@ -351,17 +471,6 @@ html{
             margin-right: 2%;
             margin-left: 2%;  
         }
-    
-        .button-nav {
-            font-size: 1rem;
-            font-weight: 480;
-            margin: 12px 0px 0px;
-            border-color: #FFAB40;
-            padding: 10px 28px;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: all 150ms linear 0s;
-        }  
 		
 		.info-enade{
 			width: 70%;
@@ -463,13 +572,22 @@ html{
 		}
 		
 		.button-nav {
-			font-size: 1.2rem;
+			font-size: 1.3rem;
 			font-weight: 500;
+		}
+
+		.button-nav:hover{
+			font-size: 1.4rem; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
+			font-weight: 600; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
 		}
 		
 		.nav-pergunta{
 			font-size: 2.2rem;
 			font-weight: 400;
+		}
+
+		footer div p a{
+			font-size: 1.6rem;
 		}
     }
 
@@ -587,8 +705,13 @@ html{
 		}
 		
 		.button-nav {
-			font-size: 0.9rem;
+			font-size: 0.85rem;
 			font-weight: 500;
+		}
+
+		.button-nav:hover{
+			font-size: 0.9rem; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
+			font-weight: 600; /* Definindo o tamanho da fonte quando o cursosr estiver sobre o componente.*/
 		}
 		
 		.nav-pergunta{
