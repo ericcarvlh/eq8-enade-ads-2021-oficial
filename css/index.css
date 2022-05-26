@@ -1,22 +1,22 @@
 .cards {
   width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
   max-width: 300px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
-  margin: auto;
+  margin: auto; /* Definindo a margem como automática */
 }
 
 .text--medium {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  font-weight: 400;
-  color: #ecf0f1;
+  font-size: 1.6rem; /* Definindo o tamanho da fonte. */
+  line-height: 2.6rem; /* Definindo a altura da caixa de linha. */
+  font-weight: 400; /* Definindo a largura da fonte como normal. */
+  color: #ecf0f1; /* Cor do texto */
 }
   
 .card {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(255, 166, 0);
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+  display: flex; /* Adicionando um display de acordo com o modelo flexbox */
+  flex-direction: column; /* Definindo a direção do modelo para a coluna.  */
+  background-color: rgb(255, 166, 0); /* Definindo a cor para o fundo */
+  cursor: pointer; /* Definindo o cursor ao passar por cima do card */
+  transition: all 0.3s ease 0s; /* Adicionando todas as propriedades para a transição */
 }
   
 .card:hover {
@@ -24,19 +24,19 @@
 }
 
 .image {
-  width: 100%;
+  width: 100%; /* Definindo a largura da imagem */
   padding-top: 55.25%; /* 16:9 */
 
-  overflow: hidden;
-  position: relative;
+  overflow: hidden; /* O conteúdo é cortado e nenhuma barra de rolagem é exibida. */
+  position: relative; /* definindo a posição como relativa */
 }
 
 .image img {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%; /* Definindo a largura da imagem */
+  position: absolute; /* Definindo como posição livre na página */
+  top: 50%; /* Especificando a posição vertical */
+  left: 50%; /* Especificando a posição para a esquerda */
+  transform: translate(-50%, -50%); /* Especificando a posição vertical */
 }
 
 .content {
@@ -49,8 +49,8 @@
 
 .info {
   display: flex;
-  align-self: end;
-  align-items: center;
+  align-self: end; /* Alinhando itens-flex da linha flex alvo */
+  align-items: center; /* Estabelecendo  o valor align-self em todos como um grupo */
 }
 
 .modal-overlay {
@@ -64,8 +64,8 @@
   height: 100%;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0; /* Definindo a opacidade */
+  visibility: hidden; /* Alterando a visibilidade */
 }
 .modal-overlay.active {
   opacity: 1;
@@ -86,14 +86,14 @@
   padding: 10px;
   
   border-radius: 3px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* sombra em caixa */
   
   opacity: 0;
   overflow-y: auto;
   visibility: hidden;
   
-  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transform: scale(1.2);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1); /* Adicionando transição com velocidade variável */
+  transform: scale(1.2); /* Alterando a escala */
 }
 .modal .close-modal {
   position: absolute;
