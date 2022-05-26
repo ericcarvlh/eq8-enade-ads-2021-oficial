@@ -5,8 +5,8 @@
 .grafico-acertos-erros, .grafico-respondidas-e-naorespondidas{
     width: 90%; /* Adicionando uma largura. */
     height: 80%; /* Adicionando uma altura. */
-    max-height: 400px; /* Adicionando uma largura máxima. */
-    max-width: 500px; /* Adicionando um tamanho máximo de largura. */
+	max-height: 400px;
+	max-width: 500px;
 }
 
 .primeiro-dados-por-inteiro div, .segundo-dados-por-inteiro div{

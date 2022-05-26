@@ -36,13 +36,13 @@
           </Div>
           <Nav>
             <Ul>
-              <Li OnClick = "limpaSessionStorage()">
+              <Li>
                 <a Href="../../Views/Principal/Index.html">Início</a>
               </Li>
-              <Li OnClick = "limpaSessionStorage()">
+              <Li>
                 <a Href="../../Views/Principal/Credits.html">Créditos</a>
               </Li>
-              <Li OnClick = "limpaSessionStorage()">
+              <Li>
                 <a Href="../../Views/Principal/About.html">Sobre</a>
               </Li>
             </Ul>
@@ -55,7 +55,7 @@
       <Div Class = "corpo-pagina">   
 
         <p Class = "mensagem-final-simulado" Id = "final-simulado">
-          Parabéns, você acabou de finalizar o simualdo!
+          Parabéns, você acabou de finalizar o simulado!
         </p>
 
         <p Class = "sub-mensagem-final-simulado" Id = "sub-t-final-simulado">
@@ -64,7 +64,7 @@
 
         <Div Id = "info-resultado" Class = "info-resultado">
           <p Class = "orientacao" Id = "orientacao">
-            Confira abaixo algumas tabelas informando sua qunatidade 
+            Confira abaixo algumas tabelas informando sua quantidade 
             de acertos, erros, perguntas não respondidas e respondidas.
           </p>
 
@@ -111,9 +111,9 @@
           </Div>
         </Div>
 
-        <Div Class = "graficos" Align = "center">
-          <canvas Class="grafico-acertos-erros" id="acertos-erros"></canvas>
-          <canvas Class="grafico-respondidas-e-naorespondidas"id="respondidas-e-naorespondidas"></canvas>
+        <Div Class = "graficos" Align = "center" Id = "div-graficos">
+          <canvas height = "250" Class = "grafico-acertos-erros" id = "acertos-erros"></canvas>
+          <canvas height = "250" Class = "grafico-respondidas-e-naorespondidas"id = "respondidas-e-naorespondidas"></canvas>
         </Div>
 
         <Div Class = "tempo-e-tempo-medio-simulado">

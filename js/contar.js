@@ -148,7 +148,17 @@ addEventListener('change', () => {
     this.sessionStorage.setItem('gabaritoUsuario', historicoPerguntas)
 })
 
+/*
+    Salva os dados acerca do simulado
+    quando o botão de finalizar for pressionado.
+*/
 function salvaResultadoSimulado(){
+    /* 
+        Declarando variáveis para 
+        armazenar o gabarito correto e os 
+        respectivos conteúdos (ou quase) 
+        de cada questão.
+    */
     let gabaritoOficial = ["Q1:E", "Q2:C", "Q3:B", "Q4:B", "Q5:A", "Q6:A", "Q7:C","Q8:D", "Q9:C", "Q10:D","Q11:E", 
     "Q12:C", "Q13:C","Q14:E", "Q15:B", "Q16:E","Q17:C", "Q18:A", "Q19:A","Q20:E", "Q21:B","Q22:A", "Q23:B","Q24:D", 
     "Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A"]
@@ -167,77 +177,150 @@ function salvaResultadoSimulado(){
         ['Q34', [' Desconhecido']], ['Q35', [' Desconhecido']]
     ]
 
+
+    /* 
+        Declarando, respectivamente,
+        os conteúdos que o usuário precisa estudar,
+        o gabarito do usuário, total de perguntas 
+        respondidas, total de acertos, e total 
+        de erros. 
+    */
 	let recomendaConteudos = []
 	let gabaritoUsuario = []
 	let totalRespondidas = []
 	let totalAcertos = []
 	let totalErros = []
 
+    /* 
+        Declarando, respectivamente,
+        o tempo decorrido de prova e
+        o total de perguntas não respondidas.
+    */
 	let tempoDecorrido = 0
 	let totalNaoRespondidas = 35
 
+    /* 
+        Declranado, respectivamente
+        os itens utilizados no cálculo da nota.
+
+    */
     let formacaoGeral = 0
     let componenteEspecifico = 0
     let notaFinal = 0
 
+    /*
+        verifica se a sessionStorage existe,
+        se existir, é armazenado em duas 
+        variáveis (gabaritoUsuario e
+        totalRespondidas).
+    */
 	if(sessionStorage.getItem('gabaritoUsuario')){
 		gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
 		totalRespondidas = sessionStorage.getItem('gabaritoUsuario').split(" ")
 	}
 
+    /*
+        verifica se o primeiro item
+        do 'totalRespondidas' é diferente de
+        zero, se for, ele realiza uma série de ações.
+        caso contrário, 'totalRespondidas' é inicializada 
+        novamente.
+    */
 	if(totalRespondidas[0] != ''){
+        /*
+            enquanto o 'i' for menor que o tamanho
+            total do gabaritoUsuario, faça...
+        */
 		for (let i = 0; i < gabaritoUsuario.length; i++) {
 			
+            /* 
+                Se a resposta estiver 
+                no gabarito oficial, 
+                então o usuário acertou...
+            */
 			if (gabaritoOficial.indexOf(gabaritoUsuario[i]) >=0 )
-				totalAcertos.push(gabaritoUsuario[i]) 
+				totalAcertos.push(gabaritoUsuario[i]) /* Adiciona a resposta (Ex: Q1:E) a variável de respostas certas. */
 			
+            /* Realiza o oposto da instrução/verficação acima */
 			if (gabaritoOficial.indexOf(gabaritoUsuario[i]) < 0)
-				totalErros.push(gabaritoUsuario[i])
+				totalErros.push(gabaritoUsuario[i]) /* Adiciona a resposta (Ex: Q1:C) a variável de respostas erradas. */
 		}
 
+        /* 
+            Enquanto 'i' for menor que que o tamanho total de 
+            perguntas certas, faça...
+        */
         for (let i = 0; i < totalAcertos.length; i++){
             let acertos = totalAcertos.join(' ')
 
+            /* 
+                Pega o número da questão e 
+                verifica se é menor que 8,
+                se for, então é uma questão 
+                de formação geral, logo,
+                somamos.
+            */
             if (acertos.split(":")[i].split("Q")[1] < 8)
-                formacaoGeral += 12.5
-            else if(acertos.split(":")[i].split("Q")[1] > 8)
-                componenteEspecifico += 3.70
+                formacaoGeral += 12.5 /* soma a nota. */
+            else if(acertos.split(":")[i].split("Q")[1] > 8) /* realiza o oposto da instrução acima */
+                componenteEspecifico += 3.70 /* soma a nota. */
         }
 
+        /* calcula o total de perguntas não respondidas. */
 		totalNaoRespondidas = 35 - totalRespondidas.length
 
+        /* Realiza o cálculo, final, da formaçãoGeral  */
         formacaoGeral = (formacaoGeral * 0.6).toPrecision(2)
+        /* Realiza o cálculo, final, dos componentesEspecífico */
         componenteEspecifico = (componenteEspecifico * 0.85).toPrecision(2)
+        /* E calcula a nota final realizando uma média ponderada da formacaoGeral e componenteEspecifico. */
         notaFinal = ((formacaoGeral * 0.25) + (componenteEspecifico * 0.75)).toPrecision(2)
 	}
 	else
 		totalRespondidas = []
 
+    /* Se o tamanho de totalErros, for diferente de 0, então... */
 	if(totalErros.length != 0){
+        /* Enquanto 'i' for menor que o tamanho de totalErros, faça... */
 		for(let i = 0; i < totalErros.length; i++){
+            /* pega o número e o 'Q' (Ex: Q1) da variável total erros. */
 			let questao = totalErros[i].split(":")[0]
 
+            /* 
+                Se for encontrado o número da questão, 
+                então armazene o conteúdo a ser estudado. 
+            */
 			if(conteudosProva[i][0].indexOf(`${questao}`) == 0)
 				recomendaConteudos.push(conteudosProva[i][1])
 		}
 	}
 
+    /* Verifica se existe o momento em que a prova começou.*/
 	if(sessionStorage.getItem("comecoProva")){
+        /* Salva o tempo em que a prova foi iniciada. */
 		let inicioProva = sessionStorage.getItem("comecoProva")
-		let finalProva = Date.parse(new Date())
+        /* Salva o tempo em que a prova acabou. */
+        let finalProva = Date.parse(new Date())
 
+        /* Realiza o calculo para obter o tempo de prova. */
 		tempoDecorrido = (finalProva - inicioProva)/1000
 	}
 
+    /* Obtém a porcentagem de acerto. */
 	var porcentagemAcerto = Math.round((totalRespondidas.length / 35) * 100)
 
-	// salva dados no localStorage
-
+    /* Salva a data (dia/mes/ano) em que a prova foi realizada. */
 	let data = new Date()
 	let diaMesAno = String(data.getDate()).padStart(2, '0') + '/' + 
 	String(data.getMonth() + 1).padStart(2, '0') + '/' + data.getFullYear() 
 
-	if(localStorage.getItem('acertosUsuario')){
+    /* Se existir a nota final, então...  */
+	if(localStorage.getItem('notaFinal')){
+        /* 
+            Salva os dados no localStorage 
+            transformando em vetor e dps 
+            converte para string. 
+        */
 		salvaDadosEvolucao(totalAcertos.length, 'acertosUsuario')
 		salvaDadosEvolucao((totalErros.length+totalNaoRespondidas), 'errosUsuario')
 		salvaDadosEvolucao(diaMesAno, 'dataSimulado')
@@ -248,10 +331,11 @@ function salvaResultadoSimulado(){
         salvaDadosEvolucao(formacaoGeral, 'formacaoGeral')
         salvaDadosEvolucao(componenteEspecifico, 'componenteEspecifico')
         salvaDadosEvolucao(notaFinal, 'notaFinal')
+        /* Salva os dados em um localStorage */
         localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
         localStorage.setItem('recomendaConteudos', recomendaConteudos)
 	}
-	else{
+	else{ /* Caso contrário, salva os dados no localStorage se for a primeira vez. */
 		localStorage.setItem('acertosUsuario', totalAcertos.length)
 		localStorage.setItem('errosUsuario', totalErros.length+totalNaoRespondidas)
 		localStorage.setItem('dataSimulado', diaMesAno)
@@ -266,16 +350,26 @@ function salvaResultadoSimulado(){
         localStorage.setItem('recomendaConteudos', recomendaConteudos)
 	}
 
+    /* Limpa os sessionsStorage's. */
 	sessionStorage.setItem('gabaritoUsuario', '')
 	sessionStorage.setItem('paginasCorrigidas', '')
 	sessionStorage.setItem('comecoProva', '')
 
+    /* Transporta para a página de resultado ao final de tudo. */
     window.location.href = 'Resultado.html'
 }
 
+/* 
+    Salva os dados no localStorage como vetores, caso exista.
+    Recebe o valor que vai armazenar e a chave do localStorage 
+*/
 function salvaDadosEvolucao(valorASerArmazenado, chaveLocalStorage){
-	let vetor = localStorage.getItem(chaveLocalStorage).split(',')
-	vetor.push(valorASerArmazenado)
+	/* Recebe o localStorage e converte ele para vetor (array). */
+    let vetor = localStorage.getItem(chaveLocalStorage).split(',')
+	/* adiciona o último valor ao vetor. */
+    vetor.push(valorASerArmazenado)
+    /* transforma para string novamente. */
 	vetor.join(' ')
+    /* coloca a variável, com o ultimo valor armazenado no localStorage. */
 	localStorage.setItem(chaveLocalStorage, vetor)
 }
