@@ -1,4 +1,4 @@
-// Make Cards
+// Faz os cards
 const sectionCards = document.querySelector("section.cards");
 
 const card = document.querySelector("div.card");
@@ -21,7 +21,7 @@ videos.map(video => {
 
 card.remove();
 
-// Modal actions
+// Realiza as ações do modal
 const modalOverlay = document.querySelector(".modal-overlay");
 const modal = document.querySelector(".modal");
 const cards = [...document.querySelectorAll(".cards .card")];
