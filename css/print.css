@@ -1,14 +1,18 @@
 header, .buttons-nav, footer, .info-resultado{
-    display: none;
+    display: none; /* Tornando o rodapé e o header 'invisível'. */
 }
 
 .corpo-pagina{
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 4%; /* Definindo uma margem em relação ao item a esquerda. */
+    margin-right: 4%; /* Definindo uma margem em relação ao item a direita. */
 }
 
 body{
-    background: #FFF;
-    color: #000; 
-    font: 12pt serif;
+    background: #FFF; /* Definindo uma cor de fundo. */
+    color: #000;  /* Definindo uma cor as letras. */
+    font: 12pt serif; /* Definindo uma fonte e tamanho. */
+}
+
+.inteiro-acertos, .inteiro-nao-respondidas {
+    margin-right: 0%; /* Definindo uma margem em relação ao item a direita. */
 }
