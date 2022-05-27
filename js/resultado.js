@@ -14,7 +14,7 @@ formacaoGeral = 0, componenteEspecifico = 0, notaFinal = 0,
 notaFinalComponenteEspecifico = 0, notaFinalFormacaoGeral = 0
 
 /* Se o localStorage 'notaFinal' existir, então... */
-if(localStorage.getItem('notaFinalFormacaoGeral')){
+if(localStorage.getItem('acertosUsuario')){
 	/* Salvamos os dados em uma variáve, (pegando o último valor do vetor.), com exceção das datas. */
 	totalAcertos = atribuiValorStorage('acertosUsuario')
 	totalErros = atribuiValorStorage('errosUsuario')
@@ -60,12 +60,13 @@ if(tempoDecorrido > 0){
 		ficar mais claro.
 	*/
 	tempoMedioPergunta = Math.round(tempoDecorrido/totalRespondidas)
-
-	/* Se o tempo decorrido por menor que 60 segundos (menor que 1 minuto), então... */
-	if(tempoDecorrido < 60){
+	/* Se o tempo decorrido for menor que 60 segundos (menor que 1 minuto) e segundos maior 0, então... */
+	if(tempoDecorrido < 60 && tempoMedioPergunta != Infinity){
 		/* Inserimos somente o tempo decorrido (em segundos) e o tempo médio por pergunta no elemento. */
 		document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos, 
 		com um tempo médio por pergunta de ${tempoMedioPergunta} segundos`
+	} else{
+		document.getElementById("tempo-de-simualdo").innerText = `Tempo total: ${tempoDecorrido} segundos`
 	}
 
 	/* Agora se o tempo decorrido for maior que 60 segundos (ou seja, igual a 1 minuto ou maior, então...) */
@@ -229,42 +230,4 @@ function atribuiInformacoesInteiras(acertos, erros, naoRespondidas, respondidas)
 function atribuiValorStorage(key){
 	let valorStorage = localStorage.getItem(key).split(',')
 	return valorStorage[valorStorage.length-1]
-}
-
-/*
-apagaTestes("Acertos: ", 'acertosUsuario')
-apagaTestes("Erros: ", 'errosUsuario')
-apagaTestes("Data(s): ", 'dataSimulado')
-apagaTestes("Em branco: ", 'perguntasNaoRespondidas')
-apagaTestes("Tempo decorrido: ", 'tempoDecorrido')
-apagaTestes("Total de perguntas respondidas: ", 'totalRespondida')
-apagaTestes('Porcentagens de acerto: ', 'porcentagensDeAcerto')
-apagaTestes("Gabarito do usuário: ", 'gabaritoUsuario')
-apagaTestes("Recomenda conteudos: ", 'recomendaConteudos')
-apagaTestes("Formação geral: ", 'formacaoGeral')
-apagaTestes("Componente específico: ", 'componenteEspecifico')
-apagaTestes("Nota final: ", 'notaFinal')
-*/
-
-/*
-testes("Acertos: ", 'acertosUsuario')
-testes("Erros: ", 'errosUsuario')
-testes("Data(s): ", 'dataSimulado')
-testes("Em branco: ", 'perguntasNaoRespondidas')
-testes("Tempo decorrido: ", 'tempoDecorrido')
-testes("Total de perguntas respondidas: ", 'totalRespondida')
-testes("Porcentagens de acerto: ", 'porcentagensDeAcerto')
-testes("Gabarito do usuário: ", 'gabaritoUsuario')
-testes("Recomenda conteudos: ", 'recomendaConteudos')
-testes("Formação geral: ", 'formacaoGeral')
-testes("Componente específico: ", 'componenteEspecifico')
-testes("Nota final: ", 'notaFinal')
-*/
-
-function testes(msg, key){
-	console.log(msg + localStorage.getItem(key))
-}
-
-function apagaTestes(msg, key){
-	console.log(msg + localStorage.removeItem(key))
 }

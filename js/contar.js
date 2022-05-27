@@ -33,7 +33,6 @@ addEventListener('load', () => {
             Obs: ele vem em uma string, ex: Q1:A, Q2:B, Q3:C.. 
         */
         perguntasRespondidas = sessionStorage.getItem('gabaritoUsuario')
-        console.log("O gabarito é: "+ perguntasRespondidas)
 
         /*
             Pegamos a variavel perguntasRespondidas e com o método 'split'
@@ -220,7 +219,7 @@ function salvaResultadoSimulado(){
 		gabaritoUsuario = sessionStorage.getItem('gabaritoUsuario').split(" ")
 		totalRespondidas = sessionStorage.getItem('gabaritoUsuario').split(" ")
 	}
-
+	
     /*
         verifica se o primeiro item
         do 'totalRespondidas' é diferente de
@@ -285,18 +284,12 @@ function salvaResultadoSimulado(){
 	if(totalErros.length != 0){
         /* Enquanto 'i' for menor que o tamanho de totalErros, faça... */
 		for(let i = 0; i < totalErros.length; i++){
-            /* pega o número e o 'Q' (Ex: Q1) da variável total erros. */
-			let questao = totalErros[i].split(":")[0]
-
-            /* 
-                Se for encontrado o número da questão, 
-                então armazene o conteúdo a ser estudado. 
-            */
-			if(conteudosProva[i][0].indexOf(`${questao}`) == 0)
-				recomendaConteudos.push(conteudosProva[i][1])
+            /* pega o número (Ex: 1) da variável total erros. */
+			let questao = totalErros[i].split(":")[0].split("Q")[1]
+			recomendaConteudos.push(conteudosProva[questao-1][1])
 		}
 	}
-
+	
     /* Verifica se existe o momento em que a prova começou.*/
 	if(sessionStorage.getItem("comecoProva")){
         /* Salva o tempo em que a prova foi iniciada. */
@@ -316,50 +309,53 @@ function salvaResultadoSimulado(){
 	let diaMesAno = String(data.getDate()).padStart(2, '0') + '/' + 
 	String(data.getMonth() + 1).padStart(2, '0') + '/' + data.getFullYear() 
 
-    /* Se existir a nota final, então...  */
-	if(localStorage.getItem('notaFinalFormacaoGeral')){
-        /* 
-            Salva os dados no localStorage 
-            transformando em vetor e dps 
-            converte para string. 
-        */
-		salvaDadosEvolucao(totalAcertos.length, 'acertosUsuario')
-		salvaDadosEvolucao((totalErros.length+totalNaoRespondidas), 'errosUsuario')
-		salvaDadosEvolucao(diaMesAno, 'dataSimulado')
-		salvaDadosEvolucao(totalNaoRespondidas, 'perguntasNaoRespondidas')
-		salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
-		salvaDadosEvolucao(totalRespondidas.length, 'totalRespondida')
-		salvaDadosEvolucao(porcentagemAcerto, 'porcentagensDeAcerto')
-        salvaDadosEvolucao(formacaoGeral, 'formacaoGeral')
-        salvaDadosEvolucao(componenteEspecifico, 'componenteEspecifico')
-        salvaDadosEvolucao(notaFinalComponenteEspecifico, 'notaFinalComponenteEspecifico')
-        salvaDadosEvolucao(notaFinalFormacaoGeral, 'notaFinalFormacaoGeral')
-        salvaDadosEvolucao(notaFinal, 'notaFinal')
-        /* Salva os dados em um localStorage */
-        localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
-        localStorage.setItem('recomendaConteudos', recomendaConteudos)
-	}
-	else{ /* Caso contrário, salva os dados no localStorage se for a primeira vez. */
-		localStorage.setItem('acertosUsuario', totalAcertos.length)
-		localStorage.setItem('errosUsuario', totalErros.length+totalNaoRespondidas)
-		localStorage.setItem('dataSimulado', diaMesAno)
-		localStorage.setItem('perguntasNaoRespondidas', totalNaoRespondidas)
-		localStorage.setItem('tempoDecorrido', tempoDecorrido)
-		localStorage.setItem('totalRespondida', totalRespondidas.length)
-		localStorage.setItem('porcentagensDeAcerto', porcentagemAcerto)
-        localStorage.setItem('formacaoGeral', formacaoGeral)
-        localStorage.setItem('componenteEspecifico', componenteEspecifico)
-        localStorage.setItem('notaFinalFormacaoGeral', notaFinalFormacaoGeral)
-        localStorage.setItem('notaFinalComponenteEspecifico', notaFinalComponenteEspecifico)
-        localStorage.setItem('notaFinal', notaFinal)
-        localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
-        localStorage.setItem('recomendaConteudos', recomendaConteudos)
-	}
+    if(totalRespondidas.length != 0){
+        /* Se existir a nota final, então...  */
+        if(localStorage.getItem('acertosUsuario')){
+            /* 
+                Salva os dados no localStorage 
+                transformando em vetor e dps 
+                converte para string. 
+            */
+            salvaDadosEvolucao(totalAcertos.length, 'acertosUsuario')
+            salvaDadosEvolucao((totalErros.length+totalNaoRespondidas), 'errosUsuario')
+            salvaDadosEvolucao(diaMesAno, 'dataSimulado')
+            salvaDadosEvolucao(totalNaoRespondidas, 'perguntasNaoRespondidas')
+            salvaDadosEvolucao(tempoDecorrido, 'tempoDecorrido')
+            salvaDadosEvolucao(totalRespondidas.length, 'totalRespondida')
+            salvaDadosEvolucao(porcentagemAcerto, 'porcentagensDeAcerto')
+            salvaDadosEvolucao(formacaoGeral, 'formacaoGeral')
+            salvaDadosEvolucao(componenteEspecifico, 'componenteEspecifico')
+            salvaDadosEvolucao(notaFinalComponenteEspecifico, 'notaFinalComponenteEspecifico')
+            salvaDadosEvolucao(notaFinalFormacaoGeral, 'notaFinalFormacaoGeral')
+            salvaDadosEvolucao(notaFinal, 'notaFinal')
+            /* Salva os dados em um localStorage */
+            localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
+            localStorage.setItem('recomendaConteudos', recomendaConteudos)
+        }
+        else{ /* Caso contrário, salva os dados no localStorage se for a primeira vez. */
+            localStorage.setItem('acertosUsuario', totalAcertos.length)
+            localStorage.setItem('errosUsuario', totalErros.length+totalNaoRespondidas)
+            localStorage.setItem('dataSimulado', diaMesAno)
+            localStorage.setItem('perguntasNaoRespondidas', totalNaoRespondidas)
+            localStorage.setItem('tempoDecorrido', tempoDecorrido)
+            localStorage.setItem('totalRespondida', totalRespondidas.length)
+            localStorage.setItem('porcentagensDeAcerto', porcentagemAcerto)
+            localStorage.setItem('formacaoGeral', formacaoGeral)
+            localStorage.setItem('componenteEspecifico', componenteEspecifico)
+            localStorage.setItem('notaFinalFormacaoGeral', notaFinalFormacaoGeral)
+            localStorage.setItem('notaFinalComponenteEspecifico', notaFinalComponenteEspecifico)
+            localStorage.setItem('notaFinal', notaFinal)
+            localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
+            localStorage.setItem('recomendaConteudos', recomendaConteudos)
+        }
 
-    /* Limpa os sessionsStorage's. */
-	sessionStorage.setItem('gabaritoUsuario', '')
-	sessionStorage.setItem('paginasCorrigidas', '')
-	sessionStorage.setItem('comecoProva', '')
+        /* Limpa os sessionsStorage's. */
+        sessionStorage.setItem('gabaritoUsuario', '')
+        sessionStorage.setItem('paginasCorrigidas', '')
+    }
+        /* Limpa o sessionsStorage. */
+        sessionStorage.setItem('comecoProva', '')
 
     /* Transporta para a página de resultado ao final de tudo. */
     window.location.href = 'Resultado.html'

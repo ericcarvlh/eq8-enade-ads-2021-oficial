@@ -2,7 +2,13 @@
 
 ## Sistema de simulado do ENADE ADS 2021.
 
-Foi desenvolvido um projeto chamado SimuNade, com 5 contribuientes sob a orientação da Rita de Cassia Felix e coorientação do Jose Luis Barboza Lobianco, ambos docentes na Fatec Carapicuiba.
+Foi desenvolvido um projeto chamado SimuNade, com 5 contribuientes, sendo: 
+1 - Diogo Gabardo Soares
+2 - Eric Vieira de Carvalho
+3 - Paulo Felipe Silva Simão
+4 - Raul Mascarenhas Souza
+5 - Tony Bryan Espinoza Gutierrez
+Sob a orientação da Rita de Cassia Felix e coorientação do Jose Luis Barboza Lobianco, ambos docentes na Fatec Carapicuiba.
 
 ## Padrão de nomenclatura adotado:
 

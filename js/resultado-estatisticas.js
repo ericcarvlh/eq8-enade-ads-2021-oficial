@@ -1,3 +1,6 @@
+// variável responsável por dar delay ao gráfico.
+let delayed;
+
 /* Verifica se a o usuário já realizou o simulado alguma vez. */
 if(!localStorage.getItem('gabaritoUsuario')){
     /* 
@@ -7,8 +10,6 @@ if(!localStorage.getItem('gabaritoUsuario')){
     */
     window.location.href = 'Resultado.html'
 }
-
-let delayed;
 
 /*
     O array dados, contém os dados que alimentaram os nossos gráficos.
@@ -50,9 +51,35 @@ const dados = [
     [34, 'A', [44, 15.2, 8.7, 13, 15.2]],
     [35, 'A', [50, 6.5, 15.2, 17.4, 10.9]]
 ]
-
 // dados[0][2] -> retorna a porcentagem por cada questão.
 // dados[0][1] -> retorna a letra correta.
+
+// Chama o método que escreve o gabarito do usuário
+criaGabaritoUsuario()
+
+/*
+    A estrutura de repetição repete a função que desenha os gráficos,
+    passando como prametro os dados que estão estabelecidos no array dados
+*/
+for (let i = 0; i < dados.length; i++) {
+    montaGraficoEstatistica(dados[i][0], dados[i][2], dados[i][1], i)
+}
+
+/* Verifica se o gabaritoUsuario existe na memória, apenas para fins de boas práticas e verificaçãi. */
+if(localStorage.getItem('gabaritoUsuario')){
+	/* Convertendo o localStorage para vetor, p/ que assim possamos  percorre-lo. */
+	let local = localStorage.getItem('gabaritoUsuario').split(",")
+	/* Percorrendo o array  */
+	for(let i = 0; i < local.length; i++)
+		document.getElementById(`gabUsu-${local[i].split(":")[0].split("Q")[1]}`).innerHTML = `Sua resposta ${local[i].split(":")[1]}`
+	for(let i = 0; i < local.length; i++){
+		let index = local[i].split(":")[0].split("Q")[1]
+		if(dados[index-1][1] == local[i].split(":")[1]){
+			document.getElementById(`caixa-gabUso-${local[i].split(":")[0].split("Q")[1]}`).classList.remove('errou')
+			document.getElementById(`caixa-gabUso-${local[i].split(":")[0].split("Q")[1]}`).classList.add('acertou')
+		}
+	}
+}
 
 function montaGraficoEstatistica(numPergunta, respValor, letra, i) {
 
@@ -80,17 +107,13 @@ function montaGraficoEstatistica(numPergunta, respValor, letra, i) {
     }
 
     let numPerg = `${numPergunta}-pergunta`
-    let gabaritoUsu = localStorage.getItem('gabaritoUsuario').split(",")
 
     // Parte que coloca o gráfico no HTML
     document.write('<Div Class= "grafico" Style = "margin-top: 5%;">')
     document.write(`<H3 Class = "titulo-pergunta">${numPergunta} ° Pergunta</H3>`)
     document.write(`<Canvas Id = "${numPerg}"></Canvas>`)
     document.write(`<H4>Gabarito: ${letra}</H4>`)
-    if(gabaritoUsu[i] != undefined)
-        document.write(`<H4>Sua resposta: ${gabaritoUsu[i].split(":")[1]}</H4>`)
-    else 
-        document.write(`<H4>Sua resposta: Não respondida</H4>`)
+	document.write(`<H4 Id = gabUsu-${numPergunta}>Sua resposta: Não respondida</H4>`)
     document.write('</Div>')
 
     let ctx = document.getElementById(numPerg);
@@ -159,63 +182,26 @@ function montaGraficoEstatistica(numPergunta, respValor, letra, i) {
     })
 }
 
-// Chama o método que escreve o gabarito do usuário
-criaGabaritoUsuario()
-
-/*
-    A estrutura de repetição repete a função que desenha os gráficos,
-    passando como prametro os dados que estão estabelecidos no array dados
-*/
-for (let i = 0; i < dados.length; i++) {
-    montaGraficoEstatistica(dados[i][0], dados[i][2], dados[i][1], i)
-}
-
 function criaGabaritoUsuario() {
     // Escreve uma div no HTML
     document.write('<div id = "gabarito-usuario" class="gabarito-usuario"> <h3>Suas Respostas:</h3>')
-    // Váriável que pega as alternativas que o usuário escolheu durante o simulado, e transforma em um array.
-    let gabaritoUsuario = localStorage.getItem('gabaritoUsuario').split("");
 
-    let j = 3;
-    let cont = 0;
-
-    for (let i = 0; i < dados.length; i++) {
-        // verifica se a alternativa escolhida pelo usuário é diferente da alternativa correta(que está em 'dados')
-        if (gabaritoUsuario[j] != dados[i][1]) {
-            /**
-             * Verifica se o número da questão é de 1 a 9, casso for, escreve uma div com a classe 'errou' com
-             * o número da questão com um zero na frente, caso for maior que 9 ele vai pro else,
-             * e escreve uma div com a classe 'errou' e com u número normal, sem o zero antes
-             */
-            if (dados[i][0] <= 9) {
-                document.write(`<div class="errou">0${dados[i][0]}</div>`)
-                cont++
-            } else {
-                document.write(`<div class="errou">${dados[i][0]}</div>`)
-                cont++
-            }
-            // Caso a alternativa selecionada seje a alternativa correta, cai dentro do else
-        } else {
-            /**
-             * Verifica se o número da questão é de 1 a 9, casso for, escreve uma div com a classe 'acertou' com
-             * o número da questão com um zero na frente, caso for maior que 9 ele vai pro else,
-             * e escreve uma div com a classe 'acertou' e com o número normal, sem o zero antes
-             */
-            if (dados[i][0] <= 9) {
-                document.write(`<div class="acertou">0${dados[i][0]}</div>`)
-                cont++
-            } else {
-                document.write(`<div class="acertou">${dados[i][0]}</div>`)
-                cont++
-            }
-        }
+    for (let i = 0; i < dados.length; i++) {	
+        /* Realiza a contagem da quantidade de vezes que passa pelo for. */
+        let cont = 0;
+        
+		/* Se a contagem for menor que, inserimos um zero a esqueda. */
+		if(cont < 9)
+			document.write(`<div id = "caixa-gabUso-${dados[i][0]}" class="errou">0${dados[i][0]}</div>`) /* Monta a caixinha de questão errada */
+		else if(cont >= 9) /* Caso nao for o de cima, o numero sera maior que 9 e, portanto, 'removemos' o 0 a esquerda. */
+			document.write(`<div id = "caixa-gabUso-${dados[i][0]}" class="errou">${dados[i][0]}</div>`)
 
         // Estrutura para quando for escrita 18 quetões, pular uma linha para começar as escrever as demais
         if(cont === 18){
             document.write('<br>')
         }
-        // Agerga valor à variável j, que está sendo usando para a locação da casa para a resposta do usuário
-        j = j+5
+		
+		cont++
     }
     
     document.write('</div>')

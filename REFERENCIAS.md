@@ -4,7 +4,7 @@
 
 `Introdução a JS`  -> [W3Schools](https://www.w3schools.com/js/js_intro.asp)
 
-`Imagens responsivas em páginas WEB` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+`Imagens responsivas em páginas WEB` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) e [W3Schools](https://www.w3schools.com/css/css_rwd_images.asp)
 
 `Escopo` -> [Quora](https://pt.quora.com/O-que-%C3%A9-escopo-em-programa%C3%A7%C3%A3o)
 
