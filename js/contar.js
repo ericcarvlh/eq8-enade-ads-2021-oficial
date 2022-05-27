@@ -164,17 +164,17 @@ function salvaResultadoSimulado(){
     "Q25:E", "Q26:E","Q27:C", "Q28:B", "Q29:D","Q30:C","Q31:D", "Q32:B", "Q33:D","Q34:A", "Q35:A"]
     let conteudosProva = [
         ['Q1', [' Interpretação e conhecimentos gerais']], ['Q2', [' Interpretação de imagem e texto']], ['Q3', [' Interpretação de charges e texto']], 
-        ['Q4', [' Interpretação e compreensão de texto']], ['Q5', [' Interpretação e compreensão de texto e imagem']], ['Q6', [' Desconhecido']], 
-        ['Q7', [' Desconhecido']], ['Q8', [' Desconhecido']], ['Q9', [' Desconhecido']],
-        ['Q10', [' Desconhecido']], ['Q11', [' Desconhecido']], ['Q12', [' Desconhecido']], 
-        ['Q13', [' Desconhecido']], ['Q14', [' Desconhecido']], ['Q15', [' Desconhecido']],
-        ['Q16', [' Desconhecido']], ['Q17', [' Desconhecido']], ['Q18', [' Desconhecido']],
-        ['Q19', [' Desconhecido']], ['Q20', [' Desconhecido']], ['Q21', [' Desconhecido']],
-        ['Q22', [' Desconhecido']], ['Q23', [' Desconhecido']], ['Q24', [' Desconhecido']],
-        ['Q25', [' Desconhecido']], ['Q26', [' Desconhecido']], ['Q27', [' Desconhecido']],
-        ['Q28', [' Desconhecido']], ['Q29', [' Desconhecido']], ['Q30', [' Desconhecido']],
-        ['Q31', [' Desconhecido']], ['Q32', [' Desconhecido']], ['Q33', [' Desconhecido']],
-        ['Q34', [' Desconhecido']], ['Q35', [' Desconhecido']]
+        ['Q4', [' Interpretação e compreensão de texto']], ['Q5', [' Interpretação e compreensão de texto e imagem']], ['Q6', [' Conhecimentos gerais']], 
+        ['Q7', [' Interpretação e conhecimentos gerais']], ['Q8', [' Interpretação e conhecimentos gerais']], ['Q9', [' Levantamento de requisitos.']],
+        ['Q10', [' Teste de mesa e lógica de programação']], ['Q11', [' Teste de mesa']], ['Q12', [' Metodologias agéis']], 
+        ['Q13', [' Teste de mesa']], ['Q14', [' Gerenciamento de projetos']], ['Q15', [' Diagrama de classes']],
+        ['Q16', [' Diagrama de sequência']], ['Q17', [' SQL e DML']], ['Q18', [' Subprovessos da engenharia de requisitos']],
+        ['Q19', [' Estilos e padrões arquiteturais']], ['Q20', [' Responsabilidades inerentes no desenvolvimento do site']], ['Q21', [' Gerência de Configuração de Software (GCS)']],
+        ['Q22', [' Gerência de Configuração de Software (GCS)']], ['Q23', [' Enterprise Resource Planning (ERP)']], ['Q24', [' UML']],
+        ['Q25', [' Desenvolvimento iterativo e incremental e RAD']], ['Q26', [' LGPD']], ['Q27', [' Sistemas de numeração']],
+        ['Q28', [' Permissões de programas']], ['Q29', [' Teste de mesa']], ['Q30', [' Redes de computadores']],
+        ['Q31', [' Casos de uso']], ['Q32', [' Big data']], ['Q33', [' Modelo de Maturidade da Capacidade (CMMi)']],
+        ['Q34', [' Teste de mesa']], ['Q35', [' Teste de mesa']]
     ]
 
 
@@ -262,7 +262,7 @@ function salvaResultadoSimulado(){
                 de formação geral, logo,
                 somamos.
             */
-            if (acertos.split(":")[i].split("Q")[1] < 8)
+            if (acertos.split(":")[i].split("Q")[1] <= 8)
                 formacaoGeral += 12.5 /* soma a nota. */
             else if(acertos.split(":")[i].split("Q")[1] > 8) /* realiza o oposto da instrução acima */
                 componenteEspecifico += 3.70 /* soma a nota. */
