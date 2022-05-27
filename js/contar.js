@@ -202,10 +202,12 @@ function salvaResultadoSimulado(){
     /* 
         Declranado, respectivamente
         os itens utilizados no cálculo da nota.
-
+        do usuário
     */
     let formacaoGeral = 0
+    let notaFinalFormacaoGeral = 0
     let componenteEspecifico = 0
+    let notaFinalComponenteEspecifico = 0
     let notaFinal = 0
 
     /*
@@ -270,11 +272,11 @@ function salvaResultadoSimulado(){
 		totalNaoRespondidas = 35 - totalRespondidas.length
 
         /* Realiza o cálculo, final, da formaçãoGeral  */
-        formacaoGeral = (formacaoGeral * 0.6).toPrecision(2)
+        notaFinalFormacaoGeral = (formacaoGeral * 0.6).toPrecision(2)
         /* Realiza o cálculo, final, dos componentesEspecífico */
-        componenteEspecifico = (componenteEspecifico * 0.85).toPrecision(2)
+        notaFinalComponenteEspecifico = (componenteEspecifico * 0.85).toPrecision(2)
         /* E calcula a nota final realizando uma média ponderada da formacaoGeral e componenteEspecifico. */
-        notaFinal = ((formacaoGeral * 0.25) + (componenteEspecifico * 0.75)).toPrecision(2)
+        notaFinal = ((notaFinalFormacaoGeral * 0.25) + (notaFinalComponenteEspecifico * 0.75)).toPrecision(2)
 	}
 	else
 		totalRespondidas = []
@@ -315,7 +317,7 @@ function salvaResultadoSimulado(){
 	String(data.getMonth() + 1).padStart(2, '0') + '/' + data.getFullYear() 
 
     /* Se existir a nota final, então...  */
-	if(localStorage.getItem('notaFinal')){
+	if(localStorage.getItem('notaFinalFormacaoGeral')){
         /* 
             Salva os dados no localStorage 
             transformando em vetor e dps 
@@ -330,6 +332,8 @@ function salvaResultadoSimulado(){
 		salvaDadosEvolucao(porcentagemAcerto, 'porcentagensDeAcerto')
         salvaDadosEvolucao(formacaoGeral, 'formacaoGeral')
         salvaDadosEvolucao(componenteEspecifico, 'componenteEspecifico')
+        salvaDadosEvolucao(notaFinalComponenteEspecifico, 'notaFinalComponenteEspecifico')
+        salvaDadosEvolucao(notaFinalFormacaoGeral, 'notaFinalFormacaoGeral')
         salvaDadosEvolucao(notaFinal, 'notaFinal')
         /* Salva os dados em um localStorage */
         localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
@@ -345,6 +349,8 @@ function salvaResultadoSimulado(){
 		localStorage.setItem('porcentagensDeAcerto', porcentagemAcerto)
         localStorage.setItem('formacaoGeral', formacaoGeral)
         localStorage.setItem('componenteEspecifico', componenteEspecifico)
+        localStorage.setItem('notaFinalFormacaoGeral', notaFinalFormacaoGeral)
+        localStorage.setItem('notaFinalComponenteEspecifico', notaFinalComponenteEspecifico)
         localStorage.setItem('notaFinal', notaFinal)
         localStorage.setItem('gabaritoUsuario', gabaritoUsuario)
         localStorage.setItem('recomendaConteudos', recomendaConteudos)

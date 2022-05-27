@@ -146,13 +146,13 @@
 			  <tr>
           <td Id = "formacao-geral-multipla-escolha">100</th>
           <td>-</td>
-          <td Id = "nota-final-formacao-geral-multipla-escolha">100</td>  
+          <td Id = "formacao-geral-multipla-escolha">100</td>  
 			  </tr>
 				<tr>
           <th>Componentes específicos</th>
           <td Id = "componente-especifico-multipla-escolha">100</th>
           <td>-</td>
-          <td Id = "nota-final-componente-especifico-multipla-escolha">100</td>  
+          <td Id = "componente-especifico-multipla-escolha">100</td>  
 			  </tr>
 			</table>
 			

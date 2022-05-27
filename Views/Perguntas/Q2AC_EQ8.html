@@ -54,6 +54,7 @@
     </Header>
 
     <Main>
+      <!-- Criando página e numero pergunta -->
       <Div Class = "pagina-pergunta">
         <Div Class = "numero-pergunta">
             <b>
@@ -62,9 +63,9 @@
                 </a>            
             </b>
         </Div>
-
+        <!-- Criação de corpo pergunta -->
         <Div Class = "corpo-pergunta">
-
+        <!-- Responsável pela navegação das perguntas. -->
           <Div Class = "nav-pergunta">
             <a Href = "Q1AE_EQ8.html"><</a>
             <a Href = "Q1AE_EQ8.html">1</a>
@@ -72,10 +73,10 @@
             <a Href = "Q3AB_EQ8.html">3</a>
             <a Href = "Q3AB_EQ8.html">></a>
           </Div>
-
+          <!-- Criação de texto pergunta. -->
           <Div Class = "texto-pergunta">
               <h3>Texto I</h3>
-
+            <!-- Utilizando o elemento "<img>" para adicionar uma imagem na pergunta. -->
               <img Class = "imagem-pergunta" src="../../Images/Perguntas/Q2AC_ENADE_ADS_2021_EQ8.png">             
 
               <h3>Texto II</h3>
@@ -100,7 +101,7 @@
                 qualidade da alimentação da população brasileira.
               </p>
           </Div>
-
+          <!-- Criação de fonte da pergunta. -->
           <Div Class = "fonte-pergunta">
             <Blockquote>
               <i>
@@ -112,7 +113,7 @@
               </i>
             </Blockquote>
           </Div>
-
+          <!-- Criação do enunciado pergunta -->
           <Div Class = "enunciado-pergunta">
             <p>
               Considerando as informações apresentadas nos textos, avalie as asserções a seguir e a relação proposta 
@@ -139,7 +140,7 @@
               A respeito dessas asserções, assinale a opção correta.
             </p>
           </Div>
-
+          <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito. -->
           <Div Class = "alternativas-pergunta">
             <Span> <Input Type = "Radio" Name = "Q2" Value = "A"/> A) As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I. </Span>
             <Span> <Input Type = "Radio" Name = "Q2" Value = "B"/> B) As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I. </Span>
@@ -147,7 +148,7 @@
             <Span> <Input Type = "Radio" Name = "Q2" Value = "D"/> D) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira. </Span>
             <Span> <Input Type = "Radio" Name = "Q2" Value = "E"/> E) As asserções I e II são proposições falsas. </Span>
           </Div>
-
+          <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito no botão. -->
           <Div Class = "buttons-nav">
             <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
             <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>

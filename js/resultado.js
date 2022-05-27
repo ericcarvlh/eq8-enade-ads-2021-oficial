@@ -4,16 +4,17 @@
 	porcentagem de acerto, datas, total de perguntas não respondidas,
 	tempo de simulado decorrido, mensagem em relação a porcentagem de acertos,
 	conteúdos recomendados para estudar, nota na formação geral, mota em componente
-	específico e nota final.
+	específico, nota final, nota final componenteEspecifico e nota final formacaoGeral.
 */
 var totalAcertos = 0, totalErros = 0, 
 totalRespondidas = 0, porcentagemAcerto = 0,
 datas = [], totalNaoRespondidas = 0, tempoDecorrido = 0,
 mensagemAcertos = '', recomendaConteudos = [],
-formacaoGeral = 0, componenteEspecifico = 0, notaFinal = 0
+formacaoGeral = 0, componenteEspecifico = 0, notaFinal = 0,
+notaFinalComponenteEspecifico = 0, notaFinalFormacaoGeral = 0
 
 /* Se o localStorage 'notaFinal' existir, então... */
-if(localStorage.getItem('notaFinal')){
+if(localStorage.getItem('notaFinalFormacaoGeral')){
 	/* Salvamos os dados em uma variáve, (pegando o último valor do vetor.), com exceção das datas. */
 	totalAcertos = atribuiValorStorage('acertosUsuario')
 	totalErros = atribuiValorStorage('errosUsuario')
@@ -24,6 +25,8 @@ if(localStorage.getItem('notaFinal')){
 	componenteEspecifico = atribuiValorStorage('componenteEspecifico')
 	notaFinal = atribuiValorStorage('notaFinal')
 	tempoDecorrido = atribuiValorStorage('tempoDecorrido')
+	notaFinalComponenteEspecifico = atribuiValorStorage('notaFinalComponenteEspecifico')
+	notaFinalFormacaoGeral = atribuiValorStorage('notaFinalFormacaoGeral')
 	/* Salvamos a data em um vetor. */
 	datas = localStorage.getItem('dataSimulado').split(',')
 }
@@ -125,13 +128,12 @@ else if (porcentagemAcerto < 75)
 else
 	mensagemAcertos = 'Parabéns, sua quantidade de acertos foi igual a '+porcentagemAcerto+'%.  Nos parece que você é o filho do Einsten, não reencarne.'
 
-/* Insere a mensagem de acerto no respectivo elemento. */
+/* Insere a mensagem de acerto nos respectivos elementos. */
 document.getElementById('retorno-acertos').innerHTML = mensagemAcertos
-/* Realiza um 'for', buscando todos os elementos com id iguais para alterar os valores. */
-for(elemento of document.querySelectorAll('#formacao-geral-multipla-escolha'))
-	elemento.innerHTML = formacaoGeral
-for(elemento of document.querySelectorAll('#componente-especifico-multipla-escolha'))
-	elemento.innerHTML = componenteEspecifico
+document.getElementById('formacao-geral-multipla-escolha').innerHTML = formacaoGeral
+document.getElementById('componente-especifico-multipla-escolha').innerHTML = componenteEspecifico
+document.getElementById('nota-final-formacao-geral-multipla-escolha').innerHTML = notaFinalFormacaoGeral
+document.getElementById('nota-final-componente-especifico-multipla-escolha').innerHTML = notaFinalComponenteEspecifico
 /* Altera o valor do elemento da nota final. */
 document.getElementById('nota-final').innerHTML = notaFinal
 

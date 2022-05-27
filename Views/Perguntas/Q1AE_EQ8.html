@@ -54,6 +54,7 @@
     </Header>
 
     <Main> 
+      <!-- Criando pagina e numero pergunta -->
       <Div Class = "pagina-pergunta">
         <Div Class = "numero-pergunta">
           <b>
@@ -62,8 +63,9 @@
             </a>            
           </b>
         </Div>
-
+        <!-- Criaçao de corpo pergunta -->
         <Div  Class = "corpo-pergunta">
+        <!-- Responsável pela navegação das perguntas. -->
           <Div Class = "nav-pergunta">
             <a Href = "#"><</a>
             <a Class="pergunta-selecionada" Href = "Q1AE_EQ8.html">1</a>
@@ -71,7 +73,7 @@
             <a Href = "Q3AB_EQ8.html">3</a>
             <a Href = "Q2AC_EQ8.html">></a>
           </Div>
-
+          <!-- Criação de texto pergunta. -->
           <Div Class = "texto-pergunta">
             <p>
               A chance de uma criança de baixa renda ter um futuro melhor que a realidade em que nasceu está, 
@@ -90,7 +92,7 @@
               quem tem pouca qualificação é pequena – e a chance de perpetuação do ciclo de pobreza, grande.
             </p>
           </Div>
-
+          <!-- Criaçao de fonte da pergunta. -->
           <Div Class = "fonte-pergunta">
             <Blockquote>
                 <i>
@@ -98,11 +100,11 @@
                 </i>
             </Blockquote>
           </Div>
-
+          <!-- Criaçao do enunciado pergunta -->
           <Div Class = "enunciado-pergunta">
             <p>A partir das informações apresentadas, é correto afirmar que</p>
           </Div>
-
+          <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito. -->
           <Div Class = "alternativas-pergunta">
             <Span> <Input Type = "Radio" Name = "Q1" Value = "A"/> A) o fator ambiental e o fator demográfico afetam a mobilidade social observada, sendo ela menor nos 
               países que apresentam as maiores taxas de natalidade. </Span>
@@ -115,7 +117,7 @@
             <Span> <Input Type = "Radio" Name = "Q1" Value = "E" Id = "alt-correta"/> E) a ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres, 
               o que ocasiona conflitos sociais em busca do acesso a tais fatores. </Span>
           </Div>
-
+          <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito no botão. -->
           <Div Class = "buttons-nav">
             <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
             <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" OnClick = "abrirPopUp()"/>
