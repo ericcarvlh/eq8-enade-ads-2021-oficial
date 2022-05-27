@@ -1,26 +1,26 @@
 h2{
-    padding-bottom: 2%;
+    padding-bottom: 2%; /* Definindo um padding em relação a acima. */
 }
 
 b{
-    font-size: 2rem;
+    font-size: 2rem; /* Definindo o tamanho da fonte. */
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none; /* Estilo do link. */
 }
 
 .sobre-o-site{
-    font-size: 1.9rem;
+    font-size: 1.9rem; /* Definindo o tamanho da fonte. */
     margin-left: 15%; /* Definindo uma distância em relaçãp a margem esquerda.*/
     margin-right: 15%; /* Definindo uma distância em relaçãp a margem direita.*/
-    padding: 0.8%;
-    text-align: justify;
+    padding: 0.8%; /* Definindo um padding geral. */
+    text-align: justify; /* Definindo o alinhamento do texto. */
 }
 
 .responsaveis-site{
-    font-size: 1.9rem;
+    font-size: 1.9rem; /* Definindo o tamanho da fonte. */
     margin-left: 15%; /* Definindo uma distância em relaçãp a margem esquerda.*/
     margin-right: 15%; /* Definindo uma distância em relaçãp a margem direita.*/
-    margin-top: 2%;
+    margin-top: 2%; /* Definindo uma distância em relaçãp a margem acima.*/
 }

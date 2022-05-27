@@ -1,29 +1,29 @@
 h2{
-    padding-bottom: 2%;
+    padding-bottom: 2%; /* Definindo um padding em relação a abaixo. */
 }
 
 b{
-    font-size: 2rem;
+    font-size: 2rem; /* Tamanho da fonte. */
 }
 
 p{
-    font-size: 1.9rem;
-    padding-top: 1%;
+    font-size: 1.9rem; /* Tamanho da fonte. */
+    padding-top: 1%; /* definindo um padding em relação a acima. */
 }
 
 body main a{
-    text-decoration: none;
+    text-decoration: none; /* Estilo do link. */
 }
 
 .creditos-do-site{
     margin-left: 20%; /* Definindo uma distância em relaçãp a margem esquerda.*/
     margin-right: 20%; /* Definindo uma distância em relaçãp a margem direita.*/
-    padding: 0.5%;
+    padding: 0.5%; /* Definindo um padding geral. */
 }
 
 .responsaveis-site{
     margin-left: 20%; /* Definindo uma distância em relaçãp a margem esquerda.*/
     margin-right: 20%; /* Definindo uma distância em relaçãp a margem direita.*/
-    margin-top: 2%;
-    padding: 0.5%;
+    margin-top: 2%; /* Definindo uma distância em relaçãp a margem acima.*/
+    padding: 0.5%; /* Definindo um padding geral. */
 }
