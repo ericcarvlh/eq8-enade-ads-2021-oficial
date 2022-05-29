@@ -188,20 +188,17 @@ function criaGabaritoUsuario() {
 
     for (let i = 0; i < dados.length; i++) {	
         /* Realiza a contagem da quantidade de vezes que passa pelo for. */
-        let cont = 0;
         
 		/* Se a contagem for menor que, inserimos um zero a esqueda. */
-		if(cont < 9)
+		if(i < 9)
 			document.write(`<div id = "caixa-gabUso-${dados[i][0]}" class="errou">0${dados[i][0]}</div>`) /* Monta a caixinha de questão errada */
-		else if(cont >= 9) /* Caso nao for o de cima, o numero sera maior que 9 e, portanto, 'removemos' o 0 a esquerda. */
+		else if(i >= 9) /* Caso nao for o de cima, o numero sera maior que 9 e, portanto, 'removemos' o 0 a esquerda. */
 			document.write(`<div id = "caixa-gabUso-${dados[i][0]}" class="errou">${dados[i][0]}</div>`)
 
         // Estrutura para quando for escrita 18 quetões, pular uma linha para começar as escrever as demais
-        if(cont === 18){
+        if(i === 18){
             document.write('<br>')
         }
-		
-		cont++
     }
     
     document.write('</div>')

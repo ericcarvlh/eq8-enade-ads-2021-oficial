@@ -34,7 +34,7 @@ if(localStorage.getItem('acertosUsuario')){
 
   /* Calcula a porcentagem de acertoss */
   for(let i = 0; i < acertos.length; i++){
-    porcentagemAcerto[i] = Math.trunc((acertos[i] / 35) * 100)
+    porcentagemAcerto[i] = Math.round((acertos[i] / 35) * 100)
   }
 
   /* 

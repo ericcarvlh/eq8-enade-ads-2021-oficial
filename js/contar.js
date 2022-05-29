@@ -302,7 +302,7 @@ function salvaResultadoSimulado(){
 	}
 
     /* Obtém a porcentagem de acerto. */
-	var porcentagemAcerto = Math.round((totalRespondidas.length / 35) * 100)
+	var porcentagemAcerto = Math.round((totalAcertos.length / 35) * 100)
 
     /* Salva a data (dia/mes/ano) em que a prova foi realizada. */
 	let data = new Date()
