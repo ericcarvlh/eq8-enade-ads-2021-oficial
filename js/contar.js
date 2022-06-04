@@ -353,6 +353,9 @@ function salvaResultadoSimulado(){
         /* Limpa os sessionsStorage's. */
         sessionStorage.setItem('gabaritoUsuario', '')
         sessionStorage.setItem('paginasCorrigidas', '')
+
+        /* Utilizado na página de estatísticas, p proibir uma possível trapaça. */
+        sessionStorage.setItem('gabUsuAuxiliar', gabaritoUsuario.join(' '))
     }
         /* Limpa o sessionsStorage. */
         sessionStorage.setItem('comecoProva', '')

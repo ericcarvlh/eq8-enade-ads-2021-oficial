@@ -1,8 +1,8 @@
 // variável responsável por dar delay ao gráfico.
 let delayed;
 
-/* Verifica se a o usuário já realizou o simulado alguma vez. */
-if(!localStorage.getItem('gabaritoUsuario')){
+/* Verifica se o usuário realizou o simulado antes de entrar na página. */
+if(!sessionStorage.getItem('gabUsuAuxiliar')){
     /* 
         Se ele não tiver feito, então 'transportamos' ele para 
         para a página de resultado, pois nessa página é necessário
