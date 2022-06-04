@@ -109,8 +109,7 @@ if(recomendaConteudos.length < 1)
 else /* Caso contrário... */
 	document.getElementById('conteudos').innerHTML = recomendaConteudos /* É inserido na página os conteúdos para estudo. */
 
-if(porcentagemAcerto == 0){ /* Se a porcentagem de acerto for igual a 0 é porque o usuário não respondeu nada. */
-	/* Então realizamos uma série de implementações de instruções ao usuário. */
+if(totalRespondidas == 0){ /* Se o usuário não tiver respondido nada, realizamos uma série de implementações de instruções ao usuário. */
 	mensagemAcertos = 'Ops, parece que você não respondeu a nenhuma pergunta. Clique em <b>REFAZER SIMULADO</b>.'
 	document.getElementById('final-simulado').innerHTML = 'Por favor, certifique-se de selecionar ao menos uma alternativa de uma questão.'
 	document.getElementById('sub-t-final-simulado').innerHTML = 'Vá ao final da página e clique em <b>REFAZER SIMULADO</b>.'
@@ -119,15 +118,20 @@ if(porcentagemAcerto == 0){ /* Se a porcentagem de acerto for igual a 0 é porqu
 	document.getElementById('primeiro-dados-por-inteiro').style.display = 'None'
 	document.getElementById('segundo-dados-por-inteiro').style.display = 'None'
 	document.getElementById('nota-simulado').style.display = 'None'
+	console.log('totalResponida: '+totalRespondidas)
 }
-else if(porcentagemAcerto < 25) /* Se a porcentagem de acerto for menor que 25%, então mude a mensagem de acerto e assim vai... */
-	mensagemAcertos = 'Infelizmente, você está na linha de rebaixamento igual o Palmeiras, pois o seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
-else if (porcentagemAcerto < 50)
-	mensagemAcertos = 'Você está quase lá, estude mais. O seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
-else if (porcentagemAcerto < 75)
-	mensagemAcertos = 'Você acertou '+totalAcertos+'% das questões do simulado. Se continuar se esforçando, obterá o resultado máximo, continue...'
-else
-	mensagemAcertos = 'Parabéns, sua quantidade de acertos foi igual a '+porcentagemAcerto+'%.  Nos parece que você é o filho do Einsten, não reencarne.'
+else{
+	if(porcentagemAcerto == 0)
+		mensagemAcertos = 'Lamentamos, mas você tirou  menor nota possível ('+porcentagemAcerto+'%), tente novamente e se esforce um pouco mais...'
+	else if(porcentagemAcerto < 25) /* Se a porcentagem de acerto for menor que 25%, então mude a mensagem de acerto e assim vai... */ 
+		mensagemAcertos = 'Infelizmente, você está na linha de rebaixamento igual o Palmeiras, pois o seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
+	else if (porcentagemAcerto < 50)
+		mensagemAcertos = 'Você está quase lá, estude mais. O seu rendimento foi de '+porcentagemAcerto+'%. Continue se esforçando.'
+	else if (porcentagemAcerto < 75)
+		mensagemAcertos = 'Você acertou '+totalAcertos+'% das questões do simulado. Se continuar se esforçando, obterá o resultado máximo, continue...'
+	else
+		mensagemAcertos = 'Parabéns, sua quantidade de acertos foi igual a '+porcentagemAcerto+'%.  Nos parece que você é o filho do Einsten, não reencarne.'
+}
 
 /* Insere a mensagem de acerto nos respectivos elementos. */
 document.getElementById('retorno-acertos').innerHTML = mensagemAcertos
