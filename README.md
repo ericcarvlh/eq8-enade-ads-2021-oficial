@@ -88,3 +88,7 @@ Página onde contém informações acerca das estatísticas de distribuição de
 Página onde possuí a presença de um gráfico informando a evolução pessoal do usuário.
 
 </p>
+
+## Hospedagem do sistema
+
+É válido ressaltar que com o *GitHub*, você consegue hospedar seu site de forma gratuita, você pode acessar esse sistema clicando [aqui](https://ericcarvlh.github.io/eq8-enade-ads-2021-oficial/Views/Principal/Index.html), onde irá se deparar com a página inicial.
