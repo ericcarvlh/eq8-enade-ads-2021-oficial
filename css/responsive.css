@@ -112,15 +112,10 @@
 		margin-top: 0.5%;/*Define a area de margem do elemento na parte superior*/
 		font-size: 1.5rem;
 	}
-		
-	.button-nav {
-		font-size: 0.85rem;
-		font-weight: 500;/*Especifica o peso ou a intensidade da fonte*/
-	}
 
-	.button-nav:hover{
-		font-size: 0.9rem; /* Definindo o tamanho da fonte quando o cursor estiver sobre o componente.*/
-		font-weight: 600; /* Definindo o tamanho da fonte quando o cursor estiver sobre o componente.*/
+	.button-nav{
+		font-size: 2rem; /* Definindo o tamanho da fonte quando o cursor estiver sobre o componente.*/
+		font-weight: 800; /* Definindo o tamanho da fonte quando o cursor estiver sobre o componente.*/
 	}
 		
 	.nav-pergunta {

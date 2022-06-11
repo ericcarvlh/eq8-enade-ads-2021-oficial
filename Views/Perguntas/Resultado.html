@@ -103,7 +103,7 @@
         <!-- Utilizando Div para separar os dados de perguntas nao respondidas e respondidas. -->
         <Div Class = "segundo-dados-por-inteiro" Id = "segundo-dados-por-inteiro">
           <Div Class = "inteiro-nao-respondidas">
-            <H4>Perguntas nao respondidas</H4>
+            <H4>Perguntas não respondidas</H4>
             <p id = "nao-respondidas">X</p>
           </Div>
           <Div Class = "inteiro-respondidas">
@@ -113,7 +113,9 @@
         </Div>
         <!-- Utilizando uma div para separar os gráficos junto com aling center para centralizar e usando o elemento canvas para obter maneiras de desenhar gráficos. -->
         <Div Class = "graficos" Align = "center" Id = "div-graficos">
+          <H3>Total de acertos e erros</H3>
           <canvas height = "250" Class = "grafico-acertos-erros" id = "acertos-erros"></canvas>
+          <H3>Total de perguntas não respondidas e respondidas</H3>
           <canvas height = "250" Class = "grafico-respondidas-e-naorespondidas"id = "respondidas-e-naorespondidas"></canvas>
         </Div>
         <!-- Criação de um cronometro ao iniciar e finalizar o simulado usando Javascript . -->
@@ -136,7 +138,34 @@
         </Div>
         <!-- Utilizando uma div para separar as tabelas junto com aling center para centralizar em seus devidos lugares. -->
 		<Div Class = "div-nota-individual" align = "center" Id = "nota-simulado">
-			<table>
+      <H4 Class = "calculo-nota">Confira abaixo informações acerca da nota em formação geral, componentes específico e nota final</H4>
+      <p Class = "calculo-nota">
+        A nota de <b>formação geral</b> é composta pela média entre a nota alcançada nas questões de
+        múltipla escolha (peso 0.6).
+        <Br>
+        A nota do <b>componente específico</b> é formada pela média entre a nota conquistada nas 
+        questões de múltipla escolha (peso 0.85).
+        <Br>
+        Para compor a <b>nota total</b>, faz-se a média entre as notas da formação geral (peso 0.25)
+        e do componente específico (peso 0.75).
+        <Br>
+        A <b>nota máxima</b> a ser alcançada, em <b>formação geral</b> (múltipla escolha) é de <b>100 pontos</b> e, <b>cada resposta correta</b>
+        equivale a <b>12.5 pontos</b>. Há um total de <b>8 perguntas em formação geral</b>, começando a partir da questão 1 e indo 
+        até a questão 8.
+        <Br>
+        A <b>nota máxima</b> a ser alcançada, em <b>componente específico</b> (múltipla escolha) é de <b>100 pontos</b> e, <b>cada resposta correta</b>
+        equivale a <b>3.7 pontos</b>. Há um total de <b>27 perguntas em componente específico</b>, começando a partir da questão 9 e indo 
+        até a questão 35.
+        <Br>
+        A pontuação em 'Discursiva' tanto em formação geral e componente específico foi desconsiderada porque o simulado consiste apenas
+        de questões de múltipla escolha.
+        <Br>
+        Confira mais clicando
+        <a Target = "_Blank" Href = "https://image.slidesharecdn.com/boletimdesempenho1-editado-191008003047/95/boletim-desempenho-enade-1-638.jpg?cb=1570494770">aqui</a>
+        .
+      </p>
+
+      <table>
 			  <tr>
           <th rowspan="2">Formação geral</th>
           <th>Múltipla escolha</td>
