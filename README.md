@@ -18,7 +18,7 @@ Em relação as imagens:
 
 Em relação as imagens das alternativas:
 
-`Q10_alt_A` -> onde "Q" significa questão, "10" o número da questão, "alt" de alternativa e, "A" da pergunta em questão.
+`Q10_alt_A` -> onde "Q" significa questão, "10" o número da questão, "alt" de alternativa e, "A" da respectiva pergunta em questão.
 
 ## Páginas
 
