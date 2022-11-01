@@ -10,9 +10,9 @@
 
 * {
   box-sizing: border-box; 
-  margin: 0;
-  padding: 0;
-  outline: 0;
+  margin: 0; /* Definindo uma margem geral. */
+  padding: 0; /* Definindo um padding geral. */
+  outline: 0; /* Contorno da linha. */
 }
 
 /*
@@ -60,15 +60,15 @@ header nav ul li a:hover {
 }
 
 h2 {
-  margin-top: 1%;
-  text-align: center;
+  margin-top: 1%; /* Definindo uma margem em relação ao item acima. */
+  text-align: center; /* Definindo o alinhamento do texto. */
   font-size: 3.6rem; /* Definindo o tamanho da fonte.*/
   line-height: 3.2rem; /* Definindo o espaçamento entre as linhas do texto. */
 }
 
 h3 {
-  text-align: center;
-  margin-top: 1%;
+  text-align: center; /* Definindo o alinhamento do texto. */
+  margin-top: 1%; /* Definindo uma margem em relação ao item acima. */
   font-size: 2.8rem; /* Definindo o tamanho da fonte.*/
   line-height: 3rem; /* Definindo o espaçamento entre as linhas do texto. */
 }
@@ -79,46 +79,46 @@ header .container {
   justify-content: space-between; /* Definindo o alinhamento do conteudo no eixo principal. */
   width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
   max-width: 1400px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
-  margin: auto;
+  margin: auto; /* Definindo uma margem geral. */
 }
 
 .inep_enade{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Definindo como os elementos serão dispostos na página. */
+  flex-direction: row; /* Definindo uma disposição de exibição */
+  justify-content: center; /* Definindo o alinhamento do conteudo no eixo principal. */
+  align-items: center; /* Definindo o alinhamento dos itens */
 }
 
 .logo_inep{
-  padding: 13px; 
-  background-color: #FFB74D;
+  padding: 13px; /* definindo um padding geral. */
+  background-color: #FFB74D; /* Definindo uma cor de fundo */
 }
 
 .logo_enade{
-  margin-left: 0.5px;
-  align-items: center;
+  margin-left: 0.5px; /* Definindo uma margem em relação a esquerda. */
+  align-items: center;/* Definindo o alinhamento dos itens */
 }
 
 .logo_enade b{
-  font-size: 3rem;
-  color: #fff;
-  letter-spacing: 1.5px;
-  padding: 5px;
-  background-color: #FFA726;
+  font-size: 3rem; /* Definindo o tamanho da fonte. */
+  color: #fff; /* Definindo uma cor */
+  letter-spacing: 1.5px; /* Espaçamento das letras. */
+  padding: 5px; /* definindo um padding geral. */
+  background-color: #FFA726; /* Definindo uma cor de fundo */
 }
 
 .button-nav {
-  display: inline-block;
-  font-size: 1.3rem;
-  font-weight: 580;
-  color: rgb(255, 255, 255);
-  background-color: #FFAB40;
-  margin: 15px 0px 0px;
-  border-color: #FFAB40;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: all 150ms linear 0s;
+  display: inline-block; /* Definindo como os elementos serão dispostos na página. */
+  font-size: 1.3rem; /* Definindo o tamanho da fonte. */
+  font-weight: 580; /* definindo um 'peso'. */
+  color: rgb(255, 255, 255); /* Definindo uma cor */
+  background-color: #FFAB40; /* Definindo uma cor de fundo */
+  margin: 15px 0px 0px; /* Definindo uma margem geral. */
+  border-color: #FFAB40; /* Definindo uma cor de borda. */
+  padding: 12px 30px; /* definindo um padding geral. */
+  text-decoration: none; /* Definindo um estilo para o link. */
+  border-radius: 5px; /* definindo o arredontamendo da borda. */
+  transition: all 150ms linear 0s; /* Definindo uma transição. */
 }
 
 .button-nav:hover{
@@ -127,79 +127,68 @@ header .container {
 }
 
 .corpo-pagina{
-  background-color: #ffb84d1f;
-  box-shadow: inset;
-  margin-left: 6%;
-  margin-right: 6%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  padding-top: 40px;
-  padding-bottom: 80px;
-  text-align: center;
+  background-color: #ffb84d1f; /* Definindo uma cor de fundo */
+  box-shadow: inset; /* Definindo um 'sombreamento'. */
+  margin-left: 6%; /* Definindo uma margem em relação a esquerda. */
+  margin-right: 6%; /* Definindo uma margem em relação a direita. */
+  margin-top: 1%; /* Definindo uma margem em relação ao item acima. */
+  margin-bottom: 1%;  /* Definindo uma distancia em relação ao item abaixo. */
+  padding-top: 40px; /* definindo um padding em relação ao topo. */
+  padding-bottom: 80px; /* definindo um padding em relação a parte de baixo. */
+  text-align: center; /* Definindo o alinhamento do texto. */
 }
 
 section.hero {
-  margin: 80px 0;
+  margin: 80px 0; /* Definindo uma margem geral. */
 }
 
 section.hero .container {
     width: 90%; /* Tornando a largura 90% do valor máximo de largura pré-estabelecido. */
     max-width: 1400px; /* Definindo um tamanho máximo de div para não ser ultrapassada.*/
-    margin: auto; /* */
-  
-    display: flex; /* */
+    margin: auto; /* Definindo uma margem geral. */
+    display: flex; /* Definindo como os elementos serão dispostos na página. */
 }
 
 section.hero p {
-  color: rgb(154, 142, 191);
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-  margin: 10px 0px 0px;
+  color: rgb(154, 142, 191); /* Definindo uma cor */
+  font-size: 1.8rem; /* Definindo o tamanho da fonte. */
+  line-height: 3.2rem; /* Definindo o espaçamento entre as linhas do texto. */
+  margin: 10px 0px 0px; /* Definindo uma margem geral. */
 }
-
-/*
-main {
-  margin-top: 40px;
-  margin-bottom: 80px;
-}
-*/
 
 footer{
-  width: 100%;
+  width: 100%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
 
-  background-color: #FF833A;
-  padding: 80px 0;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #FF833A; /* Definindo uma cor de fundo */
+  padding: 80px 0; /* definindo um padding em relação ao topo. */
+  display:flex; /* Definindo como os elementos serão dispostos na página. */
+  justify-content: center; /* Definindo o alinhamento do conteudo no eixo principal. */
+  align-items: center; /* Definindo o alinhamento dos itens */
 
-  max-width: 1400px;
-  margin:0;
-  height: 100%;
-  max-height: 100px;
-  overflow: hidden;
-  
+  margin: 0; /* Definindo uma margem geral. */
+  height: 100%; /* Definindo a altura */
+  max-height: 100px; /* Definindo a altura máxima */
+  overflow: hidden; /* Definindo o que vai acontecer com as dimensões que excedem a pag. */
 }
 
 footer p {
-  margin-bottom: 15px
+  margin-bottom: 15px;  /* Definindo uma distancia em relação ao item abaixo. */
 }
 
 .fatec_sp_enade{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  display:flex; /* Definindo como os elementos serão dispostos na página. */
+  justify-content: center; /* Definindo o alinhamento do conteudo no eixo principal. */
+  align-items: center; /* Definindo o alinhamento dos itens */
 }
 
 .fatec_sp_enade a:hover{
-  padding: 0.2%;
+  padding: 0.2%; /* definindo um padding em relação ao topo. */
   background: rgba(255, 255, 255, 0.164) /* Definindo uma cor quando o mouse for sobreposto ao elemento.*/
 }
 
 footer p a {
   text-decoration: none; /* Definindo uma decoração de texto, sendo o mesmo com diferentes tipos de linhas.*/
   color: white; /* Definindo uma cor para a palavra. */
-  text-transform: capitalize; /* Definindo a capitalização das palavras (maiuscula, minuscuça etc).*/
   font-size: 1.6rem; /* Definindo o tamanho da fonte. */
   transition: all 250ms linear 0s; /* definindo a transição entre os elementos.*/
 }
@@ -209,5 +198,5 @@ footer p a:hover {
 }
 
 input {
-  margin: 20px 8px 10px;
+  margin: 20px 8px 10px; /* Definindo uma margem geral. */
 }

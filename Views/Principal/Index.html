@@ -10,7 +10,7 @@
       <Link Rel = "Icon" href ="http://enade.inep.gov.br/enade/favicon.ico"/>
       <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
       <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/index.css"/>
-      <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
+      <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
     </Head>
 
     <Body>
@@ -18,7 +18,7 @@
         <Div Class = "container">
           <Div Class = "inep_enade">
             <Div Class = "logo_inep">
-              <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+              <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
                 <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
               </a>
             </Div>
@@ -64,15 +64,22 @@
                   <Img src="https://i.ytimg.com/vi/avJZ2mtFljc/hqdefault.jpg" />
                 </Picture>
                 <Div class="content">
-                  <p class="title text--medium">
-                    Título do video
-                  </p>
                   <Div Class = "info">
                     <p Class = "text--medium">Duração do video</p>
                   </Div>
                 </Div>
               </Div>
             </Section>
+            <Div Class = "fonte-video">
+              <Blockquote>
+                  <i>
+                      Fonte: 
+                      <a Target = "_Blank" Href = "https://www.youtube.com/watch?v=avJZ2mtFljc">
+                        https://www.youtube.com/watch?v=avJZ2mtFljc/
+                      </a>
+                  </i>
+              </Blockquote>
+            </Div>
           </Div>
   
           <Div Class = "modal-overlay">
@@ -97,7 +104,7 @@
   
           <Div>
             <Div>
-              <H3>Você sabe o que é o Enade?</H3>
+              <H3 Class = "voce-enade">Você sabe o que é o Enade?</H3>
             </Div>
           </Div>
   
@@ -150,20 +157,16 @@
 
           <Div Class = "acesso-prova-gabarito">
             <H3>Confira a prova de Técnologo em Análise e Desenvolvimento de Sistemas (ADS) do Enade do ano de 2021</H3>
-              <p>Utilize os botões abaixo para acessar as prova e o gabarito, ambos originais, em formato de <i>PDF</i>>.</p>
-              <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_GB_tecnologia_analise_desenvolvimento_sistemas.pdf">
-                <Input Type = "Button" Class = "button-nav" Value = "Gabarito"/>
-              </a>
+              <p>Utilize os botões abaixo para acessar as prova e o gabarito, ambos originais, em formato de <i>PDF</i>.</p>
               <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_PV_tecnologia_analise_desenvolvimento_sistemas.pdf">
                 <Input Type = "Button" Class = "button-nav" Value = "Prova"/>
+              </a>
+              <a Target = "_Blank" Href = "https://download.inep.gov.br/enade/provas_e_gabaritos/2021_GB_tecnologia_analise_desenvolvimento_sistemas.pdf">
+                <Input Type = "Button" Class = "button-nav" Value = "Gabarito"/>
               </a>
           </Div>
         </Div>
       </Main>         
-      
-      <!--
-        Inicio, sobre e creditos devem ficar no footer também.
-      -->
 
       <Footer>
         <Div>

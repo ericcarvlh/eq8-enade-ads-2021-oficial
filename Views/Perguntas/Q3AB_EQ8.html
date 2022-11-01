@@ -10,6 +10,9 @@
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
   </Head>
 
   <Body Id = "Q3">
@@ -17,7 +20,7 @@
       <Div Class = "container">
         <Div Class = "inep_enade">
           <Div Class = "logo_inep">
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
               <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
             </a>
           </Div>
@@ -74,11 +77,11 @@
               <h3>Texto I</h3>
               <p>
                 Na Alemanha nazista, no auge da Segunda Guerra Mundial, surgiu a necessidade de abrir mais espaço 
-                para os veículos automoti vos. Com muitos ciclistas, as bicicletas viraram um empecilho, forçando a 
+                para os veículos automotivos. Com muitos ciclistas, as bicicletas viraram um empecilho, forçando a 
                 criação de um espaço exclusivo para elas – talvez as primeiras ciclovias do mundo. Mas, se na década 
                 de 1940 os veículos eram prioridade, hoje, o uso de bicicletas – e das ciclovias – surge como uma das 
-                principais alternati vas para melhorar a qualidade de vida nas grandes metrópoles. Quando políti cas 
-                públicas incenti vam o uso de bicicletas como meio de transporte para curtas e médias distâncias, um 
+                principais alternativas para melhorar a qualidade de vida nas grandes metrópoles. Quando políticas 
+                públicas incentivam o uso de bicicletas como meio de transporte para curtas e médias distâncias, um 
                 novo panorama se abre.
               </p>
 
@@ -99,25 +102,25 @@
 
           <Div Class = "enunciado-pergunta">
             <p>
-              Considerando as informações apresentadas e o uso de bicicletas como alternati va para melhorar a 
-              qualidade de vida nas cidades, avalie as afi rmações a seguir.
+              Considerando as informações apresentadas e o uso de bicicletas como alternativa para melhorar a 
+              qualidade de vida nas cidades, avalie as afirmações a seguir.
             </p>
 
             <p>
               I. Dado que as bicicletas são veículos que ocupam pouco espaço na malha viária, prescinde-se de 
-              investi mentos públicos em construção de ciclovias, sendo prioritárias campanhas de conscienti zação 
-              de motoristas a respeito dos benefí cios do uso da bicicleta como meio de transporte.
+              investimentos públicos em construção de ciclovias, sendo prioritárias campanhas de conscientização 
+              de motoristas a respeito dos benefícios do uso da bicicleta como meio de transporte.
             </p>
 
             <p>
               II. O uso das bicicletas como meio de transporte contribui para a melhoria da qualidade de vida nas 
-              grandes metrópoles, pois elas não emitem poluentes, além de esse uso proporcionar a práti ca de 
-              ati vidade fí sica.
+              grandes metrópoles, pois elas não emitem poluentes, além de esse uso proporcionar a prática de 
+              atividade física.
             </p>
 
             <p>
               III. A parti r da Segunda Guerra Mundial, durante o governo da Alemanha nazista, o uso da bicicleta 
-              como meio de transporte tornou-se efi caz e passou a prevalecer nas cidades europeias.
+              como meio de transporte tornou-se eficaz e passou a prevalecer nas cidades europeias.
             </p>
 
             <p>
@@ -134,10 +137,8 @@
           </Div>
 
           <Div Class = "buttons-nav">
-            <a Href = "Resultado.html">
-              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
-            </a>
-            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
+            <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
         </Div>
@@ -166,7 +167,9 @@
       </Div>
     </Footer>
 
+    <Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
+    <script src="../../js/popup.js"></script>
   </Body>
 </HTML>

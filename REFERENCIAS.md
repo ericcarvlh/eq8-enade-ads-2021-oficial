@@ -1,27 +1,42 @@
-# Links úteis para auxiliá-lo no processo de compreensão do código
+# Links úteis para auxiliá-lo no processo de compreensão como um todo
 
-`Compilador de JS online` -> https://jsfiddle.net/
+`Compilador de JS online` -> [JsFiddle](https://jsfiddle.net/)
 
-`Introdução a JS` (um dos conceitos utilizados na página de resultado) -> https://www.w3schools.com/js/js_intro.asp
+`Introdução a JS`  -> [W3Schools](https://www.w3schools.com/js/js_intro.asp)
 
-`Imagens responsivas em páginas WEB` -> https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+`Imagens responsivas em páginas WEB` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) e [W3Schools](https://www.w3schools.com/css/css_rwd_images.asp)
 
-`Escopo` -> https://pt.quora.com/O-que-%C3%A9-escopo-em-programa%C3%A7%C3%A3o
+`Escopo` -> [Quora](https://pt.quora.com/O-que-%C3%A9-escopo-em-programa%C3%A7%C3%A3o)
 
-`Livros de estrutura de dados` -> https://bestbookshub.com/best-data-structures-books/
+`Livros de estrutura de dados` -> [BestBooksHub](https://bestbookshub.com/best-data-structures-books/)
 
-`Let` -> https://www.youtube.com/watch?v=ZOx7iTnBqFQ e https://imasters.com.br/front-end/o-que-e-o-let-no-javascript-es6
+`Var, Let e Const` -> [Var, Let, Const - Tudo o que você precisa saber
+(Youtube)](https://www.youtube.com/watch?v=ZOx7iTnBqFQ) e [IMasters](https://imasters.com.br/front-end/o-que-e-o-let-no-javascript-es6)
 
-`JavaScript indexOf()` -> javascript-indexof-encontrando-a-posicao-de-um-caractere-ou-string/39422;
+`Funções` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions)
 
-`JavaScript Substring()` -> https://warcontent.com/substring-javascript/~;
+`Inserindo variáveis em strings` -> [DelfStack](https://www.delftstack.com/pt/howto/javascript/javascript-variable-in-string/) e [Mozilla](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
 
-`Charts.js` (uma das bibliotecas utilizadas para gráfico) -> https://www.chartjs.org/ (documentação);
+`Métodos` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 
-`Google Charts` (uma das bibliotecas utilizadas para gráfico) -> https://developers.google.com/chart (documentação);
+`JavaScript indexOf()` -> [DevMedia](https://www.devmedia.com.br/javascript-indexof-encontrando-a-posicao-de-um-caractere-ou-string/39422)
 
+`JavaScript Substring()` -> [WarContent](https://warcontent.com/substring-javascript/~)
 
+`JavaScript Split()` -> [DevMedia](https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254)
 
+`Coalescência nula ou ??` -> [C# Tutorial](https://csharp.net-tutorials.com/pt/397/operadores/operador-de-coalescencia-nula/) e [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 
+`JavaScript Join()` -> [Acervo Lima](https://acervolima.com/metodo-javascript-array-join/)
 
+`JavaScript Math.round()` -> [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
 
+`Formatação de números decimais` -> [Alura](https://www.alura.com.br/artigos/formatando-numeros-no-javascript)
+
+`JavaScript window.locaion` -> [DevMedia](https://www.devmedia.com.br/javascript-redirect-redirecionando-o-usuario-com-window-location/39809)
+
+`LocalStorage e SessionStorage` -> [Stack Overflow](https://pt.stackoverflow.com/questions/19384/diferen%C3%A7as-entre-localstorage-vs-sessionstorage), [TreinaWeb](https://www.treinaweb.com.br/blog/quando-usar-sessionstorage-e-localstorage) e [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage)
+
+`Charts.js`  -> [Documentação](https://www.chartjs.org/)
+
+`Google Charts` -> [Documentação](https://developers.google.com/chart)

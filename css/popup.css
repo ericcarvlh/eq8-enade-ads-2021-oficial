@@ -1,0 +1,69 @@
+ /*  Estilo referente à classe popup*/
+.popup {
+    position: fixed;  /* Define uma posição fixa para o elemento */
+    background-color: #fff0e6;  /* Coloca um cor de fundo laranja claro */
+	width: 550px;  /* Define a largura do elemento em 100% */
+	height: 400px;  /* Define a altura do elemento como automático */
+    margin: auto;  /* Centraliza o elemento em relação à largura do elemento pai */
+    border-radius: 8px;  /* Arredonta as pontas do elemento */
+    border: solid 2px #FFAB40;  /* Coloca uma borda de 2px, sólida e um laranja mais escuro */
+    padding-left: 30px;  /* Coloca uma margem interior sómente do lado esquerdo */
+    padding-right: 30px;  /* Coloca uma margem interior sómente do lado diretiro */
+    box-shadow: 10px 15px 10px #4d4d4d;  /* Coloca uma sombra atrás do elemento */
+}
+ /* Estilo referente à classe mostrar */
+.mostrar{
+    display: flex;  /* Coloca um display flex, para que seja visivel */
+    align-items: center;  /* Centraliza o conteúdo em relação à altura */
+    justify-content: center;  /* Centraliza o contúdo em relação à largura */
+    bottom: 0; /* Falando pra ele se alinha com a posição 0 da parte inferior */
+    top: 0; /* Falando pra ele se alinha com a posição 0 da parte superior */
+    right: 0; /* Falando pra ele se alinha com a posição 0 da direita */
+    left: 0; /* Falando pra ele se alinha com a posição 0 da esquerda */
+    position: absolute; /* Define o elemento como próprio para se sobrepor aos outros */
+    background-color: rgba(0, 0, 0, 0); /* Coloca uma cor de fundo transparente */
+}
+/* Estilo referente à classe container-pop */
+.container-pop{
+    position: fixed;
+    display: none; /* Coloco display none para que o elemento não apareça na tela */
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    right: 0px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* Estilo referente à classe bt-pop */
+.bt-pop{
+    display: inline-block; /* Faz com que os elementos fiquem um do lado do outro, mas com uma distancia */
+    margin: 5px 10px; /* Coloco uma margem superior e inferior de 5px, e uma margem nos lados de 10px */
+    padding: 15px; /* Coloco uma margem interna de 15px */
+    background-color: #FFAB40; /* Coloco um fundo laranja */
+    border-radius: 8px;
+    text-decoration: none; /* Tira a decoração do elemento */
+    color: white; /* Defino a cor do texto como branca */
+}
+/* Estilo referente à classe bt-pop qando o mouse estiver em cima dela */
+.bt-pop:hover{
+    color: white; 
+    background-color: #FF833A;
+    padding: 17px;
+}
+/* Estilo referente à classe botoes */
+.botoes{
+    margin-top: 40px; /* olo cuma margem sómente no lado superior de 40px */
+    text-align: justify; /* Deixa o contúdo no modo justificado, para deixar o maximo possível alinhado */
+}
+/* Estilo referente à classe fechar */
+.fechar{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    cursor: pointer; /* Deixa o mouse com o simbolo de clicável */
+    font-size: 30px; /* Define o tamanho do texto com 30px */
+    margin-right: 10px; /* Coloca uma margem somente do lado direito do elemento */
+}

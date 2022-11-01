@@ -1,0 +1,75 @@
+/* Estilo referente à classe pop-acerto */
+.pop-acerto {
+    display: none; /* Colocando o display none, pra ele não aparecer na tela  */
+    background-color: rgba(0, 0, 0, 0); /* Colocando uma cor de fundo transparente */
+    bottom: 0; /* Falando pra ele se alinha com a posição 0 da parte inferior */
+    top: 0; /* Falando pra ele se alinha com a posição 0 da parte superior */
+    right: 0; /* Falando pra ele se alinha com a posição 0 da direita */
+    left: 0; /* Falando pra ele se alinha com a posição 0 da esquerda */
+    align-items: center; /* Centralisando o conteúdo no meio, em consideração à altura */
+    justify-content: center; /* Centralizando o conteúdo no meio, em consideração à largura */
+    position: absolute; /* Colocando ele como um elemento próprio, para q ele se sobreponha ao html anterior */
+}
+/* Estilo referente à classe errado */
+.errado {
+    text-align: center; /* entraliza o texto no centro, em consideração à largura */
+    width: 600px; /* colocando a largura do elemento em 600 pixels */
+	height: 300px; /* Definindo a altura do elemento em 300 pixels */
+    background-color: #fff0e6; /* Colocando uma cor de fundo laranja claro */
+    border: 2px solid #ffab40; /* colocando uma borda ao redor do elemento de 2px, sólida e um laranja mais escuro */
+    position: relative; /* Definindo ele como position relative para ela tomar as referencias do elemento pai */
+    margin: auto; /* Deixa o elemento no centro do elemento pai */
+    position: fixed; /* Define uma posição fixa para o elemento */
+    display: none; /* Coloco display none, para ele não aparecer na tela */
+    border-radius: 8px; /* Arredondo a borda do elemnto em 8px */
+    padding: 15px; /* Coloca uma margem interior de 15 px */
+    box-shadow: 10px 15px 10px #4d4d4d; /* Coloca um sombra no fundo do elemento */
+}
+/* Estilo referente aos parágrafos quem tem dentro de elemnto das classes certo e errado */
+.errado p, .certo p{
+    margin-top: 13px; /* Define um tamanho para o texto dos parágrafos */
+}
+/* Estilo referente à classe certo */
+.certo {
+    text-align: center;
+    width: 600px;
+	height: 300px;
+    background-color: #fff0e6;
+    border: 2px solid #ffab40;
+    position: relative;
+    margin: auto;
+    position: fixed;
+    display: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 10px 15px 10px #4d4d4d;
+}
+/* Estilo referente à classe atencao */
+.atencao{
+    text-align: center;
+    width: 600px;
+	height: 300px;
+    background-color: #fff0e6;
+    border: 2px solid #ffab40;
+    position: relative;
+    margin: auto;
+    position: fixed;
+    display: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 10px 15px 10px #4d4d4d;
+    flex-direction: column; /* Define o a direção dele em coluna, ou seja, um em baixo do outro */
+}
+/* Estilo referente ao h3 do elemnto atencao */
+.atencao h3{
+    margin-top: 50px; /* Coloco uma margem somente no lado superior */
+}
+/* Estilo referente à classe fechar */
+.fechar {
+    position: absolute; 
+    top: 0px;
+    right: 0;
+    cursor: pointer; /* Deixa o mouse com o simbolo de clícavel */
+    font-size: 30px;  /* Define o tamanho do texto */
+    margin-right: 10px;  /* Coloca uma margem somente no lado direito do elemnto */
+}

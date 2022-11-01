@@ -10,6 +10,9 @@
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
   </Head>
 
   <Body Id = "Q2">
@@ -17,7 +20,7 @@
       <Div Class = "container">
         <Div Class = "inep_enade">
           <Div Class = "logo_inep">
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
               <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
             </a>
           </Div>
@@ -51,6 +54,7 @@
     </Header>
 
     <Main>
+      <!-- Criando página e numero pergunta -->
       <Div Class = "pagina-pergunta">
         <Div Class = "numero-pergunta">
             <b>
@@ -59,37 +63,37 @@
                 </a>            
             </b>
         </Div>
-
-        <Div  Class = "corpo-pergunta">
-
+        <!-- Criação de corpo pergunta -->
+        <Div Class = "corpo-pergunta">
+        <!-- Responsável pela navegação das perguntas. -->
           <Div Class = "nav-pergunta">
-              <a Href = "Q1AE_EQ8.html"><</a>
-              <a Href = "Q1AE_EQ8.html">1</a>
-              <a Class="pergunta-selecionada" Href = "Q2AC_EQ8.html">2</a>
-              <a Href = "Q3AB_EQ8.html">3</a>
-              <a Href = "Q3AB_EQ8.html">></a>
+            <a Href = "Q1AE_EQ8.html"><</a>
+            <a Href = "Q1AE_EQ8.html">1</a>
+            <a Class="pergunta-selecionada" Href = "Q2AC_EQ8.html">2</a>
+            <a Href = "Q3AB_EQ8.html">3</a>
+            <a Href = "Q3AB_EQ8.html">></a>
           </Div>
-
+          <!-- Criação de texto pergunta. -->
           <Div Class = "texto-pergunta">
               <h3>Texto I</h3>
-              
-              <img Class = "imagem-pergunta" src="../../Images/Perguntas/Q2AC_ENADE_ADS_2021_EQ8.png"/>
-              
+            <!-- Utilizando o elemento "<img>" para adicionar uma imagem na pergunta. -->
+              <img Class = "imagem-pergunta" src="../../Images/Perguntas/Q2AC_ENADE_ADS_2021_EQ8.png">             
+
               <h3>Texto II</h3>
               
               <p>
-                Em alguns países da Europa, permite-se que um produto de menor valor estéti co seja comercializado. 
+                Em alguns países da Europa, permite-se que um produto de menor valor estético seja comercializado. 
                 Estamos falando de um pepino deformado ou de uma cebola pequena, mas não de um produto 
                 contaminado com resíduos químicos ou agentes biológicos. No caso do Brasil, o problema vai além da 
                 aparência, porque há hortaliças ruins – contaminadas, murchas, machucadas – que chegam às bancas 
                 para ser comercializadas.
                 Mas, se nos dois contextos há perda de alimentos e preconceito em relação às hortaliças fora do padrão 
-                visual, mas boas para o consumo, quais seriam as alternati vas para evitar o desperdício e melhorar a 
+                visual, mas boas para o consumo, quais seriam as alternativas para evitar o desperdício e melhorar a 
                 qualidade dos produtos? Para os pesquisadores do assunto, não adianta replicar a experiência europeia no 
-                Brasil, de exigir hortaliças esteti camente perfeitas, porque também teríamos produtos sendo desprezados 
+                Brasil, de exigir hortaliças esteticamente perfeitas, porque também teríamos produtos sendo desprezados 
                 ainda na etapa de produção. Não devemos passar de um mercado pouco exigente, que gera desperdício 
                 no varejo e nas residências, para um mercado exigente que gera perda no campo.
-                A solução do problema é conscienti zar os diversos elos da cadeia produti va, especialmente varejistas 
+                A solução do problema é conscientizar os diversos elos da cadeia produtiva, especialmente varejistas 
                 e consumidores, para que sejam esclarecidos sobre quais aspectos da aparência das hortaliças 
                 comprometem a qualidade. Quanto maior a exigência do mercado por hortaliças de aparência perfeita, 
                 maior o desperdício de alimentos. Por sua vez, quanto maior a exigência por hortaliças sem danos, 
@@ -97,7 +101,7 @@
                 qualidade da alimentação da população brasileira.
               </p>
           </Div>
-
+          <!-- Criação de fonte da pergunta. -->
           <Div Class = "fonte-pergunta">
             <Blockquote>
               <i>
@@ -109,7 +113,7 @@
               </i>
             </Blockquote>
           </Div>
-
+          <!-- Criação do enunciado pergunta -->
           <Div Class = "enunciado-pergunta">
             <p>
               Considerando as informações apresentadas nos textos, avalie as asserções a seguir e a relação proposta 
@@ -117,8 +121,8 @@
             </p>
 
             <p>
-              I. O texto I sinteti za uma informação principal do texto II, ao apresentar critérios disti nti vos de 
-              alterações visuais que têm efeitos puramente estéti cos em produtos alimentí cios daquelas que 
+              I. O texto I sintetiza uma informação principal do texto II, ao apresentar critérios distintivos de 
+              alterações visuais que têm efeitos puramente estéticos em produtos alimentícios daquelas que 
               têm implicações na qualidade desses produtos.
             </p>
 
@@ -127,7 +131,7 @@
             </p>
 
             <p>
-              II. O texto II divulga que o aumento das perdas na cadeia produti va de hortaliças no Brasil 
+              II. O texto II divulga que o aumento das perdas na cadeia produtiva de hortaliças no Brasil 
               é proporcional à elevação de exigências dos consumidores pela aparência de produtos 
               agropecuários.
             </p>
@@ -136,20 +140,18 @@
               A respeito dessas asserções, assinale a opção correta.
             </p>
           </Div>
-
+          <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito. -->
           <Div Class = "alternativas-pergunta">
-            <Span> <Input Type = "Radio" Name = "Q2" Value = "A"/> A) As asserções I e II são proposições verdadeiras, e a II é uma justi fi cati va correta da I. </Span>
-            <Span> <Input Type = "Radio" Name = "Q2" Value = "B"/> B) As asserções I e II são proposições verdadeiras, mas a II não é uma justi fi cati va correta da I. </Span>
+            <Span> <Input Type = "Radio" Name = "Q2" Value = "A"/> A) As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I. </Span>
+            <Span> <Input Type = "Radio" Name = "Q2" Value = "B"/> B) As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I. </Span>
             <Span> <Input Type = "Radio" Name = "Q2" Value = "C" Id = "alt-correta"/> C) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa. </Span>
             <Span> <Input Type = "Radio" Name = "Q2" Value = "D"/> D) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira. </Span>
             <Span> <Input Type = "Radio" Name = "Q2" Value = "E"/> E) As asserções I e II são proposições falsas. </Span>
           </Div>
-
+          <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito no botão. -->
           <Div Class = "buttons-nav">
-            <a Href = "Resultado.html">
-              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
-            </a>
-            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
+            <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
         </Div>
@@ -178,7 +180,9 @@
       </Div>
     </Footer>
 
+    <Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
+    <script src="../../js/popup.js"></script>
   </Body>
 </HTML>

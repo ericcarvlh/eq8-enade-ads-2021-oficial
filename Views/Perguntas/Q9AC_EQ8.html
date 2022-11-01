@@ -10,6 +10,9 @@
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
 	</head>
 
 	<body Id = "Q9">
@@ -17,7 +20,7 @@
       <Div Class = "container">
         <Div Class = "inep_enade">
           <Div Class = "logo_inep">
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
               <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
             </a>
           </Div>
@@ -92,18 +95,16 @@
           </div>
 
           <div class = "alternativas-pergunta">
-            <span><Input Type = "Radio" Name = "Q09" Value = "A"/> A) O software deve ser operacionalizado no sistema Linux. </span>
-            <span><Input Type = "Radio" Name = "Q09" Value = "B"/> B) O tempo de desenvolvimento não deve ultrapassar seis meses. </span>
-            <span><Input Type = "Radio" Name = "Q09" Value = "C" Id = "alt-correta"/> C) O software deve emitir relatórios de compras a cada quinze dias. </span>
-            <span><Input Type = "Radio" Name = "Q09" Value = "D"/> D) O tempo de resposta do sistema não deve ultrapassar 30 segundos. </span>
-            <span><Input Type = "Radio" Name = "Q09" Value = "E"/> E) A base de dados deve ser protegida para acesso apenas de usuários autorizados. </span>
+            <span><Input Type = "Radio" Name = "Q9" Value = "A"/> A) O software deve ser operacionalizado no sistema Linux. </span>
+            <span><Input Type = "Radio" Name = "Q9" Value = "B"/> B) O tempo de desenvolvimento não deve ultrapassar seis meses. </span>
+            <span><Input Type = "Radio" Name = "Q9" Value = "C" Id = "alt-correta"/> C) O software deve emitir relatórios de compras a cada quinze dias. </span>
+            <span><Input Type = "Radio" Name = "Q9" Value = "D"/> D) O tempo de resposta do sistema não deve ultrapassar 30 segundos. </span>
+            <span><Input Type = "Radio" Name = "Q9" Value = "E"/> E) A base de dados deve ser protegida para acesso apenas de usuários autorizados. </span>
           </div>
 
           <Div Class = "buttons-nav">
-            <a Href = "Resultado.html">
-              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
-            </a>
-            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
+            <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
 
@@ -132,8 +133,10 @@
         </Div>
       </Div>
     </Footer>
-
+    
+    <Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
+    <script src="../../js/popup.js"></script>
 	</body>
 </html>

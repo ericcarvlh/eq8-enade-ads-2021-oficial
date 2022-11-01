@@ -1,0 +1,22 @@
+.gabarito-usuario{
+    margin-left: 10%; /* Usando margin-left para definir a área da margem no lado esquerdo de um elemento */
+    margin-right: 10%; /* Usando margin-right para definir a área da margem no lado direito de um elemento */
+    margin-top: 15px; /* Usando margin-top para indicar o espaço acima do elemento. */
+    padding: 10px; /* Definindo uma distância entre o conteúdo de um elemento e suas bordas */
+}
+.acertou{
+    display: inline-block; /* Especificando o tipo de caixa de renderização usada por um elemento com o valor inicial */
+    background-color: rgba(0, 200, 0, 0.6); /* Definindo uma cor para o fundo. */
+    padding: 5px; /* Definindo uma distância entre o conteúdo de um elemento e suas bordas */
+    border: 2px solid rgba(0, 200, 0, 0.6); /* Defindo um tamanho de borda, estilo e cor. */
+    border-radius: 8px; /* Definindo o tamanho do arredondamento das bordas */
+    margin: 5px; /* Definindo o tamanho da margem */
+}
+.errou{
+    display: inline-block; /* Especificando o tipo de caixa de renderização usada por um elemento com o valor inicial */
+    background-color: rgba(200, 0, 0, 0.7); /* Definindo uma cor para o fundo. */
+    padding: 5px; /* Definindo uma distância entre o conteúdo de um elemento e suas bordas */
+    border: 2px solid rgba(200, 0, 0, 0.7); /* Defindo um tamanho de borda, estilo e cor. */
+    border-radius: 8px; /* Definindo o tamanho do arredondamento das bordas */
+    margin: 5px; /* Definindo o tamanho da margem */
+}

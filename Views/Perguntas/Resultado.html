@@ -3,13 +3,14 @@
 <HTML Lang = "PT-BR">
   <Head>
     <Meta CharSet = "UTF-8"/>
-    <Meta Name = "Author" Content = "Éric Carvalho"/>
+    <Meta Name = "Author" Content = "Éric Carvalho, Tony Bryan"/>
     <Meta Name = "ViewPort" Content = "width=device-width, initial-scale=1.0"/>
     <Title>Resultado - SimuNade</Title>
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
-    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/result.css"/>
-    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 768px)"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/resultado.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
+    <Link Rel = "StyleSheet" Href = "../../css/print.css" Media = "print"/>
   </Head>
 
   <Body>
@@ -17,7 +18,7 @@
       <Div Class = "container">
         <Div Class = "inep_enade">
           <Div Class = "logo_inep">
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
               <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
             </a>
           </Div>
@@ -50,70 +51,165 @@
       </Div>
     </Header>
 
+    <!-- Criando corpo página. -->
     <Main>
       <Div Class = "corpo-pagina">   
+        <!-- Criando parágrafos com classes para o css e id para o javascript. -->
+        <p Class = "mensagem-final-simulado" Id = "final-simulado">
+          Parabéns, você acabou de finalizar o simulado!
+        </p>
 
-        <H2>Resultado</H2>
+        <p Class = "sub-mensagem-final-simulado" Id = "sub-t-final-simulado">
+          Vamos conferir alguns dados?
+        </p>
+        <!-- Criando Id para javascript junto com classes para o css. -->
+        <Div Id = "info-resultado" Class = "info-resultado">
+          <p Class = "orientacao" Id = "orientacao">
+            Confira abaixo algumas tabelas informando sua quantidade 
+            de acertos, erros, perguntas não respondidas e respondidas.
+          </p>
 
-        <Div Class = "primeira-linha">
-          <!-- Tempo em que o usuário ficou realizando a prova. -->
-          <Div Class = "tempo-resultado">
-            <b>Tempo decorrido:</b>
-            <p Id = "tempo-decorrido">X</p>
+          <p Class = "orientacao" Id = "orientacao">
+            Logo após as tabelas, também há a presença de gráficos,
+            informando sobre seu desempenho, sendo:
+          </p>
+
+          <p Id = "orientacao">
+            <b>Total de acertos</b>, <b>Total de erros</b>, <b>Total de perguntas não respondidas</b>
+            e <b>Total de perguntas respondidas</b>
+          </p>
+
+          <p>
+            Confira também, logo após os gráficos, algumas 
+            outras informações quanto ao seu desempenho e botões para 
+            conferir a distribuição geral de seleção por alternativa de cada questão 
+            (<b>Estatísticas</b>), realizar o simulado mais uma vez (<b>Refazer Simulado</b>),
+            ir para a págna inicial (<b>Sair</b>) e caso você tenha realizado o simulado
+            <b>MAIS DE UMA VEZ</b>, poderá conferir a sua evolução através de um gráfico 
+            (<b>Progresso</b>).
+          </p>
+        </Div>
+        <!-- Utilizando Div para separar os dados de quantidade de acertos e erros -->
+        <Div Class = "primeiro-dados-por-inteiro" Id = "primeiro-dados-por-inteiro">
+          <Div Class = "inteiro-acertos">
+            <H4>Quantidade de acertos</H4>
+            <p id = "acertos">X</p>
           </Div>
-
-          <!-- Questões deixadas em branco (sem resposta) pelo usuário. -->
-          <Div Class = "branco-resultado">
-            <b>Questões em branco:</b>
-            <p Id = "perguntas-nulas">X</p>
+          <Div Class = "inteiro-erros">
+            <H4>Quantidade de erros</H4>
+            <p id = "erros">X</p>
           </Div>
         </Div>
-
-        <Div Class = "segunda-linha">
-          <!-- Total de acertos (respostas corretas) no simulado. -->
-          <Div Class = "acertos-resultado">
-            <b>Acertos:</b>
-            <p Id = "acertos">X</p>
+        <!-- Utilizando Div para separar os dados de perguntas nao respondidas e respondidas. -->
+        <Div Class = "segundo-dados-por-inteiro" Id = "segundo-dados-por-inteiro">
+          <Div Class = "inteiro-nao-respondidas">
+            <H4>Perguntas não respondidas</H4>
+            <p id = "nao-respondidas">X</p>
           </Div>
-          
-          <!-- Total de erros (respostas incorretas) no simulado. -->
-          <Div Class = "erros-resultado">
-            <b>Erros:</b>
-            <p Id = "erros">X</p>
+          <Div Class = "inteiro-respondidas">
+            <H4>Perguntas respondidas</H4>
+            <p id = "respondidas">X</p>
           </Div>
         </Div>
-
-        <Div>
-          <!-- 
-            Ao finalizar a prova será realizado um cálculo (total acertos/total de questões),
-            ao qual o resultado do calculo será a % de acertos, após armazenar essa informação,
-            será realizado um série de condicionais para informar o usuário, seguido de uma 
-            mensagem motivacional.
-          -->
-          <p Id = "retorno-acertos">Você acertou 75% das questões do simulado. Se continuar se esforçando, obterá o resultado máximo, parabéns.</p>
-          
-          <!--
-            Ao final da prova, com as respostas erradas já armazenadas, será feito um levantamento
-            sobre o contéudo das questões que o usuário errou e depois informado ao mesmo para estudar.
-          -->
-          <p>recomendamos que você estude o(s) seguinte(s) conteúdo(s):</p>
-          <p Id = "conteudos-a-estudar">Conteúdos</p>
+        <!-- Utilizando uma div para separar os gráficos junto com aling center para centralizar e usando o elemento canvas para obter maneiras de desenhar gráficos. -->
+        <Div Class = "graficos" Align = "center" Id = "div-graficos">
+          <H3>Total de acertos e erros</H3>
+          <canvas height = "250" Class = "grafico-acertos-erros" id = "acertos-erros"></canvas>
+          <H3>Total de perguntas não respondidas e respondidas</H3>
+          <canvas height = "250" Class = "grafico-respondidas-e-naorespondidas"id = "respondidas-e-naorespondidas"></canvas>
         </Div>
+        <!-- Criação de um cronometro ao iniciar e finalizar o simulado usando Javascript . -->
+        <Div Class = "tempo-e-tempo-medio-simulado" id = "tempo-e-tempo-medio-simulado">
+          <p Id = "tempo-de-simualdo"></p>
+        <!-- Criando um parágrafo com uma classe para o css e um id para o javascript. -->
+          <p Class = "mensagem-evolucao-usuario" Id = "mensagem-evolucao-usuario" Style = "display: none;">
+            Para acessar a página de <b>Evolução do Usuário</b> (<b>Progresso</b>),
+            você precisa, no mínimo, ter realizado o simualdo 2 vezes.
+          </p>
 
-        <Div Class = "graficos">
-          <!-- Grafico responsavel por mostrar total de acertos e erros em %. -->
-          <Div Style = "width:400; height:400;" Id = "grafico_AcertoErro_per"></Div>
-          <!-- Grafico responsavel por mostrar total de acertos e erros em inteiro. -->
-          <Div Style = "width:400; height:400;" Id = "grafico_AcertoErro_int"></Div>
-          <!-- Grafico responsavel por mostrar questões prenchidas e nulas. -->
-          <Div Style = "width:400; height:400;" Id = "grafico_PreenchidasNulas_int"></Div>
+          <p Class = "retorno-acertos" Id = "retorno-acertos">X</p>
         </Div>
+        <!-- Responsável pela entrega de conteudos perante o progresso do usuario. -->
+        <Div Class = "conteudos-estudo" Id = "conteudos-estudo">
+          <p Class = "conteudos-a-estudar">
+            Recomendamos que você estude o(s) seguinte(s) conteúdo(s): 
+            <b Id = "conteudos">Conteúdos</b>
+          </p>
+        </Div>
+        <!-- Utilizando uma div para separar as tabelas junto com aling center para centralizar em seus devidos lugares. -->
+		<Div Class = "div-nota-individual" align = "center" Id = "nota-simulado">
+      <H4 Class = "calculo-nota">Confira abaixo informações acerca da nota em formação geral, componentes específico e nota final</H4>
+      <p Class = "calculo-nota">
+        A nota de <b>formação geral</b> é composta pela média entre a nota alcançada nas questões de
+        múltipla escolha (peso 0.6).
+        <Br>
+        A nota do <b>componente específico</b> é formada pela média entre a nota conquistada nas 
+        questões de múltipla escolha (peso 0.85).
+        <Br>
+        Para compor a <b>nota total</b>, faz-se a média entre as notas da formação geral (peso 0.25)
+        e do componente específico (peso 0.75).
+        <Br>
+        A <b>nota máxima</b> a ser alcançada, em <b>formação geral</b> (múltipla escolha) é de <b>100 pontos</b> e, <b>cada resposta correta</b>
+        equivale a <b>12.5 pontos</b>. Há um total de <b>8 perguntas em formação geral</b>, começando a partir da questão 1 e indo 
+        até a questão 8.
+        <Br>
+        A <b>nota máxima</b> a ser alcançada, em <b>componente específico</b> (múltipla escolha) é de <b>100 pontos</b> e, <b>cada resposta correta</b>
+        equivale a <b>3.7 pontos</b>. Há um total de <b>27 perguntas em componente específico</b>, começando a partir da questão 9 e indo 
+        até a questão 35.
+        <Br>
+        A pontuação em 'Discursiva' tanto em formação geral e componente específico foi desconsiderada porque o simulado consiste apenas
+        de questões de múltipla escolha.
+        <Br>
+        Confira mais clicando
+        <a Target = "_Blank" Href = "https://image.slidesharecdn.com/boletimdesempenho1-editado-191008003047/95/boletim-desempenho-enade-1-638.jpg?cb=1570494770">aqui</a>
+        .
+      </p>
 
+      <table>
+			  <tr>
+          <th rowspan="2">Formação geral</th>
+          <th>Múltipla escolha</td>
+          <th>Discursiva</td>
+          <th>Nota</td>
+			  </tr>
+			  <tr>
+          <td Id = "formacao-geral-multipla-escolha">100</th>
+          <td>-</td>
+          <td Id = "nota-final-formacao-geral-multipla-escolha">100</td>  
+			  </tr>
+				<tr>
+          <th>Componentes específicos</th>
+          <td Id = "componente-especifico-multipla-escolha">100</th>
+          <td>-</td>
+          <td Id = "nota-final-componente-especifico-multipla-escolha">100</td>  
+			  </tr>
+			</table>
+			
+			<p>Nota final: <b Id = "nota-final">100</b></p>
+		</Div>
+        <!-- Criando botões para ficarem no final da página. -->
         <Div Class = "buttons-nav">
+          <!-- Utilizando o elemento "<a>" para criar um hyperlink para o resultado-->
           <a Href = "ResultadoEstatisticas.html">
+            <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito no botão. -->
             <Input Type = "Button" Class = "button-nav" Value = "Estatísticas"/>
           </a>
+          <!-- criando um botao para poder refazer o simulado. -->
+          <a Href = "Q1AE_EQ8.html">
+            <Input Type = "Button" Class = "button-nav" Value = "Refazer simulado"/>
+          </a>
+          <!-- Utilizando o elemento "<a>" para criar um hyperlink para o index-->
+          <a Href = "../Principal/Index.html">
+            <!-- Criando um botão com o elemento input e usando value para adicionar o que está escrito no botão. -->
+            <Input Type = "Button" Class = "button-nav" Value = "Sair"/>
+          </a>
+          <!-- Botão para baixar o progresso, com o "OnClick" é possível imprimir para pdf. -->
+          <a Id = "link-evolucao-usuario" Href = "../Perguntas/EvolucaoUsuario.html">
+            <Input Type = "Button" Class = "button-nav" Value = "Progresso" Id = "conferir-evolucao"/>
+          </a>
+          <Input Type = "Button" Class = "button-nav" Value = "Baixar resultado" Id = "imprimir-resultado" OnClick = "imprimirResultado()"/>
         </Div>
+		
         
       </Div>
     </Main>
@@ -139,8 +235,8 @@
           </Div>
         </Div>
     </Footer>
-
-    <Script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></Script>
+    
+    <Script src="https://cdn.jsdelivr.net/npm/chart.js"></Script>
     <Script Src = "../../js/resultado.js"></Script>
     <Script Src = "../../js/menu.js"></Script>
   </Body>

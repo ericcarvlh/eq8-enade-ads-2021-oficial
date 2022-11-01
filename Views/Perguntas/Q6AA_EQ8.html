@@ -10,6 +10,9 @@
     <Link Rel = "Icon" Href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
   </Head>
 
   <Body Id = "Q6">
@@ -17,7 +20,7 @@
       <Div Class = "container">
         <Div Class = "inep_enade">
           <Div Class = "logo_inep">
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
               <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
             </a>
           </Div>
@@ -71,13 +74,13 @@
 
           <Div Class = "texto-pergunta">
             <p>
-              A pandemia ocasionada pelo novo Coronavírus gerou impactos negati vos na economia e nos negócios, 
-              intensifi cando problemas sociais no mundo todo. Nos Estados Unidos, um estudo realizado com a 
-              parceria de duas importantes universidades verifi cou que a expectati va de vida dos norte-americanos 
-              caiu 1,1 ano em 2020. A nova expectati va é de 77,4 anos. De acordo com o estudo, esta foi a maior queda 
-              anual da expectati va de vida já registrada nos últi mos 40 anos. O declínio é ainda maior se considerada a 
-              expectati va de vida para negros que moram no país, cuja queda foi de 2,1 anos. Para a população lati na, 
-              essa queda foi de 3 anos. O declínio na expectati va de vida dos lati nos é signifi cati vo, uma vez que eles 
+              A pandemia ocasionada pelo novo Coronavírus gerou impactos negativos na economia e nos negócios, 
+              intensificando problemas sociais no mundo todo. Nos Estados Unidos, um estudo realizado com a 
+              parceria de duas importantes universidades verificou que a expectativa de vida dos norte-americanos 
+              caiu 1,1 ano em 2020. A nova expectativa é de 77,4 anos. De acordo com o estudo, esta foi a maior queda 
+              anual da expectativa de vida já registrada nos últi mos 40 anos. O declínio é ainda maior se considerada a 
+              expectativa de vida para negros que moram no país, cuja queda foi de 2,1 anos. Para a população latina, 
+              essa queda foi de 3 anos. O declínio na expectativa de vida dos latinos é significativo, uma vez que eles 
               apresentam menor incidência de condições crônicas que são fatores de risco para a Covid-19 em relação 
               às populações de brancos e negros.
             </p>
@@ -98,8 +101,8 @@
             </p>
 
             <p>
-              I. O efeito desproporcional da pandemia da Covid-19 na expectati va de vida da população negra e 
-              lati no-americana estabelece relação com sua situação de vulnerabilidade social. 
+              I. O efeito desproporcional da pandemia da Covid-19 na expectativa de vida da população negra e 
+              latino-americana estabelece relação com sua situação de vulnerabilidade social. 
             </p>
 
             <p>
@@ -107,8 +110,8 @@
             </p>
 
             <p>
-              II. Uma hipótese que pode ser levantada quanto à diminuição da expectati va de vida de negros e 
-              lati no-americanos está relacionada às suas precárias condições de trabalho, levando-os a maior 
+              II. Uma hipótese que pode ser levantada quanto à diminuição da expectativa de vida de negros e 
+              latino-americanos está relacionada às suas precárias condições de trabalho, levando-os a maior 
               possibilidade de exposição ao contágio pelo novo Coronavírus.
             </p>
 
@@ -126,10 +129,8 @@
           </Div>
 
           <Div Class = "buttons-nav">
-            <a Href = "Resultado.html">
-              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
-            </a>
-            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
+            <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
         </Div>
@@ -158,7 +159,9 @@
       </Div>
     </Footer>
     
+    <Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
+    <script src="../../js/popup.js"></script>
   </Body>
 </HTML>

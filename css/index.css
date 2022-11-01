@@ -1,169 +1,168 @@
 .cards {
-    width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
-    max-width: 300px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
-    margin: auto;
-  }
+  width: 90%; /*Tornando a largura 90% do valor máximo de largura pré-estabelecido.*/
+  max-width: 300px; /*Definindo um tamanho máximo de div para não ser ultrapassada.*/
+  margin: auto; /* Definindo a margem como automática */
+}
+
+.text--medium {
+  font-size: 1.6rem; /* Definindo o tamanho da fonte. */
+  line-height: 2.6rem; /* Definindo a altura da caixa de linha. */
+  font-weight: 400; /* Definindo a largura da fonte como normal. */
+  color: #ecf0f1; /* Cor do texto */
+}
   
-  .text--medium {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-    font-weight: 400;
-    color: #ecf0f1;
-  }
+.card {
+  display: flex; /* Adicionando um display de acordo com o modelo flexbox */
+  flex-direction: column; /* Definindo a direção do modelo para a coluna.  */
+  background-color: rgb(255, 166, 0); /* Definindo a cor para o fundo */
+  cursor: pointer; /* Definindo o cursor ao passar por cima do card */
+  transition: all 0.3s ease 0s; /* Adicionando todas as propriedades para a transição */
+}
   
-  .card {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 166, 0);
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-  }
+.card:hover {
+  transform: translateY(-10px); /* Definindo uma transição quando o card for sobreposto pelo m pointer. */
+}
+
+.image {
+  width: 100%; /* Definindo a largura da imagem */
+  padding-top: 55.25%; /* 16:9 */
+
+  overflow: hidden; /* O conteúdo é cortado e nenhuma barra de rolagem é exibida. */
+  position: relative; /* definindo a posição como relativa */
+}
+
+.image img {
+  width: 100%; /* Definindo a largura da imagem */
+  position: absolute; /* Definindo como posição livre na página */
+  top: 50%; /* Especificando a posição vertical */
+  left: 50%; /* Especificando a posição para a esquerda */
+  transform: translate(-50%, -50%); /* Especificando a posição vertical */
+}
+
+.content {
+  margin: 20px; /* Definindo a margem do card */
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  align-self: end; /* Alinhando itens-flex da linha flex alvo */
+  align-items: center; /* Estabelecendo  o valor align-self em todos como um grupo */
+}
+
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0; /* Definindo a opacidade */
+  visibility: hidden; /* Alterando a visibilidade */
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   
-  .card:hover {
-    transform: translateY(-10px); /* Definindo uma transição quando o card for sobreposto pelo m pointer. */
-  }
+  background-color: #fff;
   
-  .image {
-    width: 100%;
-    padding-top: 55.25%; /* 16:9 */
+  width: 800px;
+  height: 400px;
   
-    overflow: hidden;
-    position: relative;
-  }
+  margin: 0 auto;
+  padding: 10px;
   
-  .image img {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* sombra em caixa */
   
-  .content {
-    margin: 20px; /* Definindo a margem do card */
-  }
+  opacity: 0;
+  overflow-y: auto;
+  visibility: hidden;
   
-  .title {
-    margin-bottom: 20px;
-  }
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1); /* Adicionando transição com velocidade variável */
+  transform: scale(1.2); /* Alterando a escala */
+}
+.modal .close-modal {
+  position: absolute;
+  cursor: pointer;
+
+  top: 5px;
+  right: 15px;
   
-  .info {
-    display: flex;
-    align-self: end;
-    align-items: center;
-  }
+  opacity: 0;
   
-  .modal-overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    visibility: hidden;
-  }
-  .modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  .modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    
-    background-color: #fff;
-    
-    width: 800px;
-    height: 400px;
-    
-    margin: 0 auto;
-    padding: 10px;
-    
-    border-radius: 3px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    
-    opacity: 0;
-    overflow-y: auto;
-    visibility: hidden;
-    
-    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    transform: scale(1.2);
-  }
-  .modal .close-modal {
-    position: absolute;
-    cursor: pointer;
-  
-    top: 5px;
-    right: 15px;
-    
-    opacity: 0;
-    
-    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    transition-delay: 0.3s;
-  }
-  .modal .close-modal svg {
-    width: 18px;
-    height: 18px;
-  }
-  .modal .modal-content {
-    opacity: 0;
-    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    transition-delay: 0.3s;
-  }
-  .modal.active {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-  }
-  .modal.active .modal-content {
-    opacity: 1;
-  }
-  .modal.active .close-modal {
-    transform: translateY(10px);
-    opacity: 1;
-  }
-  
-  .video-background {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -99;
-    background-color: white;
-  }
-  .video-foreground, .video-background iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 90%;
-    transform: translate(-50%, -50%);
-  }
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.3s;
+}
+.modal .close-modal svg {
+  width: 18px;
+  height: 18px;
+}
+.modal .modal-content {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.3s;
+}
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.modal.active .modal-content {
+  opacity: 1;
+}
+.modal.active .close-modal {
+  transform: translateY(10px);
+  opacity: 1;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+  background-color: white;
+}
+.video-foreground, .video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+}
 
 .sobre-o-enade{
-    font-size: 1.75rem; /* Definindo um tamanho para a fonte*/
-    text-align: justify; /* Definindo o alinhamento do texto.*/
-    margin-left: 10%; /* Definindo uma distância em relaçãp a margem esquerda.*/
-    margin-right: 10%; /* Definindo uma distância em relaçãp a margem direita.*/
-    font-style: italic; /* Defininfo um estilo para a fonte.*/
+  font-size: 1.75rem; /* Definindo um tamanho para a fonte*/
+  text-align: justify; /* Definindo o alinhamento do texto.*/
+  margin-left: 10%; /* Definindo uma distância em relaçãp a margem esquerda.*/
+  margin-right: 10%; /* Definindo uma distância em relaçãp a margem direita.*/
+  font-style: italic; /* Defininfo um estilo para a fonte.*/
 }
-  
+
 .fonte-sobre-o-enade{
-    font-size: 1.9rem; /* Definindo um tamanho para a fonte*/
+  font-size: 1.9rem; /* Definindo um tamanho para a fonte*/
 }
-  
+
 .acesso-prova-gabarito{
-    font-size: 1.75rem; /* Definindo um tamanho para a fonte*/
+  font-size: 1.75rem; /* Definindo um tamanho para a fonte*/
 }
-  
+
 .acesso-prova-gabarito input{
-    margin: 1%;
+  margin: 1%;
 }
-  

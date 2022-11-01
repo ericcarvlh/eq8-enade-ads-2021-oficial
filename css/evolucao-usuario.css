@@ -1,0 +1,15 @@
+.graficos{
+    margin-top: 2.5%; /* Adicionando uma margem em relação ao conteúdo acima. */
+    margin-bottom: 5%; /* Adicionando uma margem em relação ao conteúdo abaixo. */
+}
+
+.grafico-evolucao{
+    width: 90%; /* Adicionando uma largura. */
+    height: 80%; /* Adicionando uma altura. */
+    max-height: 500px; /* Adicionando uma largura máxima. */
+    max-width: 600px;  /* Adicionando um tamanho máximo de largura. */
+}
+
+.info-evolucao-usuario p{
+	margin-top: 1.5%; /* Adicionando uma margem em relação ao conteúdo acima. */
+}

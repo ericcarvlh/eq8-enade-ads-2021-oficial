@@ -10,6 +10,9 @@
     <link rel = "Icon" href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
   </head>
 
   <body Id = "Q23">
@@ -17,7 +20,7 @@
       <Div Class = "container">
         <Div Class = "inep_enade">
           <Div Class = "logo_inep">
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
               <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
             </a>
           </Div>
@@ -105,18 +108,16 @@
           </div>   
 
           <div class = "alternativas-pergunta">
-            <span> <input type = "Radio" Name = "Q29" Value = "A"/> A) corretiva </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "B" Id = "alt-correta"/> B) evolutiva. </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "C"/> C) funcional. </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "D"/> D) preventiva. </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "E"/> E) adaptativa. </span>
+            <span> <input type = "Radio" Name = "Q23" Value = "A"/> A) corretiva </span>
+            <span> <input type = "Radio" Name = "Q23" Value = "B" Id = "alt-correta"/> B) evolutiva. </span>
+            <span> <input type = "Radio" Name = "Q23" Value = "C"/> C) funcional. </span>
+            <span> <input type = "Radio" Name = "Q23" Value = "D"/> D) preventiva. </span>
+            <span> <input type = "Radio" Name = "Q23" Value = "E"/> E) adaptativa. </span>
           </div>
 
           <Div Class = "buttons-nav">
-            <a Href = "Resultado.html">
-              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
-            </a>
-            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
+            <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
         </div>
@@ -145,7 +146,9 @@
       </Div>
     </Footer>
 
+    <Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
+    <script src="../../js/popup.js"></script>
   </body>
 </html>

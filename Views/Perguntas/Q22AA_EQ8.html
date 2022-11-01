@@ -10,6 +10,9 @@
     <link rel = "Icon" href = "http://enade.inep.gov.br/enade/favicon.ico"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/layout.css"/>
     <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/perguntas.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup.css"/>
+    <Link rel="StyleSheet" type="Text/Css" Href = "../../css/popup-correcao.css"/>
+    <Link Rel = "StyleSheet" Type = "Text/Css" Href = "../../css/responsive.css" Media = "screen and (max-width: 1440px)"/>
   </head>
 
   <body Id = "Q22">
@@ -17,7 +20,7 @@
       <Div Class = "container">
         <Div Class = "inep_enade">
           <Div Class = "logo_inep">
-            <a Target = "_Blank" Href = "http://enade.inep.gov.br/enade/images/logo_inep.svg">    
+            <a Target = "_Blank" Href = "https://www.gov.br/inep/pt-br">    
               <Img Src = "../../Images/Principal/ofc_logo_inep.svg" Alt = "INEP"/>
             </a>
           </Div>
@@ -77,9 +80,13 @@
               reestruturação do negócio, modificações de regras de negócio ou novas necessidades do cliente, geram <br>
               mudanças inevitáveis. Nesse cenário, a utilização de um processo de Gerência de Configuração de Software <br>
               (GCS) que contemple características necessárias para gerenciar e controlar a evolução de um software, através <br>
-              do controle formal de versão e solicitação de mudanças, é extremamente importante. <br> <br>
-              Sobre o processo de Gerência de Configuração de Software (GCS), avalie as afirmações a seguir. <br>
+              do controle formal de versão e solicitação de mudanças, é extremamente importante. 
             </p>
+          </div>
+
+          <div class="enunciado-pergunta">
+
+            <p>Sobre o processo de Gerência de Configuração de Software (GCS), avalie as afirmações a seguir. <br></p>
 
             <ol type="I">
               <li> 
@@ -101,26 +108,22 @@
                 A GCS proporciona um conjunto de atividades de acompanhamento e controle de mudanças que é <br>
                 iniciado logo depois que o software for fornecido ao cliente e colocado em operação.
               </li>
-            </ol>
-          </div>    
+            </ol>    
                             
-          <div class = "enunciado-pergunta">
-            É correto apenas o que se afirma em
+            <p>É correto apenas o que se afirma em</p>
           </div>
 
           <div class = "alternativas-pergunta">
-            <span> <input type = "Radio" Name = "Q29" Value = "A" Id = "alt-correta"/> A) I e II. </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "B"/> B) II e III. </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "C"/> C) III e IV. </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "D"/> D) I, II e IV </span>
-            <span> <input type = "Radio" Name = "Q29" Value = "E"/> E) I, III e IV. </span>
+            <span> <input type = "Radio" Name = "Q22" Value = "A" Id = "alt-correta"/> A) I e II. </span>
+            <span> <input type = "Radio" Name = "Q22" Value = "B"/> B) II e III. </span>
+            <span> <input type = "Radio" Name = "Q22" Value = "C"/> C) III e IV. </span>
+            <span> <input type = "Radio" Name = "Q22" Value = "D"/> D) I, II e IV </span>
+            <span> <input type = "Radio" Name = "Q22" Value = "E"/> E) I, III e IV. </span>
           </div>
 
           <Div Class = "buttons-nav">
-            <a Href = "Resultado.html">
-              <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "teste()"/>
-            </a>
-            <Input Type = "Button" Class = "button-nav" Value = "Revisar" OnClick = "abreMenu"/>
+            <Input Type = "Button" Class = "button-nav" Value = "Finalizar" OnClick = "salvaResultadoSimulado()"/>
+            <Input Type = "Button" id="popup" Class = "button-nav" Value = "Menu" onclick="abrirPopUp()"/>
             <Input Type = "Button" Class = "button-nav" Value = "Corrigir" OnClick = "confereResposta()"/>
           </Div>
           
@@ -149,8 +152,10 @@
         </Div>
       </Div>
     </Footer>
-
+    
+    <Script Src = "../../js/menu.js"></Script>
     <Script Src = "../../js/contar.js"></Script>
     <Script Src = "../../js/corrigir.js"></Script>
+    <script src="../../js/popup.js"></script>
   </body>
 </html>
